@@ -150,7 +150,9 @@ body{
     color:#fff;
 }
 
-
+.sortable-handler{
+    touch-action: none;
+}
 
 /* 1.2 Typography */
 
