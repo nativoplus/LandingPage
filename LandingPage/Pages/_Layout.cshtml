@@ -14,17 +14,25 @@
     <link rel="apple-touch-icon" sizes="114x114" href="template/apple-touch-icon-114x114.png">
     <title>Blazor App</title>
     <link href="template/css/style.css" rel="stylesheet" media="screen">
-
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 
 </head>
+<body>
     @RenderBody()
+
+    <!-- Blazor -->
+    <script src="_framework/blazor.server.js" autostart="false"></script>
+
+    <!-- JQuery -->
     <script src="template/js/jquery.min.js"></script>
-    <script src="template/js/bootstrap.min.js"></script>
     <script src="template/js/smoothscroll.js"></script>
     <script src="template/js/jquery.validate.min.js"></script>
     <script src="template/js/owl.carousel.min.js"></script>
     <script src="template/js/jquery.pagepiling.js"></script>
+    <script src="template/js/bootstrap.min.js"></script>
+
     <!-- Scripts -->
     <script src="template/js/scripts.js"></script>
-    <script src="_framework/blazor.server.js"></script>
+    
+</body>
 </html>
