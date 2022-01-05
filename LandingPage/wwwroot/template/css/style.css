@@ -794,7 +794,7 @@ a.brand:focus{
 
 
 
-.click-capture{
+/*.click-capture{
   position: fixed;
   top: 0;
   left: 0;
@@ -1011,7 +1011,7 @@ a.brand:focus{
   -webkit-transition-delay: 0s;
   -o-transition-delay:0s;
   transition-delay: 0s;
-}
+}*/
 
 
 
@@ -3904,7 +3904,7 @@ a.brand:focus{
   /* Sidebar Menu */
 
 
-  .menu .menu-lang{
+/*  .menu .menu-lang{
     top:7rem;
   }
 
@@ -3923,7 +3923,7 @@ a.brand:focus{
 
   .menu-footer .copy{
     display: block;
-  }
+  }*/
 }
 
 
@@ -4746,7 +4746,7 @@ a.brand:focus{
 
 
 
-.click-capture{
+/*.click-capture{
   position: fixed;
   top: 0;
   left: 0;
@@ -4963,7 +4963,7 @@ a.brand:focus{
   -webkit-transition-delay: 0s;
   -o-transition-delay:0s;
   transition-delay: 0s;
-}
+}*/
 
 
 
@@ -7828,7 +7828,7 @@ a.brand:focus{
   /* Sidebar Menu */
 
 
-  .menu .menu-lang{
+/*  .menu .menu-lang{
     top:7rem;
   }
 
@@ -7847,7 +7847,7 @@ a.brand:focus{
 
   .menu-footer .copy{
     display: block;
-  }
+  }*/
 }
 
 
