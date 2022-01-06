@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.1" />
+    <PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
