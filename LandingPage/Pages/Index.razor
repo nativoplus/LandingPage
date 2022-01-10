@@ -1,4 +1,5 @@
-﻿@page "/"
+﻿@inject IJSRuntime jsRuntime
+@page "/"
 
 <div class="page" >
 
@@ -531,5 +532,23 @@
  
 </div>
 
-@code{
+
+
+<h1>hello world</h1>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+            if (firstRender)
+            {
+                 await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.min.js");
+                 await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/smoothscroll.js");
+                 await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.validate.min.js");
+                 await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/owl.carousel.min.js");
+                 await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.pagepiling.js");
+                 await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
+                 await jsRuntime.InvokeVoidAsync("runInitScript");
+            }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
 }
