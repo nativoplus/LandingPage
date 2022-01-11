@@ -1,4 +1,4 @@
-﻿@*Imports*@
+@*Imports*@
 @inject IJSRuntime jsRuntime
 @using LandingPage.Components
 @*Page*@
@@ -158,7 +158,6 @@
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
             await jsRuntime.InvokeVoidAsync("runInitScript");
         }
-
         await base.OnAfterRenderAsync(firstRender);
     }
 }

@@ -1,4 +1,4 @@
-﻿window.runInitScript = () => {
+window.runInitScript = () => {
 	/*-------------------------------------------------------------------------------
 	   Detect mobile device 
 	 -------------------------------------------------------------------------------*/
@@ -9,15 +9,11 @@
 	  Navbar 
 	-------------------------------------------------------------------------------*/
 
-
-
 	navbar.affix({
 		offset: {
 			top: 50
 		}
 	});
-
-
 	navbar.on('affix.bs.affix', function () {
 		if (!navbar.hasClass('affix')) {
 			navbar.addClass('animated slideInDown');
@@ -114,7 +110,6 @@
 
 
 	if ($('.pagepiling').length > 0) {
-
 		$('.pagepiling').pagepiling({
 			scrollingSpeed: 280,
 			loopBottom: true,
@@ -126,8 +121,6 @@
 				else {
 					$('.navbar').addClass('navbar-white');
 				}
-
-			}
 		});
 
 
@@ -179,5 +172,5 @@
 		var index = $('.project-box').index(this);
 		$('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
 	});
-
 };
+
