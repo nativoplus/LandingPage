@@ -11,11 +11,11 @@
 
 
 
-	//navbar.affix({
-	//	offset: {
-	//		top: 50
-	//	}
-	//});
+	navbar.affix({
+		offset: {
+			top: 50
+		}
+	});
 
 
 	navbar.on('affix.bs.affix', function () {
