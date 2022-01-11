@@ -121,6 +121,7 @@ window.runInitScript = () => {
 				else {
 					$('.navbar').addClass('navbar-white');
 				}
+			}
 		});
 
 

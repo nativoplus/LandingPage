@@ -155,6 +155,7 @@
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.pagepiling.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/bootstrap.min.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "https://vjs.zencdn.net/7.17.0/video.min.js");
             await jsRuntime.InvokeVoidAsync("runInitScript");
         }
         await base.OnAfterRenderAsync(firstRender);
