@@ -1,15 +1,14 @@
-﻿<div data-anchor="page1" class="pp-scrollable text-white section section-1">
+<div data-anchor="page1" class="pp-scrollable text-white section section-1">
     <div class="scroll-wrap">
         <div class="section-bg" style="">
-            <video style="object-fit: cover; height:100%; width: 100%; opacity: .25"
+
+            <video style="object-fit: cover; height:100%; width: 100%; opacity: .40"
                    loop
                    autoplay
-                   muted
-                   preload="auto">
-                <source src="/template/videos/10-seconds-of-calm-music.mp4" type="video/mp4" />
+                   muted>
+                <source src="/template/videos/beach.mp4" type="video/mp4" />
 
             </video>
-
         </div>
         <div class="scrollable-content">
             <div class="vertical-centred">
@@ -34,9 +33,16 @@
     </div>
 </div>
 @code {
-    private readonly string localVideoSource = "/template/videos/10-seconds-of-calm-music.mp4";
+    public string localVideoSource = "/template/videos/beach.mp4";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        { }
+    }
     protected override void OnInitialized()
     {
         StateHasChanged();
+
     }
 }
