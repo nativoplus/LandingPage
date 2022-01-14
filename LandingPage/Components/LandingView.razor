@@ -46,7 +46,8 @@
     {
         if (firstRender)
         {
-            await jsRuntime.InvokeAsync<IJSObjectReference>("myScript", "");
+            List<string> array = new List<string> { "Developers", "Engineers", "Project Managers", "People", "Nativo" };
+            await jsRuntime.InvokeAsync<IJSObjectReference>("typeWriter", array);
 
         }
     }
