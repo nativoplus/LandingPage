@@ -148,6 +148,7 @@
     {
         if (firstRender)
         {
+
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.min.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/owl.carousel.min.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/smoothscroll.js");
