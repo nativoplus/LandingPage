@@ -1,4 +1,4 @@
-﻿namespace LandingPage.Models
+﻿namespace LandingPage.Domain.Entities
 {
     public class Article
     {

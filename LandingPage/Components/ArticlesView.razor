@@ -1,4 +1,4 @@
-﻿@using LandingPage.Models
+﻿@using LandingPage.Domain.Entities
 <div data-anchor="page4" class="pp-scrollable section section-4">
     <div class="scroll-wrap">
 
@@ -26,8 +26,11 @@
                                                             <li><a href="">0@(i + 1). @article.Bullets[i]</a></li>
                                                         }
                                                     </ul>
-                                                    <h6><span class="text-primary"><a href="/article-details">Read More</a></span></h6>
-                                               
+                                                    <NavLink class="nav-link" href="/article-details">
+                                                        <h6><span class="text-primary">Read More</span></h6>
+
+                                                    </NavLink>
+
 
                                                 </div>
                                                 <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
