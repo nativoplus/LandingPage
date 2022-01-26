@@ -1,12 +1,11 @@
-﻿body {
+body {
     background-color: #120439;
     height: 100%;
     font-family: 'tradegothiclt-bold', sans-serif;
 }
 
-#typewriter{
+#typewriter {
     font-size: 5em;
     color: white;
     text-transform: uppercase;
 }
-

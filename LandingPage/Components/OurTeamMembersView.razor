@@ -1,0 +1,117 @@
+﻿@using LandingPage.Models
+@using System.Security.Cryptography;
+
+<div data-anchor="page3" class="pp-scrollable text-white section section-3">
+    <div class="scroll-wrap">
+        <div class="bg-changer">
+            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
+            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
+            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
+            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
+            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
+            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
+        </div>
+        <div class="scrollable-content">
+            <div class="vertical-centred">
+                <div class="boxed boxed-inner">
+                    <div class="vertical-title hidden-xs hidden-sm"><span>Our Team</span></div>
+                    <div class="boxed">
+                        <div class="container">
+                            <div class="intro">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2 class="title-uppercase text-white">Meet Our Team</h2>
+                                        <div class="row-project-box row">
+
+                                            @foreach (var teamMember in ourTeamMembers)
+                                            {
+                                                <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
+                                                    <div class="project-box">
+                                                        <div class="project-box-inner" id="image" style="background-image:url(@teamMember.PhotoUrl);">
+                                                            <div class="project-box-inner" id="container">
+
+                                                                <h5>@teamMember.Name</h5>
+                                                                <div class="project-category">@teamMember.Title</div>
+                                                                <div class="project-category">@teamMember.Description</div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    public List<Team> ourTeamMembers = new List<Team> { new Team
+    {
+        Name = "Hector Orellana Reyes",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        PhotoUrl = "template/images/team/hector.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Jose Velez",
+        Title = "Founder",
+        Description = "Lorem Ipsum",
+        PhotoUrl = "template/images/team/jose.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Angel Ramos",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        PhotoUrl = "template/images/team/ramos.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Arnaldo Rodriguez",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        PhotoUrl = "template/images/team/arnaldo.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Angel Martinez",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        PhotoUrl = "template/images/team/martinez.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    }};
+
+    protected override void OnInitialized()
+    {
+        Shuffle();
+        //ourTeamMembers = Shuffle(ourTeamMembers);
+        base.OnInitialized();
+    }
+    public void Shuffle()
+    {
+
+        var rnd = new Random();
+        var randomized = ourTeamMembers.OrderBy(item => rnd.Next());
+
+        ourTeamMembers = randomized.ToList();
+    }
+}

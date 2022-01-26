@@ -1,6 +1,7 @@
 @*Imports*@
 @inject IJSRuntime jsRuntime
 @using LandingPage.Components
+@using LandingPage.Models
 @*Page*@
 @layout EmptyLayout
 @page "/"
@@ -73,33 +74,39 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="brand" href="#">
+        <!-- Brand Logo -->
+        @*   <a class="brand" href="#">
             <img class="brand-img" alt="" src="template/images/nativoplus.png">
-        </a>
-
+            </a>
+        *@
         <div class="social-list hidden-xs">
-            <a href="" class="icon ion-social-twitter"></a>
-            <a href="" class="icon ion-social-linkedin"></a>
+            <a href="https://twitter.com/nativoplus" class="icon ion-social-twitter"></a>
+            <a href="https://www.linkedin.com/company/nativoplus/" class="icon ion-social-linkedin"></a>
             @*<a href="" class="icon ion-social-facebook"></a>*@
             @*<a href="" class="icon ion-social-googleplus"></a>*@
             @*<a href="" class="icon ion-social-dribbble-outline"></a>*@
         </div>
     </header>
-    <div class="copy-bottom white boxed">© Jonny 2017.</div>
-    <div class="lang-bottom white boxed">
+    <div class="copy-bottom white boxed">© NativoPlus Studio.</div>
+    <!-- Languages  -->
+    @*<div class="lang-bottom white boxed">
         <div class="menu-lang">
-            <a href="" class="active">Eng</a>
-            <a href="">Fra</a>
-            <a href="">Ger</a>
+        <a href="" class="active">Eng</a>
+        <a href="">Fra</a>
+        <a href="">Ger</a>
         </div>
-    </div>
+        </div>*@
+
+    <!-- Views -->
+
     <div class="pagepiling">
 
         <LandingView />
         <AboutView />
-        <ProjectsView />
+        <OurTeamMembersView />
+        <ArticlesView ArticleList=@ArticleList />
+
         <ServicesView />
-        <TimelineView />
         <PartnersView />
         <TestimonialsView />
         <ContactUsView />
@@ -137,11 +144,33 @@
 </div>
 
 @code {
+    public List<Article> ArticleList { get; set; } = new List<Article> { };
+
     private bool MenuState = false;
 
     private void ToggleMenu()
     {
         MenuState = !MenuState;
+    }
+
+    protected override void OnInitialized()
+    {
+        ArticleList = new List<Article>
+        {
+            new Article
+            {
+              Title = "Improving financial company customer onboarding capabilities with low code platform:",
+              Bullets = new List<string>{ "Enable Multiple Integrations", "Transform and Streamline the UX", "Descrease Onboarding by a Factor of 10", "Exponentially Increase Onboarding Capacity"},
+              PhotoUrl = "template/images/assets/fintechsolutions.png"
+            },
+            new Article{
+              Title = "Improving financial company customer onboarding capabilities with low code platform:",
+              Bullets = new List<string>{ "Enable Multiple Integrations", "Transform and Streamline the UX", "Descrease Onboarding by a Factor of 10", "Exponentially Increase Onboarding Capacity"},
+              PhotoUrl = "template/images/assets/fintechsolutions.png"
+            }
+        };
+
+        base.OnInitialized();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

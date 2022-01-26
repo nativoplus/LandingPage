@@ -1,0 +1,122 @@
+﻿@using LandingPage.Models
+<div data-anchor="page4" class="pp-scrollable section section-4">
+    <div class="scroll-wrap">
+
+        <div class="scrollable-content">
+            <div class="vertical-centred">
+                <div class="boxed boxed-inner">
+                    <div class="vertical-title hidden-xs hidden-sm"><span>Real Use Cases</span></div>
+                    <div class="boxed">
+                        @if (ArticleList.Count > 0)
+                        {
+
+                            @foreach (var article in ArticleList)
+                            {
+                                <div class="container">
+                                    <div class="intro">
+                                        <div class="row">
+                                            @if (true)
+                                            {
+                                                <div class="col-md-5 col-lg-5" style="padding-bottom: 10rem;">
+                                                    <h2 class="title-uppercase">@article.Title</h2>
+
+                                                    <ul class="service-list">
+                                                        @for (var i = 0; i < @article.Bullets.Count; i++)
+                                                        {
+                                                            <li><a href="">0@(i + 1). @article.Bullets[i]</a></li>
+                                                        }
+                                                    </ul>
+                                                    <h6><span class="text-primary"><a href="/article-details">Read More</a></span></h6>
+                                               
+
+                                                </div>
+                                                <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
+                                                    <div class="dots-image-2">
+                                                        <img alt="" class="img-responsive" src="@article.PhotoUrl">
+                                                        <div class="dots"></div>
+
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="col-md-5 col-lg-5 col-md-6 ">
+                                                    <div class="dots-image-2">
+                                                        <img alt="" class="img-responsive" src="@article.PhotoUrl">
+                                                        <div class="dots"></div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5 col-md-offset-1 col-lg-offset-2">
+                                                    <h2 class="title-uppercase">@article.Title</h2>
+
+                                                    <ul class="service-list">
+                                                        @for (var i = 0; i < @article.Bullets.Count; i++)
+                                                        {
+                                                            <li><a href="">0@(i + 1). @article.Bullets[i]</a></li>
+                                                        }
+                                                    </ul>
+                                                    <h6><span class="text-primary"><a href="">Read More</a></span></h6>
+                                                </div>
+
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                odd = !odd;
+                            }
+                        }
+                        else
+                        {
+                            <div class="container">
+                                <div class="intro">
+                                    <div class="row">
+                                        <div class="col-md-5 col-lg-5">
+                                            <h2 class="title-uppercase">@Title</h2>
+
+                                            <ul class="service-list">
+                                                @for (var i = 0; i < @Bullets.Count; i++)
+                                                {
+                                                    <li><a href="">0@(i + 1). @Bullets[i]</a></li>
+                                                }
+                                            </ul>
+                                            <h6><span class="text-primary"><a href="">Read More</a></span></h6>
+                                        </div>
+                                        <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
+                                            <div class="dots-image-2">
+                                                <img alt="" class="img-responsive" src="@PhotoUrl">
+                                                <div class="dots"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@code {
+    private bool odd { get; set; } = true;
+    [ParameterAttribute]
+    public string Title { get; set; } = "";
+    [ParameterAttribute]
+    public List<string> Bullets { get; set; } = new List<string> { };
+    [ParameterAttribute]
+    public string PhotoUrl { get; set; } = "template/images/bg/bg1.jpg";
+    [ParameterAttribute]
+    public List<Article> ArticleList { get; set; } = new List<Article> { };
+
+}
