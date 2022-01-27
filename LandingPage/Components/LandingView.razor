@@ -45,8 +45,7 @@
         if (firstRender)
         {
             List<string> array = new List<string> { "We are Developers", "We are  Engineers", "We are  Project Managers", "We are People", "We are Nativo" };
-            await jsRuntime.InvokeAsync<IJSObjectReference>("typeWriter", array);
-
+            await jsRuntime.InvokeAsync<string>("typeWriter", array);
         }
     }
     protected override void OnInitialized()

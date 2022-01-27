@@ -23,61 +23,20 @@
         <Nativo_Menu_Item Text="Reviews" Url="#page6" />
         <Nativo_Menu_Item Text="Contact" Url="#page7" />
     </Nativo_Menu>
-    @*
-        <div class="menu">
-        <span class="close-menu icon-cross2 right-boxed"></span>
-        <div class="menu-lang right-boxed">
-        <a href="" class="active">Eng</a>
-        <a href="">Fra</a>
-        <a href="">Ger</a>
-        </div>
-        <ul class="menu-list right-boxed">
-        <li data-menuanchor="page1">
-        <a href="#page1">Home</a>
-        </li>
-        <li data-menuanchor="page2">
-        <a href="#page2">Specialization</a>
-        </li>
-        <li data-menuanchor="page3">
-        <a href="#page3">Projects</a>
-        </li>
-        <li data-menuanchor="page4">
-        <a href="#page4">Services</a>
-        </li>
-        <li data-menuanchor="page6">
-        <a href="#page6">Reviews</a>
-        </li>
-        <li data-menuanchor="page7">
-        <a href="#page7">Contact</a>
-        </li>
-        </ul>
-        <div class="menu-footer right-boxed">
-        <div class="social-list">
-        <a href="" class="icon ion-social-twitter"></a>
-        <a href="" class="icon ion-social-facebook"></a>
-        <a href="" class="icon ion-social-googleplus"></a>
-        <a href="" class="icon ion-social-linkedin"></a>
-        <a href="" class="icon ion-social-dribbble-outline"></a>
-        </div>
-        <div class="copy">© Jonny 2017. All Rights Reseverd<br> Design by LoganCee</div>
-        </div>
-        </div>
-    *@
-
-  
-    <div class="copy-bottom white boxed">© NativoPlus Studio.</div>
-    <!-- Languages  -->
-    @*<div class="lang-bottom white boxed">
-        <div class="menu-lang">
-        <a href="" class="active">Eng</a>
-        <a href="">Fra</a>
-        <a href="">Ger</a>
-        </div>
-        </div>*@
+ 
 
     <!-- Views -->
 
-   <MainPage/>
+  <div class="pagepiling">
+        <LandingView />
+        <AboutView />
+        <OurTeamMembersView />
+        <ArticlesView ArticleList=@ArticleList />
+        <ServicesView />
+        <PartnersView />
+        <TestimonialsView />
+        <ContactUsView />
+    </div>
 
     <!-- Modals success -->
 
@@ -111,7 +70,7 @@
 </div>
 
 @code {
-
+    public List<Article> ArticleList { get; set; } = new List<Article> { };
     private bool MenuState = false;
 
     private void ToggleMenu()
@@ -119,4 +78,41 @@
         MenuState = !MenuState;
     }
 
+    protected override void OnInitialized()
+    {
+        ArticleList = new List<Article>
+        {
+            new Article
+            {
+              Title = "Improving financial company customer onboarding capabilities with low code platform:",
+              Bullets = new List<string>{ "Enable Multiple Integrations", "Transform and Streamline the UX", "Descrease Onboarding by a Factor of 10", "Exponentially Increase Onboarding Capacity"},
+              PhotoUrl = "template/images/assets/fintechsolutions.png"
+            },
+            new Article{
+              Title = "Improving financial company customer onboarding capabilities with low code platform:",
+              Bullets = new List<string>{ "Enable Multiple Integrations", "Transform and Streamline the UX", "Descrease Onboarding by a Factor of 10", "Exponentially Increase Onboarding Capacity"},
+              PhotoUrl = "template/images/assets/fintechsolutions.png"
+            }
+        };
+
+        base.OnInitialized();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/owl.carousel.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/smoothscroll.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.validate.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.pagepiling.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/bootstrap.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "https://vjs.zencdn.net/7.17.0/video.min.js");
+            await jsRuntime.InvokeVoidAsync("runInitScript");
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
 }
