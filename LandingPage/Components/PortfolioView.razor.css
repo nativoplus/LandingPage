@@ -1,0 +1,14 @@
+﻿#image {
+    background-size: cover;
+}
+
+#container {
+    background-color: rgba(0, 0, 0, .30);
+}
+
+    #container:hover {
+        color: none;
+    }
+
+#container-data {
+}

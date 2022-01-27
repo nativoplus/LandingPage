@@ -44,15 +44,70 @@
             @*<a href="" class="icon ion-social-dribbble-outline"></a>*@
         </div>
     </header>
-    <div class="copy-bottom white boxed">© NativoPlus Studio.</div>
 
 
     <!-- Views -->
 
-    <div>
-        <h2>Details</h2>
-    </div>
+    <div class="scroll-wrap">
+        <div class="scrollable-content">
+            <div class="vertical-centred">
+                <div class="boxed boxed-inner">
+                    <div class="vertical-title hidden-xs hidden-sm"><span>testimonials</span></div>
+                    <div class="boxed">
+                        <div class="container">
+                            <div class="intro">
+                                <div class="row">
 
+                                    <div>
+                                        <div class="col-md-5 col-lg-5">
+                                            <div class="dots-image-2">
+                                                <img alt="" class="img-responsive" src="template/images/1-470x490.jpg">
+                                                <div class="dots"></div>
+                                                @*   <div class="experience-info">
+                                                    <div class="number">4</div>
+                                                    <div class="text">Years<br>Experience<br>Working</div>
+                                                    </div>*@
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-lg-5 col-md-offset-1 heading-text">
+                                            <h2 class="title-uppercase text-white">creative & dedicated is things that Jonny studio brings for your house</h2>
+                                            <div class="text">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris erat, accumsan sed vestibulum et, feugiat id metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ornare lacus at lacinia iaculis. Integer commodo vehicula tortor, at varius risus consequat in.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-12 main-article-text">
+                                        <div>
+                                            <div>
+                                                <h3 class="title-uppercase text-white">creative & dedicated is things that Jonny studio brings for your house</h3>
+
+                                                <div class="text">
+                                                    <p>@LoremIpsumText</p>
+                                                    <p>@LoremIpsumText</p>
+                                                    <p>@LoremIpsumText</p>
+                                                    <p>@LoremIpsumText</p>
+
+                                                    <p> Thank you so much for all your design and expertise."</p>
+                                                </div>
+                                                <div class="review-author">
+                                                    <div class="author-name">David & Elisa</div>
+                                                    <i>Apartment view lake at Brooklyn</i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modals success -->
 
     <div id="success" class="modal modal-message fade" role="dialog">
@@ -86,7 +141,7 @@
 
 @code {
     private bool MenuState = false;
-
+    public string LoremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris erat, accumsan sed vestibulum et, feugiat id metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ornare lacus at lacinia iaculis. Integer commodo vehicula tortor, at varius risus consequat in. Donec maximus fringilla metus, eu fringilla elit gravida eget. Duis non ante eu elit volutpat vestibulum eu eget ex. Fusce vel nunc congue, tempor neque id, pharetra diam. Aenean id dui mi. Sed blandit ex nisi, non condimentum urna dignissim nec.";
     private void ToggleMenu()
     {
         MenuState = !MenuState;
