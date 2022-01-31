@@ -1,0 +1,26 @@
+﻿@using LandingPage.Domain.Entities
+
+<h3 class="title-uppercase text-white"><span class="text-primary">@Header</span></h3>
+<div class="row-project-box row">
+    @foreach (var person in Team)
+    {
+        <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
+            <div class="project-box">
+                <div class="project-box-inner" id="image" style="background-image:url(@person.ImgUrl);">
+                    <div class="project-box-inner" id="container">
+
+                        <h5>@person.Name</h5>
+                        <div class="project-category">@person.Title</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? Header { get; set; }
+    [Parameter]
+    public List<Team> Team { get; set; } = new List<Team> { };
+}

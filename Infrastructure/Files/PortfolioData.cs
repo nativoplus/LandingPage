@@ -26,72 +26,61 @@ namespace LandingPage.Infrastructure.Files
                 of users, based on business requirements, user requests, and customer feedback. Additionally, they were looking 
                 to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
                 ImgUrl = "template/images/assets/gentlebirth.png",
-                Services = new List<Services>
+                Services = new List<string>
                 {
-                    new Services
-                    {
-                        Service = "Web development",
-                    },
-                    new Services
-                    {
-                        Service = "Web Design",
-                    },
-                    new Services
-                    {
-                        Service = "Social Media Managment",
-                    },
-                    new Services
-                    {
-                        Service = "Mobile App Redesign",
-                    },
-                    new Services
-                    {
-                        Service = "API Development",
-                    },
-                    new Services
-                    {
-                        Service = "Database Design",
-                    },
-                    new Services
-                    {
-                        Service = "Server Management",
-                    },
-                    new Services
-                    {
-                        Service = "Deployment Automation",
-                    },
+                    "Web development",
+                    "Web Design",
+                    "Social Media Managment",
+                    "Mobile App Redesign",
+                    "API Development",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
                 },
-                Technologies = new List<Technologies>
+                Technologies = new List<string>
                 {
-                    new Technologies
-                    {
-                        Technology = "Flutter / Dart"
-                    },
-                    new Technologies
-                    {
-                        Technology = "HTML / CSS"
-                    },
-                    new Technologies
-                    {
-                        Technology = "Angular"
-                    },
-                    new Technologies
-                    {
-                        Technology = ".Net Core"
-                    },
-                    new Technologies
-                    {
-                        Technology = "Microsoft Azure"
-                    },
-                    new Technologies
-                    {
-                        Technology = "Firebase"
-                    },
-                    new Technologies
-                    {
-                        Technology = "SQL Server"
-                    },
+                    "Flutter / Dart",
+                    "HTML / CSS",
+                    "Angular",
+                    ".Net Core",
+                    "Microsoft Azure",
+                    "Firebase",
+                    "SQL Server"
 
+                },
+                Practices = new List<string>
+                {
+                    "User Research",
+                    "UX Design",
+                    "Agile Development",
+                    "Restful API",
+                    "Data Management",
+                    "Technical Discovery",
+                    "Mobile Design",
+                    "Product Management",
+                    "Cloud Hosting",
+                    "Open Source Development"
+                },
+                Team = new List<Team>
+                {
+                    new Team
+                    {
+                        Name = "Hector Orellana Reyes",
+                        Title = "Software Engineer",
+                        Description = "Lorem Ipsum",
+                        ImgUrl = "template/images/team/hector.jpg",
+                        LinkedIn = "",
+                        GithubUrl = "",
+                    },
+                    new Team
+                    {
+                        Name = "Arnaldo Rodriguez",
+                        Title = "Software Engineer",
+                        Description = "Lorem Ipsum",
+                        ImgUrl = "template/images/team/arnaldo.jpg",
+                        LinkedIn = "",
+                        GithubUrl = "",
+                    },
                 }
             }
         };
