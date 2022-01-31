@@ -1,4 +1,5 @@
-﻿@using LandingPage.Models
+﻿@using LandingPage.Components
+@using LandingPage.Domain.Entities
 @using System.Security.Cryptography;
 
 <div data-anchor="page3" class="pp-scrollable text-white section section-3">
@@ -21,27 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h2 class="title-uppercase text-white">Meet Our Team</h2>
-                                        <div class="row-project-box row">
-
-                                            @foreach (var teamMember in ourTeamMembers)
-                                            {
-                                                <div class="col-project-box col-sm-6 col-md-4 col-lg-4">
-                                                    <div class="project-box">
-                                                        <div class="project-box-inner" id="image" style="background-image:url(@teamMember.PhotoUrl);">
-                                                            <div class="project-box-inner" id="container">
-
-                                                                <h5>@teamMember.Name</h5>
-                                                                <div class="project-category">@teamMember.Title</div>
-                                                                <div class="project-category">@teamMember.Description</div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            }
-
-                                        </div>
-
+                                        <TeamMembersList Team="ourTeamMembers"/>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +40,7 @@
         Name = "Hector Orellana Reyes",
         Title = "Software Engineer",
         Description = "Lorem Ipsum",
-        PhotoUrl = "template/images/team/hector.jpg",
+        ImgUrl = "template/images/team/hector.jpg",
         LinkedIn = "",
         GithubUrl = "",
     },
@@ -68,7 +49,7 @@
         Name = "Jose Velez",
         Title = "Founder",
         Description = "Lorem Ipsum",
-        PhotoUrl = "template/images/team/jose.jpg",
+        ImgUrl = "template/images/team/jose.jpg",
         LinkedIn = "",
         GithubUrl = "",
     },
@@ -77,7 +58,7 @@
         Name = "Angel Ramos",
         Title = "Software Engineer",
         Description = "Lorem Ipsum",
-        PhotoUrl = "template/images/team/ramos.jpg",
+        ImgUrl = "template/images/team/ramos.jpg",
         LinkedIn = "",
         GithubUrl = "",
     },
@@ -86,7 +67,7 @@
         Name = "Arnaldo Rodriguez",
         Title = "Software Engineer",
         Description = "Lorem Ipsum",
-        PhotoUrl = "template/images/team/arnaldo.jpg",
+        ImgUrl = "template/images/team/arnaldo.jpg",
         LinkedIn = "",
         GithubUrl = "",
     },
@@ -95,7 +76,7 @@
         Name = "Angel Martinez",
         Title = "Software Engineer",
         Description = "Lorem Ipsum",
-        PhotoUrl = "template/images/team/martinez.jpg",
+        ImgUrl = "template/images/team/martinez.jpg",
         LinkedIn = "",
         GithubUrl = "",
     }};

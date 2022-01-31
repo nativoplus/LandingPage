@@ -7,7 +7,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\SectionList.razor.css" />
+    <None Remove="Components\TeamMembersList.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Components\SectionList.razor.css" />
+    <Content Include="Components\TeamMembersList.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

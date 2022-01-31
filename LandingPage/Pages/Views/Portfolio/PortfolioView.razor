@@ -1,0 +1,101 @@
+﻿@using LandingPage.Domain.Entities
+@using System.Security.Cryptography;
+@using LandingPage.Infrastructure.Files
+@using Microsoft.AspNetCore.Html
+@implements IDisposable
+@inject NavigationManager NavigationManager
+
+<div data-anchor="page2" class="pp-scrollable section section-2">
+    <div class="scroll-wrap">
+        <div class="scrollable-content">
+            <div class="vertical-centred">
+                <div class="boxed boxed-inner">
+                    <div class="vertical-title text-dark hidden-xs hidden-sm"><span>Our Masterpieces</span></div>
+                    <div class="boxed">
+                        <div class="container">
+                            <div class="intro">
+                                <div class="row">
+                                    <div class="col-12 mb-5r">
+                                        <p class="subtitle-top text-dark">Abouts Us</p>
+                                        <h2 class="title-uppercase">Welcome to <br> <span class="text-primary">Nativoplus Portfolio</span></h2>
+                                        <p class="subtitle-top text-dark">We grow ideas into businesses “and have fun while doing it”. Our mission is to help you build the capacity, infrastructure, and engagement you will need to create person-centered services.</p>
+                                    </div>
+
+                                    @foreach (var p in projects)
+                                    {
+
+                                        @*First Row*@
+
+                                        <div class="row mb-10r">
+                                            <div class="col-md-5 col-lg-5">
+                                                <h2 class="title-uppercase"><span class="text-primary">@p.Name</span><br></h2>
+                                                @RenderMarkupStringSection(p.Headline)
+
+                                                <NavLink class="nav-link" @onclick=@( () => NavigateToDetails(@p.Name))>
+                                                    <h6><span class="text-primary">Read More</span></h6>
+                                                </NavLink>
+                                            </div>
+
+                                            <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
+                                                <div class="dots-image-2">
+                                                    <img alt="" class="img-responsive" src="@p.ImgUrl">
+                                                    <div class="dots"></div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    public List<Portfolio> projects;
+
+    protected override void OnInitialized()
+    {
+        var portfolio = new PortfolioData().portfolio;
+        projects = portfolio;
+        NavigationManager.LocationChanged += LocationChanged;
+        base.OnInitialized();
+    }
+
+    private MarkupString RenderMarkupStringSection(string stringLiteral)
+    {
+        return new MarkupString(stringLiteral);
+    }
+
+    private void NavigateToDetails(string projectName)
+    {
+        NavigationManager.NavigateTo("/portfolio-details/" + projectName, forceLoad: true);
+    }
+
+    public void Shuffle()
+    {
+
+        var rnd = new Random();
+        var randomized = projects.OrderBy(item => rnd.Next());
+
+        projects = randomized.ToList();
+    }
+
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+        NavigationManager.LocationChanged -= LocationChanged;
+    }
+}

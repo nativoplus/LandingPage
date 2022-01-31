@@ -1,4 +1,4 @@
-﻿@using LandingPage.Models
+﻿@using LandingPage.Domain.Entities
 <div data-anchor="page4" class="pp-scrollable section section-4">
     <div class="scroll-wrap">
 
@@ -26,19 +26,23 @@
                                                             <li><a href="">0@(i + 1). @article.Bullets[i]</a></li>
                                                         }
                                                     </ul>
-                                                    <h6><span class="text-primary"><a href="/article-details">Read More</a></span></h6>
-                                               
+                                                    <NavLink class="nav-link" href="/article-details">
+                                                        <h6><span class="text-primary">Read More</span></h6>
+
+                                                    </NavLink>
+
 
                                                 </div>
                                                 <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
                                                     <div class="dots-image-2">
-                                                        <img alt="" class="img-responsive" src="@article.PhotoUrl">
+                                                        <img alt="" class="img-responsive" src="@article.ImgUrl">
                                                         <div class="dots"></div>
 
                                                     </div>
                                                 </div>
                                             }
-                                            else
+                                            <!-- Two Columns Option-->
+                                           @* else
                                             {
                                                 <div class="col-md-5 col-lg-5 col-md-6 ">
                                                     <div class="dots-image-2">
@@ -59,7 +63,7 @@
                                                     <h6><span class="text-primary"><a href="">Read More</a></span></h6>
                                                 </div>
 
-                                            }
+                                            }*@
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +88,7 @@
                                         </div>
                                         <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
                                             <div class="dots-image-2">
-                                                <img alt="" class="img-responsive" src="@PhotoUrl">
+                                                <img alt="" class="img-responsive" src="@ImgUrl">
                                                 <div class="dots"></div>
 
                                             </div>
@@ -115,7 +119,7 @@
     [ParameterAttribute]
     public List<string> Bullets { get; set; } = new List<string> { };
     [ParameterAttribute]
-    public string PhotoUrl { get; set; } = "template/images/bg/bg1.jpg";
+    public string ImgUrl { get; set; } = "template/images/bg/bg1.jpg";
     [ParameterAttribute]
     public List<Article> ArticleList { get; set; } = new List<Article> { };
 

@@ -1,6 +1,8 @@
-﻿@page "/article-details"
+﻿@page "/portfolio-details/{projectName}"
 @layout EmptyLayout
-
+@using LandingPage.Domain.Entities
+@using LandingPage.Infrastructure.Files
+@using LandingPage.Components
 @inject IJSRuntime jsRuntime
 
 <div class="page">
@@ -44,15 +46,63 @@
             @*<a href="" class="icon ion-social-dribbble-outline"></a>*@
         </div>
     </header>
-    <div class="copy-bottom white boxed">© NativoPlus Studio.</div>
-   
+
 
     <!-- Views -->
 
-    <div>
-        <h2>Details</h2>
-    </div>
+    <div class="scroll-wrap">
+        <div class="scrollable-content">
+            <div class="vertical-centred">
+                <div class="boxed boxed-inner">
+                    <div class="vertical-title hidden-xs hidden-sm"><span>Masterpieces</span></div>
+                    <div class="boxed">
+                        <div class="container">
+                            <div class="intro">
+                                <div class="row">
 
+                                    <div>
+                                        <div class="col-12">
+                                            <div class="dots-image-2">
+                                                <img alt="" class="img-responsive" src="@project.ImgUrl">
+                                                <div class="dots"></div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="main-article-text">
+                                        <div class="heading-text">
+                                            <h2 class="title-uppercase text-white">@project.Name</h2>
+                                            <div class="text">
+                                                <p>@project.Headline</p>
+                                            </div>
+                                        </div>
+                                        <div class="body-section">
+                                            <div>
+
+                                                @project.Body
+
+                                                <SectionList Header="Services" Items="project.Services" />
+                                                <SectionList Header="Technologies We Used" Items="project.Technologies" />
+                                                <SectionList Header="Practices We Used" Items="project.Practices" />
+                                                <div class="section">
+                                                    <TeamMembersList Header="Team Members" Team="project.Team"></TeamMembersList>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modals success -->
 
     <div id="success" class="modal modal-message fade" role="dialog">
@@ -86,22 +136,33 @@
 
 @code {
     private bool MenuState = false;
+    [Parameter]
+    public string projectName { get; set; } = "";
+    public Portfolio project = new Portfolio();
+    public List<Team> ourTeamMembers = new List<Team>
+        {
+
+        };
 
     private void ToggleMenu()
     {
         MenuState = !MenuState;
     }
 
+    protected override void OnInitialized()
+    {
+        project = new PortfolioData().portfolio.FirstOrDefault(x => x.Name == projectName) ?? new Portfolio();
+        base.OnInitialized();
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.min.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/owl.carousel.min.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/smoothscroll.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.validate.min.js");
-            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.pagepiling.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/bootstrap.min.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
             await jsRuntime.InvokeAsync<IJSObjectReference>("import", "https://vjs.zencdn.net/7.17.0/video.min.js");
@@ -109,5 +170,4 @@
         }
         await base.OnAfterRenderAsync(firstRender);
     }
-
 }
