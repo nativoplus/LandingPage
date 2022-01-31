@@ -1,0 +1,205 @@
+﻿@page "/portfolio-details/{projectName}"
+@layout EmptyLayout
+@using LandingPage.Domain.Entities
+@using LandingPage.Infrastructure.Files
+@inject IJSRuntime jsRuntime
+
+<div class="page">
+
+    <div class="loader"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>
+
+    <!-- Content CLick Capture-->
+    @*<div class="click-capture"></div>*@
+
+    <!-- Sidebar Menu-->
+
+    <Nativo_Menu @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right>
+        <Nativo_Menu_Item Text="Home" Url="#page1" />
+        <Nativo_Menu_Item Text="Specialization" Url="#page2" />
+        <Nativo_Menu_Item Text="Projects" Url="#page3" />
+        <Nativo_Menu_Item Text="Services" Url="#page4" />
+        <Nativo_Menu_Item Text="Reviews" Url="#page6" />
+        <Nativo_Menu_Item Text="Contact" Url="#page7" />
+    </Nativo_Menu>
+
+    <!-- Navbar -->
+
+    <header class="navbar navbar-2 navbar-white boxed">
+        <div class="navbar-bg"></div>
+        <button @onclick="ToggleMenu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <!-- Brand Logo -->
+        @*   <a class="brand" href="#">
+            <img class="brand-img" alt="" src="template/images/nativoplus.png">
+            </a>
+        *@
+        <div class="social-list hidden-xs">
+            <a href="https://twitter.com/nativoplus" class="icon ion-social-twitter"></a>
+            <a href="https://www.linkedin.com/company/nativoplus/" class="icon ion-social-linkedin"></a>
+            @*<a href="" class="icon ion-social-facebook"></a>*@
+            @*<a href="" class="icon ion-social-googleplus"></a>*@
+            @*<a href="" class="icon ion-social-dribbble-outline"></a>*@
+        </div>
+    </header>
+
+
+    <!-- Views -->
+
+    <div class="scroll-wrap">
+        <div class="scrollable-content">
+            <div class="vertical-centred">
+                <div class="boxed boxed-inner">
+                    <div class="vertical-title hidden-xs hidden-sm"><span>Masterpieces</span></div>
+                    <div class="boxed">
+                        <div class="container">
+                            <div class="intro">
+                                <div class="row">
+
+                                    <div>
+                                        <div class="col-12">
+                                            <div class="dots-image-2">
+                                                <img alt="" class="img-responsive" src="@project.ImgUrl">
+                                                <div class="dots"></div>
+                                                @*   <div class="experience-info">
+                                                    <div class="number">4</div>
+                                                    <div class="text">Years<br>Experience<br>Working</div>
+                                                    </div>*@
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="main-article-text">
+                                        <div class="heading-text">
+                                            <h2 class="title-uppercase text-white">@project.Name</h2>
+                                            <div class="text">
+                                                <p>@project.Headline</p>
+                                            </div>
+                                        </div>
+                                        <div class="body-section">
+                                            <div>
+
+                                                @project.Body
+
+
+                                                <div class="section services">
+                                                    <h3 class="title-uppercase text-white"><span class="text-primary">Services</span></h3>
+                                                    <div class="text">
+                                                        <div class="row service-list">
+                                                            @foreach (var s in project.Services)
+                                                            {
+                                                                <div class="col-md-6">
+                                                                    <p>- @s.Service</p>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section technologies">
+                                                    <h3 class="title-uppercase text-white"><span class="text-primary">Technologies Used</span></h3>
+                                                    <div class="text">
+                                                        <div class="row service-list">
+                                                            @foreach (var t in project.Technologies)
+                                                            {
+                                                                <div class="col-md-6">
+                                                                    <p>- @t.Technology</p>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section practices">
+                                                    <h3 class="title-uppercase text-white"><span class="text-primary">Practices Used</span></h3>
+                                                    <div class="text">
+                                                        <div class="row service-list">
+                                                            @foreach (var t in project.Technologies)
+                                                            {
+                                                                <div class="col-md-6">
+                                                                    <p>- @t.Technology</p>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals success -->
+
+    <div id="success" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+                    <h2 class="modal-title">Thank you</h2>
+                    <p class="modal-subtitle">Your message is successfully sent...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals error -->
+
+    <div id="error" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+                    <h2 class="modal-title">Sorry</h2>
+                    <p class="modal-subtitle"> Something went wrong </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@code {
+    private bool MenuState = false;
+    [Parameter]
+    public string projectName { get; set; } = "";
+    public Portfolio project = new Portfolio();
+    public string LoremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris erat, accumsan sed vestibulum et, feugiat id metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ornare lacus at lacinia iaculis. Integer commodo vehicula tortor, at varius risus consequat in. Donec maximus fringilla metus, eu fringilla elit gravida eget. Duis non ante eu elit volutpat vestibulum eu eget ex. Fusce vel nunc congue, tempor neque id, pharetra diam. Aenean id dui mi. Sed blandit ex nisi, non condimentum urna dignissim nec.";
+    private void ToggleMenu()
+    {
+        MenuState = !MenuState;
+    }
+
+    protected override void OnInitialized()
+    {
+        project = new PortfolioData().portfolio.FirstOrDefault(x => x.Name == projectName) ?? new Portfolio();
+        base.OnInitialized();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/owl.carousel.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/smoothscroll.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/jquery.validate.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/bootstrap.min.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "https://vjs.zencdn.net/7.17.0/video.min.js");
+            await jsRuntime.InvokeVoidAsync("runInitScript");
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}
