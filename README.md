@@ -1,6 +1,6 @@
 # LandingPage
 
-##Resources:
+###Resources:
 
 1. Architecture Model Based On:
 https://github.com/jasontaylordev/CleanArchitecture
