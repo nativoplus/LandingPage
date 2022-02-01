@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\CarouselGallery.razor.css" />
     <None Remove="Components\SectionList.razor.css" />
     <None Remove="Components\TeamMembersList.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Components\CarouselGallery.razor.css" />
     <Content Include="Components\SectionList.razor.css" />
     <Content Include="Components\TeamMembersList.razor.css" />
   </ItemGroup>
@@ -21,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
     <PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.2" />
   </ItemGroup>
 
