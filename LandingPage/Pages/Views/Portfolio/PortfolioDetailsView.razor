@@ -60,17 +60,11 @@
                             <div class="intro">
                                 <div class="row">
 
-                                    <div>
-                                        <div class="col-12">
-                                            <div class="dots-image-2">
-                                                <img alt="" class="img-responsive" src="@project.ImgUrl">
-                                                <div class="dots"></div>
-                                            </div>
-                                        </div>
 
-
-
+                                    <div class="col-12">
+                                        <CarouselGallery Header="" ImgsUrls="project.ImgUrls" />
                                     </div>
+
 
                                     <div class="main-article-text">
                                         <div class="heading-text">
@@ -90,7 +84,9 @@
                                                 <div class="section">
                                                     <TeamMembersList Header="Team Members" Team="project.Team"></TeamMembersList>
                                                 </div>
-
+                                              @*<div id="gallery" class="section">
+                                                    <CarouselGallery Header="Gallery" ImgsUrls="project.ImgUrls" />
+                                                </div>*@
                                             </div>
 
                                         </div>

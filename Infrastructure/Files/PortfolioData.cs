@@ -25,7 +25,11 @@ namespace LandingPage.Infrastructure.Files
                 and refactored the implementation of multiple React components within a responsive web app, accessed by thousands 
                 of users, based on business requirements, user requests, and customer feedback. Additionally, they were looking 
                 to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
-                ImgUrl = "template/images/assets/gentlebirth.png",
+                ImgUrls = new List<string>{
+                    "template/images/assets/gb/gentlebirth.png",
+                    "template/images/assets/gb/backoffice.png",
+                    //"template/images/assets/gb/templates.jpg",
+                },
                 Services = new List<string>
                 {
                     "Web development",
