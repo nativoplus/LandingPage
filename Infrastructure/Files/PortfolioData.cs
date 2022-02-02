@@ -1,4 +1,4 @@
-﻿using LandingPage.Domain.Entities;
+using LandingPage.Domain.Entities;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
