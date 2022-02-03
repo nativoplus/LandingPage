@@ -216,7 +216,7 @@ namespace LandingPage.Infrastructure.Files
                 {
                     "Web development",
                     "Web Design",
-                    "Social Media Managment",
+                    "Production Support",
                     "Mobile App Redesign",
                     "API Development",
                     "Database Design",
@@ -536,7 +536,7 @@ namespace LandingPage.Infrastructure.Files
             new Portfolio
             {
                 ProjectId = 7,
-                Name = "Dri-Duck Atlantis Eangee Thinc Actionwear",
+                Name = "Dri-Duck, Atlantis, Eangee, Thinc Actionwear",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"This companies and distributors of outdoor clothing 
                 and home decor turned to us for help. We have design from 
@@ -588,8 +588,8 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 7,
-                Name = "Dri-Duck Atlantis Eangee Thinc Actionwear",
+                ProjectId = 8,
+                Name = "Farm to Market Bread Co.",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Farm to Market Bread Co. is a company that answers 
                 the need for fresh bread baked from quality ingredients. Farm 
