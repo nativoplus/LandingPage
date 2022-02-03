@@ -602,7 +602,7 @@ namespace LandingPage.Infrastructure.Files
                 and sales promotion, marketing campaigns, display design, logo, 
                 and identity development.</p>"),
                 ImgUrls = new List<string>{
-                    "template/images/assets/bg/bg1.jpg",
+                    "template/images/bg/bg1.jpg",
                 },
                 Services = new List<string>
                 {
