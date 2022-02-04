@@ -1,25 +1,26 @@
 ﻿<h5 class="title-uppercase text-white"><span class="text-primary">@Header</span></h5>
 <div class="col-12">
     <div class="dots-image-2">
-        <div id="sync1" class="owl-carousel owl-theme">
-            @foreach (var image in ImgsUrls)
-            {
-                <div class="item">
-                    <img alt="" class="img-responsive" src="@image">
-                </div>
-            }
-        </div>
-        <div class="dots"></div>
-    </div>
-</div>
-<div>
-    <div id="sync2" class="owl-carousel owl-theme">
-        @foreach (var image in ImgsUrls)
-        {
-            <div class="item">
-                <img alt="" class="img-responsive" src="@image">
+        <div>
+            <Carousel @ref="_carousel">
+                @foreach (var image in ImgsUrls)
+                {
+
+                    <CarouselSlick>
+                        <img alt="" class="img-responsive" src="@image">
+
+                    </CarouselSlick>
+                }
+            </Carousel>
+            <div class="button-container">
+                <Button OnClick="@( _=>_carousel.Previous())" Size="small">Prev</Button>
+                
+                <Button OnClick="@( _=>_carousel.Next())" Size="small">Next</Button>
+
             </div>
-        }
+        </div>
+
+        <div class="dots"></div>
     </div>
 </div>
 
@@ -28,4 +29,5 @@
     public string Header { get; set; } = string.Empty;
     [Parameter]
     public List<string> ImgsUrls { get; set; } = new List<string>();
+    Carousel _carousel;
 }

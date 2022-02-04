@@ -1,7 +1,16 @@
-﻿.section {
+﻿.icon-quote{
+	padding: 0;
+	margin-bottom: 2rem;
+	font-size: 45px;
+}
+
+.section {
 	 padding: 1rem 0px;
 }
 
+#review-section{
+	padding-top: 10rem;
+}
 #gallery{
 	padding: 4rem 0px !important;
 }
@@ -17,3 +26,4 @@
 .columns {
 	margin-top: 25rem !important;
 }
+

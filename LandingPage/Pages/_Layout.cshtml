@@ -12,6 +12,8 @@
     <link rel="apple-touch-icon" sizes="72x72" href="template/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="template/apple-touch-icon-114x114.png">
     <title>Blazor App</title>
+    @*Ant Design*@
+    <link href="_content/AntDesign/css/ant-design-blazor.css" rel="stylesheet" />
     <link href="template/css/style.css" rel="stylesheet" media="screen" />
     <link href="LandingPage.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
@@ -22,6 +24,10 @@
 
     <!-- Blazor -->
     <script src="_framework/blazor.server.js"></script>
+    @*Ant Design*@
+    <script src="_content/AntDesign/js/ant-design-blazor.js"></script>
+    @*MudBlazor*@
+    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
     <script>
         window.typeWriter = (textList) => {
 

@@ -86,6 +86,48 @@
                                                 <div id="gallery" class="section">
                                                     <CarouselGallery Header="Gallery" ImgsUrls="project.ImgUrls" />
                                                 </div>
+                                                <div id="review-section" class="row">
+
+                                                    <div class="col-md-12">
+                                                        <div class="review-carousel owl-carousel">
+                                                            <div class="review-carousel-item">
+                                                                <div class="col-md-4">
+                                                                        <img class="img-responsive" src="/template/images/assets/gb/review1.jpg" />
+                                                                </div>
+                                                                <div class="col-md-6 col-md-offset-1">
+                                                                        <span class="icon-quote ion-quote"></span>
+
+                                                
+                                                                        <h3 class="title-uppercase text-white">Great app. Easy to understand. Love the ability to manually add contractions although the enty method could use work.</h3>
+                                                                   
+                                                                    <div class="review-author">
+                                                                        <div class="author-name">Andrew Frimpong</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-carousel-item">
+                                                                <div class="text">
+                                                                    <p>“  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptates officia molestias fugit ipsum, blanditiis minima voluptatibus sit in laudantium doloribus, illum, reiciendis similique distinctio asperiores earum dolore eveniet eius."</p>
+                                                                </div>
+                                                                <div class="review-author">
+                                                                    <div class="author-name">Amanda</div>
+                                                                    <i>Apartment view lake at Brooklyn</i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-carousel-item">
+                                                                <div class="text">
+                                                                    <p>“ If you are seeking an Interior designer that will understand exactly your needs, and someone who will utilise their creative and technical skills in parity with your taste, then Suzanne at The Jonny Studio is perfect.</p>
+                                                                    <p> Thank you so much for all your design and expertise."</p>
+                                                                </div>
+                                                                <div class="review-author">
+                                                                    <div class="author-name">John</div>
+                                                                    <i>Apartment view lake at Brooklyn</i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
 
                                         </div>
@@ -134,11 +176,7 @@
     [Parameter]
     public string projectName { get; set; } = "";
     public Portfolio project = new Portfolio();
-    public List<Team> ourTeamMembers = new List<Team>
-        {
-
-        };
-
+    public List<Team> ourTeamMembers = new List<Team> { };
     private void ToggleMenu()
     {
         MenuState = !MenuState;
