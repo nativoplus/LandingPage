@@ -3,7 +3,9 @@
 @using LandingPage
 @using LandingPage.Pages.Views
 @using LandingPage.Pages.Views.Portfolio
+@using LandingPage.Pages.Views.Article
 @using LandingPage.Domain.Entities
+@using LandingPage.Pages.Views.UseCase
 @*Page*@
 @layout EmptyLayout
 @page "/"
@@ -19,7 +21,7 @@
 
     <Nativo_Menu @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right>
         <Nativo_Menu_Item Text="Home" Url="#page1" />
-        <Nativo_Menu_Item Text="Specialization" Url="#page2" />
+        <Nativo_Menu_Item Text="About Us" Url="page2" />
         <Nativo_Menu_Item Text="Projects" Url="#page3" />
         <Nativo_Menu_Item Text="Services" Url="#page4" />
         <Nativo_Menu_Item Text="Reviews" Url="#page6" />
@@ -48,7 +50,6 @@
         <LandingView />
         <AboutView />
         <OurTeamMembersView />
-        <ArticlesView ArticleList=@ArticleList />
         <PortfolioView />
 
         @*   <ServicesView />
@@ -104,9 +105,9 @@
         {
             new Article
             {
-              Title = "Improving financial company customer onboarding capabilities with low code platform:",
-              Bullets = new List<string>{ "Enable Multiple Integrations", "Transform and Streamline the UX", "Descrease Onboarding by a Factor of 10", "Exponentially Increase Onboarding Capacity"},
-              ImgUrl = "template/images/assets/fintechsolutions.png"
+              Headline = "Improving financial company customer onboarding capabilities with low code platform:",
+              //Bullets = new List<string>{ "Enable Multiple Integrations", "Transform and Streamline the UX", "Descrease Onboarding by a Factor of 10", "Exponentially Increase Onboarding Capacity"},
+              ImgUrls = new List<string>{"template/images/assets/fintechsolutions.png"}
             }
         };
 

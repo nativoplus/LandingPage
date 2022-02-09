@@ -85,6 +85,17 @@ namespace LandingPage.Infrastructure.Files
                         LinkedIn = "",
                         GithubUrl = "",
                     },
+                },
+                 Reviews = new List<Reviews>
+                {
+                    new Reviews
+                    {
+                        Review = @"Great App. Easy to Understand. Love the ability to manually add
+                        contractions although the entry method could use work.",
+                        Reviewer = "Andrew Frimpong",
+                        ReviewImgUrl = "/template/images/assets/gb/review1.png"
+                    },
+
                 }
             },
             new Portfolio
@@ -150,10 +161,291 @@ namespace LandingPage.Infrastructure.Files
                     },
                 }
             },
+             new Portfolio
+            {
+                ProjectId = 1,
+                Name = "Maxana - TBC",
+                // Uses String Literal to make the string more readable on development. 
+                Headline=@"Maxana is a company partner with a proven track record in the
+                creation of new Fin tech Digital Transformation solutions and
+                services to the market that create significant customer value
+                enabled by technological expertise and an ecosystem
+                of partners.",
+                //Managing Body as a Markup string to be able to generate body more dynamically. 
+                Body = new MarkupString(@""),
+                ImgUrls = new List<string>{
+                    "template/images/assets/fm/fertilemind.png",
+                    //"template/images/assets/gb/templates.jpg",
+                },
+                Services = new List<string>
+                {
+                    "Web development",
+                    "Web Design",
+                    "Mobile App Redesign",
+                    "Production Support",
+                    "API Development",
+                    "Troubleshooting",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
+                },
+                Technologies = new List<string>
+                {
+                },
+                Practices = new List<string>
+                {
+
+                },
+                Team = new List<Team>
+                {
+                    new Team
+                    {
+                        Name = "Arnaldo Rodriguez",
+                        Title = "Software Engineer",
+                        Description = "Lorem Ipsum",
+                        ImgUrl = "template/images/team/arnaldo.jpg",
+                        LinkedIn = "",
+                        GithubUrl = "",
+                    },
+                }
+            },
+            new Portfolio
+            {
+                ProjectId = 1,
+                Name = "Stripe - TBC",
+                // Uses String Literal to make the string more readable on development. 
+                Headline=@"Stripe is a technology company that builds economic infrastructure for 
+                the internet. Their software helps businesses of all sizes to accept payments and 
+                manage their businesses online. Their software platform is used by millions of 
+                companies in over 120 countries.",
+                //Managing Body as a Markup string to be able to generate body more dynamically. 
+                Body = new MarkupString(@"
+                <p>
+                    Stripe selected us to build their first-ever Stripe University cohort to obtain 
+                    Stripe certification. We build a marketplace for Stripe where customers can easily 
+                    access highly vetted, certified Stripe engineers and other technical resources that 
+                    can help expand their payment capabilities. The platform uses friendly design to 
+                    connect enterprises with qualified, certified Stripe-certified engineers and other 
+                    technical resources that can readily and expertly implement Stripe integrations, 
+                    reducing time to market and revenue.
+                </p>
+                <div class='dots-image-2'>
+                    <img class='img-responsive' src='template/images/assets/st/analysis.jpg'>
+                    <div class='dots'></div>
+                </div>
+                <div style='padding-top: 2rem'>
+                    <h5>
+                        Methodology:
+                    </h5>
+                    <p>
+                       We used a subset of TOGAF (The Open Group
+                       Architecture Framework) to define requirements, functions, services,
+                       capabilities, and technical components.
+                    </p>
+                    <h5>
+                        Design:
+                    </h5>
+                    <p>
+                       The capabilities were mapped to microservices using domaindriven
+                       design patterns like “ports and adapters,” which clarified the
+                       separation of concerns and enforced architecture. The infrastructure
+                       provisioning was 100% automated.
+                    </p>
+                    <h5>
+                        Management:
+                    </h5>
+                    <p>
+                       Agile/scrum was used to manage the
+                       development process.
+                    </p>
+                    <h5>
+                        Results & Outcomes:
+                    </h5>
+                    <p>
+                       A structured approach that facilitated easy
+                       onboarding and the processing of new data sets in short time. The
+                       new data sets powered financial instruments to trade revenue.
+                    </p>
+                    
+                </div>
+              "){
+                },
+                ImgUrls = new List<string>{
+                    "template/images/assets/st/architecture.png",
+                    //"template/images/assets/gb/templates.jpg",
+                },
+                Services = new List<string>
+                {
+                    "Web development",
+                    "Web Design",
+                    "Mobile App Redesign",
+                    "Production Support",
+                    "API Development",
+                    "Troubleshooting",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
+                },
+                Technologies = new List<string>
+                {
+                },
+                Practices = new List<string>
+                {
+
+                },
+                Team = new List<Team>
+                {
+                    new Team
+                    {
+                    },
+                }
+            },
+            new Portfolio
+            {
+                ProjectId = 1,
+                Name = "Advantage For Analysts",
+                // Uses String Literal to make the string more readable on development. 
+                Headline=@"Advantage for Analysts Inc provides modeling and analysis software
+                and professional services for originating, trading and managing
+                complex financial assets. Advantage’s solutions help clients
+                retain a long-term competitive advantage through rapid insights,
+                confident decision making, and improved risk management.",
+                //Managing Body as a Markup string to be able to generate body more dynamically. 
+                Body = new MarkupString(@"
+                <p>
+                    We create for Advantage for Analysts Inc a member-centered
+                    web application that is not only conducive to their needs and
+                    requirements, but also allows clients to communicate, review,
+                    and interact as a teamwork. Our Restful APIs are responsible
+                    for processing thousands of loans daily in a consortium-like
+                    environment from multiple partners, allowing members to access
+                    their loan information from anywhere in the world. Fintechfocused
+                    APIs allow members to get loans from various partners
+                    on the same platform, process loans instantly, create transfers
+                    between different member accounts, lend against external
+                    entities, and more.
+                </p>
+              "){
+                },
+                ImgUrls = new List<string>{
+                    "template/images/bg/bg1.jpg",
+                    //"template/images/assets/gb/templates.jpg",
+                },
+                Services = new List<string>
+                {
+                    "Web development",
+                    "Web Design",
+                    "Mobile App Redesign",
+                    "Production Support",
+                    "API Development",
+                    "Troubleshooting",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
+                },
+                Technologies = new List<string>
+                {
+                },
+                Practices = new List<string>
+                {
+                },
+                Team = new List<Team>
+                {
+                }
+            },
+            new Portfolio
+            {
+                ProjectId = 1,
+                Name = "Whistic",
+                // Uses String Literal to make the string more readable on development. 
+                Headline=@"Whistic simplifies how businesses assess, publish,
+                and share security documentation with customers
+                and vendors. The Whistic Vendor Security Network
+                accelerates the vendor assessment process by
+                enabling buyers to access and evaluate a vendor’s
+                Whistic Profile. Additionally, Whistic facilitates zero-
+                touch assessments via the Whistic Trust Catalog,
+                which contains security information for more than
+                35,000 businesses.",
+                //Managing Body as a Markup string to be able to generate body more dynamically. 
+                Body = new MarkupString(@""){
+                },
+                ImgUrls = new List<string>{
+                    "template/images/bg/bg1.jpg",
+                    //"template/images/assets/gb/templates.jpg",
+                },
+                Services = new List<string>
+                {
+                    "Web development",
+                    "Web Design",
+                    "Mobile App Redesign",
+                    "Production Support",
+                    "API Development",
+                    "Troubleshooting",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
+                },
+                Technologies = new List<string>
+                {
+                },
+                Practices = new List<string>
+                {
+                },
+                Team = new List<Team>
+                {
+                }
+            },
+            new Portfolio
+            {
+                ProjectId = 1,
+                Name = "Westcor",
+                // Uses String Literal to make the string more readable on development. 
+                Headline=@"Westcor, the largest privately held underwriter in the United States, is focused on 
+                creating and promoting a culture where innovation is abundant at every level while at the same 
+                time adhering to the strictest of compliance regulations and providing essential risk management 
+                training. These attributes have secured Westcor as an industry leader in providing value-added 
+                solutions to agents, lenders, and customers.",
+                //Managing Body as a Markup string to be able to generate body more dynamically. 
+                Body = new MarkupString(@"
+                <p>
+                    Westcor needed an app focused on UX design and a platform that could showcase its products. 
+                    We developed an app using the React framework to provide a smooth workflow for users to 
+                    interact with Westcor’s products. This app has helped secure Westcor as an industry leader 
+                    in providing value-added solutions.
+                </p>
+              "){
+                },
+                ImgUrls = new List<string>{
+                    "template/images/bg/bg1.jpg",
+                    //"template/images/assets/gb/templates.jpg",
+                },
+                Services = new List<string>
+                {
+                    "Web development",
+                    "Web Design",
+                    "Mobile App Redesign",
+                    "Production Support",
+                    "API Development",
+                    "Troubleshooting",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
+                },
+                Technologies = new List<string>
+                {
+                },
+                Practices = new List<string>
+                {
+                },
+                Team = new List<Team>
+                {
+                }
+            },
             new Portfolio
             {
                 ProjectId = 3,
-                Name = "Techcu",
+                Name = "Techcu - TBC",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
                 Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
@@ -277,7 +569,7 @@ namespace LandingPage.Infrastructure.Files
             new Portfolio
             {
                 ProjectId = 4,
-                Name = "Happy Volts",
+                Name = "Happy Volts - TBC",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"HappyVolts is a clean tech company that makes all-in-one
                 inverters to help people use natural resources wisely.
@@ -403,7 +695,7 @@ namespace LandingPage.Infrastructure.Files
             new Portfolio
             {
                 ProjectId = 5,
-                Name = "Sportman Cap & Bag",
+                Name = "Sportman Cap & Bag - TBC",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Sportsman Cap & Bag is a worldwide distributor of promotional
                 merchandise. Has more than 85 years of experience in the cap
@@ -469,7 +761,7 @@ namespace LandingPage.Infrastructure.Files
             new Portfolio
             {
                 ProjectId = 6,
-                Name = "Kati Sportcap & Bag",
+                Name = "Kati Sportcap & Bag - TBC",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Kati Sportcap & Bag is an established distributor of promotional
                 products, caps, and bags, operated in Houston, Texas. For
@@ -535,61 +827,8 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 7,
-                Name = "Dri-Duck, Atlantis, Eangee, Thinc Actionwear",
-                // Uses String Literal to make the string more readable on development. 
-                Headline=@"This companies and distributors of outdoor clothing 
-                and home decor turned to us for help. We have design from 
-                social media content, to website banners, mailing strategies, 
-                and animations to engage their audience.",
-                //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@""),
-                ImgUrls = new List<string>{
-                    "template/images/assets/at/at.png",
-                },
-                Services = new List<string>
-                {
-                    "E-Blasts",
-                    "Social Media Content",
-                    "Website Banners",
-                    "Catalogs",
-                    "Blogs",
-                },
-                Technologies = new List<string>
-                {
-                    "HTML / CSS",
-                    "Wordpress",
-                },
-                Practices = new List<string>
-                {
-                    "User Research",
-                    "UX Design",
-                    "Agile Development",
-                    "Restful API",
-                    "Data Management",
-                    "Technical Discovery",
-                    "Mobile Design",
-                    "Product Management",
-                    "Cloud Hosting",
-                    "Open Source Development"
-                },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
-            },
-            new Portfolio
-            {
                 ProjectId = 8,
-                Name = "Farm to Market Bread Co.",
+                Name = "Farm to Market Bread Co. - TBC",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Farm to Market Bread Co. is a company that answers 
                 the need for fresh bread baked from quality ingredients. Farm 

@@ -9,7 +9,7 @@
 }
 
 #review-section{
-	padding-top: 10rem;
+	padding-top: 15rem;
 }
 #gallery{
 	padding: 4rem 0px !important;
@@ -27,3 +27,10 @@
 	margin-top: 25rem !important;
 }
 
+.mb-10r {
+	margin-bottom: 15rem;
+}
+
+.mb-5r {
+	margin-bottom: 15rem;
+}

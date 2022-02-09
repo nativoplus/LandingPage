@@ -18,14 +18,14 @@
                                             @if (true)
                                             {
                                                 <div class="col-md-5 col-lg-5" style="padding-bottom: 10rem;">
-                                                    <h2 class="title-uppercase">@article.Title</h2>
+                                                    <h2 class="title-uppercase">@article.Headline</h2>
 
-                                                    <ul class="service-list">
+                                                   @* <ul class="service-list">
                                                         @for (var i = 0; i < @article.Bullets.Count; i++)
                                                         {
                                                             <li><a href="">0@(i + 1). @article.Bullets[i]</a></li>
                                                         }
-                                                    </ul>
+                                                    </ul>*@
                                                     <NavLink class="nav-link" href="/article-details">
                                                         <h6><span class="text-primary">Read More</span></h6>
 
@@ -35,7 +35,7 @@
                                                 </div>
                                                 <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
                                                     <div class="dots-image-2">
-                                                        <img alt="" class="img-responsive" src="@article.ImgUrl">
+                                                        <img alt="" class="img-responsive" src="@article.ImgUrls">
                                                         <div class="dots"></div>
 
                                                     </div>

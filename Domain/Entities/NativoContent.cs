@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace LandingPage.Domain.Entities
 {
-    public class Portfolio
+    public class NativoContent
     {
-        public int ProjectId { get; set; } = 0;
         public string Name { get; set; } = string.Empty;
         public string Headline { get; set; } = string.Empty;
         public MarkupString Body { get; set; } = new MarkupString(string.Empty);
@@ -19,6 +18,5 @@ namespace LandingPage.Domain.Entities
         public List<string> Practices { get; set; } = new List<string>();
         public List<Team> Team { get; set; } = new List<Team>();
         public List<Reviews> Reviews { get; set; } = new List<Reviews>();
-
     }
 }
