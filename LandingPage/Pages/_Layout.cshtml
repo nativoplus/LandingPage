@@ -7,15 +7,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
-    <link rel="shortcut icon" href="template/favicon.png">
-    <link rel="apple-touch-icon" href="template/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="template/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="template/apple-touch-icon-114x114.png">
-    <title>Blazor App</title>
+    <!-- set the encoding of your site -->
+    <meta charset="utf-8">
+    <!-- set the viewport width and initial-scale on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- set the apple mobile web app capable -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- set the HandheldFriendly -->
+    <meta name="HandheldFriendly" content="True">
+    <!-- set the apple mobile web app status bar style -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- set the description -->
+    <meta name="description" content="Be - Startup Business HTML Template">
+    <meta name="keywords" content="agency, Startup, bootstrap, business, corporate, creative, minimal, modern, onepage, personal, portfolio,  html5, responsive">
+    <meta name="author" content="Be - Startup Business HTML Template">
+    <!-- include the site stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600" rel="stylesheet">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/bootstrap.css">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/fonts-icons.css">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/plugin-resets.css">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/scss/style.css">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/responsive.css">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/color.css">
+    <!-- Page Title -->
+    <title>Be - Startup Business HTML Template</title>
+    
+
     @*Ant Design*@
-    <link href="_content/AntDesign/css/ant-design-blazor.css" rel="stylesheet" />
-    <link href="template/css/style.css" rel="stylesheet" media="screen" />
-    <link href="LandingPage.styles.css" rel="stylesheet" />
+
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 
 </head>
@@ -24,10 +49,10 @@
 
     <!-- Blazor -->
     <script src="_framework/blazor.server.js"></script>
-    @*Ant Design*@
-    <script src="_content/AntDesign/js/ant-design-blazor.js"></script>
-    @*MudBlazor*@
-    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+        <!-- Template -->
+    <script src="template/js/jquery.js"></script>
+    <script src="template/js/plugins.js"></script>
+    <script src="template/js/jquery.main.js"></script>
     <script>
         window.typeWriter = (textList) => {
 
