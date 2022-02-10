@@ -1,17 +1,4 @@
-﻿<div class="section">
-    <h5 class="title-uppercase text-white"><span class="text-primary">@Header</span></h5>
-    <div class="text">
-        <div class="row service-list">
-            @foreach (var item in Items)
-            {
-                <div class="col-md-6">
-                    <p>- @item</p>
-                </div>
-            }
-        </div>
-    </div>
-</div>
-
+﻿
 @code {
     [Parameter]
     public string Header { get; set; } = string.Empty;

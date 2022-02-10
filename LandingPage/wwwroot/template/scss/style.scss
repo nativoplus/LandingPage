@@ -85,6 +85,7 @@ $media-expressions: (
 /*------------------------------------------------------------------
 	1. import files
 -------------------------------------------------------------------*/
+
 // ligatured operators ≥ ≤
 
 @import 'vendors/include-media';
@@ -2720,7 +2721,7 @@ button,
 	top: 50%;
 	left: 50%;
 	min-width: 100%;
-	min-height: 91vh;
+	min-height: 100%;
 	width: auto;
 	z-index: -100;
 	-webkit-transform: translate(-50%, -50%);
@@ -2832,4 +2833,18 @@ button,
 @keyframes spinner-round-animate {
 	0% {transform: rotate(0deg);}
 	100% {transform: rotate(360deg);}
+}
+
+/*------------------------------------------------------------------
+	Custom CSS
+-------------------------------------------------------------------*/
+#typewriter-span {
+	border-right: .05em solid;
+	animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+	50% {
+		border-color: transparent;
+	}
 }

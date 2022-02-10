@@ -1,42 +1,6 @@
-window.runInitScript = () => {
-
-	
-}; 
-$( window ).on( "load" , function() {
-
+$(window).on("load", function () {
 	"use strict";
 
-	$( "#loader" ).delay( 600 ).fadeOut( 300 );
-
-	initIsoTop();
-	// IsoTop init
-	function initIsoTop() {
-		"use strict";
-
-		// Isotope init
-		var isotopeHolder = jQuery('#isotop-holder'),
-			win = jQuery(window);
-
-		jQuery('.isotop-filter a').on( "click", function(e){
-			e.preventDefault();
-			
-			jQuery('.isotop-filter li').removeClass('active');
-			jQuery('.isotop-filter a').parent('li').addClass('active');
-			var selector = jQuery('.isotop-filter a').attr('data-filter');
-			isotopeHolder.isotope({ filter: selector });
-		});
-		jQuery('#isotop-holder').isotope({
-			itemSelector: '.item',
-			layoutMode: 'masonry',
-			transitionDuration: '0.6s',
-			masonry: {
-				columnWidth: '.item'
-			}
-		});
-	}
-
-	"use strict";
-	console.log("executed");
 	$.scrollIt({
 		topOffset: -75,
 		scrollTime: 1500,
@@ -329,41 +293,44 @@ $( window ).on( "load" , function() {
 			defaultTab: false
 		});
 	}
+	// Seems to be unused. 
+	//initCountDown();
+	//// count down init
+	//function initCountDown() {
+	//	"use strict";
 
-	initCountDown();
-	// count down init
-	function initCountDown() {
-		"use strict";
+	//	//Countdown script
 
-		//Countdown script
+	//	var countDownDate = new Date("June 30, 2017 15:37:25").getTime();
 
-		var countDownDate = new Date("June 30, 2017 15:37:25").getTime();
+	//	// Update the count down every 1 second
+	//	var x = setInterval(function () {
 
-		// Update the count down every 1 second
-		var x = setInterval(function () {
+	//		// Get todays date and time
+	//		var now = new Date().getTime();
 
-			// Get todays date and time
-			var now = new Date().getTime();
+	//		// Find the distance between now an the count down date
+	//		var distance = countDownDate - now;
 
-			// Find the distance between now an the count down date
-			var distance = countDownDate - now;
+	//		// Time calculations for days, hours, minutes and seconds
+	//		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	//		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	//		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	//		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-			// Time calculations for days, hours, minutes and seconds
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	//		// Output the result in an element with id="demo"
+	//		$('#daysplace').text(days);
+	//		$('#hoursplace').text(hours);
+	//		$('#minsplace').text(minutes);
+	//		$('#secplace').text(seconds);
 
-			// Output the result in an element with id="demo"
-			$('#daysplace').text(days);
-			$('#hoursplace').text(hours);
-			$('#minsplace').text(minutes);
-			$('#secplace').text(seconds);
-
-			// If the count down is over, write some text 
-
-		}, 1000);
-	}
+	//		// If the count down is over, write some text 
+	//		if (distance < 0) {
+	//			clearInterval(x);
+	//			document.getElementById("demo").innerHTML = "EXPIRED";
+	//		}
+	//	}, 1000);
+	//}
 
 	initTextRotator();
 	// TextRotator2 init
@@ -371,9 +338,9 @@ $( window ).on( "load" , function() {
 		"use strict";
 
 		jQuery("#rotating").typed({
-			strings: ["Design", "develop", "Code", "Create"],
+			strings: ["Website.", "Mobile App.", "Ideas Into Reality."],
 			loop: true,
-			typeSpeed: 200
+			typeSpeed: 250
 		});
 	}
 
@@ -448,20 +415,48 @@ $( window ).on( "load" , function() {
 		jQuery("#bgvid").vegas({
 			slides: [
 				{
-					src: 'images/img22.jpg',
+					src: 'template/images/img22.jpg',
 					video: {
 						src: [
-							'video/polina.webm',
-							'video/polina.mov',
-							'video/polina.mp4'
+							'template/videos/beach.mp4',
 						],
 						loop: true,
 						timer: false,
-						mute: true
+						mute: true, 
 					}
 				}
 			]
 		});
 	}
 
-}); 
+	"use strict";
+
+	$("#loader").delay(600).fadeOut(300);
+
+	initIsoTop();
+	// IsoTop init
+	function initIsoTop() {
+		"use strict";
+
+		// Isotope init
+		var isotopeHolder = jQuery('#isotop-holder'),
+			win = jQuery(window);
+
+		jQuery('.isotop-filter a').on("click", function (e) {
+			e.preventDefault();
+
+			jQuery('.isotop-filter li').removeClass('active');
+			jQuery('.isotop-filter a').parent('li').addClass('active');
+			var selector = jQuery('.isotop-filter a').attr('data-filter');
+			isotopeHolder.isotope({ filter: selector });
+		});
+		jQuery('#isotop-holder').isotope({
+			itemSelector: '.item',
+			layoutMode: 'masonry',
+			transitionDuration: '0.6s',
+			masonry: {
+				columnWidth: '.item'
+			}
+		});
+	}
+});
