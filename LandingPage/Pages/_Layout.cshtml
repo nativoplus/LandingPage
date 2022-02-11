@@ -44,9 +44,17 @@
 <body>
     @RenderBody()
     <!-- Blazor -->
-    <script src="_framework/blazor.server.js"></script>
+    <script src="_framework/blazor.server.js" autostart="false"></script>
     <!-- Template -->
     <script src="template/js/jquery.js"></script>
     <script src="template/js/plugins.js"></script>
+    <script>
+      Blazor.start().then(function () {
+        var customScript = document.createElement('script');
+        customScript.setAttribute('src', 'template/js/scripts.js');
+        document.head.appendChild(customScript);
+      });
+    </script>
+
 </body>
 </html>

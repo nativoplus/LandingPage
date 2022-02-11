@@ -1,0 +1,223 @@
+﻿@*Imports*@
+@inject IJSRuntime jsRuntime
+@using LandingPage
+@using LandingPage.Components;
+@*Page*@
+@layout EmptyLayout
+@page "/portfolios"
+
+<!-- start of main page wrapper -->
+	<div id="wrapper">
+		<!-- start of preloader -->
+		<Preloader/>
+    		<!-- end  opreloader -->
+		<div class="w1">
+			<!-- start of page header -->
+			<NavigationBar/>
+			<!-- end of page header -->
+			<!-- start of search-popup -->
+			<div class="search-popup">
+				<div class="holder">
+					<a href="#" class="search-close"><span></span><span></span></a>
+					<div class="frame">
+						<form action="#">
+							<fieldset>
+								<input placeholder="Search here..." type="text">
+								<button class="pe-7s-search" type="submit"></button>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div><!-- end of search-popup -->
+			<!-- start of page main section -->
+			<main id="main">
+				<!-- start of page-header -->
+				<div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/projects.jpg);">
+					<span class="bg-overlay"></span>
+					<div class="container pad-top-xs pad-bottom-lg">
+						<div class="row pad-top-md pad-bottom-xs">
+							<div class="col-xs-12">
+								<!-- start of breadcrumbs -->
+								<ul class="list-inline breadcrumbs">
+									<li><a href="index.html">Home</a></li>
+									<li>Portfolio Standard</li>
+								</ul><!-- end of breadcrumbs -->
+							</div>
+						</div>
+					</div>
+				</div><!-- end of page-header -->
+				<div class="container pad-top-md">
+					<div class="row mar-bottom-xs">
+						<div class="col-xs-12">
+							<!-- start of isotop filter -->
+							<ul class="list-inline isotop-filter">
+								<li class="active pad-left-z"><a href="#">All</a></li>
+								<li><a href="#" data-filter=".filter1">Website</a></li>
+								<li><a href="#" data-filter=".filter2">Motion</a></li>
+								<li><a href="#" data-filter=".filter3">Digital</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row mar-bottom-md">
+						<!-- start of isotop-holder -->
+						<div id="isotop-holder">
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter3 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Golden Box</a></h3>
+										<div class="frame">
+											<span class="price">Digital &amp; Art</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter2 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Animated Wheel</a></h3>
+										<div class="frame">
+											<span class="price">Motion</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter1 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Skating Rink</a></h3>
+										<div class="frame">
+											<span class="price">Website</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter1 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">3D Pringting</a></h3>
+										<div class="frame">
+											<span class="price">Website</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter3 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Business Cards</a></h3>
+										<div class="frame">
+											<span class="price">Digital &amp; Art</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter2 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Red Flowers</a></h3>
+										<div class="frame">
+											<span class="price">Motion</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter1 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Be Typewriter</a></h3>
+										<div class="frame">
+											<span class="price">Website</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter3 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Icons Photography</a></h3>
+										<div class="frame">
+											<span class="price">Digital &amp; Art</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+							<!-- start of item -->
+							<div class="item col-xs-12 col-sm-6 col-md-4 filter1 mar-bottom-xs">
+								<!-- start of product-box -->
+								<div class="product-box">
+									<a href="portfolio-detail.html">
+										<img src="template/images/bg/bggrey.png" alt="image" class="img-responive">
+									</a>
+									<div class="box">
+										<h3 class="heading large"><a href="portfolio-detail.html">Be Headphone</a></h3>
+										<div class="frame">
+											<span class="price">Motion</span>
+										</div>
+									</div>
+								</div><!-- end of product-box -->
+							</div><!-- end of item -->
+						</div><!-- end of isotop-holder -->
+					</div>
+				</div>
+			</main><!-- end of page main section -->
+			 <!-- start of promo-box -->
+            <CallToAction />
+            <!-- end of promo-box -->
+			<!-- start of page footer -->
+			<Footer/>
+			<!-- end of page footer -->
+		</div>
+		<!-- Back Top of the page -->
+	    <BackToTop/>
+	</div><!-- end of main page wrapper -->
+
+@code {
+	 protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Initialize Any JS Interop
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}

@@ -135,9 +135,6 @@
         if (firstRender)
         {
             // Initialize Any JS Interop
-            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/scripts.js");
-            await jsRuntime.InvokeVoidAsync("runInitScript");
-
         }
         await base.OnAfterRenderAsync(firstRender);
     }
