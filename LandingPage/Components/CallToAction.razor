@@ -1,0 +1,19 @@
+﻿@if (CallToActionType == "Schedule Appointment")
+{
+    <!-- start of promo-box -->
+    <div class="main-bg-color text-center promo-box">
+        <div class="container pad-top-md pad-bottom-md">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="txt">Let's Build Something Together</span>
+                    <a href="#" class="btn btn-white text-uppercase">Let's Talk!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of promo-box -->
+}
+@code {
+    [Parameter]
+    public string CallToActionType { get; set; } = "Schedule Appointment";
+}

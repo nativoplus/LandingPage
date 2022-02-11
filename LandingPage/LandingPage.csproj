@@ -1,38 +1,136 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Components\CarouselGallery.razor.css" />
-    <None Remove="Components\SectionList.razor.css" />
-    <None Remove="Components\TeamMembersList.razor.css" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Components\SectionList.razor.css" />
+		<None Remove="Components\TeamMembersList.razor.css" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Include="Components\CarouselGallery.razor.css" />
-    <Content Include="Components\SectionList.razor.css" />
-    <Content Include="Components\TeamMembersList.razor.css" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="Components\SectionList.razor.css" />
+		<Content Include="Components\TeamMembersList.razor.css" />
+		<Content Include="Styles\style.scss" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="..\.editorconfig" Link=".editorconfig" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\.editorconfig" Link=".editorconfig" />
+		<None Include="wwwroot\template\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+		<None Include="wwwroot\template\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+		<None Include="wwwroot\template\scss\.DS_Store" />
+		<None Include="wwwroot\template\scss\base\.DS_Store" />
+		<None Include="wwwroot\template\scss\base\_helpers.scss" />
+		<None Include="wwwroot\template\scss\base\_mixins.scss" />
+		<None Include="wwwroot\template\scss\base\_wp-reset.scss" />
+		<None Include="wwwroot\template\scss\bootstrap-extended.scss" />
+		<None Include="wwwroot\template\scss\bootstrap.scss" />
+		<None Include="wwwroot\template\scss\color.scss" />
+		<None Include="wwwroot\template\scss\responsive.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_alerts.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_background-variant.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_border-radius.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_buttons.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_center-block.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_clearfix.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_forms.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_gradients.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_grid-framework.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_grid.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_hide-text.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_image.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_labels.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_list-group.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_nav-divider.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_nav-vertical-align.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_opacity.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_pagination.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_panels.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_progress-bar.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_reset-filter.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_reset-text.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_resize.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_responsive-visibility.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_size.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_tab-focus.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_table-row.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_text-emphasis.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_text-overflow.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_vendor-prefixes.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_alerts.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_badges.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_breadcrumbs.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_button-groups.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_buttons.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_carousel.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_close.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_code.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_component-animations.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_dropdowns.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_forms.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_glyphicons.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_grid.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_input-groups.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_jumbotron.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_labels.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_list-group.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_media.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_mixins.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_modals.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_navbar.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_navs.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_normalize.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_pager.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_pagination.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_panels.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_popovers.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_print.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_progress-bars.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_responsive-embed.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_responsive-utilities.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_scaffolding.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_tables.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_theme.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_thumbnails.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_tooltip.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_type.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_utilities.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_variables.scss" />
+		<None Include="wwwroot\template\scss\vendors\bootstrap\_wells.scss" />
+		<None Include="wwwroot\template\scss\vendors\_include-media.scss" />
+		<None Include="wwwroot\template\scss\_bootstrap-custom.scss" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AntDesign" Version="0.10.3.1" />
-    <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
-    <PackageReference Include="MudBlazor" Version="6.0.6" />
-    <PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Application\Application.csproj" />
+		<ProjectReference Include="..\Domain\Domain.csproj" />
+		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+	</ItemGroup>
+	<!-- Add SCSS files to dotnet watch -->
+	<ItemGroup>
+		<Watch Include="**\*.scss" />
+		<None Update="**\*.css" watch="false" />
+	</ItemGroup>
 
+	<!-- Compile SCSS files into CSS -->
+	<ItemGroup>
+		<ComponentScssFiles Include="**/*/*.scss" Exclude="node_modules/**;wwwroot/**;" />
+	</ItemGroup>
+	
+	<Target Name="CompileComponentSass" BeforeTargets="CompileGlobalSass">
+		<Message Text="Compiling Component SCSS files" Importance="high" />
+		<Exec Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch('%(ComponentScssFiles.Identity)', `.*[/\\]_.*`))" Command="npm run sass -- --style=compressed --no-source-map --load-path= %(ComponentScssFiles.Identity) %(relativedir)%(filename).css" />
+	</Target>
+	
+	<Target Name="CompileGlobalSass" BeforeTargets="Compile">
+		<Message Text="Compiling global SCSS file" Importance="high" />
+		<Exec Command="npm run sass  -- --style=compressed --no-source-map Styles:wwwroot/template/scss" />
+	</Target>
 </Project>

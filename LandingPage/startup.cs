@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using MudBlazor.Services;
-
-namespace LandingPage
+﻿namespace LandingPage
 {
     public class Startup
     {
@@ -21,8 +14,6 @@ namespace LandingPage
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddAntDesign();
-            services.AddMudServices();
             services.AddServerSideBlazor(o => o.DetailedErrors = true);
         }
 

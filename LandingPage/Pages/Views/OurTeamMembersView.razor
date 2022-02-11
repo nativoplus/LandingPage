@@ -2,38 +2,6 @@
 @using LandingPage.Domain.Entities
 @using System.Security.Cryptography;
 
-<div data-anchor="page3" class="pp-scrollable text-white section section-3">
-    <div class="scroll-wrap">
-        <div class="bg-changer">
-            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
-            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
-            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
-            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
-            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
-            <div class="section-bg" style="background-image:url(template/images/bg/nativo-main-bg.jpg);"></div>
-        </div>
-        <div class="scrollable-content">
-            <div class="vertical-centred">
-                <div class="boxed boxed-inner">
-                    <div class="vertical-title hidden-xs hidden-sm"><span>Our Team</span></div>
-                    <div class="boxed">
-                        <div class="container">
-                            <div class="intro">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h2 class="title-uppercase text-white">Meet Our Team</h2>
-                                        <TeamMembersList Team="ourTeamMembers"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 @code {
     public List<Team> ourTeamMembers = new List<Team> { new Team
     {
