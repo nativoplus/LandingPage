@@ -1,4 +1,4 @@
-$(window).on("load", function () {
+window.runInitScript = () => {
 	"use strict";
 
 	$.scrollIt({
@@ -233,7 +233,7 @@ $(window).on("load", function () {
 		});
 	}
 
-	initAnimatedProgressbars();
+	//initAnimatedProgressbars();
 	// progressbars init
 	function initAnimatedProgressbars() {
 		"use strict";
@@ -431,7 +431,7 @@ $(window).on("load", function () {
 
 	"use strict";
 
-	$("#loader").delay(600).fadeOut(300);
+	$("#loader").delay(300).fadeOut(100);
 
 	initIsoTop();
 	// IsoTop init
@@ -459,4 +459,4 @@ $(window).on("load", function () {
 			}
 		});
 	}
-});
+}

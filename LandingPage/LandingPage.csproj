@@ -14,6 +14,7 @@
 	<ItemGroup>
 		<Content Include="Components\SectionList.razor.css" />
 		<Content Include="Components\TeamMembersList.razor.css" />
+		<Content Include="Styles\style.scss" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -29,7 +30,6 @@
 		<None Include="wwwroot\template\scss\bootstrap.scss" />
 		<None Include="wwwroot\template\scss\color.scss" />
 		<None Include="wwwroot\template\scss\responsive.scss" />
-		<None Include="wwwroot\template\scss\style.scss" />
 		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_alerts.scss" />
 		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_background-variant.scss" />
 		<None Include="wwwroot\template\scss\vendors\bootstrap\mixins\_border-radius.scss" />
@@ -121,15 +121,16 @@
 
 	<!-- Compile SCSS files into CSS -->
 	<ItemGroup>
-		<ComponentScssFiles Include="**/*/*.scss" Exclude="node_modules/**;wwwroot/**;Styles/**" />
+		<ComponentScssFiles Include="**/*/*.scss" Exclude="node_modules/**;wwwroot/**;" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Pages\Services\" />
-	  <Folder Include="Pages\Portfolio\" />
-	</ItemGroup>
-
+	
+	<Target Name="CompileComponentSass" BeforeTargets="CompileGlobalSass">
+		<Message Text="Compiling Component SCSS files" Importance="high" />
+		<Exec Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch('%(ComponentScssFiles.Identity)', `.*[/\\]_.*`))" Command="npm run sass -- --style=compressed --no-source-map --load-path= %(ComponentScssFiles.Identity) %(relativedir)%(filename).css" />
+	</Target>
+	
 	<Target Name="CompileGlobalSass" BeforeTargets="Compile">
 		<Message Text="Compiling global SCSS file" Importance="high" />
-		<Exec Command="npm run sass -- --style=compressed Styles:wwwroot/template/scss" />
+		<Exec Command="npm run sass  -- --style=compressed --no-source-map Styles:wwwroot/template/scss" />
 	</Target>
 </Project>

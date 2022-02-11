@@ -88,15 +88,15 @@ $media-expressions: (
 
 // ligatured operators ≥ ≤
 
-@import 'vendors/include-media';
-
-@import "bootstrap-custom";
-@import "vendors/bootstrap/variables";
-@import "vendors/bootstrap/mixins";
-
-@import 'base/mixins';
-@import 'base/helpers';
-@import "base/wp-reset";
+@import '../wwwroot/template/scss/vendors/include-media';
+							
+@import "../wwwroot/template/scss/bootstrap-custom";
+@import "../wwwroot/template/scss/vendors/bootstrap/variables";
+@import "../wwwroot/template/scss/vendors/bootstrap/mixins";
+							 
+@import '../wwwroot/template/scss/base/mixins';
+@import '../wwwroot/template/scss/base/helpers';
+@import "../wwwroot/template/scss/base/wp-reset";
 
 
 /*------------------------------------------------------------------
