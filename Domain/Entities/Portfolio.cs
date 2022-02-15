@@ -19,6 +19,6 @@ namespace LandingPage.Domain.Entities
         public List<string> Practices { get; set; } = new List<string>();
         public List<Team> Team { get; set; } = new List<Team>();
         public List<Reviews> Reviews { get; set; } = new List<Reviews>();
-
+        public List<Categories> Categories { get; set; } = new List<Categories>();
     }
 }

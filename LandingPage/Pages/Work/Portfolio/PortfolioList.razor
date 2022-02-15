@@ -1,0 +1,122 @@
+﻿@*Imports*@
+@implements IDisposable
+@inject NavigationManager NavigationManager
+@inject IJSRuntime jsRuntime
+@using LandingPage
+@using LandingPage.Domain.Entities;
+@using LandingPage.Components;
+@using LandingPage.Infrastructure.Files
+@*Page*@
+@layout EmptyLayout
+@page "/portfolios"
+
+<!-- start of main page wrapper -->
+<div id="wrapper">
+    <!-- start of preloader -->
+    <Preloader />
+    <!-- end  opreloader -->
+    <div class="w1">
+        <!-- start of page header -->
+        <NavigationBar />
+        <!-- end of page header -->
+        <main id="main">
+            <!-- start of page-header -->
+            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/projects.jpg);">
+                <span class="bg-overlay"></span>
+                <div class="container pad-top-xs pad-bottom-lg">
+                    <div class="row pad-top-md pad-bottom-xs">
+                        <div class="col-xs-12">
+                            <!-- start of breadcrumbs -->
+                            <ul class="list-inline breadcrumbs">
+                                <li><a @onclick:preventDefault @onclick="@(() => NavigateTo("/"))">Home</a></li>
+                                <li>Our Experience</li>
+                            </ul><!-- end of breadcrumbs -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of page-header -->
+            <div class="container pad-top-md">
+                @*<CategoriesFilter @bind-ActiveFilter=ActiveFilter />*@
+
+                <div class="row mar-bottom-md">
+                    <!-- start of isotop-holder -->
+                    <div id="isotop-holder">
+                        @foreach (var project in Portfolio)
+                        {
+                            <!-- start of item -->
+                            <div class="item col-xs-12 col-sm-6 col-md-4 All mar-bottom-xs">
+                                <!-- start of product-box -->
+                            <div class="product-box">
+                                    <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
+                                        <img src="@project.ImgUrls[0]" alt="image" class="img-responive">
+                                    </a>
+                                    <div class="box">
+                                        <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>
+                                        <div class="frame">
+                                            <span class="price">Digital &amp; Art</span>
+                                        </div>
+                                    </div>
+                                </div><!-- end of product-box -->
+                        </div>
+                            <!-- end of item -->
+                        }
+
+                    </div><!-- end of isotop-holder -->
+                </div>
+            </div>
+        </main><!-- end of page main section -->
+        <!-- start of promo-box -->
+        <CallToAction />
+        <!-- end of promo-box -->
+        <!-- start of page footer -->
+        <Footer />
+        <!-- end of page footer -->
+    </div>
+    <!-- Back Top of the page -->
+    <BackToTop />
+</div><!-- end of main page wrapper -->
+@code {
+    public List<Portfolio> Portfolio;
+    public string ActiveFilter { get; set; } = "All";
+
+
+    protected override void OnInitialized()
+    {
+        var p = new PortfolioData().portfolio;
+        Portfolio = p;
+        base.OnInitialized();
+    }
+
+    public void Shuffle()
+    {
+        var rnd = new Random();
+        var randomized = Portfolio.OrderBy(item => rnd.Next());
+
+        Portfolio = randomized.ToList();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Initialize Any JS Interop
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    public void NavigateTo(string path)
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/" + path, forceLoad: true);
+    }
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+        NavigationManager.LocationChanged -= LocationChanged;
+    }
+
+}

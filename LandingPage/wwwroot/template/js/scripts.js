@@ -437,7 +437,7 @@ $(document).ready(function () {
     // IsoTop init
     function initIsoTop() {
         "use strict";
-
+        console.log("Isotope JS FN Successfully Init.")
         // Isotope init
         var isotopeHolder = jQuery('#isotop-holder'),
             win = jQuery(window);
@@ -445,8 +445,9 @@ $(document).ready(function () {
         jQuery('.isotop-filter a').on("click", function (e) {
             e.preventDefault();
 
-            jQuery('.isotop-filter li').removeClass('active');
-            jQuery('.isotop-filter a').parent('li').addClass('active');
+            //Logic is Bugged: Remove Active Class and then added again to all elements. 
+            //jQuery('.isotop-filter li').removeClass('active');
+            //jQuery('.isotop-filter a').parent('li').addClass('active');
             var selector = jQuery('.isotop-filter a').attr('data-filter');
             isotopeHolder.isotope({ filter: selector });
         });

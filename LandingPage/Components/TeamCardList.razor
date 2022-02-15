@@ -1,0 +1,103 @@
+﻿@using LandingPage.Domain.Entities
+<section class="@(GreyBackground ? "bg-grey" : "") pad-top-lg">
+    <header class="main-heading text-center row">
+        <div class="col-xs-12">
+            <h2 class="heading">@Heading</h2>
+            @Body
+        </div>
+    </header><!-- end of main-heading -->
+
+    <div class="container">
+        <div class="row pad-top-md">
+            @foreach (var member in Team)
+            {
+                <!-- start of team-box -->
+                <div class="col-xs-12 col-sm-4 mar-bottom-md">
+
+                    <div class="team-box text-center">
+                        <div class="img-box"><img src="@member.ImgUrl" alt="image" class="img-responsive"></div>
+                        <h3 class="heading">@member.Name</h3>
+                        <span class="text">@member.Title</span>
+                        <!-- social -->
+                    <ul class="list-inline social">
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div><!-- end of team-box -->
+            </div>
+            }
+        </div>
+    </div>
+</section>
+@code {
+    [Parameter]
+    public bool GreyBackground { get; set; } = false;
+    [Parameter]
+    public string Heading { get; set; } = string.Empty;
+    [Parameter]
+    public MarkupString Body { get; set; } = new MarkupString("");
+    [Parameter]
+    public List<Team> Team { get; set; } = new List<Team> { new Team
+        {
+        Name = "Hector Orellana Reyes",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/hector.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+        },
+        new Team
+        {
+        Name = "Jose Velez",
+        Title = "Founder",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/jose.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+        },
+        new Team
+        {
+        Name = "Angel Ramos",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/ramos.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+        },
+        new Team
+        {
+        Name = "Arnaldo Rodriguez",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/arnaldo.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+        },
+        // new Team
+        //{
+        //    Name = "Angel Martinez",
+        //    Title = "Software Engineer",
+        //    Description = "Lorem Ipsum",
+        //    ImgUrl = "template/images/team/martinez.jpg",
+        //    LinkedIn = "",
+        //    GithubUrl = "",
+        //}};
+        };
+
+    protected override void OnInitialized()
+    {
+        Shuffle();
+        //ourTeamMembers = Shuffle(ourTeamMembers);
+        base.OnInitialized();
+    }
+    public void Shuffle()
+    {
+
+        var rnd = new Random();
+        var randomized = Team.OrderBy(item => rnd.Next());
+
+        Team = randomized.ToList();
+    }
+        }

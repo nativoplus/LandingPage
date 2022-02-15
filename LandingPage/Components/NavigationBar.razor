@@ -9,29 +9,28 @@
             <div class="row">
                 <div class="col-xs-12">
                     <!-- Page logo -->
-                    <div class="logo pull-left"><a href="index.html">Nativo.</a></div>
+                    <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>Nativo.</a></div>
                     <div class="holder pull-right">
                         <a href="#" class="pe-7s-menu menu-opener opener pull-right visible-xs"></a>
-                        <a href="#" class="pe-7s-search search-opener pull-right opener"></a>
                         <!-- start of page navigation -->
                         <nav id="nav" class="text-uppercase">
                             <ul class="list-inline">
                                 <li>
-                                    <a @onclick=@( () => NavigateTo("/"))>Home</a>
+                                    <a class="drop-link" href="#">Company</a>
 
-                                    @* <div class="drop">
+                                    <div class="drop">
                                         <ul class="list-unstyled">
-                                        <li><a href="home1.html">HomePage 1</a></li>
-                                        <li><a href="home2.html">HomePage 2</a></li>
-                                        <li><a href="home3.html">HomePage 3</a></li>
-                                        <li><a href="home4.html">HomePage 4</a></li>
-                                        <li><a href="home5.html">HomePage 5</a></li>
-                                        <li><a href="home6.html">HomePage 6</a></li>
-                                        <li><a href="home7.html">HomePage 7</a></li>
-                                        <li><a href="home8.html">HomePage 8</a></li>
-                                        <li><a href="home9.html">HomePage 9</a></li>
+                                            <li><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/about"))>About Us</a></li>
+                                            @*         <li><a href="home2.html">HomePage 2</a></li>
+                                                <li><a href="home3.html">HomePage 3</a></li>
+                                                <li><a href="home4.html">HomePage 4</a></li>
+                                                <li><a href="home5.html">HomePage 5</a></li>
+                                                <li><a href="home6.html">HomePage 6</a></li>
+                                                <li><a href="home7.html">HomePage 7</a></li>
+                                                <li><a href="home8.html">HomePage 8</a></li>
+                                                <li><a href="home9.html">HomePage 9</a></li>*@
                                         </ul>
-                                        </div>*@
+                                    </div>
                                 </li>
                                 <li>
                                     <a class="drop-link" href="#">Work</a>
@@ -39,7 +38,8 @@
                                         <ul class="list-unstyled">
                                             @*                <li><a href="about.html">About Us</a></li>
                                                 <li><a href="team.html">Team</a></li>*@
-                                            <li><a @onclick=@( () => NavigateTo("/services"))>Our Work</a></li>
+                                            <li><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/services"))>Our Services</a></li>
+                                            <li><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/portfolios"))>Our Experience</a></li>
                                             @*  <li><a href="contact.html">Contact</a></li>
                                                 <li><a href="coming-soon.html">Coming Soon</a></li>
                                                 <li><a href="404.html">Error 404</a></li>
@@ -47,16 +47,16 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
-                                    <a @onclick=@( () => NavigateTo("/portfolios")) href="#">Portfolio</a>
-                                    @*<div class="drop">
+                               @*<li>
+                                    <a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/portfolios"))>Our Experience</a>
+                                    <div class="drop">
                                         <ul class="list-unstyled">
-                                            <li><a href="portfolio.html">Portfolio Standard</a></li>
-                                            <li><a href="portfolio2.html">Portfolio Masonry</a></li>
-                                            <li><a href="portfolio-detail.html">Portfolio Details</a></li>
+                                        <li><a href="portfolio.html">Portfolio Standard</a></li>
+                                        <li><a href="portfolio2.html">Portfolio Masonry</a></li>
+                                        <li><a href="portfolio-detail.html">Portfolio Details</a></li>
                                         </ul>
-                                    </div>*@
-                                </li>
+                                        </div>
+                                </li>*@
 
                                 @* <li>
                                     <a class="drop-link" href="#">Blog</a>

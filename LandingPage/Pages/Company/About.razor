@@ -1,0 +1,209 @@
+﻿@*Imports*@
+@inject NavigationManager NavigationManager
+@inject IJSRuntime jsRuntime
+@using LandingPage
+@using LandingPage.Domain.Entities;
+@using LandingPage.Components;
+@using LandingPage.Infrastructure.Files
+@*Page*@
+@layout EmptyLayout
+@page "/about"
+
+<!-- start of main page wrapper -->
+<div id="wrapper">
+    <!-- start of preloader -->
+    <Preloader />
+    <!-- end  opreloader -->
+    <div class="w1">
+        <!-- start of page header -->
+        <NavigationBar />
+        <!-- end of page header -->
+        <!-- start of page main section -->
+        <main id="main">
+            <!-- start of page-header -->
+            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/about.jpg);">
+                <div class="pad-top-lg hidden-sm"></div>
+                <span class="bg-overlay"></span>
+                <div class="container pad-top-lg pad-bottom-lg">
+                    <div class="row pad-top-md pad-bottom-xs">
+                        <div class="col-xs-12">
+                            <h1 class="heading">About Us</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="pad-top-lg hidden-sm"></div>
+            </div><!-- end of page-header -->
+            <section class="pad-top-lg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 pad-top-lg pad-bottom-lg col-md-offset-1">
+                            <!-- main text -->
+                            <span class="main-text text-center">Hi, We’re a creative agency, We build creative sites with stunning pages and components, with be toolkit you can create your site fast & easy.</span>
+                        </div>
+                    </div>
+                    <div class="border-top pad-top-lg"></div>
+                    <div class="row mar-bottom-sm">
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
+                            <span class="pe-7s-rocket main-color icon"></span>
+                            <div class="holder">
+                                <span class="title">Easy For Users</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod viel incididunt labore et dolore magna. aliqua enim.</p>
+                            </div>
+                        </div><!-- end of icon-box -->
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
+                            <span class="pe-7s-vector main-color icon"></span>
+                            <div class="holder">
+                                <span class="title">Pixel Perfect</span>
+                                <p>Duis aute irure dolor in reprehenderit iner velit esse cillum dolore eu fugiat nulla paritur exceur sint occaecat cupidat prident.</p>
+                            </div>
+                        </div><!-- end of icon-box -->
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
+                            <span class="pe-7s-edit main-color icon"></span>
+                            <div class="holder">
+                                <span class="title">Edit Content</span>
+                                <p>Sede ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.</p>
+                            </div>
+                        </div><!-- end of icon-box -->
+                    </div>
+                </div>
+                <!-- start of wedo section -->
+                <section class="bg-grey wedo-section add">
+                    <div class="pad-top-lg hidden-sm"></div>
+                    <div class="container pad-top-lg">
+                        <div class="row pad-bottom-md">
+                            <div class="col-md-5 col-xs-12">
+                                <!-- start of main-heading -->
+                                <header class="main-heading mar-bottom-xs">
+                                    <h2 class="heading">You don’t need any skills to create your website with be!</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sede do eiusmod tempor incididunt ut labore  dolore magna aliqa Ut enim ad minim veniam, quis nostrud.</p>
+                                </header><!-- end of main-heading -->
+                                <img src="images/sign.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pad-top-lg hidden-sm"></div>
+                    <div class="img-box bg-img-full" style="background-image: url(template/images/bg/build.jpg);"></div>
+                </section><!-- end of wedo section -->
+                <!-- start of wedo section -->
+                <section class="bg-grey wedo-section add">
+                    <div class="pad-top-lg hidden-sm"></div>
+                    <div class="pad-top-md hidden-sm"></div>
+                    <div class="container">
+                        <div class="row pad-bottom-xs">
+                            <div class="col-md-5 col-xs-12 col-md-push-7">
+                                <!-- start of main-heading -->
+                                <header class="main-heading mar-bottom-xs">
+                                    <h2 class="heading">Building stunning elements</h2>
+                                </header><!-- end of main-heading -->
+                                <ul class="list-unstyled progress-bar">
+                                    <li>
+                                        <div class="frame">
+                                            <span class="txt">Branding</span>
+                                            <span class="number"><span class="count">70</span>%</span>
+                                        </div>
+                                        <span class="bar-outer"><span class="bar" data-width="70"></span></span>
+                                    </li>
+                                    <li>
+                                        <div class="frame">
+                                            <span class="txt">User Interface</span>
+                                            <span class="number"><span class="count">85</span>%</span>
+                                        </div>
+                                        <span class="bar-outer"><span class="bar" data-width="85"></span></span>
+                                    </li>
+                                    <li>
+                                        <div class="frame">
+                                            <span class="txt">Developing</span>
+                                            <span class="number"><span class="count">60</span>%</span>
+                                        </div>
+                                        <span class="bar-outer"><span class="bar" data-width="60"></span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pad-top-lg hidden-sm"></div>
+                    <div class="img-box bg-img-full right" style="background-image: url(template/images/bg/skills.jpg);"></div>
+                </section><!-- end of wedo section -->
+            </section>
+            <TeamCardList GreyBackground="false"
+                          Heading="Meet The Team"
+                          Body=@(new MarkupString(@"<p>When you create your startup
+                          the only way to win <br>is to race ahead not to stop and fight.</p>")) />
+        </main><!-- end of page main section -->
+        <!-- start of promo-box -->
+        <CallToAction />
+        <!-- end of promo-box -->
+        <!-- start of page footer -->
+        <Footer />
+        <!-- end of page footer -->
+    </div>
+    <!-- Back Top of the page -->
+    <BackToTop />
+</div><!-- end of main page wrapper -->
+@code {
+    public List<Team> Team = new List<Team> { new Team
+    {
+        Name = "Hector Orellana Reyes",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/hector.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Jose Velez",
+        Title = "Founder",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/jose.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Angel Ramos",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/ramos.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+     new Team
+    {
+        Name = "Arnaldo Rodriguez",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "template/images/team/arnaldo.jpg",
+        LinkedIn = "",
+        GithubUrl = "",
+    },
+        // new Team
+        //{
+        //    Name = "Angel Martinez",
+        //    Title = "Software Engineer",
+        //    Description = "Lorem Ipsum",
+        //    ImgUrl = "template/images/team/martinez.jpg",
+        //    LinkedIn = "",
+        //    GithubUrl = "",
+        //}};
+    };
+
+    protected override void OnInitialized()
+    {
+        Shuffle();
+        //ourTeamMembers = Shuffle(ourTeamMembers);
+        base.OnInitialized();
+    }
+    public void Shuffle()
+    {
+
+        var rnd = new Random();
+        var randomized = Team.OrderBy(item => rnd.Next());
+
+        Team = randomized.ToList();
+    }
+
+}

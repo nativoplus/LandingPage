@@ -96,6 +96,10 @@ namespace LandingPage.Infrastructure.Files
                         ReviewImgUrl = "/template/images/assets/gb/review1.png"
                     },
 
+                },
+                Categories = new List<Categories>
+                {
+
                 }
             },
             new Portfolio
