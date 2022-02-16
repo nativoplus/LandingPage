@@ -10,6 +10,7 @@ https://github.com/jasontaylordev/CleanArchitecture
 https://skylight.digital
 
 ## Basic View Layout with Components:
+
 <PageTitle>NativoPlus - Current Page</PageTitle>
 <!-- start of main page wrapper -->
 <div id="wrapper">
