@@ -9,6 +9,9 @@ https://github.com/jasontaylordev/CleanArchitecture
 2. Following Content Format From:
 https://skylight.digital
 
+3. Template:
+http://htmlbeans.com/html/be/blog-detail-fullwidth.html
+
 ## Basic View Layout with Components:
 
 ```HTML
