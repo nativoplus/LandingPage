@@ -2,10 +2,10 @@
 @using LandingPage.Domain.Entities
 @using LandingPage.Infrastructure.Files
 @inject NavigationManager NavigationManager
-
-@page "/{projectName}"
+@layout EmptyLayout
+@page "/work/portfolio/{ProjectName}"
 <!-- start of main page wrapper -->
-<PageTitle>Projects - @project.Name</PageTitle>
+<PageTitle>NativoPlus - @project.Name</PageTitle>
 <div id="wrapper">
     <!-- start of preloader -->
     <Preloader />
@@ -50,12 +50,12 @@
                     <div class="col-xs-12">
                         <!-- start of port-slider -->
                         <div class="port-slider">
-                            <div class="slide">
-                                <img src="template/images/bg/projects.jpg" alt="image" class="img-responsive">
-                            </div>
-                            <div class="slide">
-                                <img src="template/images/bg/bggrey.png" alt="image" class="img-responsive">
-                            </div>
+                            @foreach (var imgage in project.ImgUrls)
+                            {
+                                <div class="slide">
+                                    <img src="@imgage" alt="image" class="img-responsive">
+                                </div>
+                            }
                         </div><!-- end of port-slider -->
                     </div>
                 </div>
@@ -65,23 +65,72 @@
                         <span class="heading">@project.Name</span>
                         <p>@project.Headline</p>
                         @project.Body
-                        <ul class="social list-inline">
+                        @*     <ul class="social list-inline">
                             <li>Share:</li>
                             <li><a href="#" class="fa fa-twitter"></a></li>
                             <li><a href="#" class="fa fa-facebook"></a></li>
                             <li><a href="#" class="fa fa-google-plus"></a></li>
                             <li><a href="#" class="fa fa-pinterest-p"></a></li>
-                        </ul>
+                            </ul>*@
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 mar-bottom-xs">
-                        <span class="subheading">Category</span>
-                        <span class="txt">Digital</span>
-                        <span class="subheading">Date</span>
-                        <span class="txt">Mar 13, 2017</span>
-                        <span class="subheading">Tags</span>
-                        <span class="txt">creative, digital, skating</span>
+
+                        <!-- Starts Of Category Details-->
+                        <div>
+                            <span class="subheading">Category</span>
+                            <span class="txt">
+                                @foreach (var category in project.Categories)
+                                {
+
+                                    if (project.Categories.IndexOf(category) != project.Categories.Count - 1)
+                                    {
+                                        // Add Comma and a Space at the end of the string.
+                                        @(@category  + ", ")
+                                    }
+                                    else
+                                    {
+                                        // Does Not Add Comma and Space at the end of the string for last item.
+                                        @category
+                                    }
+                                }
+                            </span>
+                        </div>
+                        <!-- End Of Category Details-->
+                        <!-- Starts Of Date Details-->
+                        <div>
+                            <span class="subheading">Date</span>
+                            <span class="txt">TBA</span>
+                        </div>
+                        <!-- End Of Date Details-->
+                        <!-- Starts Of Tags Details-->
+                        @*<div>
+                            <span class="subheading">Tags</span>
+                            <span class="txt">
+                            @foreach (var category in project.Services)
+                            {
+
+                            if (project.Services.IndexOf(category) < 1)
+                            {
+                            // Add Comma and a Space at the end of the string.
+                            @(@category  + ", ")
+                            }
+                            else if (project.Services.IndexOf(category) == 1)
+                            {
+                            // Does Not Add Comma and Space at the end of the string for last item.
+                            @category
+                            }
+                            }
+                            </span>
+                            </div>*@
+                        <!-- End Of Tags Details-->
                     </div>
                 </div><!-- end of port-detail -->
+                @if (@project.Reviews.Count > 0)
+                {
+                    <!-- Start of Testimonial Section -->
+                    <Testimonials Reviews="@project.Reviews"/>
+                    <!-- End of Testimonial Section -->
+                }
                 <div class="border-top mar-bottom-md"></div>
                 <div class="row mar-bottom-lg">
                     <div class="col-xs-4">
@@ -108,14 +157,14 @@
 </div><!-- end of main page wrapper -->
 @code {
     [Parameter]
-    public string projectName { get; set; } = "";
+    public string ProjectName { get; set; } = "";
     public Portfolio project = new Portfolio();
     public List<Team> ourTeamMembers = new List<Team> { };
 
     protected override void OnInitialized()
     {
         var portfolio = new PortfolioData().portfolio;
-        project = portfolio.FirstOrDefault(p => p.Name == projectName)?? new Portfolio();
+        project = portfolio.FirstOrDefault(p => p.Name == ProjectName) ?? new Portfolio();
         base.OnInitialized();
     }
 }

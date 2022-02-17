@@ -1,0 +1,28 @@
+﻿@using LandingPage.Domain.Entities
+<!-- start of t-section -->
+<div class="t-section grey pad-top-lg pad-bottom-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-lg-8 col-md-push-1 col-lg-push-2">
+                <h2 class="heading text-center">Real Reviews</h2>
+                <!-- t-slider -->
+                <div class="t-slider">
+                    @foreach (var review in Reviews)
+                    {
+                        <!-- slide -->
+                        <div class="slide text-center">
+                            <blockquote>
+                                <q>@review.Review</q>
+                                <cite>@review.Reviewer</cite>
+                            </blockquote>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- end of t-section -->
+@code {
+    [Parameter]
+    public List<Reviews> Reviews { get; set; } = new List<Reviews> { };
+}

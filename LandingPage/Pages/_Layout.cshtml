@@ -4,8 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
     <!-- set the encoding of your site -->
     <meta charset="utf-8">
@@ -30,11 +28,12 @@
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="template/css/plugin-resets.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/scss/style.css">
+    <link rel="stylesheet" href="template/css/style.css">
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="template/css/responsive.css">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/color.css">
+    <link rel="stylesheet" href="template/css/color.css" />
+    <link href="LandingPage.styles.css" rel="stylesheet" />
     <!-- Page Title -->
     <title>NativoPlus</title>
 
@@ -49,11 +48,11 @@
     <script src="template/js/jquery.js"></script>
     <script src="template/js/plugins.js"></script>
     <script>
-      Blazor.start().then(function () {
-        var customScript = document.createElement('script');
-        customScript.setAttribute('src', 'template/js/scripts.js');
-        document.head.appendChild(customScript);
-      });
+        Blazor.start().then(function () {
+          var customScript = document.createElement('script');
+          customScript.setAttribute('src', 'template/js/scripts.js');
+          document.head.appendChild(customScript);
+        });
     </script>
 
 </body>

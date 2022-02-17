@@ -8,7 +8,7 @@
 @using LandingPage.Infrastructure.Files
 @*Page*@
 @layout EmptyLayout
-@page "/portfolios"
+@page "/work/portfolio"
 
 <!-- start of main page wrapper -->
 <div id="wrapper">
@@ -76,7 +76,7 @@
     <BackToTop />
 </div><!-- end of main page wrapper -->
 @code {
-    public List<Portfolio> Portfolio;
+    public List<Portfolio> Portfolio = new List<Portfolio>{};
     public string ActiveFilter { get; set; } = "All";
 
 
@@ -106,7 +106,7 @@
     public void NavigateTo(string path)
     {
         // Forced Reload To Ensure a Fresh Instance of Javascript Files.
-        NavigationManager.NavigateTo("/" + path, forceLoad: true);
+        NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
     }
     private void LocationChanged(object sender, LocationChangedEventArgs e)
     {

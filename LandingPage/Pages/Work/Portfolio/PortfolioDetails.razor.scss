@@ -1,0 +1,10 @@
+﻿.port-slider {
+    img {
+        width: 100%;
+        transition: all ease 0.3s;
+    }
+
+    &:hover img {
+        transform: scale(.99) !important;
+    }
+}

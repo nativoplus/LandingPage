@@ -97,9 +97,9 @@ namespace LandingPage.Infrastructure.Files
                     },
 
                 },
-                Categories = new List<Categories>
+                Categories = new List<string>
                 {
-
+                    "Mobile Application"
                 }
             },
             new Portfolio
