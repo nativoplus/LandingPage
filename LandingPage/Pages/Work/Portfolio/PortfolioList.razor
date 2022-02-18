@@ -53,7 +53,7 @@
                                     <div class="box">
                                         <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>
                                         <div class="frame">
-                                            <span class="price">Digital &amp; Art</span>
+                                            <span class="price">@(project.Categories.Count >0 ? project.Categories[0]: "Development")</span>
                                         </div>
                                     </div>
                                 </div><!-- end of product-box -->
