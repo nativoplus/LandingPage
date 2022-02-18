@@ -1,14 +1,17 @@
 ﻿@*Imports*@
 @implements IDisposable
 @inject NavigationManager NavigationManager
+@using Infrastructure.Files
 @using LandingPage.Components
+@using LandingPage.Components.Collapsible
 @using LandingPage.Domain.Entities
 @using LandingPage.Infrastructure.Files
+@using static LandingPage.Enums.CollapsibleItemEnum
 @inject NavigationManager NavigationManager
 @layout EmptyLayout
 @page "/work/portfolio/{ProjectName}"
 <!-- start of main page wrapper -->
-<PageTitle>NativoPlus - @project.Name</PageTitle>
+<PageTitle>NativoPlus - @Project.Name</PageTitle>
 <div id="wrapper">
     <!-- start of preloader -->
     <Preloader />
@@ -17,25 +20,11 @@
         <!-- start of page header -->
         <NavigationBar />
         <!-- end of page header -->
-        <!-- start of search-popup -->
-        <div class="search-popup">
-            <div class="holder">
-                <a href="#" class="search-close"><span></span><span></span></a>
-                <div class="frame">
-                    <form action="#">
-                        <fieldset>
-                            <input placeholder="Search here..." type="text">
-                            <button class="pe-7s-search" type="submit"></button>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div><!-- end of search-popup -->
         <!-- start of page main section -->
         <main id="main">
             <!-- start of page-header -->
             <div class="page-header text-center bg-img-full"
-                style="background-image: url(template/images/bg/bggrey.png);">
+                 style="background-image: url(template/images/bg/bggrey.png);">
                 <span class="bg-overlay"></span>
                 <div class="container pad-top-xs pad-bottom-lg">
                     <div class="row pad-top-md pad-bottom-xs">
@@ -54,7 +43,7 @@
                     <div class="col-xs-12">
                         <!-- start of port-slider -->
                         <div class="port-slider">
-                            @foreach (var imgage in project.ImgUrls)
+                            @foreach (var imgage in Project.ImgUrls)
                             {
                                 <div class="slide">
                                     <img src="@imgage" alt="image" class="img-responsive">
@@ -66,27 +55,30 @@
                 <!-- start of port-detail -->
                 <div class="row port-detail mar-bottom-xs">
                     <div class="col-xs-12 col-sm-8 mar-bottom-xs">
-                        <span class="heading">@project.Name</span>
-                        <p>@project.Headline</p>
-                        @project.Body
-                        @* <ul class="social list-inline">
-                            <li>Share:</li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-pinterest-p"></a></li>
-                            </ul>*@
+                        <span class="heading">@Project.Name</span>
+                        <p>@Project.Headline</p>
+                        @Project.Body
+
+                        @if (Project.Reviews.Count > 0)
+                        {
+                            <blockquote>
+                                <div class="row">
+                                    <q class="col-xs-12">
+                                        @Project.Reviews[0].Review
+                                    </q>
+                                    <p class="pull-left pad-top-xs col-xs-12">- @Project.Reviews[0].Reviewer</p>
+                                </div>
+                            </blockquote>
+                        }
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 mar-bottom-xs">
-
                         <!-- Starts Of Category Details-->
                         <div>
                             <span class="subheading">Category</span>
                             <span class="txt">
-                                @foreach (var category in project.Categories)
+                                @foreach (var category in Project.Categories)
                                 {
-
-                                    if (project.Categories.IndexOf(category) != project.Categories.Count - 1)
+                                    if (Project.Categories.IndexOf(category) != Project.Categories.Count - 1)
                                     {
                                         // Add Comma and a Space at the end of the string.
                                         @(@category + ", ")
@@ -106,59 +98,36 @@
                             <span class="txt">TBA</span>
                         </div>
                         <!-- End Of Date Details-->
-                        <!-- Starts Of Tags Details-->
-                        @*<div>
-                            <span class="subheading">Tags</span>
-                            <span class="txt">
-                            @foreach (var category in project.Services)
-                            {
-
-                            if (project.Services.IndexOf(category) < 1)
-                            {
-                            // Add Comma and a Space at the end of the string.
-                            @(@category + ", ")
-                            }
-                            else if (project.Services.IndexOf(category) == 1)
-                            {
-                            // Does Not Add Comma and Space at the end of the string for last item.
-                            @category
-                            }
-                            }
-                            </span>
-                            </div>*@
-                        <!-- End Of Tags Details-->
                     </div>
-
-
+                    <div class="mar-bottom-lg">
+                        <Collapsible>
+                            @if (Project.Team.Count > 0)
+                            {
+                                <!-- Start Of Collapsible Item-->
+                                <CollapsibleItem Header="Team Members" CollapsibleItemOption="@CollapsibleItemOptions.Team" Team="@Project.Team" />
+                                <!-- End Of Collapsible Item-->
+                            }
+                            @if (Project.Technologies.Count > 0)
+                            {
+                                <!-- Start Of Collapsible Item-->
+                                <CollapsibleItem Header="Technology Used" CollapsibleItemOption="@CollapsibleItemOptions.List" Items="@Project.Technologies" />
+                                <!-- End Of Collapsible Item-->
+                            }
+                            @if (Project.Practices.Count > 0)
+                            {
+                                <!-- Start Of Collapsible Item-->
+                                <CollapsibleItem Header="Practices Used" CollapsibleItemOption="@CollapsibleItemOptions.List" Items="@Project.Practices" HasBottomBorder="false" />
+                                <!-- End Of Collapsible Item-->
+                            }
+                        </Collapsible>
+                    </div>
 
                 </div><!-- end of port-detail -->
 
-                @* <div class="border-top mar-bottom-md"></div>
-                    <div class="row mar-bottom-lg">
-                    <div class="col-xs-4">
-                    <a href="portfolio-detail.html" class="btn-port"><i class="fa fa-long-arrow-left"
-                    aria-hidden="true"></i> Previous</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                    <a href="portfolio.html" class="btn-port">All Projects</a>
-                    </div>
-                    <div class="col-xs-4 text-right">
-                    <a href="portfolio-detail.html" class="btn-port">Next <i class="fa fa-long-arrow-right"
-                    aria-hidden="true"></i></a>
-                    </div>
-                    </div> *@
+
             </div>
 
         </main><!-- end of page main section -->
-
-        <TeamCardList Team="@project.Team" Heading="The Team" />
-
-        @if (@project.Reviews.Count > 0)
-        {
-            <!-- Start of Testimonial Section -->
-            <Testimonials Reviews="@project.Reviews" />
-            <!-- End of Testimonial Section -->
-        }
         <!-- start of promo-box -->
         <CallToAction />
         <!-- end of promo-box -->
@@ -174,13 +143,15 @@
     public List<Portfolio> Portfolio { get; set; } = new List<Portfolio> { };
     [Parameter]
     public string ProjectName { get; set; } = "";
-    public Portfolio project = new Portfolio();
-    public List<Team> ourTeamMembers = new List<Team> { };
+    public Portfolio Project = new Portfolio();
 
     protected override void OnInitialized()
     {
+        var projectTeam = new TeamData().Team;
         var portfolio = new PortfolioData().portfolio;
-        project = portfolio.FirstOrDefault(p => p.Name == ProjectName) ?? new Portfolio();
+        Project = portfolio.FirstOrDefault(p => p.Name == ProjectName) ?? new Portfolio();
+        Project.Team = projectTeam.FindAll(p => p.Projects.Contains(ProjectName));
+        Shuffle();
         base.OnInitialized();
     }
 
@@ -195,9 +166,15 @@
         string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
         System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
     }
-    void IDisposable.Dispose()
+
+    public void Shuffle()
     {
+
+        var rnd = new Random();
+        var randomized = Project.Team.OrderBy(item => rnd.Next());
+        Project.Team = randomized.ToList();
+    }
+    void IDisposable.Dispose() =>
         // Unsubscribe from the event when our component is disposed
         NavigationManager.LocationChanged -= LocationChanged;
-    }
 }

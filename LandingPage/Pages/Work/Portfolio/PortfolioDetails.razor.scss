@@ -1,4 +1,6 @@
-﻿.port-slider {
+﻿@import '../../../wwwroot/template/scss/_bootstrap-custom.scss';
+
+.port-slider {
     img {
         width: 100%;
         transition: all ease 0.3s;

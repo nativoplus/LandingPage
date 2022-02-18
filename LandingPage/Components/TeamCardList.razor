@@ -1,5 +1,6 @@
 ﻿@using LandingPage.Domain.Entities
-<section class="@(GreyBackground ? "bg-grey" : "") pad-top-lg">
+@using LandingPage.Infrastructure.Files
+<section class="@(GreyBackground ? "bg-grey" : "") pad-top-xs">
     <header class="main-heading text-center row">
         <div class="col-xs-12">
             <h2 class="heading">@Heading</h2>
@@ -37,55 +38,11 @@
     [Parameter]
     public MarkupString Body { get; set; } = new MarkupString("");
     [Parameter]
-    public List<Team> Team { get; set; } = new List<Team> { new Team
-        {
-        Name = "Hector Orellana Reyes",
-        Title = "Software Engineer",
-        Description = "Lorem Ipsum",
-        ImgUrl = "template/images/team/hector.jpg",
-        LinkedIn = "",
-        GithubUrl = "",
-        },
-        new Team
-        {
-        Name = "Jose Velez",
-        Title = "Founder",
-        Description = "Lorem Ipsum",
-        ImgUrl = "template/images/team/jose.jpg",
-        LinkedIn = "",
-        GithubUrl = "",
-        },
-        new Team
-        {
-        Name = "Angel Ramos",
-        Title = "Software Engineer",
-        Description = "Lorem Ipsum",
-        ImgUrl = "template/images/team/ramos.jpg",
-        LinkedIn = "",
-        GithubUrl = "",
-        },
-        new Team
-        {
-        Name = "Arnaldo Rodriguez",
-        Title = "Software Engineer",
-        Description = "Lorem Ipsum",
-        ImgUrl = "template/images/team/arnaldo.jpg",
-        LinkedIn = "",
-        GithubUrl = "",
-        },
-        // new Team
-        //{
-        //    Name = "Angel Martinez",
-        //    Title = "Software Engineer",
-        //    Description = "Lorem Ipsum",
-        //    ImgUrl = "template/images/team/martinez.jpg",
-        //    LinkedIn = "",
-        //    GithubUrl = "",
-        //}};
-        };
+    public List<Team> Team { get; set; } = new List<Team> { };
 
     protected override void OnInitialized()
     {
+        Team = new TeamData().Team;
         Shuffle();
         //ourTeamMembers = Shuffle(ourTeamMembers);
         base.OnInitialized();
@@ -98,4 +55,4 @@
 
         Team = randomized.ToList();
     }
-        }
+}

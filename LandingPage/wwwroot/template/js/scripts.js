@@ -437,7 +437,6 @@ $(document).ready(function () {
     // IsoTop init
     function initIsoTop() {
         "use strict";
-        console.log("Isotope JS FN Successfully Init.")
         // Isotope init
         var isotopeHolder = jQuery('#isotop-holder'),
             win = jQuery(window);
@@ -459,5 +458,24 @@ $(document).ready(function () {
                 columnWidth: '.item'
             }
         });
+    }
+
+    initCollapasible();
+    // Init Collapsible
+    function initCollapasible() {
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
     }
 });

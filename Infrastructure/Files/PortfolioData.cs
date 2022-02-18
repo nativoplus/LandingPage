@@ -65,28 +65,7 @@ namespace LandingPage.Infrastructure.Files
                     "Cloud Hosting",
                     "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Hector Orellana Reyes",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/hector.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
-                 Reviews = new List<Reviews>
+                Reviews = new List<Reviews>
                 {
                     new Reviews
                     {
@@ -152,23 +131,12 @@ namespace LandingPage.Infrastructure.Files
                     "Cloud Hosting",
                     "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                }
+                Categories = new List<string> { "Mobile Application"}
             },
-             new Portfolio
+            new Portfolio
             {
                 ProjectId = 1,
-                Name = "Maxana - TBC",
+                Name = "Maxana",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Maxana is a company partner with a proven track record in the
                 creation of new Fin tech Digital Transformation solutions and
@@ -178,14 +146,11 @@ namespace LandingPage.Infrastructure.Files
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@""),
                 ImgUrls = new List<string>{
-                    "template/images/assets/fm/fertilemind.png",
+                    "template/images/assets/maxana/maxana.png",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
                 {
-                    "Web development",
-                    "Web Design",
-                    "Mobile App Redesign",
                     "Production Support",
                     "API Development",
                     "Troubleshooting",
@@ -195,28 +160,30 @@ namespace LandingPage.Infrastructure.Files
                 },
                 Technologies = new List<string>
                 {
+                    ".Net Core",
+                    "Microsoft Azure",
+                    "SQL Server"
                 },
                 Practices = new List<string>
                 {
-
+                    "User Research",
+                    "Agile Development",
+                    "Restful API",
+                    "Data Management",
+                    "Technical Discovery",
+                    "Product Management",
+                    "Cloud Hosting",
+                    "Open Source Development"
                 },
-                Team = new List<Team>
+                Categories = new List<string>
                 {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
+                    "API Development"
                 }
             },
             new Portfolio
             {
                 ProjectId = 1,
-                Name = "Stripe - TBC",
+                Name = "Stripe",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Stripe is a technology company that builds economic infrastructure for 
                 the internet. Their software helps businesses of all sizes to accept payments and 
@@ -275,14 +242,11 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/st/architecture.png",
+                    "template/images/assets/maxana/maxana.png",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
                 {
-                    "Web development",
-                    "Web Design",
-                    "Mobile App Redesign",
                     "Production Support",
                     "API Development",
                     "Troubleshooting",
@@ -292,16 +256,24 @@ namespace LandingPage.Infrastructure.Files
                 },
                 Technologies = new List<string>
                 {
+                    ".Net Core",
+                    "Microsoft Azure",
+                    "SQL Server"
                 },
                 Practices = new List<string>
                 {
-
+                    "User Research",
+                    "Agile Development",
+                    "Restful API",
+                    "Data Management",
+                    "Technical Discovery",
+                    "Product Management",
+                    "Cloud Hosting",
+                    "Open Source Development"
                 },
-                Team = new List<Team>
+                Categories = new List<string>
                 {
-                    new Team
-                    {
-                    },
+                    "API Development"
                 }
             },
             new Portfolio
@@ -332,14 +304,10 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/bg/bg1.jpg",
-                    //"template/images/assets/gb/templates.jpg",
+                    "template/images/assets/afa/afa.png",
                 },
                 Services = new List<string>
                 {
-                    "Web development",
-                    "Web Design",
-                    "Mobile App Redesign",
                     "Production Support",
                     "API Development",
                     "Troubleshooting",
@@ -349,57 +317,66 @@ namespace LandingPage.Infrastructure.Files
                 },
                 Technologies = new List<string>
                 {
+                    ".Net Core",
+                    "Microsoft Azure",
+                    "SQL Server"
                 },
                 Practices = new List<string>
                 {
+                    "User Research",
+                    "Agile Development",
+                    "Restful API",
+                    "Data Management",
+                    "Technical Discovery",
+                    "Product Management",
+                    "Cloud Hosting",
+                    "Open Source Development"
                 },
-                Team = new List<Team>
+                Categories = new List<string>
                 {
+                    "Web Development"
                 }
             },
-            new Portfolio
-            {
-                ProjectId = 1,
-                Name = "Whistic",
-                // Uses String Literal to make the string more readable on development. 
-                Headline=@"Whistic simplifies how businesses assess, publish,
-                and share security documentation with customers
-                and vendors. The Whistic Vendor Security Network
-                accelerates the vendor assessment process by
-                enabling buyers to access and evaluate a vendor’s
-                Whistic Profile. Additionally, Whistic facilitates zero-
-                touch assessments via the Whistic Trust Catalog,
-                which contains security information for more than
-                35,000 businesses.",
-                //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@""){
-                },
-                ImgUrls = new List<string>{
-                    "template/images/bg/bg1.jpg",
-                    //"template/images/assets/gb/templates.jpg",
-                },
-                Services = new List<string>
-                {
-                    "Web development",
-                    "Web Design",
-                    "Mobile App Redesign",
-                    "Production Support",
-                    "API Development",
-                    "Troubleshooting",
-                    "Database Design",
-                    "Server Management",
-                    "Deployment Automation"
-                },
-                Technologies = new List<string>
-                {
-                },
-                Practices = new List<string>
-                {
-                },
-                Team = new List<Team>
-                {
-                }
-            },
+            //new Portfolio
+            //{
+            //    ProjectId = 1,
+            //    Name = "Whistic",
+            //    // Uses String Literal to make the string more readable on development. 
+            //    Headline=@"Whistic simplifies how businesses assess, publish,
+            //    and share security documentation with customers
+            //    and vendors. The Whistic Vendor Security Network
+            //    accelerates the vendor assessment process by
+            //    enabling buyers to access and evaluate a vendor’s
+            //    Whistic Profile. Additionally, Whistic facilitates zero-
+            //    touch assessments via the Whistic Trust Catalog,
+            //    which contains security information for more than
+            //    35,000 businesses.",
+            //    //Managing Body as a Markup string to be able to generate body more dynamically. 
+            //    Body = new MarkupString(@""){
+            //    },
+            //    ImgUrls = new List<string>{
+            //        "template/images/bg/bg1.jpg",
+            //        //"template/images/assets/gb/templates.jpg",
+            //    },
+            //    Services = new List<string>
+            //    {
+            //        "Web development",
+            //        "Web Design",
+            //        "Mobile App Redesign",
+            //        "Production Support",
+            //        "API Development",
+            //        "Troubleshooting",
+            //        "Database Design",
+            //        "Server Management",
+            //        "Deployment Automation"
+            //    },
+            //    Technologies = new List<string>
+            //    {
+            //    },
+            //    Practices = new List<string>
+            //    {
+            //    },
+            //},
             new Portfolio
             {
                 ProjectId = 1,
@@ -421,98 +398,14 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/bg/bg1.jpg",
+                    "template/images/assets/westcor/westcor.png",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
                 {
                     "Web development",
                     "Web Design",
-                    "Mobile App Redesign",
-                    "Production Support",
-                    "API Development",
-                    "Troubleshooting",
-                    "Database Design",
-                    "Server Management",
-                    "Deployment Automation"
-                },
-                Technologies = new List<string>
-                {
-                },
-                Practices = new List<string>
-                {
-                },
-                Team = new List<Team>
-                {
-                }
-            },
-            new Portfolio
-            {
-                ProjectId = 3,
-                Name = "Techcu - TBC",
-                // Uses String Literal to make the string more readable on development. 
-                Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
-                Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
-                and outstanding service and member benefits.",
-                //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>Techcu was interested in creating a member-centered website that provided members with the
-                information they needed and represented their values as well. We have provided Techcu with a number of services, one of these
-                is Restful Apis, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created
-                Fintech-focused APIs so that multiple partners can process loans, access member information, create transfers, and manage external
-                loans using Azure logic apps and azure functions.</p>
-                <div class='row' style='margin-bottom: 3rem'>
-                    <div class='col-md-12'>
-                        <p>
-                            Additionally, we have delivered extensive support
-                            for their legacy apps, improving code quality, creating development, staging and production environments as well. Our long-standing
-                            mission has been to position Techcu in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
-                            their offerings to the fintech world, granting them multiple partnerships across automobile and solar industries with many more to
-                            come.
-                        </p> 
-                    </div>
-                    <div class='col-md-12'>
-                        <p>
-                            Digital Account Opening is a product for a credit union which offers 
-                            its customers to open an account with the union, without the customer 
-                            ever interacting without an official, everything is done online.
-                        </p> 
-                        <p>
-                            This application has the following features: 
-                        </p> 
-                        <ul>
-                            <li>
-                                OFAC integrations.
-                            </li>
-                            <li>
-                                Soft credit inquiry at the moment of opening an account.
-                            </li>
-                            <li>
-                                Identity Detection.
-                            </li> 
-                            <li>
-                                Electronic in house and external transfers at the moment of funding an account.
-                            </li>
-                            <li>
-                                Move bank accounts from one bank to another.
-                            </li>
-                            <li>
-                                Plaid Integration.
-                            </li>
-                        </ul>
-                    </div>
-                   </div>"
-                    ),
-                ImgUrls = new List<string>{
-                    "template/images/assets/techcu/techcu2.png",
-                    "template/images/assets/techcu/techcu1.png",
-                    "template/images/assets/techcu/techcu3.png",
-                    "template/images/assets/techcu/techcu4.png"
-                },
-                Services = new List<string>
-                {
-                    "Web development",
-                    "Web Design",
-                    "Production Support",
+                    "Social Media Managment",
                     "Mobile App Redesign",
                     "API Development",
                     "Database Design",
@@ -539,41 +432,106 @@ namespace LandingPage.Infrastructure.Files
                     "Cloud Hosting",
                     "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Angel Ramos",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/ramos.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                    new Team
-                    {
-                        Name = "Angel Martinez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/martinez.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                    new Team
-                    {
-                        Name = "Jose Velez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/jose.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
+                Categories = new List<string> { "Mobile Application"}
             },
+            //new Portfolio
+            //{
+            //    ProjectId = 3,
+            //    Name = "Techcu - TBC",
+            //    // Uses String Literal to make the string more readable on development. 
+            //    Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
+            //    Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
+            //    and outstanding service and member benefits.",
+            //    //Managing Body as a Markup string to be able to generate body more dynamically. 
+            //    Body = new MarkupString(@"<p>Techcu was interested in creating a member-centered website that provided members with the
+            //    information they needed and represented their values as well. We have provided Techcu with a number of services, one of these
+            //    is Restful Apis, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created
+            //    Fintech-focused APIs so that multiple partners can process loans, access member information, create transfers, and manage external
+            //    loans using Azure logic apps and azure functions.</p>
+            //    <div class='row' style='margin-bottom: 3rem'>
+            //        <div class='col-md-12'>
+            //            <p>
+            //                Additionally, we have delivered extensive support
+            //                for their legacy apps, improving code quality, creating development, staging and production environments as well. Our long-standing
+            //                mission has been to position Techcu in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
+            //                their offerings to the fintech world, granting them multiple partnerships across automobile and solar industries with many more to
+            //                come.
+            //            </p> 
+            //        </div>
+            //        <div class='col-md-12'>
+            //            <p>
+            //                Digital Account Opening is a product for a credit union which offers 
+            //                its customers to open an account with the union, without the customer 
+            //                ever interacting without an official, everything is done online.
+            //            </p> 
+            //            <p>
+            //                This application has the following features: 
+            //            </p> 
+            //            <ul>
+            //                <li>
+            //                    OFAC integrations.
+            //                </li>
+            //                <li>
+            //                    Soft credit inquiry at the moment of opening an account.
+            //                </li>
+            //                <li>
+            //                    Identity Detection.
+            //                </li> 
+            //                <li>
+            //                    Electronic in house and external transfers at the moment of funding an account.
+            //                </li>
+            //                <li>
+            //                    Move bank accounts from one bank to another.
+            //                </li>
+            //                <li>
+            //                    Plaid Integration.
+            //                </li>
+            //            </ul>
+            //        </div>
+            //       </div>"
+            //        ),
+            //    ImgUrls = new List<string>{
+            //        "template/images/assets/techcu/techcu2.png",
+            //        "template/images/assets/techcu/techcu1.png",
+            //        "template/images/assets/techcu/techcu3.png",
+            //        "template/images/assets/techcu/techcu4.png"
+            //    },
+            //    Services = new List<string>
+            //    {
+            //        "Web development",
+            //        "Web Design",
+            //        "Production Support",
+            //        "Mobile App Redesign",
+            //        "API Development",
+            //        "Database Design",
+            //        "Server Management",
+            //        "Deployment Automation"
+            //    },
+            //    Technologies = new List<string>
+            //    {
+            //        "Flutter / Dart",
+            //        "Firebase",
+            //        "SQL Server"
+
+            //    },
+            //    Practices = new List<string>
+            //    {
+            //        "User Research",
+            //        "UX Design",
+            //        "Agile Development",
+            //        "Restful API",
+            //        "Data Management",
+            //        "Technical Discovery",
+            //        "Mobile Design",
+            //        "Product Management",
+            //        "Cloud Hosting",
+            //        "Open Source Development"
+            //    },
+            //},
             new Portfolio
             {
                 ProjectId = 4,
-                Name = "Happy Volts - TBC",
+                Name = "Happy Volts",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"HappyVolts is a clean tech company that makes all-in-one
                 inverters to help people use natural resources wisely.
@@ -652,9 +610,7 @@ namespace LandingPage.Infrastructure.Files
                 },
                 ImgUrls = new List<string>{
                     "template/images/assets/hv/hv2.png",
-                    "template/images/assets/hv/hv1.jpg",
-                    "template/images/assets/hv/hv3.png",
-                    "template/images/assets/hv/hv4.jpg"
+                    "template/images/assets/hv/hv.jpg",
                 },
                 Services = new List<string>
                 {
@@ -683,23 +639,12 @@ namespace LandingPage.Infrastructure.Files
                     "Cloud Hosting",
                     "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
+                Categories = new List<string> { "Marketing"}
             },
             new Portfolio
             {
                 ProjectId = 5,
-                Name = "Sportman Cap & Bag - TBC",
+                Name = "Sportman Cap & Bag",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Sportsman Cap & Bag is a worldwide distributor of promotional
                 merchandise. Has more than 85 years of experience in the cap
@@ -749,23 +694,13 @@ namespace LandingPage.Infrastructure.Files
                     "Cloud Hosting",
                     "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
+                Categories = new List<string> { "Marketing"}
+
             },
             new Portfolio
             {
                 ProjectId = 6,
-                Name = "Kati Sportcap & Bag - TBC",
+                Name = "Kati Sportcap & Bag",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Kati Sportcap & Bag is an established distributor of promotional
                 products, caps, and bags, operated in Houston, Texas. For
@@ -785,7 +720,7 @@ namespace LandingPage.Infrastructure.Files
                 "),
                 ImgUrls = new List<string>{
                     "template/images/assets/sc/ksc1.png",
-                    "template/images/assets/sc/ksc2.png",
+                    "template/images/assets/sc/sportcap.png",
                 },
                 Services = new List<string>
                 {
@@ -816,23 +751,12 @@ namespace LandingPage.Infrastructure.Files
                     "Cloud Hosting",
                     "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
+                Categories = new List<string> { "Marketing"}
             },
             new Portfolio
             {
                 ProjectId = 8,
-                Name = "Farm to Market Bread Co. - TBC",
+                Name = "Farm to Market Bread Co.",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Farm to Market Bread Co. is a company that answers 
                 the need for fresh bread baked from quality ingredients. Farm 
@@ -845,7 +769,8 @@ namespace LandingPage.Infrastructure.Files
                 and sales promotion, marketing campaigns, display design, logo, 
                 and identity development.</p>"),
                 ImgUrls = new List<string>{
-                    "template/images/bg/bg1.jpg",
+                    "template/images/assets/ftmb/ftmb.png",
+                    "template/images/assets/ftmb/ftmb2.png",
                 },
                 Services = new List<string>
                 {
@@ -853,7 +778,7 @@ namespace LandingPage.Infrastructure.Files
                     "Marketing Campaings",
                     "Display Design",
                     "Logo",
-                    "Identity Development",
+                    "Identity Design",
                 },
                 Technologies = new List<string>
                 {
@@ -862,29 +787,10 @@ namespace LandingPage.Infrastructure.Files
                 },
                 Practices = new List<string>
                 {
-                    "User Research",
                     "UX Design",
-                    "Agile Development",
-                    "Restful API",
-                    "Data Management",
-                    "Technical Discovery",
-                    "Mobile Design",
                     "Product Management",
-                    "Cloud Hosting",
-                    "Open Source Development"
                 },
-                Team = new List<Team>
-                {
-                    new Team
-                    {
-                        Name = "Arnaldo Rodriguez",
-                        Title = "Software Engineer",
-                        Description = "Lorem Ipsum",
-                        ImgUrl = "template/images/team/arnaldo.jpg",
-                        LinkedIn = "",
-                        GithubUrl = "",
-                    },
-                },
+                Categories = new List<string> { "Marketing"}
             }
         };
     }
