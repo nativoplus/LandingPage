@@ -1,0 +1,79 @@
+﻿@using LandingPage.Components;
+
+@page "/thoughts/blog/{Blog}"
+<PageTitle>NativoPlus - @Blog</PageTitle>
+<!-- start of main page wrapper -->
+<div id="wrapper">
+    <!-- start of preloader -->
+    <Preloader />
+    <!-- end of preloader -->
+    <div class="w1">
+        <!-- start of page header -->
+        <NavigationBar />
+        <!-- end of page header -->
+        <!-- start of page main section -->
+        <main id="main" class="bg-grey">
+            <!-- start of page-header -->
+            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/bggrey.png);">
+                <span class="bg-overlay"></span>
+                <div class="container pad-top-xs pad-bottom-lg">
+                    <div class="row pad-top-md pad-bottom-xs">
+                        <div class="col-xs-12">
+                            <!-- start of breadcrumbs -->
+                            <ul class="list-inline breadcrumbs">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Blog Single</li>
+                            </ul><!-- end of breadcrumbs -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of page-header -->
+            <div class="container pad-top-md full-width">
+                <div class="row pad-top-xs">
+                    <div class="col-xs-12">
+                        <div class="blog-detail">
+                            <div class="img"><img src="template/images/bg/bggrey.png" alt="img" class="img-responsive"></div>
+                            <div class="text-box bg-white">
+                                <h2 class="heading">Discover New Technologies</h2>
+                                <span class="meta">by: Stenve Martin &nbsp; / &nbsp; Jan 26, 2017</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error.</p>
+                                <p>Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunter in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus erison voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                <blockquote>
+                                    <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusod tempor incididunt ut labor et dolore magna aliqua. Ut enim ad minim venia quis nostrud exercitation ullamco laboris nisi ut aliquip. </q>
+                                </blockquote>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                                <div class="post-footer">
+                                    <ul class="tags list-inline">
+                                        <li>Tags:</li>
+                                        <li><a href="#">Logo,</a></li>
+                                        <li><a href="#">Mockup,</a></li>
+                                        <li><a href="#">Design</a></li>
+                                    </ul>
+                                    <ul class="social list-inline">
+                                        <li>Share:</li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                                        <li><a href="#" class="fa fa-pinterest-p"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main><!-- end of page main section -->
+        <!-- start of promo-box -->
+        <CallToAction />
+        <!-- end of promo-box -->
+        <!-- start of page footer -->
+        <Footer />
+        <!-- end of page footer -->
+    </div>
+    <!-- Back Top of the page -->
+    <BackToTop />
+</div>
+@code {
+    [Parameter]
+    public string Blog { get; set; } = "";
+}

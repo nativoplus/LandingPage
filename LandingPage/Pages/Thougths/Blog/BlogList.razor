@@ -1,0 +1,94 @@
+﻿@*Imports*@
+@implements IDisposable
+@inject NavigationManager NavigationManager
+@using LandingPage.Components;
+@page "/thoughts/blog"
+<PageTitle>NativoPlus - Blog</PageTitle>
+<!-- start of main page wrapper -->
+<div id="wrapper">
+    <!-- start of preloader -->
+    <Preloader />
+    <!-- end of preloader -->
+    <div class="w1">
+        <!-- start of page header -->
+        <NavigationBar />
+        <!-- end of page header -->
+        <!-- start of page main section -->
+        <main id="main" class="bg-grey">
+            <!-- start of page-header -->
+            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/bggrey.png);">
+                <span class="bg-overlay"></span>
+                <div class="container pad-top-xs pad-bottom-lg">
+                    <div class="row pad-top-md pad-bottom-xs">
+                        <div class="col-xs-12">
+                            <!-- start of breadcrumbs -->
+                            <ul class="list-inline breadcrumbs">
+                                <li><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo("/"))">Home</a></li>
+                                <li>Blog</li>
+                            </ul><!-- end of breadcrumbs -->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of page-header -->
+            <div class="container pad-top-xs">
+                <div class="row pad-top-md ">
+                    <div class="col-xs-12 col-sm-4 mar-bottom-xs">
+                        <!-- start of post -->
+                        <div class="post">
+                            <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo("dets"))"><img src="template/images/bg/bggrey.png" alt="image" class="img-responsive"></a>
+                            <div class="box bg-white">
+                                <h3 class="heading"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo("dets"))">Discover New Technologies</a></h3>
+                                <span class="meta">Web design &nbsp;/&nbsp; 26 Jan, 2017</span>
+                                <p>Proin gravida nibh vel velit auctor aliquet viel soicudin, lorem quis bibem auctor viele elit consequat ipsum, nec sagittis sem...</p>
+                                <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo("dets"))" class="more">More  <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div><!-- end of post -->
+                    </div>
+                </div>
+
+                <div class="row mar-bottom-lg pad-top-xs">
+                    <div class="col-xs-12">
+                        <ul class="list-inline shop-pagination text-center">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">Next &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main><!-- end of page main section -->
+        <!-- start of promo-box -->
+        <CallToAction />
+        <!-- end of promo-box -->
+        <!-- start of page footer -->
+        <Footer />
+        <!-- end of page footer -->
+    </div>
+    <!-- Back Top of the page -->
+    <BackToTop />
+</div>
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    public void NavigateTo(string path)
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/thoughts/blog/" + path, forceLoad: true);
+    }
+
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+        NavigationManager.LocationChanged -= LocationChanged;
+    }
+}

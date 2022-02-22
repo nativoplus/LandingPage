@@ -1,0 +1,58 @@
+﻿@using LandingPage.Domain.Entities
+@using LandingPage.Infrastructure.Files
+<section class="@(GreyBackground ? "bg-grey" : "") pad-top-xs">
+    <header class="main-heading text-center row">
+        <div class="col-xs-12">
+            <h2 class="heading">@Heading</h2>
+            @Body
+        </div>
+    </header><!-- end of main-heading -->
+
+    <div class="container">
+        <div class="row pad-top-md">
+            @foreach (var member in Team)
+            {
+                <!-- start of team-box -->
+                <div class="col-xs-12 col-sm-4 mar-bottom-md">
+
+                    <div class="team-box text-center">
+                        <div class="img-box"><img src="@member.ImgUrl" alt="image" class="img-responsive"></div>
+                        <h3 class="heading">@member.Name</h3>
+                        <span class="text">@member.Title</span>
+                        <!-- social -->
+                    <ul class="list-inline social">
+                            <li><a href="@member.LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="@member.GithubUrl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div><!-- end of team-box -->
+            </div>
+            }
+        </div>
+    </div>
+</section>
+@code {
+    [Parameter]
+    public bool GreyBackground { get; set; } = false;
+    [Parameter]
+    public string Heading { get; set; } = string.Empty;
+    [Parameter]
+    public MarkupString Body { get; set; } = new MarkupString("");
+    [Parameter]
+    public List<Team> Team { get; set; } = new List<Team> { };
+
+    protected override void OnInitialized()
+    {
+        Team = new TeamData().Team;
+        Shuffle();
+        //ourTeamMembers = Shuffle(ourTeamMembers);
+        base.OnInitialized();
+    }
+    public void Shuffle()
+    {
+
+        var rnd = new Random();
+        var randomized = Team.OrderBy(item => rnd.Next());
+
+        Team = randomized.ToList();
+    }
+}

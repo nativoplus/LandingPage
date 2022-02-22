@@ -1,0 +1,89 @@
+﻿@using LandingPage.Domain.Entities
+@using LandingPage.Enums
+@using static LandingPage.Enums.CollapsibleItemEnum
+<div class="@(HasBottomBorder? "border-bot" : "") ms10 custom-pad">
+
+    <a class="collapsible subheading" href="" @onclick:preventDefault @onclick="ToggleHander">
+        <div class="row">
+            <div class="col-xs-10">
+                <span>@Header</span>
+            </div>
+            <div class="col-xs-2">
+                <span class="fa @(IsCollapsed? "fa-angle-up":"fa-angle-down") main-color icon pull-right" style="font-size: 26px;"></span>
+            </div>
+        </div>
+    </a>
+    <div class="row content">
+        @if (CollapsibleItemOption == CollapsibleItemOptions.Team)
+        {
+            <!-- Render Team In Collapsible Item -->
+            <div class="row pad-top-xs">
+                @foreach (var member in Team)
+                {
+                    <!-- start of team-box -->
+                    <div class="col-xs-12 col-sm-4 mar-bottom-xs">
+
+                        <div class="team-box text-center">
+                            <div class="img-box"><img src="@member.ImgUrl" alt="image" class="img-responsive"></div>
+                            <h3 class="subheading">@member.Name</h3>
+                            <span class="text">@member.Title</span>
+                            <!-- social -->
+                    <ul class="list-inline social">
+                                <li><a href="@member.LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                <li><a href="@member.GithubUrl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- end of team-box -->
+            </div>
+                }
+            </div>
+            <!-- Render Team In Collapsible Item -->
+        }
+        else if (CollapsibleItemOption == CollapsibleItemOptions.List)
+        {
+            <!-- Render Team In Collapsible Item -->
+            <div class="row pad-top-xs">
+                @foreach (var item in Items)
+                {
+                    <!-- start of team-box -->
+                    <div class="col-xs-12 col-sm-6 mar-bottom-xs">
+
+                        <div class="team-box">
+
+                            <span>@item</span>
+                            <!-- social -->
+                </div>
+                        <!-- end of team-box -->
+            </div>
+                }
+            </div>
+            <!-- Render Team In Collapsible Item -->
+        }
+        else
+        {
+            @Body
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public bool HasBottomBorder { get; set; } = true;
+    [Parameter]
+    public CollapsibleItemOptions? CollapsibleItemOption { get; set; } = CollapsibleItemOptions.String;
+    [Parameter]
+    public string Header { get; set; } = string.Empty;
+    [Parameter]
+    public MarkupString Body { get; set; } = new MarkupString("");
+    [Parameter]
+    public List<string> Items { get; set; } = new List<string> { };
+    [Parameter]
+    public List<Team> Team { get; set; } = new List<Team> { };
+
+    private bool IsCollapsed { get; set; } = false;
+
+    private void ToggleHander()
+    {
+        IsCollapsed = !IsCollapsed;
+    }
+}

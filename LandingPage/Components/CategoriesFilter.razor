@@ -1,0 +1,51 @@
+﻿@using LandingPage.Domain.Entities
+<div class="row mar-bottom-xs">
+    <div class="col-xs-12">
+        <!-- start of isotop filter -->
+        <ul class="list-inline isotop-filter">
+            @*  @foreach (var category in Categories)
+                {
+                <li class="@(ActiveFilter == category.CategoryName ? "active" : "") pad-left-z"
+                @onclick=@( () => UpdateActiveFilterValue(category.CategoryName))><a href="" data-filter=".@ActiveFilter" >@category.CategoryName</a></li>
+                }*@
+
+            <li class="@(ActiveFilter == "All" ? "active" : "") pad-left-z"
+                @onclick=@( () => UpdateActiveFilterValue("All"))><a href="#">All</a></li>
+            <li class="@(ActiveFilter == "Website" ? "active" : "") pad-left-z"
+                @onclick=@( () => UpdateActiveFilterValue("Website"))><a href="" data-filter="filter3">Website</a></li>
+            <li class="@(ActiveFilter == "Mobile" ? "active" : "") pad-left-z"
+                @onclick=@( () => UpdateActiveFilterValue("Mobile"))><a href="" data-filter="filter4">Mobile</a></li>
+        </ul>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public string ActiveFilter { get; set; } = "All";
+    [Parameter]
+    public EventCallback<string> ActiveFilterChanged { get; set; }
+
+    public List<Categories> Categories = new List<Categories>{
+        new Categories
+        {
+            CategoryName = "All"
+        },
+        new Categories
+        {
+            CategoryName = "Website"
+        },
+        new Categories
+        {
+            CategoryName = "Mobile App"
+        },
+        new Categories
+        {
+            CategoryName = "Markerting"
+        }
+    };
+
+    async Task UpdateActiveFilterValue(string activeFilter)
+    {
+        ActiveFilter = activeFilter;
+        await ActiveFilterChanged.InvokeAsync(ActiveFilter);
+    }
+}
