@@ -1,4 +1,4 @@
-using LandingPage.Domain.Entities;
+﻿using LandingPage.Domain.Entities;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -144,7 +144,171 @@ namespace LandingPage.Infrastructure.Files
                 enabled by technological expertise and an ecosystem
                 of partners.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@""),
+                Body = new MarkupString(@"
+                <div>
+
+                   
+				    <div class='mar-bottom-lg'>
+					    <h2 class='heading mar-bottom-xs'>What is Stripe?</h2>
+						    <p>
+                                Stripe is a technology company that builds economic infrastructure for 
+                                the internet. Their software helps businesses of all sizes to accept payments and 
+                                manage their businesses online. Their software platform is used by millions of 
+                                companies in over 120 countries.<br/><br/>
+
+                                Stripe selected us to build their first-ever Stripe University cohort to obtain 
+                                Stripe certification. We build a marketplace for Stripe where customers can easily 
+                                access highly vetted, certified Stripe engineers and other technical resources that 
+                                can help expand their payment capabilities. The platform uses friendly design to 
+                                connect enterprises with qualified, certified Stripe-certified engineers and other 
+                                technical resources that can readily and expertly implement Stripe integrations, 
+                                reducing time to market and revenue.
+                            </p>
+					</div>
+                   
+                    <div class='mar-top-lg'>
+                            <!-- start of icon-box -->
+                            <div class='col-xs-12 col-sm-6 mar-bottom-sm icon-box'>
+                                <span class='pe-7s-tools main-color icon add'></span>
+                                <div class='holder'>
+                                    <span class='title large'>Methodology</span>
+                                        <p>
+                                            We used a subset of TOGAF (The Open Group
+                                            Architecture Framework) to define requirements, functions, services,
+                                            capabilities, and technical components.
+                                        </p>
+                                </div>
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class='col-xs-12 col-sm-6 mar-bottom-sm icon-box'>
+                                <span class='pe-7s-browser main-color icon add'></span>
+                                <div class='holder'>
+                                    <span class='title large'>Design</span>
+                                    <p>
+                                       The capabilities were mapped to microservices using domaindriven
+                                       design patterns like “ports and adapters,” which clarified the
+                                       separation of concerns and enforced architecture. The infrastructure
+                                       provisioning was 100% automated.
+                                    </p>
+                                </div>
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class='col-xs-12 col-sm-6 mar-bottom-sm icon-box'>
+                                <span class='pe-7s-helm main-color icon add'></span>
+                                <div class='holder'>
+                                    <span class='title large'>Management</span>
+                                    <p>
+                                        Agile/scrum was used to manage the
+                                        development process.
+                                    </p>
+                                </div>
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class='col-xs-12 col-sm-6 mar-bottom-sm icon-box'>
+                                <span class='pe-7s-portfolio main-color icon add'></span>
+                                <div class='holder'>
+                                    <span class='title large'>Results</span>
+                                    <p>
+                                       A structured approach that facilitated easy
+                                       onboarding and the processing of new data sets in short time. The
+                                       new data sets powered financial instruments to trade revenue.
+                                    </p>            
+                                </div>
+                            </div><!-- end of icon-box -->
+                        </div>
+                    </div>
+                    <div class='mar-bottom-sm'>
+					    <h2 class='heading mar-bottom-sm'>Stripe Implementation</h2>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Problem Statement</span>
+						    <p>
+                              A financial services company wanted to expedite and expand customer onboardingcapabilities leveraging an emerging low code platform to:
+                            </p>
+
+                            <ul>
+                                <li>Enable multiple integrations</li>
+                                <li>Transform and streamline the UX</li>
+                                <li>Decrease onboarding by a factor of 10</li>
+                                <li>Exponentially increase onboarding capacity</li>
+                            </ul>
+                        </div>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Technical Delivery</span>
+                            <ul>
+                                <li>Cloud-based New Account Opening low code platform integrated with an on-premises banking core</li>
+                                <li>Complex integrations with FIS, Alacriti, iOvation, Mitek, and Plaid</li>
+                                <li>New CICD DevOps platform with Datadog and Octopus implementation</li>
+                            </ul>
+                        </div>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Outcome</span>
+                            <ul>
+                                <li>Improved customer journey analytics, leveraging Google Analytics and MS PowerBI</li>
+                                <li>30% increased customer conversion via streamlined UI</li>
+                                <li>Improved ability to identify account fraud through integration with iOvation and Verafin</li>
+                            </ul>
+                        </div>
+					</div>
+                    <div class='mar-bottom-sm'>
+					    <h2 class='heading mar-bottom-sm'>Data Science</h2>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Problem Statement</span>
+						    <p>
+                                A fintech needed to build a payments intelligence platform, including a unified system that consolidated risk, compliance, and investigative 
+                                tooling with metrics enabling a single lens for all payment transactions for the purposes of fraud and compliance-based investigations.​
+                            </p>
+                        </div>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Technical Delivery</span>
+                            <ul>
+                                <li>Track metrics for compliance and operational tooling with Hive data pipelines and complex SQL queries</li>
+                                <li>The platform was built on top of Apache opensource big data projects, e.g., Airflow, Superset, Tez, Hive, 
+                                Presto, and integrated with Amazon EMR</li>
+                            </ul>
+                        </div>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Outcome</span>
+                            <ul>
+                                <li>Reduction in issues related to sanctions and fraudulent payments</li>
+                                <li>Scalable and extensible tooling infrastructure that was flexible, configurable, customizable, and reusable​</li>
+                                <li>Increased operational efficiency​</li>
+                                <li>Improved accuracy​</li>
+                            </ul>
+                        </div>
+					</div>
+                    <div class='mar-bottom-sm'>
+					    <h2 class='heading mar-bottom-sm'>Strategy</h2>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Problem Statement</span>
+						    <p>
+                                A fintech needed to create extraordinary user experiences across all digital banking channels for a truly omni-channel experience.
+                            </p>
+                        </div>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Technical Delivery</span>
+                            <ul>
+                                <li>Created Enterprise Service Bus (ESB)</li>
+                                <li>Designed frontend UI</li>
+                                <li>API integration to a common ESB</li>
+                                <li>Minimal complexity from direct integrations to core</li>
+                                <li>Widget based UI components easily modified based on best design principles/practices</li>
+
+                            </ul>
+                        </div>
+                        <div class='mar-bottom-sm'>
+                            <span class='subheading mar-bottom-xs'>Outcome</span>
+                            <ul>
+                                <li>Maxana’s recommendations drove the client’s vendor selection process</li>
+                                <li>Negotiated vendor contracts​</li>
+                                <li>Partnered with the vendors to initiate implementation​</li>
+                                <li>Completed Design & Architecture of third-party integrations</li>
+                            </ul>
+                        </div>
+					</div>
+                </div>
+        
+
+"),
                 ImgUrls = new List<string>{
                     "template/images/assets/maxana/maxana.png",
                     //"template/images/assets/gb/templates.jpg",
@@ -218,7 +382,7 @@ namespace LandingPage.Infrastructure.Files
                     </h5>
                     <p>
                        The capabilities were mapped to microservices using domaindriven
-                       design patterns like �ports and adapters,� which clarified the
+                       design patterns like “ports and adapters,” which clarified the
                        separation of concerns and enforced architecture. The infrastructure
                        provisioning was 100% automated.
                     </p>
@@ -283,7 +447,7 @@ namespace LandingPage.Infrastructure.Files
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Advantage for Analysts Inc provides modeling and analysis software
                 and professional services for originating, trading and managing
-                complex financial assets. Advantage�s solutions help clients
+                complex financial assets. Advantage’s solutions help clients
                 retain a long-term competitive advantage through rapid insights,
                 confident decision making, and improved risk management.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
@@ -346,7 +510,7 @@ namespace LandingPage.Infrastructure.Files
             //    and share security documentation with customers
             //    and vendors. The Whistic Vendor Security Network
             //    accelerates the vendor assessment process by
-            //    enabling buyers to access and evaluate a vendor�s
+            //    enabling buyers to access and evaluate a vendor’s
             //    Whistic Profile. Additionally, Whistic facilitates zero-
             //    touch assessments via the Whistic Trust Catalog,
             //    which contains security information for more than
@@ -392,7 +556,7 @@ namespace LandingPage.Infrastructure.Files
                 <p>
                     Westcor needed an app focused on UX design and a platform that could showcase its products. 
                     We developed an app using the React framework to provide a smooth workflow for users to 
-                    interact with Westcor�s products. This app has helped secure Westcor as an industry leader 
+                    interact with Westcor’s products. This app has helped secure Westcor as an industry leader 
                     in providing value-added solutions.
                 </p>
               "){
@@ -549,7 +713,7 @@ namespace LandingPage.Infrastructure.Files
                     CHALLENGE:
                 </h5>
                 <p>
-                    Validate the different clients� perception of the brand and
+                    Validate the different clients’ perception of the brand and
                     design different touchpoints and sale tools.
                 </p>
                 <h5>
