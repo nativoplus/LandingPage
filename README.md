@@ -42,3 +42,7 @@ http://htmlbeans.com/html/be/blog-detail-fullwidth.html
     <BackToTop />
 </div>
 ```
+## To Get SASS Dependencies Run the Following Command on the Terminal:
+``CMD
+npm install sass --save-dev
+```
