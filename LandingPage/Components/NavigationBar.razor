@@ -9,19 +9,23 @@
             <div class="row">
                 <div class="col-xs-12">
                     <!-- Page logo -->
-                    <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>Nativo.</a></div>
-                    <div class="holder pull-right">
-                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right"></a>
+                    <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
+
+                    <div class="pull-right">
+                        <a href="#" class="logo btn-green-nav text-uppercase">Let's Talk!</a>
+                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;"></a>
                         <!-- start of page navigation -->
                         <Nativo_Menu @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right>
-                            
-                                <div @onclick=@( () => NavigateTo("/"))><Nativo_Menu_Item Text="Home" Url="" /></div>
-                                <div @onclick=@( () => NavigateTo("/company/about"))><Nativo_Menu_Item Text="About Us" Url="" /></div>
-                                <div @onclick=@( () => NavigateTo("/work/services"))><Nativo_Menu_Item Text="Services" Url="" /></div>
-                                <div @onclick=@( () => NavigateTo("/work/portfolio"))><Nativo_Menu_Item Text="Portfolio" Url="" /></div>
 
-                        
+                            <div @onclick=@( () => NavigateTo("/"))><Nativo_Menu_Item Text="Home" Url="" /></div>
+                            <div @onclick=@( () => NavigateTo("/company/about"))><Nativo_Menu_Item Text="About Us" Url="" /></div>
+                            <div @onclick=@( () => NavigateTo("/work/services"))><Nativo_Menu_Item Text="Services" Url="" /></div>
+                            <div @onclick=@( () => NavigateTo("/work/portfolio"))><Nativo_Menu_Item Text="Portfolio" Url="" /></div>
+
+
                         </Nativo_Menu>
+
+
                         <!-- end of page navigation -->
                     </div>
                 </div>
