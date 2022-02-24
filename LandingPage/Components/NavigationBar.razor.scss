@@ -1,3 +1,5 @@
-﻿.btn-green{
-    vertical-align: center !important;
+﻿@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none;
+    }
 }
