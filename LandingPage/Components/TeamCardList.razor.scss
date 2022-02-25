@@ -1,3 +1,22 @@
+.port-slider {
+    min-height: 600px !important;
+    img {
+        width: 100%;
+        transition: all ease 0.3s;
+    }
+
+    &:hover img {
+        transform: scale(.99) !important;
+    }
+}
+
+.custom-link{
+    color: #9999;
+    :hover{
+        color: #2ECC71;
+    }
+}
+
 .pad-left-xs{
     padding-left: 30px;
 }
@@ -11,4 +30,10 @@
 }
 .pad-left-lg{
     padding-left: 90px;
+}
+
+.img-responsive{
+    max-height: 345px !important;
+    object-fit: cover;
+    max-width: 345px !important;
 }
