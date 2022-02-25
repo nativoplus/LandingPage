@@ -25,12 +25,6 @@
 	<ItemGroup>
 		<ComponentScssFiles Include="**/*/*.scss" Exclude="node_modules/**;wwwroot/**;Styles/**" />
 	</ItemGroup>
-	<ItemGroup>
-	  <ComponentScssFiles Remove="Components\NavigationBar.razor.scss" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Watch Remove="Components\NavigationBar.razor.scss" />
-	</ItemGroup>
 	<Target Name="CompileComponentSass" BeforeTargets="CompileGlobalSass">
 		<Message Text="Compiling Component SCSS files" Importance="high" />
 		<Exec Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch('%(ComponentScssFiles.Identity)', `.*[/\\]_.*`))" Command="npm run sass -- --style=compressed --no-source-map --load-path= %(ComponentScssFiles.Identity) %(relativedir)%(filename).css" />

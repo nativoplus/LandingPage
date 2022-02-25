@@ -42,13 +42,55 @@ namespace LandingPage.Infrastructure.Files
         new Team
         {
         Name = "Arnaldo Rodriguez",
-        Title = "Software Engineer",
+        Title = "Full Stack Developer",
         Description = "Lorem Ipsum",
         ImgUrl = "template/images/team/arnaldo.jpg",
         LinkedIn = "https://www.linkedin.com/in/arnaldo-rodriguez-1445b811b/",
         GithubUrl = "",
         Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
 
+        },
+        new Team
+        {
+        Name = "Cristian Amaro",
+        Title = "Software Engineer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "",
+        LinkedIn = "",
+        GithubUrl = "",
+        Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+
+        },
+        new Team
+        {
+        Name = "Marie Fitch",
+        Title = "COO",
+        Description = "Lorem Ipsum",
+        ImgUrl = "",
+        LinkedIn = "",
+        GithubUrl = "",
+        Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+
+        },
+        new Team
+        {
+        Name = "Angel Martinez",
+        Title = "Full Stack Developer",
+        Description = "Lorem Ipsum",
+        ImgUrl = "",
+        LinkedIn = "",
+        GithubUrl = "",
+        Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+        },
+            new Team
+        {
+        Name = "Juliana Garrido",
+        Title = "Art Director",
+        Description = "Lorem Ipsum",
+        ImgUrl = "",
+        LinkedIn = "",
+        GithubUrl = "",
+        Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
         },
         // new Team
         //{
