@@ -1,4 +1,4 @@
-@using Microsoft.AspNetCore.Components.Web
+﻿@using Microsoft.AspNetCore.Components.Web
 @namespace LandingPage.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
@@ -19,6 +19,11 @@
     <meta name="description" content="Be - Startup Business HTML Template">
     <meta name="keywords" content="agency, Startup, bootstrap, business, corporate, creative, minimal, modern, onepage, personal, portfolio,  html5, responsive">
     <meta name="author" content="Be - Startup Business HTML Template">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+
     <!-- include the site stylesheet -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600" rel="stylesheet">
     <!-- include the site stylesheet -->
@@ -37,6 +42,7 @@
     <!-- Page Title -->
     <title>NativoPlus</title>
 
+
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 
 </head>
@@ -46,12 +52,14 @@
     <script src="_framework/blazor.server.js" autostart="false"></script>
     <!-- Template -->
     <script src="template/js/jquery.js"></script>
+    <script src="template/js/modal.js"> </script>
     <script src="template/js/plugins.js"></script>
     <script>
         Blazor.start().then(function () {
           var customScript = document.createElement('script');
           customScript.setAttribute('src', 'template/js/scripts.js');
           document.head.appendChild(customScript);
+            $("#modal").animatedModal();
         });
     </script>
 
