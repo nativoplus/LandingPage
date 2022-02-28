@@ -21,7 +21,7 @@
         <!-- start of page main section -->
         <main id="main">
             <!-- start of page-header -->
-            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/about.jpg);">
+            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/about.png);">
                 <div class="pad-top-lg hidden-sm"></div>
                 <span class="bg-overlay"></span>
                 <div class="container pad-top-lg pad-bottom-lg">
@@ -38,35 +38,43 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-10 pad-top-lg pad-bottom-lg col-md-offset-1">
                             <!-- main text -->
-                            <h2 class="main-text text-center">Hello! We’re Nativoplus, a creative technology agency. Our team is made up of 
-                                tech natives who are passionate about building, creating, and developing websites and apps. 
-                                It’s not just what we do, it’s who we are.</h2>
+                            <h2 class="main-text text-center">
+                                Hello! We’re Nativoplus, a creative technology agency. Our team is made up of
+                                tech natives who are passionate about building, creating, and developing websites and apps.
+                                It’s not just what we do, it’s who we are.
+                            </h2>
                         </div>
                     </div>
                     <div class="border-top pad-top-lg"></div>
                     <div class="row mar-bottom-sm">
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                            <span class="pe-7s-rocket main-color icon"></span>
-                            <div class="holder">
-                                <h3 class="title">Easy For Users</h3>
-                                <p>We are friendly as our websites, we make it easy for visitors to find what they’re looking for on any device.</p>
+                            <div class="row">
+                                <i class="fa fa-rocket main-color icon custom-icon col-xs-1 col-xs-offset-2"></i>
+                                <div class="holder col-xs-9">
+                                    <h3 class="title">Easy For Users</h3>
+                                    <p>We are friendly as our websites, we make it easy for visitors to find what they’re looking for on any device.</p>
+                                </div>
                             </div>
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                            <span class="pe-7s-vector main-color icon"></span>
-                            <div class="holder">
-                                <h3 class="title">Pixel Perfect</h3>
-                                <p>We deliver complete and clean design through absolute use of every pixel. We are not perfect, but we try to be!</p>
+                            <div class="row">
+                                <span class="fa fa-desktop main-color icon custom-icon col-xs-1"></span>
+                                <div class="holder col-xs-9">
+                                    <h3 class="title">Pixel Perfect</h3>
+                                    <p>We deliver complete and clean design through absolute use of every pixel. We are not perfect, but we try to be!</p>
+                                </div>
                             </div>
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                            <span class="pe-7s-edit main-color icon"></span>
-                            <div class="holder">
-                                <h3 class="title">Edit Content</h3>
-                                <p>We’re all about finding the right words to show you and your customers just how amazing you are.</p>
+                            <div class="row">
+                                <span class="fa fa-edit main-color icon custom-icon col-xs-1"></span>
+                                <div class="holder col-xs-9" >
+                                    <h3 class="title">Edit Content</h3>
+                                    <p>We’re all about finding the right words to show you and your customers just how amazing you are.</p>
+                                </div>
                             </div>
                         </div><!-- end of icon-box -->
                     </div>
@@ -87,7 +95,7 @@
                         </div>
                     </div>
                     <div class="pad-top-lg hidden-sm"></div>
-                    <div class="img-box bg-img-full" style="background-image: url(template/images/bg/build.jpg);"></div>
+                    <div class="img-box bg-img-full" style="background-image: url(template/images/bg/about-skills-section.jpg);"></div>
                 </section><!-- end of wedo section -->
                 <!-- start of wedo section -->
                 <section class="bg-grey wedo-section add">
@@ -127,9 +135,32 @@
                         </div>
                     </div>
                     <div class="pad-top-lg hidden-sm"></div>
-                    <div class="img-box bg-img-full right" style="background-image: url(template/images/bg/skills.jpg);"></div>
+                    <div class="img-box bg-img-full right" style="background-image: url(template/images/bg/about-build-section.jpg);"></div>
                 </section><!-- end of wedo section -->
             </section>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <TeamCardList GreyBackground="false"
                           Heading="Meet The Team"
                           Body=@(new MarkupString(@"<p>Meet the team behind our work.<br/>
@@ -149,5 +180,11 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+        }
     }
 }
