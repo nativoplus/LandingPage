@@ -48,7 +48,7 @@
                                 <!-- start of product-box -->
                             <div class="product-box">
                                     <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
-                                        <img src="@project.ImgUrls[0]" alt="image" class="img-responive">
+                                        <img loading="lazy" src="@project.ImgUrls[0]" alt="image" class="img-responive">
                                     </a>
                                     <div class="box">
                                         <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>

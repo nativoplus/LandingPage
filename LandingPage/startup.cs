@@ -1,4 +1,6 @@
-﻿namespace LandingPage
+﻿using Microsoft.AspNetCore.ResponseCompression;
+
+namespace LandingPage
 {
     public class Startup
     {
@@ -13,6 +15,8 @@
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = System.IO.Compression.CompressionLevel.Fastest);
+            services.AddResponseCompression();
             services.AddRazorPages();
             services.AddServerSideBlazor(o => o.DetailedErrors = true);
         }
@@ -32,6 +36,7 @@
             }
 
             app.UseHttpsRedirection();
+            app.UseResponseCompression();
             app.UseStaticFiles();
 
             app.UseRouting();
