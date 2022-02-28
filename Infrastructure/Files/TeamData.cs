@@ -59,9 +59,10 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Cristian Amaro",
                 Role = "Software Engineer",
-                Description = @"Amaro brings a positive attiude to the office every day and brings experience in user 
-                interface design by breaching the gap between users and the systems that power them.  ",
-                ImgUrl = "template/images/team/amaro.jfif",
+                Description = @"Cristian knows that website are about people, he is dedicated to full-stack web 
+                development. He focuse on designing modern web-based solutions and is experience on development 
+                life-cycle of team-based web projects.",
+                ImgUrl = "template/images/team/amaro.png",
                 LinkedIn = "https://www.linkedin.com/in/cristian-amaro-burgos-64815816a/",
                 GithubUrl = "https://github.com/camaro24max",
                 Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
@@ -81,37 +82,52 @@ namespace LandingPage.Infrastructure.Files
             new Team
             {
                 Name = "Angel Martinez",
-                Role = "Full Stack Developer",
-                Description = @"Angel has been a Full Stack Developer with Nativo Plus Studio since 
-                August 2016.  Based in Puerto Rico, he has extensive expertise with developing web 
-                applications using .NET, JavaScript, AngularJS, and TypeScript, and designing RESTful APIs.  ",
-                ImgUrl = "template/images/team/martinez.jpg",
+                Role = "Senior Software Engineer",
+                Description = @"Angel is always dedicated to ensuring quality and delivering value. 
+                Creative and passionate in promoting creativity and innovation. Proactive, 
+                self-motivated, and creative problem solver.",
+                ImgUrl = "template/images/team/martinez.png",
                 LinkedIn = "https://www.linkedin.com/in/angel-isaac-martinez-437589a1/",
                 GithubUrl = "",
-                Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+                Projects = new List<string>{ },
             },
             new Team
             {
                 Name = "Juliana Garrido",
                 Role = "Art Director",
-                Description = @"Juliana Garrido is an expert art and audiovisual director. Juliana’s focus on 
-                storytelling, human-center design, design thinking and creativity have allowed her to build 
-                and materialize unique concepts and ideas.",
+                Description = @"Juliana has the ability to see the spark of potential everywhere. She is 
+                an expert in creating high-value content, experiences, and emotions through audiovisual 
+                content and storytelling. Juliana combines imagination with a desire for practical solutions 
+                using human-centered and design thinking tools.",
                 ImgUrl = "template/images/team/juliana.png",
                 LinkedIn = "https://www.linkedin.com/in/juliana-galeano-garrido/",
                 GithubUrl = "",
-                Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+                Projects = new List<string>{ },
             },
             new Team
             {
                 Name = "Danny Ruiz",
-                Role = "UI Developer",
-                Description = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa magna, 
-                efficitur in condimentum a, pulvinar ut neque. Vestibulum pellentesque suscipit dapibus.",
+                Role = "System Engineer",
+                Description = @"Danny is a proactive and intuitive person, answering project needs before being
+                asked. He is focused on software and web application development, with a high level of creativity, 
+                a positive attitude, and a desire to learn and improve day by day. He is friendly and professional 
+                approach has resulted in many successful projects for clients of all sizes.",
                 ImgUrl = "template/images/team/danny.jfif",
                 LinkedIn = "https://www.linkedin.com/in/danny-stev-ruiz/",
                 GithubUrl = "",
-                Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+                Projects = new List<string>{ },
+            },
+            new Team
+            {
+                Name = "Sara Cabrera",
+                Role = "Sales Specialist",
+                Description = @"Sara likes to help companies reach their best version, thanks to her skills 
+                and professional experience. She is passionate about Marketing and Business Analytics. As a 
+                Sales Specialist, she has a record of success in boosting brands through tailored strategies.",
+                ImgUrl = "template/images/team/sara.png",
+                LinkedIn = "https://www.linkedin.com/in/saracabrerao/",
+                GithubUrl = "",
+                Projects = new List<string>{ },
             }
         };
     }
