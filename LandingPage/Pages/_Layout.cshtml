@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="template/css/responsive.css">
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="template/css/color.css" />
+    @*<link rel="stylesheet" href="template/css/bundle.min.css" /> *@
     <link href="LandingPage.styles.css" rel="stylesheet" />
     <!-- Page Title -->
     <title>NativoPlus</title>
@@ -54,6 +55,12 @@
           document.head.appendChild(customScript);
         });
     </script>
-
+    @*<script>
+        Blazor.start().then(function () {
+          var customScript = document.createElement('script');
+          customScript.setAttribute('src', 'template/js/bundle.min.js');
+          document.head.appendChild(customScript);
+        });
+    </script>*@
 </body>
 </html>

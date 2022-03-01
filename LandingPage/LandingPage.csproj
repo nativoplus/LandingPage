@@ -7,6 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
 		<PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
 		<PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.3" />
 	</ItemGroup>
@@ -41,4 +42,6 @@
 		<Message Text="Compiling global SCSS file" Importance="high" />
 		<Exec Command="npm run sass  -- --style=compressed --no-source-map Styles:wwwroot/template/css" />
 	</Target>
+	
+	<ProjectExtensions><VisualStudio><UserProperties bundleconfig_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>
