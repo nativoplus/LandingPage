@@ -1,5 +1,6 @@
 ﻿@using LandingPage.Domain.Entities
 @using LandingPage.Infrastructure.Files
+@inject IJSRuntime jsRuntime
 <section class="@(GreyBackground ? "bg-grey" : "") pad-top-lg">
     <header class="main-heading text-center row">
         <div class="col-xs-12">
@@ -15,11 +16,11 @@
                 <!-- start of team-box -->
                 <div class="col-xs-12 col-sm-4">
 
-                   <div class="port-slider">
+                    <div class="port-slider">
                         <div class="team-box text-center">
 
                             <div class="img-box"><img src="@member.ImgUrl" alt="image" class="img-responsive"></div>
-                            <a href="#" class="custom-link">
+                            <a @onclick:preventDefault @onclick=@(() => OnTeamMemberClickHandler(member)) class="custom-link">
                                 <h3 class="heading">@member.Name</h3>
                                 <span class="text">@member.Role</span>
                             </a>
@@ -35,13 +36,18 @@
                                 }
                             </ul>
                         </div><!-- end of team-box -->
-                        </div>
-            </div>
+                </div>
+                </div>
             }
         </div>
     </div>
 </section>
-@code {
+@code
+{
+    [Parameter]
+    public Team Member { get; set; } = new Team();
+    [Parameter]
+    public EventCallback<Team> SelectedTeamMember { get; set; }
     [Parameter]
     public bool GreyBackground { get; set; } = false;
     [Parameter]
@@ -53,6 +59,7 @@
 
     protected override void OnInitialized()
     {
+
         Team = new TeamData().Team;
         Shuffle();
         //ourTeamMembers = Shuffle(ourTeamMembers);
@@ -65,5 +72,12 @@
         var randomized = Team.OrderBy(item => rnd.Next());
 
         Team = randomized.ToList();
+    }
+
+    public async void OnTeamMemberClickHandler(Team member)
+    {
+        // Console.log() Equivalent in Blazor.
+        // await this.jsRuntime.InvokeVoidAsync("console.log", member.Name);
+        await SelectedTeamMember.InvokeAsync(member);
     }
 }

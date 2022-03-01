@@ -137,22 +137,94 @@
                     <div class="img-box bg-img-full right" style="background-image: url(template/images/bg/about-build-section.jpg);"></div>
                 </section><!-- end of wedo section -->
             </section>
-            <!--Call your modal-->
-            <a id="modal" href="#animatedModal">DEMO01</a>
 
-            <!--DEMO01-->
-            <div id="animatedModal">
-                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-                <div class="close-animatedModal">
-                    CLOSE MODAL
-                </div>
+            <AnimatedModal>
+                <Content>
+                    <div id="wrapper">
+                        <div class="w1">
+                            <!-- start of page main section -->
+                            <!-- start of page main section -->
+                            <main id="main" class=" border-top">
+                                <!-- start of product-detail -->
+                                <div class="product-detail container pad-top-xs mar-bottom-md">
+                                    <div class="row pad-top-md">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="">
 
-                <div class="modal-content">
-                    <!--Your modal content goes here-->
-                </div>
-            </div>
+                                                <div class="">
+                                                    <img src="@selectedMember.ImgUrl" alt="images" class="img-responsive">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-5 pad-top-xs">
+                                            <h1 class="heading">@selectedMember.Name</h1>
+                                            @*Uses Price Class From Be Template*@
+                                            <span class="price">@selectedMember.Role</span>
+                                            <p>@selectedMember.Description</p>
+
+                                            <ul class="list-inline social pad-top-xs">
+                                                @if (selectedMember.LinkedIn.ToString() != "")
+                                                {
+                                                    <li><a href="@selectedMember.LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                                }
+                                                @if (selectedMember.GithubUrl.ToString() != "")
+                                                {
+                                                    <li><a href="@selectedMember.GithubUrl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div><!-- end of product-detail -->
+                                @if (true)
+                                {
+                                    <!-- start of related-product -->
+                                    <div class="related-product container">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <h2 class="mainheading">Projects @(selectedMember.Name) has been part:</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row mar-bottom-md">
+                                            <!-- start of isotop-holder -->
+                                        <div id="isotop-holder">
+                                                @foreach (var project in Portfolio)
+                                                {
+                                                    <!-- start of item -->
+                                                    <div class="item col-xs-12 col-sm-6 col-md-4 All mar-bottom-xs">
+                                                        <!-- start of product-box -->
+                                                <div class="product-box">
+                                                            <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
+                                                                <img loading="lazy" src="@project.ImgUrls[0]" alt="image" class="img-responive">
+                                                            </a>
+                                                            <div class="box">
+                                                                <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>
+                                                                <div class="frame">
+                                                                    <span class="price">@(project.Categories.Count >0 ? project.Categories[0]: "Development")</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end of product-box -->
+                                            </div>
+                                                    <!-- end of item -->
+                                                }
+
+                                            </div><!-- end of isotop-holder -->
+                                    </div>
+                                    </div>
+
+                                    <!-- end of related-product -->
+                                }
+                            </main><!-- end of page main section -->
+
+                        </div>
+                        <!-- Back Top of the page -->
+                    </div>
+                </Content>
+
+            </AnimatedModal>
             <TeamCardList GreyBackground="false"
-                          Heading="Meet The Team"
+                          Heading="Meet Our Team"
+                          Member="@selectedMember"
+                          SelectedTeamMember="@MemberChangedHandler"
                           Body=@(new MarkupString(@"<p>Meet the team behind our work.<br/>
                           We are the Nativoplus team. We are here to bring your projects life.</p>")) />
         </main><!-- end of page main section -->
@@ -164,19 +236,40 @@
         <!-- end of page footer -->
     </div>
     <!-- Back Top of the page -->
-    <BackToTop />
+    @*<BackToTop />*@
 </div><!-- end of main page wrapper -->
 @code {
-    private ElementReference modalRef;
+    private Team selectedMember = new Team();
+    public List<Portfolio> Portfolio = new List<Portfolio> { };
+    public Portfolio Project = new Portfolio();
+
     protected override void OnInitialized()
     {
+        var projectTeam = new TeamData().Team;
+        var portfolio = new PortfolioData().portfolio;
+        Portfolio = portfolio;
         base.OnInitialized();
     }
+
+    private async void MemberChangedHandler(Team selected)
+    {
+        selectedMember = selected;
+        await jsRuntime.InvokeVoidAsync("openModal");
+
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-
+            await jsRuntime.InvokeVoidAsync("initModal");
         }
     }
+
+    public void NavigateTo(string path)
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
+    }
+
 }
