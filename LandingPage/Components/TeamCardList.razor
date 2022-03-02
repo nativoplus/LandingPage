@@ -19,8 +19,10 @@
                     <div class="port-slider">
                         <div class="team-box text-center">
 
-                            <div class="img-box"><img src="@member.ImgUrl" alt="image" class="img-responsive"></div>
-                            <a @onclick:preventDefault @onclick=@(() => OnTeamMemberClickHandler(member)) class="custom-link">
+                            <a href="#" @onclick:preventDefault @onclick=@(() => OnTeamMemberClickHandler(member))>
+                                <div class="img-box"><img src="@member.ImgUrl" alt="image" class="img-responsive"></div>
+                            </a>
+                            <a href="#" @onclick:preventDefault @onclick=@(() => OnTeamMemberClickHandler(member)) class="custom-link">
                                 <h3 class="heading">@member.Name</h3>
                                 <span class="text">@member.Role</span>
                             </a>

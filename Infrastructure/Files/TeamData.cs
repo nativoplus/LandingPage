@@ -114,7 +114,7 @@ namespace LandingPage.Infrastructure.Files
                 approach has resulted in many successful projects for clients of all sizes.",
                 ImgUrl = "template/images/team/danny.png",
                 LinkedIn = "https://www.linkedin.com/in/danny-stev-ruiz/",
-                GithubUrl = "",
+                GithubUrl = "https://github.com/danruiz01",
                 Projects = new List<string>{ },
             },
             new Team

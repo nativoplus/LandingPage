@@ -140,13 +140,13 @@
 
             <AnimatedModal>
                 <Content>
-                    <div id="wrapper">
-                        <div class="w1">
+                     <div id="wrapper bg-grey">
+                        <div class="w1 ">
                             <!-- start of page main section -->
                             <!-- start of page main section -->
-                            <main id="main" class=" border-top">
+                            <main id="main" class="mar-bottom-lg">
                                 <!-- start of product-detail -->
-                                <div class="product-detail container pad-top-xs mar-bottom-md">
+                                <div class="product-detail container pad-top-xs mar-bottom-lg">
                                     <div class="row pad-top-md">
                                         <div class="col-xs-12 col-sm-6">
                                             <div class="">
@@ -175,7 +175,7 @@
                                         </div>
                                     </div>
                                 </div><!-- end of product-detail -->
-              @*                  @if (true)
+                             @*   @if (true)
                                 {
                                     <!-- start of related-product -->
                                     <div class="related-product container">
@@ -194,7 +194,7 @@
                                                         <!-- start of product-box -->
                                                 <div class="product-box">
                                                             <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
-                                                                <img loading="lazy" src="@project.ImgUrls[0]" alt="image" class="img-responive">
+                                                                <img src="@project.ImgUrls[0]" alt="image" class="img-responive">
                                                             </a>
                                                             <div class="box">
                                                                 <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>
@@ -216,11 +216,14 @@
                             </main><!-- end of page main section -->
 
                         </div>
-                        <!-- Back Top of the page -->
+                        <CallToAction/>
+                        <Footer/>
                     </div>
                 </Content>
 
             </AnimatedModal>
+
+            
             <TeamCardList GreyBackground="false"
                           Heading="Meet Our Team"
                           Member="@selectedMember"
