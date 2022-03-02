@@ -1,21 +1,7 @@
 ﻿[
   {
-    "outputFileName": "wwwroot/template/css/bundle.min.css",
-    "inputFiles": [
-      "wwwroot/template/css/bootstrap.css",
-      "wwwroot/template/css/color.css",
-      "wwwroot/template/css/font-icons.css",
-      "wwwroot/template/css/plugin-resets.css",
-      "wwwroot/template/css/responsive.css",
-      "wwwroot/template/css/style.css"
-    ]
-  },
-  {
     "outputFileName": "wwwroot/template/js/bundle.min.js",
     "inputFiles": [
-      "wwwroot/template/js/rev-slider/jquery.themepunch.enablelog.js",
-      "wwwroot/template/js/jquery.js",
-      "wwwroot/template/js/plugins.js",
       "wwwroot/template/js/scripts.js"
     ],
     "minify": {

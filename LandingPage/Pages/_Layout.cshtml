@@ -22,7 +22,7 @@
     <!-- include the site stylesheet -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600" rel="stylesheet">
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/bootstrap.css">
+    <link rel="stylesheet" href="template/css/bootstrap.min.css">
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="template/css/fonts-icons.css">
     <!-- include the site stylesheet -->
@@ -47,20 +47,20 @@
     <script src="_framework/blazor.server.js" autostart="false"></script>
     <!-- Template -->
     <script src="template/js/jquery.js"></script>
-    <script src="template/js/plugins.js"></script>
+ @*   <script src="template/js/plugins.js"></script>
     <script>
         Blazor.start().then(function () {
           var customScript = document.createElement('script');
           customScript.setAttribute('src', 'template/js/scripts.js');
           document.head.appendChild(customScript);
         });
-    </script>
-    @*<script>
+    </script>*@
+    <script>
         Blazor.start().then(function () {
           var customScript = document.createElement('script');
           customScript.setAttribute('src', 'template/js/bundle.min.js');
           document.head.appendChild(customScript);
         });
-    </script>*@
+    </script>
 </body>
 </html>
