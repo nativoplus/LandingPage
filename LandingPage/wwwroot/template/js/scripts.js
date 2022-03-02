@@ -233,7 +233,7 @@ $(document).ready(function () {
         });
     }
 
-    //initAnimatedProgressbars();
+    initAnimatedProgressbars();
     // progressbars init
     function initAnimatedProgressbars() {
         "use strict";
@@ -293,6 +293,7 @@ $(document).ready(function () {
             defaultTab: false
         });
     }
+    
     // Seems to be unused. 
     //initCountDown();
     //// count down init

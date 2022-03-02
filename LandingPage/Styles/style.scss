@@ -301,12 +301,58 @@ button,
 /*------------------------------------------------------------------
 	3. Global buttons style 
 -------------------------------------------------------------------*/
-.btn-green {
+
+.btn-green-custom {
     color: $white;
     padding: 10px 40px;
     letter-spacing: 1px;
     border-radius: 30px;
     background: transparent !important;
+    border-color: #2ecc71 !important;
+    transition: all ease 0.3s;
+    border: 2px solid transparent;
+    font: 500 13px/24px $font-family-heading;
+
+    &:focus,
+    &:active {
+        color: $white;
+    }
+
+    &:hover {
+        color: $white;
+        background: #2ecc71 !important;
+    }
+}
+
+.btn-green-hover {
+    color: $white;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    background: rgb(46, 204, 113) !important;
+    transition: all ease 0.3s;
+    border: 2px solid transparent;
+    font: 500 13px/24px $font-family-heading;
+
+    &:focus,
+    &:active {
+        color: $white;
+    }
+
+    &:hover {
+        color: white;
+        background: rgba(46, 204, 113, .9) !important;
+        
+
+    }
+}
+
+
+.btn-green {
+    color: $white;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    border-radius: 30px;
     transition: all ease 0.3s;
     border: 2px solid transparent;
     font: 500 13px/24px $font-family-heading;
