@@ -102,34 +102,88 @@
                     <div class="pad-top-md hidden-sm"></div>
                     <div class="container">
                         <div class="row pad-bottom-xs">
-                            <div class="col-md-5 col-xs-12 col-md-push-7">
+                            <div class="col-xs-12 col-md-6 col-md-push-7 ">
                                 <!-- start of main-heading -->
                                 <header class="main-heading mar-bottom-xs">
                                     <h2 class="heading">Let's get started!</h2>
+                                    <p class="text">We don’t just develop apps. We help realize ideas  that make an impact.</p>
                                 </header><!-- end of main-heading -->
-                                <ul class="list-unstyled progress-bar">
-                                    <li>
-                                        <div class="frame">
-                                            <span class="txt">Development</span>
-                                            <span class="number"><span class="count">100</span>%</span>
+                                <!-- end of icon-box -->
+                                @* <!-- start of icon-box -->
+                                    <div class="col-xs-12 mar-bottom-xs icon-box">
+                                    <div class="row">
+                                    <span class="fa fa-bullseye main-color icon custom-icon col-xs-1"></span>
+                                    <div class="holder col-xs-9">
+                                    <h3 class="title">Our Mission</h3>
+                                    <p>
+                                    Our job is to help you envision, develop, and launch your project. We can provide support
+                                    and expertise at every stage of the development life cycle from conception to scaling.
+                                    We’re here to help you make real the project you’ve always imagined.
+                                    </p>
+                                    </div>
+                                    </div>
+                                    </div><!-- end of icon-box -->
+                                    <!-- start of icon-box -->
+                                    <div class="col-xs-12 mar-bottom-xs icon-box">
+                                    <div class="row">
+                                    <span class="fa fa-tag main-color icon custom-icon col-xs-1"></span>
+                                    <div class="holder col-xs-9">
+                                    <h3 class="title">Quality Services</h3>
+                                    <p>
+                                    We provide more than great apps; we help you create the capacity, infrastructure,
+                                    and engagement you’ll need to deliver person-centered data integrated projects.
+                                    </p>
+                                    </div>
+                                    </div>
+                                    </div><!-- end of icon-box -->
+                                *@
+                                <div class="col-xs-12 ">
+                                    <div class="row">
+                                        <div class="segmented-control mar-bottom-xs">
+                                            <input type="radio" name="sc-1-1" id="sc-1-1-1" checked @onclick=@(() => SegmentedBarObject("Values"))>
+                                            <input type="radio" name="sc-1-1" id="sc-1-1-2" @onclick=@(() => SegmentedBarObject("Mission"))>
+                                            <input type="radio" name="sc-1-1" id="sc-1-1-3" @onclick=@(() => SegmentedBarObject("Services"))>
+
+                                            <label for="sc-1-1-1" data-value="Our Values">Our Values</label>
+                                            <label for="sc-1-1-2" data-value="Our Mission">Our Mission</label>
+                                            <label for="sc-1-1-3" data-value="Quality Services">Quality Services</label>
                                         </div>
-                                        <span class="bar-outer"><span class="bar" data-width="100"></span></span>
-                                    </li>
-                                    <li>
-                                        <div class="frame">
-                                            <span class="txt">Marketing</span>
-                                            <span class="number"><span class="count">100</span>%</span>
-                                        </div>
-                                        <span class="bar-outer"><span class="bar" data-width="100"></span></span>
-                                    </li>
-                                    <li>
-                                        <div class="frame">
-                                            <span class="txt">Support</span>
-                                            <span class="number"><span class="count">100</span>%</span>
-                                        </div>
-                                        <span class="bar-outer"><span class="bar" data-width="100"></span></span>
-                                    </li>
-                                </ul>
+
+                                    </div>
+                                </div>
+                                <div class="mar-bottom-xs">
+                                    @if (Option == "Values")
+                                    {
+                                        <p style="height: 200px">
+                                            We know that relationships and communication are crucial to sustaining buy- in,
+                                            staying the course, meeting expectations, and seizing opportunities for improvement.
+                                            We value the people in our organization and believe that great ideas and innovations
+                                            happen when people collaborate and network with one another.
+                                        </p>
+
+                                    }
+                                    else if (Option == "Mission")
+                                    {
+                                        <p style="height: 200px">
+                                            Our job is to help you envision, develop, and launch your project. We can provide support
+                                            and expertise at every stage of the development life cycle from conception to scaling.
+                                            We’re here to help you make real the project you’ve always imagined.
+                                        </p>
+
+                                    }
+                                    else if (Option == "Services")
+                                    {
+                                        <p style="height: 200px">
+                                            We provide more than great apps; we help you create the capacity, infrastructure,
+                                            and engagement you’ll need to deliver person-centered data integrated projects.
+                                        </p>
+
+                                    }
+                                </div>
+                            </div>
+
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-md-8 col-md-push-7 ">
                             </div>
                         </div>
                     </div>
@@ -140,7 +194,7 @@
 
             <AnimatedModal>
                 <Content>
-                     <div id="wrapper bg-grey">
+                    <div id="wrapper bg-grey">
                         <div class="w1 ">
                             <!-- start of page main section -->
                             <!-- start of page main section -->
@@ -175,55 +229,18 @@
                                         </div>
                                     </div>
                                 </div><!-- end of product-detail -->
-                             @*   @if (true)
-                                {
-                                    <!-- start of related-product -->
-                                    <div class="related-product container">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <h2 class="mainheading">Projects @(selectedMember.Name) has been part:</h2>
-                                            </div>
-                                        </div>
-                                        <div class="row mar-bottom-md">
-                                            <!-- start of isotop-holder -->
-                                        <div id="isotop-holder">
-                                                @foreach (var project in Portfolio)
-                                                {
-                                                    <!-- start of item -->
-                                                    <div class="item col-xs-12 col-sm-6 col-md-4 All mar-bottom-xs">
-                                                        <!-- start of product-box -->
-                                                <div class="product-box">
-                                                            <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
-                                                                <img src="@project.ImgUrls[0]" alt="image" class="img-responive">
-                                                            </a>
-                                                            <div class="box">
-                                                                <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>
-                                                                <div class="frame">
-                                                                    <span class="price">@(project.Categories.Count >0 ? project.Categories[0]: "Development")</span>
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- end of product-box -->
-                                            </div>
-                                                    <!-- end of item -->
-                                                }
 
-                                            </div><!-- end of isotop-holder -->
-                                    </div>
-                                    </div>
-
-                                    <!-- end of related-product -->
-                                }*@
                             </main><!-- end of page main section -->
 
                         </div>
-                        <CallToAction/>
-                        <Footer/>
+                        <CallToAction />
+                        <Footer />
                     </div>
                 </Content>
 
             </AnimatedModal>
 
-            
+
             <TeamCardList GreyBackground="false"
                           Heading="Meet Our Team"
                           Member="@selectedMember"
@@ -245,6 +262,7 @@
     private Team selectedMember = new Team();
     public List<Portfolio> Portfolio = new List<Portfolio> { };
     public Portfolio Project = new Portfolio();
+    public string Option = "Values";
 
     protected override void OnInitialized()
     {
@@ -273,6 +291,11 @@
     {
         // Forced Reload To Ensure a Fresh Instance of Javascript Files.
         NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
+    }
+
+    public void SegmentedBarObject(string option)
+    {
+        Option = option;
     }
 
 }
