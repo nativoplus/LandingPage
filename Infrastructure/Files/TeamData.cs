@@ -15,7 +15,7 @@ namespace LandingPage.Infrastructure.Files
                 Name = "Hector Orellana Reyes",
                 Role = "Software Engineer",
                 Description = @"Hector has been a UI Developer with Nativo Plus Studio since January 2017.",
-                ImgUrl = "template/images/team/hector.png",
+                ImgUrl = "template/images/team/hector.webp",
                 LinkedIn = "https://www.linkedin.com/in/hector-orellana-reyes-220b7a113/",
                 GithubUrl = "https://github.com/horeyes",
                 Projects = new List<string>{ "Gentlebirth" },
@@ -28,7 +28,7 @@ namespace LandingPage.Infrastructure.Files
                 based in the San Francico Bay Area, he has over 10 years of experience with ovreseing 
                 the application development lifecycle from conception to implementation as a senior 
                 software engineer and software architect in the public and private sectors.",
-                ImgUrl = "template/images/team/jose.png",
+                ImgUrl = "template/images/team/jose.webp",
                 LinkedIn = "https://www.linkedin.com/in/joecolon/",
                 GithubUrl = "https://github.com/jvelezc",
                 Projects = new List<string>{ "TechCU", "Gentlebirth", "Fertilemind" },
@@ -38,7 +38,7 @@ namespace LandingPage.Infrastructure.Files
                 Name = "Angel Ramos",
                 Role = "Software Engineer",
                 Description = @"Angel has been a Software Engineer with Nativo Plus Studio since April 2017.  ",
-                ImgUrl = "template/images/team/ramos.png",
+                ImgUrl = "template/images/team/ramos.webp",
                 LinkedIn = "https://www.linkedin.com/in/angel-ramos-5a6a52a2/",
                 GithubUrl = "https://github.com/joey0xx",
                 Projects = new List<string>{ "TechCU"},
@@ -50,7 +50,7 @@ namespace LandingPage.Infrastructure.Files
                 Description = @"Focused and passionate about creating quality products, that involve a great 
                 design as well as great code. He likes to follow the best practices and latest design patterns. 
                 Arnaldo is a professional that promotes and empowers creativity and a healthy work environment.",
-                ImgUrl = "template/images/team/arnaldo.png",
+                ImgUrl = "template/images/team/arnaldo.webp",
                 LinkedIn = "https://www.linkedin.com/in/arnaldo-rodriguez-1445b811b/",
                 GithubUrl = "https://github.com/arodriguezgb",
                 Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
@@ -62,7 +62,7 @@ namespace LandingPage.Infrastructure.Files
                 Description = @"Cristian knows that website are about people, he is dedicated to full-stack web 
                 development. He focuse on designing modern web-based solutions and is experience on development 
                 life-cycle of team-based web projects.",
-                ImgUrl = "template/images/team/amaro.png",
+                ImgUrl = "template/images/team/amaro.webp",
                 LinkedIn = "https://www.linkedin.com/in/cristian-amaro-burgos-64815816a/",
                 GithubUrl = "https://github.com/camaro24max",
                 Projects = new List<string>{ },
@@ -74,7 +74,7 @@ namespace LandingPage.Infrastructure.Files
                 Description = @"Marie is a Creative specialist dedicated to finding original 
                 design solutions to everyday life. Specialist in sales and marketing, facilitating 
                 businesses to exceed sales objectives. ",
-                ImgUrl = "template/images/team/marie.png",
+                ImgUrl = "template/images/team/marie.webp",
                 LinkedIn = "https://www.linkedin.com/in/mariefitch/",
                 GithubUrl = "",
                 Projects = new List<string>{  },
@@ -86,7 +86,7 @@ namespace LandingPage.Infrastructure.Files
                 Description = @"Angel is always dedicated to ensuring quality and delivering value. 
                 Creative and passionate in promoting creativity and innovation. Proactive, 
                 self-motivated, and creative problem solver.",
-                ImgUrl = "template/images/team/martinez.png",
+                ImgUrl = "template/images/team/martinez.webp",
                 LinkedIn = "https://www.linkedin.com/in/angel-isaac-martinez-437589a1/",
                 GithubUrl = "",
                 Projects = new List<string>{ },
@@ -99,7 +99,7 @@ namespace LandingPage.Infrastructure.Files
                 an expert in creating high-value content, experiences, and emotions through audiovisual 
                 content and storytelling. Juliana combines imagination with a desire for practical solutions 
                 using human-centered and design thinking tools.",
-                ImgUrl = "template/images/team/juliana.png",
+                ImgUrl = "template/images/team/juliana.webp",
                 LinkedIn = "https://www.linkedin.com/in/juliana-galeano-garrido/",
                 GithubUrl = "",
                 Projects = new List<string>{ },
@@ -112,7 +112,7 @@ namespace LandingPage.Infrastructure.Files
                 asked. He is focused on software and web application development, with a high level of creativity, 
                 a positive attitude, and a desire to learn and improve day by day. He is friendly and professional 
                 approach has resulted in many successful projects for clients of all sizes.",
-                ImgUrl = "template/images/team/danny.png",
+                ImgUrl = "template/images/team/danny.webp",
                 LinkedIn = "https://www.linkedin.com/in/danny-stev-ruiz/",
                 GithubUrl = "https://github.com/danruiz01",
                 Projects = new List<string>{ },
@@ -124,7 +124,7 @@ namespace LandingPage.Infrastructure.Files
                 Description = @"Sara likes to help companies reach their best version, thanks to her skills 
                 and professional experience. She is passionate about Marketing and Business Analytics. As a 
                 Sales Specialist, she has a record of success in boosting brands through tailored strategies.",
-                ImgUrl = "template/images/team/sara.png",
+                ImgUrl = "template/images/team/sara.webp",
                 LinkedIn = "https://www.linkedin.com/in/saracabrerao/",
                 GithubUrl = "",
                 Projects = new List<string>{ },
@@ -138,7 +138,7 @@ namespace LandingPage.Infrastructure.Files
                 and constraints through planning and strategy drives him to continue to learn and grow as a 
                 designer and programmer on a daily basis. He loves to watch projects come to life through the 
                 product cycle.",
-                ImgUrl = "template/images/team/bradley.png",
+                ImgUrl = "template/images/team/bradley.webp",
                 LinkedIn = "https://www.linkedin.com/in/bradley-bailey-murray-3823a053/",
                 GithubUrl = "",
                 Projects = new List<string>{ },
