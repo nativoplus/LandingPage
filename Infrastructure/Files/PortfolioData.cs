@@ -26,8 +26,8 @@ namespace LandingPage.Infrastructure.Files
                 of users, based on business requirements, user requests, and customer feedback. Additionally, they were looking 
                 to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
                 ImgUrls = new List<string>{
-                    "template/images/assets/gb/gentlebirth.png",
-                    "template/images/assets/gb/backoffice.png",
+                    "template/images/assets/gb/gentlebirth.webp",
+                    "template/images/assets/gb/backoffice.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
@@ -72,7 +72,7 @@ namespace LandingPage.Infrastructure.Files
                         Review = @"Great App. Easy to Understand. Love the ability to manually add
                         contractions although the entry method could use work.",
                         Reviewer = "Andrew Frimpong",
-                        ReviewImgUrl = "/template/images/assets/gb/review1.png"
+                        ReviewImgUrl = "/template/images/assets/gb/review1.webp"
                     },
 
                 },
@@ -97,7 +97,7 @@ namespace LandingPage.Infrastructure.Files
                 decided to build a UI based on the React framework, which was
                 already being used in the backend.</p>"),
                 ImgUrls = new List<string>{
-                    "template/images/assets/fm/fertilemind.png",
+                    "template/images/assets/fm/fertilemind.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
@@ -310,7 +310,7 @@ namespace LandingPage.Infrastructure.Files
 
 "),
                 ImgUrls = new List<string>{
-                    "template/images/assets/maxana/maxana.png",
+                    "template/images/assets/maxana/maxana.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
@@ -406,7 +406,7 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/maxana/maxana.png",
+                    "template/images/assets/maxana/maxana.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
@@ -468,7 +468,7 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/afa/afa.png",
+                    "template/images/assets/afa/afa.webp",
                 },
                 Services = new List<string>
                 {
@@ -562,7 +562,7 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/westcor/westcor.png",
+                    "template/images/assets/westcor/westcor.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
@@ -655,10 +655,10 @@ namespace LandingPage.Infrastructure.Files
             //       </div>"
             //        ),
             //    ImgUrls = new List<string>{
-            //        "template/images/assets/techcu/techcu2.png",
-            //        "template/images/assets/techcu/techcu1.png",
-            //        "template/images/assets/techcu/techcu3.png",
-            //        "template/images/assets/techcu/techcu4.png"
+            //        "template/images/assets/techcu/techcu2.webp",
+            //        "template/images/assets/techcu/techcu1.webp",
+            //        "template/images/assets/techcu/techcu3.webp",
+            //        "template/images/assets/techcu/techcu4.webp"
             //    },
             //    Services = new List<string>
             //    {
@@ -773,7 +773,7 @@ namespace LandingPage.Infrastructure.Files
                     ){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/hv/hv2.png",
+                    "template/images/assets/hv/hv2.webp",
                     "template/images/assets/hv/hv.jpg",
                 },
                 Services = new List<string>
@@ -826,8 +826,8 @@ namespace LandingPage.Infrastructure.Files
                 work with.</p>
                 "),
                 ImgUrls = new List<string>{
-                    "template/images/assets/sc/sportcap.png",
-                    "template/images/assets/sc/sc2.png",
+                    "template/images/assets/sc/sportcap.webp",
+                    "template/images/assets/sc/sc2.webp",
                 },
                 Services = new List<string>
                 {
@@ -883,8 +883,8 @@ namespace LandingPage.Infrastructure.Files
                 for sourcing new suppliers.</p>
                 "),
                 ImgUrls = new List<string>{
-                    "template/images/assets/sc/ksc1.png",
-                    "template/images/assets/sc/sportcap.png",
+                    "template/images/assets/sc/ksc1.webp",
+                    "template/images/assets/sc/sportcap.webp",
                 },
                 Services = new List<string>
                 {
@@ -933,8 +933,8 @@ namespace LandingPage.Infrastructure.Files
                 and sales promotion, marketing campaigns, display design, logo, 
                 and identity development.</p>"),
                 ImgUrls = new List<string>{
-                    "template/images/assets/ftmb/ftmb.png",
-                    "template/images/assets/ftmb/ftmb2.png",
+                    "template/images/assets/ftmb/ftmb.webp",
+                    "template/images/assets/ftmb/ftmb2.webp",
                 },
                 Services = new List<string>
                 {
