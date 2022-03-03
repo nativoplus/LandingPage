@@ -26,19 +26,25 @@
 
 
     <!-- include the site stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600&display=swap" rel="stylesheet">
+
+@*    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/bootstrap.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/bootstrap.css">
+    <link rel="stylesheet" href="template/css/fonts-icons.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/fonts-icons.css">
+    <link rel="stylesheet" href="template/css/plugin-resets.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/plugin-resets.css">
+    <link rel="stylesheet" href="template/css/style.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/style.css">
+    <link rel="stylesheet" href="template/css/responsive.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/responsive.css">
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/color.css" />
+    <link rel="stylesheet" href="template/css/color.css" />*@
+
+    <link rel="stylesheet" href="template/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="template/css/plugin-resets.css" />
+    <link rel="stylesheet" href="template/css/bundle.min.css" />
+
     <link href="LandingPage.styles.css" rel="stylesheet" />
     <!-- Page Title -->
     <title>NativoPlus</title>
@@ -54,11 +60,11 @@
     <!-- Template -->
     <script src="template/js/jquery.js"></script>
     <script src="template/js/modal.js"> </script>
-    <script src="template/js/plugins.js"></script>
+    <script src="template/js/plugins.min.js"></script>
     <script>
         Blazor.start().then(function () {
           var customScript = document.createElement('script');
-          customScript.setAttribute('src', 'template/js/scripts.js');
+          customScript.setAttribute('src', 'template/js/scripts.min.js');
           document.head.appendChild(customScript);
         });
     </script>
