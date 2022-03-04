@@ -1,3 +1,30 @@
+.drawer {
+    background-color: #363636 !important;
+    height: 100% !important;
+    width: 260px !important;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all ease .3s !important;
+    transition: all ease .3s !important;
+    -o-transition: all 0.3s ease !important;
+}
+
+@media (max-width: 767px) {
+    .drawer {
+        width: 260px !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .drawer {
+        width: 500px!important;
+    }
+}
+
+
+
 /*
 Theme Name: Be - Startup Business HTML Template
 Author: Adnan and Tameer
@@ -84,7 +111,6 @@ $media-expressions: ( 'screen': 'screen', 'print': 'print', 'handheld': 'handhel
 @import '../wwwroot/template/scss/base/helpers';
 @import "../wwwroot/template/scss/base/wp-reset";
 
-
 /*------------------------------------------------------------------
 	2. Global style classes
 -------------------------------------------------------------------*/
@@ -127,13 +153,13 @@ $media-expressions: ( 'screen': 'screen', 'print': 'print', 'handheld': 'handhel
 }
 
 .bg-img-full:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0,0,0,0.6);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
 }
 
 .bg-img-parallax {
@@ -286,7 +312,7 @@ body {
 
 body.boxed-v #wrapper {
     max-width: 80%;
-    background: #fff;
+    background: #363636;
     margin: 20px auto;
     border-radius: 3px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -341,7 +367,7 @@ button,
 
     &:hover {
         color: white;
-        background: rgba(38, 166, 91, .9) !important;
+        background: rgba(46, 204, 113, .9) !important;
     }
 }
 
