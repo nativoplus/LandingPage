@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <span class="@Icon @(Large ? "":"custom-icon") main-color icon col-xs-1"></span>
+    <div class="holder col-xs-9">
+        <h3 class="title @(Large ? "large":"")">@Title</h3>
+        <p>
+            @Text
+        </p>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "Lorem Ipsum";
+    [Parameter]
+    public bool Large { get; set; } = false;
+    [Parameter]
+    public string Text { get; set; } = "Lorem Ipsum Dolor";
+    [Parameter]
+    public string Icon { get; set; } = "fa fa-gears";
+
+}
