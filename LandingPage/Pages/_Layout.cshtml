@@ -1,6 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 @namespace LandingPage.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var random = new Random();
+    var nonce = new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 10)
+    .Select(s => s[random.Next(s.Length)]).ToArray());
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,24 +26,39 @@
     <meta name="keywords" content="agency, Startup, bootstrap, business, corporate, creative, minimal, modern, onepage, personal, portfolio,  html5, responsive">
     <meta name="author" content="Be - Startup Business HTML Template">
 
+    <meta http-equiv="Content-Security-Policy" 
+          content="base-uri 'none';
+                   block-all-mixed-content;
+                   default-src 'self';
+                   font-src 'self' https://fonts.gstatic.com/;
+                   object-src 'none';
+                   script-src 'nonce-@nonce' 'strict-dynamic' 'unsafe-inline' https:;
+                   style-src 'self' https://cdnjs.cloudflare.com/ https://fonts.googleapis.com/ 'unsafe-inline' https:;
+                   upgrade-insecure-requests;">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 
 
     <!-- include the site stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600&display=swap" rel="stylesheet">
+
+@*    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="template/css/bootstrap.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/bootstrap.css">
+    <link rel="stylesheet" href="template/css/fonts-icons.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/fonts-icons.css">
+    <link rel="stylesheet" href="template/css/plugin-resets.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/plugin-resets.css">
+    <link rel="stylesheet" href="template/css/style.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/style.css">
+    <link rel="stylesheet" href="template/css/responsive.css" />
     <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/responsive.css">
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/color.css" />
+    <link rel="stylesheet" href="template/css/color.css" />*@
+
+    <link rel="stylesheet" href="template/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="template/css/plugin-resets.css" />
+    <link rel="stylesheet" href="template/css/bundle.min.css" />
+
     <link href="LandingPage.styles.css" rel="stylesheet" />
     <!-- Page Title -->
     <title>NativoPlus</title>
@@ -49,16 +69,18 @@
 </head>
 <body>
     @RenderBody()
+
     <!-- Blazor -->
-    <script src="_framework/blazor.server.js" autostart="false"></script>
+    <script nonce=@nonce src="_framework/blazor.server.js" autostart="false"></script>
     <!-- Template -->
-    <script src="template/js/jquery.js"></script>
-    <script src="template/js/modal.js"> </script>
-    <script src="template/js/plugins.js"></script>
-    <script>
+    <script nonce=@nonce src="template/js/jquery.js"></script>
+    <script nonce=@nonce src="template/js/modal.js"> </script>
+    <script nonce=@nonce src="template/js/plugins.min.js"></script>
+    <script nonce=@nonce>
         Blazor.start().then(function () {
           var customScript = document.createElement('script');
-          customScript.setAttribute('src', 'template/js/scripts.js');
+          customScript.setAttribute('src', 'template/js/scripts.min.js');
+          customScript.setAttribute('nonce', '@nonce');
           document.head.appendChild(customScript);
         });
     </script>

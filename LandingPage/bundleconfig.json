@@ -1,0 +1,29 @@
+[
+  {
+    "outputFileName": "wwwroot/template/css/bootstrap.min.css",
+    "inputFiles": [
+      "wwwroot/template/css/bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/template/css/bundle.min.css",
+    "inputFiles": [
+      "wwwroot/template/css/fonts-icons.css",
+      "wwwroot/template/css/style.css",
+      "wwwroot/template/css/responsive.css",
+      "wwwroot/template/css/color.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/template/js/plugins.min.js",
+    "inputFiles": [
+      "wwwroot/template/js/plugins.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/template/js/scripts.min.js",
+    "inputFiles": [
+      "wwwroot/template/js/scripts.js"
+    ]
+  }
+]
