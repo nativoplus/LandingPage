@@ -482,4 +482,14 @@ $(document).ready(function () {
             });
         }
     }
+
+    addAriaLabelToListboxItems();
+    function addAriaLabelToListboxItems() {
+        var listboxItems = $("div.slick-track[role='listbox']");
+        if (listboxItems) {
+            listboxItems.each(function () {
+                $(this).attr('aria-label', 'Listbox item');
+            });
+        }
+    }
 });

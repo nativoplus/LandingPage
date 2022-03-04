@@ -34,7 +34,7 @@
     </noscript>
 
     <script nonce="NativoPlus">
-        document.getElementById("google-fonts").addEventListener('load', function () {
+        document.getElementById("google-fonts").addEventListener('load', function() {
             this.onload = null;
             this.removeAttribute('media');
         });
@@ -65,13 +65,12 @@
     <script nonce="NativoPlus" src="template/js/modal.js"> </script>
     <script nonce="NativoPlus" src="template/js/plugins.min.js"></script>
     <script nonce="NativoPlus">
-        Blazor.start().then(function () {
+        Blazor.start().then(function() {
             var customScript = document.createElement('script');
             customScript.setAttribute('src', 'template/js/scripts.min.js');
             customScript.setAttribute('nonce', 'NativoPlus');
             document.head.appendChild(customScript);
         });
     </script>
-
 </body>
 </html>
