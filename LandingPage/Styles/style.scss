@@ -228,59 +228,59 @@ body {
     -webkit-font-smoothing: antialiased;
 
     &.pattern1 {
-        background-image: url(images/patterns/pattern1.png);
+        background-image: url(images/patterns/pattern1.webp);
     }
 
     &.pattern2 {
-        background-image: url(images/patterns/pattern2.png);
+        background-image: url(images/patterns/pattern2.webp);
     }
 
     &.pattern3 {
-        background-image: url(images/patterns/pattern3.png);
+        background-image: url(images/patterns/pattern3.webp);
     }
 
     &.pattern4 {
-        background-image: url(images/patterns/pattern4.png);
+        background-image: url(images/patterns/pattern4.webp);
     }
 
     &.pattern5 {
-        background-image: url(images/patterns/pattern5.png);
+        background-image: url(images/patterns/pattern5.webp);
     }
 
     &.pattern6 {
-        background-image: url(images/patterns/pattern6.png);
+        background-image: url(images/patterns/pattern6.webp);
     }
 
     &.pattern7 {
-        background-image: url(images/patterns/pattern7.png);
+        background-image: url(images/patterns/pattern7.webp);
     }
 
     &.pattern8 {
-        background-image: url(images/patterns/pattern8.png);
+        background-image: url(images/patterns/pattern8.webp);
     }
 
     &.pattern9 {
-        background-image: url(images/patterns/pattern9.png);
+        background-image: url(images/patterns/pattern9.webp);
     }
 
     &.pattern10 {
-        background-image: url(images/patterns/pattern10.png);
+        background-image: url(images/patterns/pattern10.webp);
     }
 
     &.pattern11 {
-        background-image: url(images/patterns/pattern11.png);
+        background-image: url(images/patterns/pattern11.webp);
     }
 
     &.pattern12 {
-        background-image: url(images/patterns/pattern12.png);
+        background-image: url(images/patterns/pattern12.webp);
     }
 
     &.pattern13 {
-        background-image: url(images/patterns/pattern13.png);
+        background-image: url(images/patterns/pattern13.webp);
     }
 
     &.pattern14 {
-        background-image: url(images/patterns/pattern14.png);
+        background-image: url(images/patterns/pattern14.webp);
     }
 }
 
@@ -308,7 +308,7 @@ button,
     letter-spacing: 1px;
     border-radius: 30px;
     background: transparent !important;
-    border-color: #2ecc71 !important;
+    border-color: #2abb67 !important;
     transition: all ease 0.3s;
     border: 2px solid transparent;
     font: 500 13px/24px $font-family-heading;
@@ -320,7 +320,7 @@ button,
 
     &:hover {
         color: $white;
-        background: #2ecc71 !important;
+        background: #2abb67 !important;
     }
 }
 
@@ -364,7 +364,7 @@ button,
 
     &:hover {
         color: $white;
-        background: #2ecc71 !important;
+        background: #2abb67 !important;
     }
 }
 
@@ -385,7 +385,7 @@ button,
     }
 
     &:hover {
-        color: #2ecc71;
+        color: #2abb67;
         border-color: $white;
         background-color: $white;
     }
@@ -571,7 +571,7 @@ button,
         padding: 10px 20px;
         letter-spacing: 1px;
         border-radius: 30px;
-        border-color: #2ecc71 !important;
+        border-color: #2abb67 !important;
         transition: all ease 0.3s;
         border: 2px solid transparent;
         font: 500 13px/24px $font-family-heading;
@@ -582,7 +582,7 @@ button,
         }
 
         &:hover {
-            background: #2ecc71 !important;
+            background: #2abb67 !important;
             color: $white !important;
         }
     }
