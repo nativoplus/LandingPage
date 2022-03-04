@@ -13,14 +13,14 @@
 
                     <div class="pull-right">
                         <a href="#" class="logo btn-green-nav text-uppercase hidden-mobile">Let's Talk!</a>
-                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;"></a>
+                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;" aria-label="Open or close the navigation menu"></a>
                         <!-- start of page navigation -->
-                        <Nativo_Menu @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right>
+                        <Nativo_Menu_Template @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right>
                             <div @onclick=@( () => NavigateTo("/"))><Nativo_Menu_Item Text="Home" Url="" /></div>
                             <div @onclick=@( () => NavigateTo("/company/about"))><Nativo_Menu_Item Text="About Us" Url="" /></div>
                             <div @onclick=@( () => NavigateTo("/work/services"))><Nativo_Menu_Item Text="Services" Url="" /></div>
                             <div @onclick=@( () => NavigateTo("/work/portfolio"))><Nativo_Menu_Item Text="Portfolio" Url="" /></div>
-                        </Nativo_Menu>
+                        </Nativo_Menu_Template>
 
 
 

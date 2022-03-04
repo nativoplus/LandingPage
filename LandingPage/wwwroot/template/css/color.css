@@ -32,7 +32,7 @@ a,
 #header.sticky .header-holder #nav a:hover,
 #header.sticky .header-holder #nav li:hover > a,
 .main-color {
-  color: #2abb67;
+  color: #26a65b;
   /*color: red;*/
 }
 
@@ -45,7 +45,7 @@ a,
 .cart-block .coupon-form .btn:hover,
 .search-popup .search-close:hover span,
 .main-bg-color {
-  background-color: #2abb67;
+  background-color: #26a65b;
   /*background-color: red;*/
 }
 
@@ -55,6 +55,6 @@ a,
 .shop-pagination .active a,
 .filter-widget .btn-filter:hover,
 .main-border-color {
-  border-color: #2abb67;
+  border-color: #26a65b;
   /*border-color: red;*/
 }
