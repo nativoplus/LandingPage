@@ -334,7 +334,7 @@ button,
     letter-spacing: 1px;
     border-radius: 30px;
     background: transparent !important;
-    border-color: #2abb67 !important;
+    border-color: #26a65b !important;
     transition: all ease 0.3s;
     border: 2px solid transparent;
     font: 500 13px/24px $font-family-heading;
@@ -346,7 +346,7 @@ button,
 
     &:hover {
         color: $white;
-        background: #2abb67 !important;
+        background: #26a65b !important;
     }
 }
 
@@ -355,7 +355,7 @@ button,
     padding: 10px 40px;
     letter-spacing: 1px;
     border-radius: 30px;
-    background: rgb(46, 204, 113) !important;
+    background: #1c7d44 !important;
     transition: all ease 0.3s;
     border: 2px solid transparent;
     font: 500 13px/24px $font-family-heading;
@@ -388,7 +388,7 @@ button,
 
     &:hover {
         color: $white;
-        background: #2abb67 !important;
+        background: #26a65b !important;
     }
 }
 
@@ -402,6 +402,7 @@ button,
     transition: all ease 0.3s;
     border: 2px solid rgba(255,255,255,0.4);
     font: 500 13px/24px $font-family-heading;
+    background-color: #1c7d44;
 
     &:focus,
     &:active {
@@ -409,7 +410,7 @@ button,
     }
 
     &:hover {
-        color: #2abb67;
+        color: #26a65b;
         border-color: $white;
         background-color: $white;
     }
@@ -595,7 +596,7 @@ button,
         padding: 10px 20px;
         letter-spacing: 1px;
         border-radius: 30px;
-        border-color: #2abb67 !important;
+        border-color: #26a65b !important;
         transition: all ease 0.3s;
         border: 2px solid transparent;
         font: 500 13px/24px $font-family-heading;
@@ -606,7 +607,7 @@ button,
         }
 
         &:hover {
-            background: #2abb67 !important;
+            background: #26a65b !important;
             color: $white !important;
         }
     }
@@ -1644,7 +1645,7 @@ button,
 -------------------------------------------------------------------*/
 .email-form {
     @include placeholder {
-        color: #999;
+        color: #8c8c8c;
     }
 
     label {
@@ -1659,7 +1660,7 @@ button,
         border-radius: 30px;
 
         @include placeholder {
-            color: #999;
+            color: #8c8c8c;
         }
     }
 
@@ -1668,7 +1669,7 @@ button,
         margin: 0;
         outline: 0;
         width: 73%;
-        color: #999;
+        color: #333;
         float: left;
         height: 40px;
         font-size: 14px;
@@ -1678,7 +1679,7 @@ button,
         background: $white;
 
         @include placeholder {
-            color: #999;
+            color: #8c8c8c;
         }
     }
 

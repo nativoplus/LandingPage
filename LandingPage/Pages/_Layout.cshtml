@@ -2,85 +2,74 @@
 @namespace LandingPage.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    var random = new Random();
-    var nonce = new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 10)
-    .Select(s => s[random.Next(s.Length)]).ToArray());
+    var googleFontsUrl = "https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600&display=swap";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <base href="~/" />
     <!-- set the encoding of your site -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <!-- set the viewport width and initial-scale on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- set the apple mobile web app capable -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- set the HandheldFriendly -->
-    <meta name="HandheldFriendly" content="True">
+    <meta name="HandheldFriendly" content="True" />
     <!-- set the apple mobile web app status bar style -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- set the description -->
     <meta name="google-site-verification" content="ha0LKVx0HRHH1J3Vw094ekkkHFahiaNFPplvdGJtgLg" />
     <meta name="description" content="NativoPlus Website">
     <meta name="keywords" content="agency, Startup, bootstrap, business, corporate, creative, minimal, modern, onepage, personal, portfolio,  html5, responsive">
     <meta name="author" content="NativoPlus">
 
-    <meta http-equiv="Content-Security-Policy" 
-          content="base-uri 'none';
-                   block-all-mixed-content;
-                   default-src 'self';
-                   font-src 'self' https://fonts.gstatic.com/;
-                   object-src 'none';
-                   script-src 'nonce-@nonce' 'strict-dynamic' 'unsafe-inline' https:;
-                   style-src 'self' https://cdnjs.cloudflare.com/ https://fonts.googleapis.com/ 'unsafe-inline' https:;
-                   upgrade-insecure-requests;">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href=@googleFontsUrl />
+    <link id="google-fonts" rel="stylesheet" media="print" href=@googleFontsUrl />
 
-    @*<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">*@
+    <noscript>
+        <link rel="stylesheet" href=@googleFontsUrl />
+    </noscript>
 
-    <!-- include the site stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600&display=swap" rel="stylesheet">
+    <script nonce="NativoPlus">
+        document.getElementById("google-fonts").addEventListener('load', function () {
+            this.onload = null;
+            this.removeAttribute('media');
+        });
+    </script>
 
-@*    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/bootstrap.css" />
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/fonts-icons.css" />
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/plugin-resets.css" />
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/style.css" />
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/responsive.css" />
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="template/css/color.css" />*@
-
-    <link rel="stylesheet" href="template/css/bootstrap.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="template/css/bootstrap.min.css" />
     <link rel="stylesheet" href="template/css/plugin-resets.css" />
     <link rel="stylesheet" href="template/css/bundle.min.css" />
 
+    @*<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">*@
+
     <link href="LandingPage.styles.css" rel="stylesheet" />
+
     <!-- Page Title -->
     <title>NativoPlus</title>
 
-
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
-
 </head>
 <body >
     @RenderBody()
 
     <!-- Blazor -->
-    <script nonce=@nonce src="_framework/blazor.server.js" autostart="false"></script>
+    <script nonce="NativoPlus" src="_framework/blazor.server.js" autostart="false"></script>
+
     <!-- Template -->
-    <script nonce=@nonce src="template/js/jquery.js"></script>
-    <script nonce=@nonce src="template/js/modal.js"> </script>
-    <script nonce=@nonce src="template/js/plugins.min.js"></script>
-    <script nonce=@nonce>
+    <script nonce="NativoPlus" src="template/js/jquery.js"></script>
+    <script nonce="NativoPlus" src="template/js/modal.js"> </script>
+    <script nonce="NativoPlus" src="template/js/plugins.min.js"></script>
+    <script nonce="NativoPlus">
         Blazor.start().then(function () {
-          var customScript = document.createElement('script');
-          customScript.setAttribute('src', 'template/js/scripts.min.js');
-          customScript.setAttribute('nonce', '@nonce');
-          document.head.appendChild(customScript);
+            var customScript = document.createElement('script');
+            customScript.setAttribute('src', 'template/js/scripts.min.js');
+            customScript.setAttribute('nonce', 'NativoPlus');
+            document.head.appendChild(customScript);
         });
     </script>
 
