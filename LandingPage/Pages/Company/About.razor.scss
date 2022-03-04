@@ -38,7 +38,7 @@ body {
     position: fixed;
     top: 1em;
     right: 1em;
-    font-size: 2em;
+    font-size: .75em;
     padding: 1em;
     cursor: pointer;
     z-index: 1;
@@ -93,6 +93,18 @@ body {
     &__content {
         opacity: 1;
         transform: scale(1) translate3D(0,0,0);
+    }
+}
+
+@media (max-width: 400px){
+    .segmented-control {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 401px) {
+    .segmented-control {
+        font-size: 16px;
     }
 }
 
