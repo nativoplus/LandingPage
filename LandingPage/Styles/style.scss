@@ -308,7 +308,7 @@ button,
     letter-spacing: 1px;
     border-radius: 30px;
     background: transparent !important;
-    border-color: #2ecc71 !important;
+    border-color: #2abb67 !important;
     transition: all ease 0.3s;
     border: 2px solid transparent;
     font: 500 13px/24px $font-family-heading;
@@ -320,7 +320,7 @@ button,
 
     &:hover {
         color: $white;
-        background: #2ecc71 !important;
+        background: #2abb67 !important;
     }
 }
 
@@ -364,7 +364,7 @@ button,
 
     &:hover {
         color: $white;
-        background: #2ecc71 !important;
+        background: #2abb67 !important;
     }
 }
 
@@ -385,7 +385,7 @@ button,
     }
 
     &:hover {
-        color: #2ecc71;
+        color: #2abb67;
         border-color: $white;
         background-color: $white;
     }
@@ -571,7 +571,7 @@ button,
         padding: 10px 20px;
         letter-spacing: 1px;
         border-radius: 30px;
-        border-color: #2ecc71 !important;
+        border-color: #2abb67 !important;
         transition: all ease 0.3s;
         border: 2px solid transparent;
         font: 500 13px/24px $font-family-heading;
@@ -582,7 +582,7 @@ button,
         }
 
         &:hover {
-            background: #2ecc71 !important;
+            background: #2abb67 !important;
             color: $white !important;
         }
     }
