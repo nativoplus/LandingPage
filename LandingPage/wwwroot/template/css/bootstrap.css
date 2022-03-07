@@ -1412,7 +1412,7 @@ textarea {
 }
 
 a {
-    color: #2abb67;
+    color: #26a65b;
     text-decoration: none;
 }
 
@@ -4115,7 +4115,7 @@ fieldset[disabled] a.btn {
     }
 
 .btn-link {
-    color: #2abb67;
+    color: #26a65b;
     font-weight: normal;
     border-radius: 0;
 }

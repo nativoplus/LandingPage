@@ -15,7 +15,7 @@
 
                     <div class="pull-right">
                         <a href="#" class="logo btn-green-nav text-uppercase hidden-mobile">Let's Talk!</a>
-                        <a href="#" @onclick:preventDefault @onclick=ToggleMenu class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;"></a>
+                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;" aria-label="Open or close the navigation menu"></a>
                         <!-- start of page navigation -->
                         <Nativo_Menu_Template @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right CssClass="drawer" EnableOverlay=true>
                             <div class="header" role="banner" >

@@ -1,4 +1,6 @@
-﻿  <!-- start of page footer -->
+﻿@implements IDisposable
+@inject NavigationManager NavigationManager
+<!-- start of page footer -->
 <footer id="footer">
     <div class="bg-dark2 pad-top-lg pad-bottom-xs">
         <div class="container">
@@ -6,17 +8,17 @@
                 <div class="col-xs-12 col-sm-4 mar-bottom-xs">
                     <!-- logo -->
                     <div class="logo"><a href="#">NativoPlus</a></div>
-                    <p>We grow ideas into businesses<br />“and have fun while doing it.”</p>
+                  
                     <!-- social -->
                     <ul class="list-inline social pad-top-xs">
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/nativoplus/?viewAsMember=true" aria-label="Visit our LinkedIn page"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/nativeplussolutions" aria-label="Visit our Facebook page"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 mar-bottom-xs">
                     <span class="title text-uppercase">Contact us</span>
                     <!-- start of twitter-feed -->
-                    <p> 825 Marshall St. Redwood City<br />California<br />Phone: +1(123)-123-1234<br />Email: nativoplus@nativoplus.com<br /> </p>
+                    <p> 825 Marshall St. Redwood City<br />California<br />Phone: +1(650)-382-2451<br />Email: nativoplus@nativoplus.com<br /> </p>
 
                 </div>
                 <div class="col-xs-12 col-sm-4 mar-bottom-xs">
@@ -41,13 +43,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <span class="pull-left">© NativoPlus 2021, All Rights Reserved.</span>
-                    <span class="pull-right"><a href="#">Policy Privacy</a>  &nbsp; &nbsp; &nbsp; &nbsp; <a href="#">Terms &amp; Conditions</a></span>
+                    <span class="pull-left">© NativoPlus 2022, All Rights Reserved.</span>
+                    <span class="pull-right"><a @onclick:preventDefault @onclick=@( () => NavigateTo("/terms-and-conditions")) href="#">Terms &amp; Conditions</a></span>
                 </div>
             </div>
         </div>
     </div><!-- end of f-bottom -->
 </footer><!-- end of page footer -->
 @code {
-
+        public void NavigateTo(string path)
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo(path, forceLoad: true);
+    }
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+    }
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+    }
 }
