@@ -247,20 +247,23 @@ $(document).ready(function () {
 
                 var scrollPos = jQuery(window).scrollTop();
                 var windowHeight = jQuery(window).height();
+                var wedoSection = jQuery('.wedo-section');
 
-                var activeSection = jQuery('.wedo-section').offset().top - 50;
-                if (scrollPos > activeSection) {
-                    var item = jQuery('.bar-outer .bar');
-                    var percent = item.attr('data-width');
-                    var animationSpeed = 2500;
-                    var flag = false;
+                if (wedoSection.length) {
+                    var activeSection = wedoSection.offset().top - 50;
+                    if (scrollPos > activeSection) {
+                        var item = jQuery('.bar-outer .bar');
+                        var percent = item.attr('data-width');
+                        var animationSpeed = 2500;
+                        var flag = false;
 
-                    if (!flag) {
-                        item.animate({
-                            width: percent + "%"
-                        }, animationSpeed);
+                        if (!flag) {
+                            item.animate({
+                                width: percent + "%"
+                            }, animationSpeed);
 
-                        flag = true;
+                            flag = true;
+                        }
                     }
                 }
             }, 200);
@@ -476,6 +479,16 @@ $(document).ready(function () {
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
+            });
+        }
+    }
+
+    addAriaLabelToListboxItems();
+    function addAriaLabelToListboxItems() {
+        var listboxItems = $("div.slick-track[role='listbox']");
+        if (listboxItems) {
+            listboxItems.each(function () {
+                $(this).attr('aria-label', 'Listbox item');
             });
         }
     }

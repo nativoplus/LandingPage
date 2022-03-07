@@ -38,7 +38,7 @@ body {
     position: fixed;
     top: 1em;
     right: 1em;
-    font-size: 2em;
+    font-size: .75em;
     padding: 1em;
     cursor: pointer;
     z-index: 1;
@@ -96,6 +96,18 @@ body {
     }
 }
 
+@media (max-width: 400px){
+    .segmented-control {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 401px) {
+    .segmented-control {
+        font-size: 16px;
+    }
+}
+
 .segmented-control {
     position: relative;
     display: inline-block;
@@ -128,7 +140,7 @@ body {
 
 .segmented-control:nth-child(1) {
     width: 100%;
-    color: #2ecc71;
+    color: #26a65b;
 }
 
 .segmented-control:nth-child(2) {

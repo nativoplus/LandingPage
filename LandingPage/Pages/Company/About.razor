@@ -49,33 +49,20 @@
                     <div class="row mar-bottom-sm">
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                            <div class="row">
-                                <i class="fa fa-rocket main-color icon custom-icon col-xs-1"></i>
-                                <div class="holder col-xs-9">
-                                    <h3 class="title">Easy For Users</h3>
-                                    <p>We are friendly as our websites, we make it easy for visitors to find what they’re looking for on any device.</p>
-                                </div>
-                            </div>
+                            <IconBox Icon="pe-7s-rocket" Title="Easy For Users"
+                                     Text="We are friendly as our websites, we make it easy for visitors to find what they’re
+                                     looking for on any device." />
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                            <div class="row">
-                                <span class="fa fa-desktop main-color icon custom-icon col-xs-1"></span>
-                                <div class="holder col-xs-9">
-                                    <h3 class="title">Pixel Perfect</h3>
-                                    <p>We deliver complete and clean design through absolute use of every pixel. We are not perfect, but we try to be!</p>
-                                </div>
-                            </div>
+                            <IconBox Icon="pe-7s-vector" Title="Pixel Perfect"
+                                     Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect, 
+                                     but we try to be!" />
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                            <div class="row">
-                                <span class="fa fa-gears main-color icon custom-icon col-xs-1"></span>
-                                <div class="holder col-xs-9">
-                                    <h3 class="title">Edit Content</h3>
-                                    <p>We’re all about finding the right words to show you and your customers just how amazing you are.</p>
-                                </div>
-                            </div>
+                           <IconBox Icon="pe-7s-edit" Title="Edit Content"
+                                     Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
                         </div><!-- end of icon-box -->
                     </div>
                 </div>
@@ -102,41 +89,13 @@
                     <div class="pad-top-md hidden-sm"></div>
                     <div class="container">
                         <div class="row pad-bottom-xs">
-                            <div class="col-xs-12 col-md-6 col-md-push-7 ">
+                            <div class="col-xs-12 col-md-5 col-md-push-7 ">
                                 <!-- start of main-heading -->
                                 <header class="main-heading mar-bottom-xs">
                                     <h2 class="heading">Let's get started!</h2>
                                     <p class="text">We don’t just develop apps. We help realize ideas  that make an impact.</p>
                                 </header><!-- end of main-heading -->
                                 <!-- end of icon-box -->
-                                @* <!-- start of icon-box -->
-                                    <div class="col-xs-12 mar-bottom-xs icon-box">
-                                    <div class="row">
-                                    <span class="fa fa-bullseye main-color icon custom-icon col-xs-1"></span>
-                                    <div class="holder col-xs-9">
-                                    <h3 class="title">Our Mission</h3>
-                                    <p>
-                                    Our job is to help you envision, develop, and launch your project. We can provide support
-                                    and expertise at every stage of the development life cycle from conception to scaling.
-                                    We’re here to help you make real the project you’ve always imagined.
-                                    </p>
-                                    </div>
-                                    </div>
-                                    </div><!-- end of icon-box -->
-                                    <!-- start of icon-box -->
-                                    <div class="col-xs-12 mar-bottom-xs icon-box">
-                                    <div class="row">
-                                    <span class="fa fa-tag main-color icon custom-icon col-xs-1"></span>
-                                    <div class="holder col-xs-9">
-                                    <h3 class="title">Quality Services</h3>
-                                    <p>
-                                    We provide more than great apps; we help you create the capacity, infrastructure,
-                                    and engagement you’ll need to deliver person-centered data integrated projects.
-                                    </p>
-                                    </div>
-                                    </div>
-                                    </div><!-- end of icon-box -->
-                                *@
                                 <div class="col-xs-12 ">
                                     <div class="row">
                                         <div class="segmented-control mar-bottom-xs">
@@ -146,7 +105,7 @@
 
                                             <label for="sc-1-1-1" data-value="Our Values">Our Values</label>
                                             <label for="sc-1-1-2" data-value="Our Mission">Our Mission</label>
-                                            <label for="sc-1-1-3" data-value="Quality Services">Quality Services</label>
+                                            <label for="sc-1-1-3" data-value="Quality Services">Our Services</label>
                                         </div>
 
                                     </div>
@@ -206,7 +165,7 @@
                                             <div class="">
 
                                                 <div class="">
-                                                    <img src="@selectedMember.ImgUrl" alt="images" class="img-responsive">
+                                                    <img loading="lazy" src="@selectedMember.ImgUrl" alt="images" class="img-responsive">
                                                 </div>
                                             </div>
                                         </div>
@@ -219,11 +178,11 @@
                                             <ul class="list-inline social pad-top-xs">
                                                 @if (selectedMember.LinkedIn.ToString() != "")
                                                 {
-                                                    <li><a href="@selectedMember.LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                                    <li><a href="@selectedMember.LinkedIn" aria-label="Team member's LinkedIn profile"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                                                 }
                                                 @if (selectedMember.GithubUrl.ToString() != "")
                                                 {
-                                                    <li><a href="@selectedMember.GithubUrl"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                                    <li><a href="@selectedMember.GithubUrl" aria-label="Team member's GitHub account"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                                                 }
                                             </ul>
                                         </div>
