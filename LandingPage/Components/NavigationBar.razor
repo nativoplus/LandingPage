@@ -20,12 +20,12 @@
                         <Nativo_Menu_Template @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right CssClass="drawer" EnableOverlay=true>
                             <div class="header" role="banner" >
                                 <div class="nav-logo">
-                                    <a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#"><img src="template/images/assets/logo.webp" style="" /></a>
+                                    <a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="The company logo"><img src="template/images/assets/logo.webp" alt="The company logo" height="40" width="175" /></a>
                                 </div>
                                 <div class="nav-wrap">
                                     <nav class="main-nav" role="navigation">
                                         <ul class="unstyled list-hover-slide">
-                                            <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/company/about")) href="#">Abouts</a></li>
+                                            <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/company/about")) href="#" aria-label="Learn more about our company and our team members">About us</a></li>
                                             @* <li><a href="#">Work</a></li>
                                                 <li><a href="#">Contact</a></li>
                                                 <li><a href="#">Blog</a></li>*@

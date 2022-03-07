@@ -1,12 +1,12 @@
 ﻿<!-- Call your modal -->
-<a id="modal" href="#animatedModal"></a>
+<a id="modal" href="#animatedModal" aria-label="Open the modal to view its contents"></a>
 <!-- Modal -->
 <div id="animatedModal">
     <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
 
 
     <div class="modal-content">
-        <a href="#" @onclick:preventDefault class="close-animatedModal">
+        <a href="#" @onclick:preventDefault class="close-animatedModal" aria-label="Close the modal to return to the previous page">
             <i class="pe-7s-close main-color icon custom-icon" style="font-size: 56px;"></i>
         </a>
 
