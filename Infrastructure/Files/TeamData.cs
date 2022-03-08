@@ -107,7 +107,7 @@ namespace LandingPage.Infrastructure.Files
             new Team
             {
                 Name = "Danny Ruiz",
-                Role = "System Engineer",
+                Role = "Software Engineer",
                 Description = @"Danny is a proactive and intuitive person, answering project needs before being
                 asked. He is focused on software and web application development, with a high level of creativity, 
                 a positive attitude, and a desire to learn and improve day by day. He is friendly and professional 
