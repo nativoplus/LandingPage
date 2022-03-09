@@ -1,33 +1,111 @@
-.cookie{
-	width: 420px;
-    height: 72px;
-    background-color: #fff;
+#riskfloater {
+    background-color: green;
+    left: 10px;
     position: fixed;
-    bottom: 88px;
-    border-radius: 10px;
-	left: 5%;
-	padding: 10px 20px;
+    padding: 8px 16px;
+    background: green;
+    color: #ffffff;
+    cursor: pointer;
+    bottom: 10px;
+    z-index: 2;
+    // -moz-border-radius: 3px;
+    // -webkit-border-radius: 3px;
+    // border-radius: 3px;
 }
 
-.cookie .txt{
-	float: left;
-    width: 65%;
-}
-.txt p{
-	color:#1D2D35;
+#cookiebar {
+    position: fixed;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    display: none;
+    z-index: 200;
+
+    .container {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background-color: green;
+        color: #ffffff;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 10px;
+        overflow: hidden;
+
+        a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted white;
+        }
+    }
 }
 
-.cookie .accept {
-    background-color: #40CC79;
-    color: #fff !important;
-    border-radius: 32px;
-    padding: 3px 23px;
-    /* align-self: center; */
-    font-size: 19px;
-    margin-top: 2.5%;	
-    margin-left: 3%;
+#cookiebarBox {
+    position: fixed;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    display: none;
+    z-index: 200;
 
+    .container {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+
+        a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted white;
+        }
+    }
 }
-.cookie .accept:hover {
-	background-color: #30b867;
+
+.btn-green-hover {
+    width: 200px !important;
+}
+
+.cookieok {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #e8f0f3;
+    color: #186782 !important;
+    font-weight: 600;
+    // float: right;
+    line-height: 2.5em;
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom-width: 0 !important;
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+
+.bg-custom {
+    background-color: #130f40;
+}
+
+.button-fixed {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    border-radius: 4px;
+}
+
+.fas {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
 }

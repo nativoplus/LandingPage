@@ -1,15 +1,28 @@
- <section class="bg-grey cookie">
-   <div class="txt">
-      <p class="">
-         By using Your Website Name,<br>
-         you agree to our <a href="#" target="_blanck">Cookie Policy.</a>
-      </p>
-   </div>
-   <div>
-      <a class="btn accept">Accept</a>
-   </div>
-</section>
+@inject IJSRuntime jsRuntime
+<div id="cookiebarBox" hidden class="os-animation" data-os-animation="fadeIn">
+    <div class="col-md-4">
+        <div class="bg-dark container pull-left pad-bottom-xs">
 
-@code{
-    
+            <p class="pad-bottom-xs pad-top-xs">
+                We use our own and third-party cookies to show you more relevant
+                content based on your browsing and navigation history.
+            </p>
+
+
+            <button id="cookieBoxok" class="btn btn-green-hover" data-cookie="risk">OK</button>
+
+        </div>
+    </div>
+</div>
+@code {
+    private bool isRendered = false;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Initialize Any JS Interop
+            await jsRuntime.InvokeAsync<IJSObjectReference>("import", "/template/js/cookies.js");
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
 }
