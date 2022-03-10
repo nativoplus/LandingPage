@@ -30,7 +30,7 @@ https://nativoplus-website-dev.azurewebsites.net/
         <!-- end of page header -->
       
         <!-- start of page main section -->
-        ...
+        PAGE HTML CODE GOES HERE
         <!-- end of page main section -->
       
         <!-- start of promo-box -->
