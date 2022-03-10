@@ -14,7 +14,10 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Hector Orellana Reyes",
                 Role = "Software Engineer",
-                Description = @"Hector has been a UI Developer with Nativo Plus Studio since January 2017.",
+                Description = @"Hector is a software developer with a wealth of practical experience. 
+                He’s fearless, up for a challenge and full of ideas. He can create the kind of software 
+                your organization needs to stay in front of your competitors. Hector loves to deliver effective, 
+                reliable services that meet the needs of any project, and he loves to see his ideas become real.",
                 ImgUrl = "template/images/team/hector.webp",
                 LinkedIn = "https://www.linkedin.com/in/hector-orellana-reyes-220b7a113/",
                 GithubUrl = "https://github.com/horeyes",
@@ -37,7 +40,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Angel Ramos",
                 Role = "Software Engineer",
-                Description = @"Angel has been a Software Engineer with Nativo Plus Studio since April 2017.  ",
+                Description = @"Angel enjoys learning and staying on top of the latest trends in writing 
+                code. He specializes in NativeScript and APIs for mobile healthcare applications. He’s 
+                dedicated to ensuring quality and delivering value on every project.",
                 ImgUrl = "template/images/team/ramos.webp",
                 LinkedIn = "https://www.linkedin.com/in/angel-ramos-5a6a52a2/",
                 GithubUrl = "https://github.com/joey0xx",
@@ -93,7 +98,7 @@ namespace LandingPage.Infrastructure.Files
             },
             new Team
             {
-                Name = "Juliana Garrido",
+                Name = "Juliana Galeano",
                 Role = "Art Director",
                 Description = @"Juliana has the ability to see the spark of potential everywhere. She is 
                 an expert in creating high-value content, experiences, and emotions through audiovisual 
@@ -140,6 +145,18 @@ namespace LandingPage.Infrastructure.Files
                 product cycle.",
                 ImgUrl = "template/images/team/bradley.webp",
                 LinkedIn = "https://www.linkedin.com/in/bradley-bailey-murray-3823a053/",
+                GithubUrl = "",
+                Projects = new List<string>{ },
+            },
+            new Team
+            {
+                Name = "Kate Bradshaw",
+                Role = "Graphic Designer",
+                Description = @"Kate is a graphic designer with a background in creative writing. She takes a 
+                multifaceted approach to communication and problem solving, and is always looking to add new 
+                skills to her toolbelt.",
+                ImgUrl = "template/images/team/kate.webp",
+                LinkedIn = "https://www.linkedin.com/in/kateruthbradshaw/",
                 GithubUrl = "",
                 Projects = new List<string>{ },
             }
