@@ -355,7 +355,7 @@ button,
     padding: 10px 40px;
     letter-spacing: 1px;
     border-radius: 30px;
-    background: #1c7d44 !important;
+    background: #26a65b !important;
     transition: all ease 0.3s;
     border: 2px solid transparent;
     font: 500 13px/24px $font-family-heading;
@@ -367,7 +367,7 @@ button,
 
     &:hover {
         color: white;
-        background: rgba(38, 166, 91, .9) !important;
+        background: rgba(38, 166, 91, .5) !important;
     }
 }
 
