@@ -10,10 +10,13 @@ https://github.com/jasontaylordev/CleanArchitecture
 https://skylight.digital
 
 3. Template:
-http://htmlbeans.com/html/be/blog-detail-fullwidth.html
+http://htmlbeans.com/html/be/index.html
 
 4. Live Website: 
 https://nativoplus-website-dev.azurewebsites.net/
+
+5. Template Code URL:
+https://drive.google.com/file/d/1Otv5EyE0xEtPeSoXJZu6X4hYn7NpDJXJ/view?usp=sharing
 
 ## Basic View Layout with Components:
 
