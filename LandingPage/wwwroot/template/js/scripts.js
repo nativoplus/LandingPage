@@ -492,4 +492,16 @@ $(document).ready(function () {
             });
         }
     }
+
+    $(".newsletter-sub-btn").click(function () {
+        $('.simple_hover_modal').show();
+    });
+
+    $('.simple_hover_modal').click(function () {
+        $('.simple_hover_modal').hide();
+    });
+
+    $('.popupCloseButton').click(function () {
+        $('.simple_hover_modal').hide();
+    });
 });

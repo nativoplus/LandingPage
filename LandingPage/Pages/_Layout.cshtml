@@ -2,7 +2,7 @@
 @namespace LandingPage.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    var googleFontsUrl = "https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600";
+    var googleFontsUrl = "https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600&display=swap";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -58,17 +58,16 @@
     @RenderBody()
 
     <!-- Blazor -->
-    <script nonce="NativoPlus" src="_framework/blazor.server.js" autostart="false"></script>
+    <script src="_framework/blazor.server.js" autostart="false"></script>
 
     <!-- Template -->
-    <script nonce="NativoPlus" src="template/js/jquery.js"></script>
-    <script nonce="NativoPlus" src="template/js/modal.js"> </script>
-    <script nonce="NativoPlus" src="template/js/plugins.min.js"></script>
-    <script nonce="NativoPlus">
+    <script src="template/js/jquery.js"></script>
+    <script src="template/js/modal.js"> </script>
+    <script src="template/js/plugins.min.js"></script>
+    <script>
         Blazor.start().then(function() {
             var customScript = document.createElement('script');
             customScript.setAttribute('src', 'template/js/scripts.min.js');
-            customScript.setAttribute('nonce', 'NativoPlus');
             document.head.appendChild(customScript);
         });
     </script>
