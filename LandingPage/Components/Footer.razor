@@ -11,13 +11,18 @@
             @*<p>We grow ideas into businesses<br />“and have fun while doing it.”</p>*@
             <!-- social -->
             <ul class="list-inline social pad-top-xs">
-                <li><a href="#" aria-label="Visit our LinkedIn page"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a href="#" aria-label="Visit our Facebook page"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/nativoplus/" aria-label="Visit our LinkedIn page"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/nativeplussolutions" aria-label="Visit our Facebook page"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a></li>
             </ul>
 		</div>
 		<div class="col-md-8 col-xs-12 mar-bottom-xs">
 			<div class="row">
 				<div class="col-md-4">
+ @*                   <ul class="unstyled">
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="Learn more about our home">Home</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about our company and our team members">About us</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
+					</ul>*@
                     <!-- start of email-form -->
                     <form action="#" class="email-form">
                         <label>
@@ -32,19 +37,10 @@
                     <!-- end of email-form -->
 				</div>
 				<div class="col-md-4">
-                    <ul style="list-style: none;">
-						<li class="list-item">
-							<a href="">Loremt</a>
-						</li>
-						<li class="list-item">
-							<a href="#">adipiscing</a>
-						</li>
-						<li class="list-item">
-							<a href="">molestie</a>
-						</li>
-						<li class="list-item">
-							<a href="#">pretium</a>
-						</li>
+                    <ul class="unstyled">
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="Learn more about our home">Home</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about our company and our team members">About us</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4">
