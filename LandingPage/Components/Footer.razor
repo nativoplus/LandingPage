@@ -18,26 +18,31 @@
 		<div class="col-md-8 col-xs-12 mar-bottom-xs">
 			<div class="row">
 				<div class="col-md-4">
- @*                   <ul class="unstyled">
-                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="Learn more about our home">Home</a></li>
-                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about our company and our team members">About us</a></li>
-                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
-					</ul>*@
-                    <!-- start of button let's talk' -->
-                    <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom text-uppercase">Let's Talk!</a>
-                    <!-- end of button let's talk -->
-				</div>
-				<div class="col-md-4">
                     <ul class="unstyled">
                         <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="Learn more about our home">Home</a></li>
-                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
                         <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about our company and our team members">About us</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4">
-                    <span class="title text-uppercase">Contact us</span>
+                      <span class="title text-uppercase">Contact us</span>
                     <!-- start of twitter-feed -->
                     <p> 825 Marshall St. Redwood City<br />California<br />Phone: +1(123)-123-1234<br />Email: nativoplus@nativoplus.com<br /> </p>
+				</div>
+				<div class="col-md-4">
+                    <span class="title text-uppercase">Newsletter</span>
+                    <!-- start of button let's talk' -->
+                    <form action="#" class="email-form">
+                        <label>
+                            Don’t be a stranger. Stay in touch!
+                            Sign up to get awesome updates from Nativoplus!
+                        </label>
+                        <div class="holder">
+                            <input type="text" class="input" placeholder="Email address">
+                            <button type="submit" class="btn btn-green-hover">Subscribe</button>
+                        </div>
+                    </form>
+                    <!-- end of button let's talk -->
 				</div>
 			</div>
 		</div>
