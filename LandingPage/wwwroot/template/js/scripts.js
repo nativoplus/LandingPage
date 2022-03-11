@@ -500,8 +500,4 @@ $(document).ready(function () {
     $('.simple_hover_modal').click(function () {
         $('.simple_hover_modal').hide();
     });
-
-    $('.popupCloseButton').click(function () {
-        $('.simple_hover_modal').hide();
-    });
 });
