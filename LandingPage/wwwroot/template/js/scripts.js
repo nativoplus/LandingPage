@@ -494,10 +494,10 @@ $(document).ready(function () {
     }
 
     $(".newsletter-sub-btn").click(function () {
-        $('.simple_hover_modal').show();
+        $('.simple-hover-modal').show();
     });
 
-    $('.simple_hover_modal').click(function () {
-        $('.simple_hover_modal').hide();
+    $('.simple-hover-modal').click(function () {
+        $('.simple-hover-modal').hide();
     });
 });
