@@ -492,4 +492,12 @@ $(document).ready(function () {
             });
         }
     }
+
+    $(".newsletter-sub-btn").click(function () {
+        $('.simple-hover-modal').show();
+    });
+
+    $('.simple-hover-modal').click(function () {
+        $('.simple-hover-modal').hide();
+    });
 });

@@ -1,0 +1,11 @@
+﻿<div class="simple-hover-modal">
+    <span class="helper"></span>
+    <div>
+        @Content
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? Content { get; set; }
+}

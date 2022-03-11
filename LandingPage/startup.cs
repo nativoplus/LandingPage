@@ -35,12 +35,6 @@ namespace LandingPage
                 app.UseHsts();
             }
 
-            //app.Use(async (context, next) =>
-            //{
-            //    context.Response.Headers.Add("Content-Security-Policy", "base-uri 'self';block-all-mixed-content;default-src 'self';font-src 'self' https://fonts.gstatic.com/;object-src 'none';script-src 'nonce-NativoPlus' 'strict-dynamic' 'unsafe-inline' https:;style-src 'self' https://cdnjs.cloudflare.com/ https://fonts.googleapis.com/ 'unsafe-inline' https:;upgrade-insecure-requests;");
-            //    await next();
-            //});
-
             app.UseHttpsRedirection();
             app.UseResponseCompression();
             app.UseStaticFiles();
