@@ -13,7 +13,7 @@
     <div class="bg-dark2 pad-top-lg pad-bottom-xs">
         <div class="container">
 	        <div class="row">
-		        <div class="col-md-3">
+		        <div class="col-md-3 col-xs-12 col-sm-4 mar-bottom-xs">
                     <!-- logo -->
                     <div class="logo"><a href="#">NativoPlus</a></div>
                     @*<p>We grow ideas into businesses<br />“and have fun while doing it.”</p>*@
@@ -23,19 +23,19 @@
                         <li><a href="https://www.facebook.com/nativeplussolutions" aria-label="Visit our Facebook page"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a></li>
                     </ul>
 		        </div>
-		        <div class="col-md-3">
+		        <div class="col-md-3 col-xs-12 col-sm-4 mar-bottom-xs">
                     <ul class="unstyled">
-                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="Learn more about our home">Home</a></li>
-                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about our company and our team members">About us</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="Go to home page">Home</a></li>
+                        <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about us">About us</a></li>
                         <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
                     </ul>
 		        </div>
-		        <div class="col-md-3">
+		        <div class="col-md-3 col-xs-12 col-sm-4 mar-bottom-xs">
                     <span class="title text-uppercase">Contact us</span>
                     <!-- start of twitter-feed -->
                     <p> 825 Marshall St. Redwood City<br />California<br />Phone: +1(123)-123-1234<br />Email: nativoplus@nativoplus.com<br /> </p>
 		        </div>
-		        <div class="col-md-3">
+		        <div class="col-md-3 col-xs-12 col-sm-4 mar-bottom-xs">
                     <span class="title text-uppercase">Newsletter</span>
                     <!-- start of button let's talk' -->
                     <form action="#" class="email-form">
@@ -43,10 +43,7 @@
                             Don’t be a stranger. Stay in touch!
                             Sign up to get awesome updates from Nativoplus!
                         </label>
-                        <div class="holder">
-                            <input type="text" class="input" placeholder="Email address">
-                            <button type="submit" class="btn btn-green-hover">Subscribe</button>
-                        </div>
+                        <button type="button" class="btn-green-hover newsletter-sub-btn">Subscribe</button>
                     </form>
                     <!-- end of button let's talk -->
 		        </div>
