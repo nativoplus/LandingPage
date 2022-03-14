@@ -8,7 +8,7 @@
 @using LandingPage.Infrastructure.Files
 @*Page*@
 @layout EmptyLayout
-@page "/work/portfolio"
+@page "/portfolio"
 
 <!-- start of main page wrapper -->
 <div id="wrapper">
@@ -106,7 +106,7 @@
     public void NavigateTo(string path)
     {
         // Forced Reload To Ensure a Fresh Instance of Javascript Files.
-        NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
+        NavigationManager.NavigateTo("/portfolio/" + path, forceLoad: true);
     }
     private void LocationChanged(object sender, LocationChangedEventArgs e)
     {

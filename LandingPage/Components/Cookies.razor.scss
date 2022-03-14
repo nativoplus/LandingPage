@@ -51,7 +51,8 @@
     .container {
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
-        border-radius: 3px;
+        max-width: 400px;
+        border-radius: 10px;
         color: #ffffff;
         margin-bottom: 20px;
         width: 100%;
@@ -85,7 +86,7 @@
     padding-right: 30px;
     border-bottom-width: 0 !important;
     cursor: pointer;
-    max-width: 200px;
+    max-width: 150px;
     margin: 0 auto;
 }
 

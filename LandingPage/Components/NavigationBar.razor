@@ -2,7 +2,7 @@
 @inject NavigationManager NavigationManager
 
 <!-- start of page header -->
-<header id="header" class="nospace">
+<header id="header" class="@(HasNoSpace ? "nospace":"")">
     <!-- header holder -->
 
     <div class="header-holder">
@@ -14,19 +14,20 @@
                     <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
 
                     <div class="pull-right">
-                        <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="logo btn-green-nav text-uppercase hidden-mobile">Let's Talk!</a>
+                        <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="logo btn-green-nav text-uppercase hidden-mobile" style="@(HasNoSpace ? "":"color: black;")">Let's Talk!</a>
                         <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;" aria-label="Open or close the navigation menu"></a>
                         <!-- start of page navigation -->
                         <Nativo_Menu_Template @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right CssClass="drawer" EnableOverlay=true>
-                            <div class="header" role="banner" >
+                            <div class="header" role="banner">
                                 <div class="nav-logo">
-                                    <a @onclick:preventDefault @onclick=@( () => NavigateTo("/")) href="#" aria-label="The company logo"><img src="template/images/assets/logo.webp" alt="The company logo" height="40" width="175" /></a>
+                                    <div class="logo "><a style="color: white !important;" href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
                                 </div>
                                 <div class="nav-wrap">
                                     <nav class="main-nav" role="navigation">
                                         <ul class="unstyled list-hover-slide">
                                             <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/about")) href="#" aria-label="Learn more about us">About us</a></li>
                                             <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/services")) href="#" aria-label="Learn more about our services">Services</a></li>
+                                            <li><a @onclick:preventDefault @onclick=@( () => NavigateTo("/portfolio")) href="#" aria-label="Learn more about our work">Portfolio</a></li>
 
                                             @* <li><a href="#">Work</a></li>
                                                 <li><a href="#">Contact</a></li>
@@ -37,7 +38,7 @@
                                 </div>
                             </div>
                         </Nativo_Menu_Template>
-           
+
                     </div>
                 </div>
             </div>
@@ -46,6 +47,8 @@
 </header><!-- end of page header -->
 @code {
     private bool MenuState = false;
+    [Parameter]
+    public bool HasNoSpace { get; set; } = true;
 
     protected override void OnInitialized()
     {

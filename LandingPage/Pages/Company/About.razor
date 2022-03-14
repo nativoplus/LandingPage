@@ -207,6 +207,7 @@
                           Body=@(new MarkupString(@"<p>Meet the team behind our work.<br/>
                           We are the Nativoplus team. We are here to bring your projects life.</p>")) />
         </main><!-- end of page main section -->
+        <Cookies/>
         <!-- start of promo-box -->
         <CallToAction />
         <!-- end of promo-box -->
@@ -215,7 +216,7 @@
         <!-- end of page footer -->
     </div>
     <!-- Back Top of the page -->
-    @*<BackToTop />*@
+    <BackToTop/>
 </div><!-- end of main page wrapper -->
 @code {
     private Team selectedMember = new Team();
@@ -249,7 +250,7 @@
     public void NavigateTo(string path)
     {
         // Forced Reload To Ensure a Fresh Instance of Javascript Files.
-        NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
+        NavigationManager.NavigateTo("/portfolio/" + path, forceLoad: true);
     }
 
     public void SegmentedBarObject(string option)
