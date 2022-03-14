@@ -1,0 +1,55 @@
+﻿@implements IDisposable
+@inject NavigationManager NavigationManager
+
+
+@layout EmptyLayout
+<PageTitle>NativoPlus - Not Found</PageTitle>
+<!-- start of main page wrapper -->
+<div id="wrapper">
+    <!-- start of preloader -->
+    <Preloader />
+    <!-- end of preloader -->
+    <div class="w1">
+        <!-- start of page header -->
+        <NavigationBar HasNoSpace=false />
+        <!-- end of page header -->
+        <!-- start of page main section -->
+        <main id="main" class="bg-grey border-top">
+            <!-- start of section-404 -->
+            <div class="container section-404 text-center pad-top-lg pad-bottom-lg">
+                <div class="row pad-top-lg pad-bottom-lg">
+                    <div class="col-xs-12 col-lg-6 col-md-8 col-lg-offset-3 col-md-offset-2">
+                        <img class="not-found-gif" src="template/images/assets/animations/404.gif" />
+                        <h1 class="heading">Error 404 <br>Page Not Found</h1>
+                        <p>You seem to be lost, Don’t worry we’ll get you back on the track.</p>
+                        <a @onclick:preventDefault @onclick="BackToHome" BaCK href="#" class="btn btn-full">Back To Home</a>
+                    </div>
+                </div>
+            </div><!-- end of section-404 -->
+        </main><!-- end of page main section -->
+        <!-- end of page main section -->
+        <!-- start of promo-box -->
+        <!-- end of promo-box -->
+        <!-- start of page footer -->
+        <Footer />
+        <!-- end of page footer -->
+    </div>
+    <!-- Back Top of the page -->
+</div>
+
+@code {
+        public void BackToHome()
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+    }
+}

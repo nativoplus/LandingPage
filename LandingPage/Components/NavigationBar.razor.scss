@@ -36,6 +36,7 @@ $white-off: #DFDBD9;
     bottom: 0;
     width: 500px;
     background: $gray;
+    
 }
 
 // Need to match Drawer Package Size
@@ -67,7 +68,7 @@ $white-off: #DFDBD9;
     a {
         display: block;
         padding: 1em 0;
-        color: $white-off;
+        color: white;
         text-decoration: none;
         transition: .15s linear color;
 
