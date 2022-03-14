@@ -8,7 +8,6 @@
   {
     "outputFileName": "wwwroot/template/css/bundle.min.css",
     "inputFiles": [
-      "wwwroot/template/css/fonts-icons.css",
       "wwwroot/template/css/style.css",
       "wwwroot/template/css/responsive.css",
       "wwwroot/template/css/color.css"
