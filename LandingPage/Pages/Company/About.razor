@@ -21,24 +21,27 @@
         <!-- end of page header -->
         <!-- start of page main section -->
         <main id="main">
-            <!-- start of page-header -->
-            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/about.webp);">
-                <div class="pad-top-lg hidden-sm"></div>
+         <!-- start of main banner -->
+            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/projects.webp);">
                 <span class="bg-overlay"></span>
-                <div class="container pad-top-lg pad-bottom-lg">
+                <div class="container pad-top-xs pad-bottom-lg">
                     <div class="row pad-top-md pad-bottom-xs">
                         <div class="col-xs-12">
-                            <h1 class="heading">About Us</h1>
+                            <!-- start of breadcrumbs -->
+                            <ul class="list-inline breadcrumbs">
+                                <li><a @onclick:preventDefault @onclick="@(() => NavigateTo("/"))">Home</a></li>
+                                <li>Company</li>
+                            </ul><!-- end of breadcrumbs -->
                         </div>
                     </div>
                 </div>
-                <div class="pad-top-lg hidden-sm"></div>
             </div><!-- end of page-header -->
-            <section class="pad-top-lg">
+            <section class="" data-scroll-index="1">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-md-10 pad-top-lg pad-bottom-lg col-md-offset-1">
                             <!-- main text -->
+                            <h1 class="heading text-center pad-bottom-xs">About Us</h1>
                             <h2 class="main-text text-center">
                                 Hello! We’re Nativoplus, a creative technology agency. Our team is made up of
                                 tech natives who are passionate about building, creating, and developing websites and apps.
@@ -68,7 +71,7 @@
                     </div>
                 </div>
                 <!-- start of wedo section -->
-                <section class="bg-grey wedo-section add">
+                <div class="bg-grey wedo-section add">
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="container pad-top-lg">
                         <div class="row pad-bottom-md">
@@ -83,9 +86,9 @@
                     </div>
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="img-box bg-img-full" style="background-image: url(template/images/bg/about-skills-section.webp);"></div>
-                </section><!-- end of wedo section -->
+                </div><!-- end of wedo section -->
                 <!-- start of wedo section -->
-                <section class="bg-grey wedo-section add">
+                <div class="bg-grey wedo-section add">
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="pad-top-md hidden-sm"></div>
                     <div class="container">
@@ -149,7 +152,7 @@
                     </div>
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="img-box bg-img-full right" style="background-image: url(template/images/bg/about-build-section.webp);"></div>
-                </section><!-- end of wedo section -->
+                </div><!-- end of wedo section -->
             </section>
 
             <AnimatedModal>
