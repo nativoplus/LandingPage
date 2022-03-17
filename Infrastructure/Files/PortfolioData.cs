@@ -406,7 +406,7 @@ namespace LandingPage.Infrastructure.Files
               "){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/maxana/maxana.webp",
+                    "template/images/assets/st/stripe.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
@@ -774,7 +774,7 @@ namespace LandingPage.Infrastructure.Files
                 },
                 ImgUrls = new List<string>{
                     "template/images/assets/hv/hv2.webp",
-                    "template/images/assets/hv/hv.jpg",
+                    "template/images/assets/hv/hv.webp",
                 },
                 Services = new List<string>
                 {
