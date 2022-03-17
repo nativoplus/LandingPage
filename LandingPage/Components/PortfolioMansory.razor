@@ -1,0 +1,163 @@
+﻿@*Imports*@
+@implements IDisposable
+@inject NavigationManager NavigationManager
+@inject IJSRuntime jsRuntime
+@using LandingPage
+@using LandingPage.Domain.Entities;
+@using LandingPage.Components;
+@using LandingPage.Infrastructure.Files
+<div class="row mar-bottom-md pad-bottom-sm">
+    <header class="main-heading text-center row pad-bottom-lg">
+        <div class="col-xs-12">
+            <h2 class="heading">Our Cases</h2>
+            Explore some of our masterpieces. Lorem Ipsum dolores, lorem ipsum dolores
+        </div>
+    </header><!-- end of main-heading -->
+    <!-- start of isotop-holder -->
+    <div id="isotop-holder">
+        <!-- start of item -->
+        <div class="item col-xs-12 col-sm-6 col-md-3 mar-bottom-xs filter2">
+            <!-- start of portfolio-box -->
+            <div class="portfolio-box">
+                <img src="@Portfolio[0].ImgUrls[0]" alt="image description" class="img-responsive">
+                <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[0].Name))">
+                    <div class="holder">
+                        <div class="frame">
+                            <span class="heading text-capitalize">@Portfolio[0].Name</span>
+                            <span class="text"> @Portfolio[0].Categories[0] </span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end of portfolio-box -->
+        </div><!-- end of item -->
+        <!-- start of item -->
+        <div class="item col-xs-12 col-sm-6 col-md-3 mar-bottom-xs filter1">
+            <!-- start of portfolio-box -->
+            <div class="portfolio-box">
+                <img src="@Portfolio[1].ImgUrls[0]" alt="image description" class="img-responsive">
+                <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[1].Name))">
+                    <div class="holder">
+                        <div class="frame">
+                            <span class="heading text-capitalize">@Portfolio[1].Name</span>
+                            <span class="text"> @Portfolio[1].Categories[0] </span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end of portfolio-box -->
+        </div><!-- end of item -->
+        <!-- start of item -->
+        <div class="item col-xs-12 col-md-6 mar-bottom-xs filter3">
+            <!-- start of portfolio-box -->
+            <div class="portfolio-box">
+                <img src="@Portfolio[2].ImgUrls[0]" alt="image description" class="img-responsive">
+                <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[2].Name))">
+                    <div class="holder">
+                        <div class="frame">
+                            <span class="heading text-capitalize">@Portfolio[2].Name</span>
+                            <span class="text"> @Portfolio[2].Categories[0] </span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end of portfolio-box -->
+        </div><!-- end of item -->
+        <!-- start of item -->
+        <div class="item col-xs-12 col-md-6 mar-bottom-xs filter1">
+            <!-- start of portfolio-box -->
+            <div class="portfolio-box">
+                <div class="bg-overlay" style="opacity: .25;"></div>
+                <img src="@Portfolio[3].ImgUrls[0]" alt="image description" class="img-responsive">
+                <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[3].Name))">
+                    <div class="holder">
+                        <div class="frame">
+                            <span class="heading text-capitalize">@Portfolio[3].Name</span>
+                            <span class="text"> @Portfolio[3].Categories[0] </span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end of portfolio-box -->
+        </div><!-- end of item -->
+        <!-- start of item -->
+        <div class="item col-xs-12 col-sm-6 col-md-3 mar-bottom-xs filter1">
+            <!-- start of portfolio-box -->
+            <div class="portfolio-box">
+
+                <img src="@Portfolio[6].ImgUrls[1]" alt="image description" class="img-responsive">
+                <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[6].Name))">
+                    <div class="holder">
+                        <div class="frame">
+                            <span class="heading text-capitalize">@Portfolio[6].Name</span>
+                            <span class="text"> @Portfolio[6].Categories[0] </span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end of portfolio-box -->
+        </div><!-- end of item -->
+        <!-- start of item -->
+        <div class="item col-xs-12 col-sm-6 col-md-3 mar-bottom-xs filter1">
+             <!-- start of portfolio-box -->
+            <div class="portfolio-box">
+                <div class="bg-overlay" style="opacity: .25;"></div>
+
+                <img src="@Portfolio[5].ImgUrls[0]" alt="image description" class="img-responsive">
+                <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[5].Name))">
+                    <div class="holder">
+                        <div class="frame">
+                            <span class="heading text-capitalize">@Portfolio[5].Name</span>
+                            <span class="text"> @Portfolio[5].Categories[0] </span>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end of portfolio-box -->
+        </div><!-- end of item -->
+
+    </div><!-- end of isotop-holder -->
+    <div class="col-xs-12">
+
+      <a class="pull-right" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo())">View All &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+    </div>
+</div>
+@code {
+    public List<Portfolio> Portfolio = new List<Portfolio> { };
+    public string ActiveFilter { get; set; } = "All";
+
+
+    protected override void OnInitialized()
+    {
+        var p = new PortfolioData().portfolio;
+        Portfolio = p;
+        base.OnInitialized();
+    }
+
+    public void Shuffle()
+    {
+        var rnd = new Random();
+        var randomized = Portfolio.OrderBy(item => rnd.Next());
+
+        Portfolio = randomized.ToList();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Initialize Any JS Interop
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    public void NavigateTo(string path = "")
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/portfolio/" + path, forceLoad: true);
+    }
+    private void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+    void IDisposable.Dispose()
+    {
+        // Unsubscribe from the event when our component is disposed
+        NavigationManager.LocationChanged -= LocationChanged;
+    }
+}

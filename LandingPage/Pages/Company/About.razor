@@ -21,20 +21,22 @@
         <!-- end of page header -->
         <!-- start of page main section -->
         <main id="main">
-            <!-- start of page-header -->
-            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/about.webp);">
-                <div class="pad-top-lg hidden-sm"></div>
-                <span class="bg-overlay"></span>
-                <div class="container pad-top-lg pad-bottom-lg">
-                    <div class="row pad-top-md pad-bottom-xs">
-                        <div class="col-xs-12">
+            <!-- start of main banner -->
+            <section class="main-banner text-center">
+                <!-- slide -->
+                <div class="slide bg-img-full" style="background-image: url(template/images/bg/about.webp);">
+                    <span class="bg-overlay"></span>
+                    <div class="caption">
+                        <div class="holder">
                             <h1 class="heading">About Us</h1>
+                            <p>It's all about you. From sketch to releasing your project.<br /> We'll be there to guide you at every step. </p>
+                            <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom text-uppercase">Let's Talk!</a>
                         </div>
                     </div>
                 </div>
-                <div class="pad-top-lg hidden-sm"></div>
-            </div><!-- end of page-header -->
-            <section class="pad-top-lg">
+                <a href="#" data-scroll-nav="1" class="btn-bottom pe-7s-angle-down" aria-label="Scroll to the next section of the page"></a>
+            </section><!-- end of main banner -->
+            <section class="pad-top-lg" data-scroll-index="1">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-md-10 pad-top-lg pad-bottom-lg col-md-offset-1">
@@ -57,18 +59,18 @@
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
                             <IconBox Icon="pe-7s-vector" Title="Pixel Perfect"
-                                     Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect, 
+                                     Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
                                      but we try to be!" />
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 mar-bottom-xs icon-box">
-                           <IconBox Icon="pe-7s-edit" Title="Edit Content"
+                            <IconBox Icon="pe-7s-edit" Title="Edit Content"
                                      Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
                         </div><!-- end of icon-box -->
                     </div>
                 </div>
                 <!-- start of wedo section -->
-                <section class="bg-grey wedo-section add">
+                <div class="bg-grey wedo-section add">
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="container pad-top-lg">
                         <div class="row pad-bottom-md">
@@ -83,9 +85,9 @@
                     </div>
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="img-box bg-img-full" style="background-image: url(template/images/bg/about-skills-section.webp);"></div>
-                </section><!-- end of wedo section -->
+                </div><!-- end of wedo section -->
                 <!-- start of wedo section -->
-                <section class="bg-grey wedo-section add">
+                <div class="bg-grey wedo-section add">
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="pad-top-md hidden-sm"></div>
                     <div class="container">
@@ -149,7 +151,7 @@
                     </div>
                     <div class="pad-top-lg hidden-sm"></div>
                     <div class="img-box bg-img-full right" style="background-image: url(template/images/bg/about-build-section.webp);"></div>
-                </section><!-- end of wedo section -->
+                </div><!-- end of wedo section -->
             </section>
 
             <AnimatedModal>
@@ -198,16 +200,21 @@
                 </Content>
 
             </AnimatedModal>
+            <div class="pad-bottom-sm">
+                <TeamCardList GreyBackground="false"
+                              Heading="Meet Our Team"
+                              Member="@selectedMember"
+                              SelectedTeamMember="@MemberChangedHandler"
+                              Body=@(new MarkupString(@"<p>Meet the team behind our work.<br/>
+                              We are the Nativoplus team. We are here to bring your projects life.</p>")) />
+            </div>
 
+            <div class="container">
+                <PortfolioMansory />
 
-            <TeamCardList GreyBackground="false"
-                          Heading="Meet Our Team"
-                          Member="@selectedMember"
-                          SelectedTeamMember="@MemberChangedHandler"
-                          Body=@(new MarkupString(@"<p>Meet the team behind our work.<br/>
-                          We are the Nativoplus team. We are here to bring your projects life.</p>")) />
+            </div>
         </main><!-- end of page main section -->
-        <Cookies/>
+        <Cookies />
         <!-- start of promo-box -->
         <CallToAction />
         <!-- end of promo-box -->
@@ -216,7 +223,7 @@
         <!-- end of page footer -->
     </div>
     <!-- Back Top of the page -->
-    <BackToTop/>
+    <BackToTop />
 </div><!-- end of main page wrapper -->
 @code {
     private Team selectedMember = new Team();
