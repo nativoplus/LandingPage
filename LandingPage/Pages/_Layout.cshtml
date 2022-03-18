@@ -25,15 +25,18 @@
     <meta name="keywords" content="agency, Startup, bootstrap, business, corporate, creative, minimal, modern, onepage, personal, portfolio,  html5, responsive, Company, Hiring, Develpment, Software, APP, Mobile, Responsive, Design, ">
     <meta name="author" content="NativoPlus">
 
-    <!-- Google fonts -->
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://mc.sendgrid.com" crossorigin />
+    <link rel="preconnect" href="https://google.com" crossorigin />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google fonts -->
     <link rel="preload" as="style" href=@googleFontsUrl />
     <link id="google-fonts" rel="stylesheet" media="print" href=@googleFontsUrl />
-
     <noscript>
         <link rel="stylesheet" href=@googleFontsUrl />
     </noscript>
-
     <script nonce="NativoPlus">
         document.getElementById("google-fonts").addEventListener('load', function() {
             this.onload = null;
@@ -61,7 +64,6 @@
     <script src="_framework/blazor.server.js" autostart="false"></script>
 
     <!-- Template -->
-    <script src="@lottieUrl"></script>
     <script src="template/js/jquery.js"></script>
     <script src="template/js/modal.js"> </script>
     <script src="template/js/plugins.min.js"></script>
@@ -70,6 +72,10 @@
             var customScript = document.createElement('script');
             customScript.setAttribute('src', 'template/js/scripts.min.js');
             document.head.appendChild(customScript);
+
+            var lottieScript = document.createElement('script');
+            lottieScript.setAttribute('src', '@lottieUrl');
+            document.head.appendChild(lottieScript);
         });
     </script>
 </body>
