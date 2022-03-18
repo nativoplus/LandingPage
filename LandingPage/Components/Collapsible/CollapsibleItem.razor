@@ -5,11 +5,11 @@
 
     <a class="collapsible subheading" href="" @onclick:preventDefault @onclick="ToggleHander">
         <div class="row">
-            <div class="col-xs-10">
+            <div class="@(Flex ? "col-xs-10" : "col-xs-3")">
                 <span>@Header</span>
             </div>
-            <div class="col-xs-2">
-                <span class="fa @(IsCollapsed? "fa-angle-up":"fa-angle-down") main-color icon pull-right" style="font-size: 26px;"></span>
+            <div class="@(Flex ? "col-xs-2" : "col-xs-1")">
+                <span class="fa @(IsCollapsed? "fa-angle-up":"fa-angle-down") main-color icon @(Flex ? "pull-right": "")" style="font-size: 26px;"></span>
             </div>
         </div>
     </a>
@@ -67,6 +67,8 @@
 </div>
 
 @code {
+    [Parameter]
+    public bool Flex { get; set; } = true;
     [Parameter]
     public bool HasBottomBorder { get; set; } = true;
     [Parameter]

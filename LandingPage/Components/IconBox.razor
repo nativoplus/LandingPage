@@ -1,14 +1,34 @@
 ﻿<div class="row">
-    <span class="@Icon @(Large ? "":"custom-icon") main-color icon col-xs-1"></span>
-    <div class="holder col-xs-9">
-        <h3 class="title @(Large ? "large":"")">@Title</h3>
-        <p>
-            @Text
-        </p>
-    </div>
+
+    @if (Animated)
+    {
+        <div class="@(Large ? "":"custom-icon") main-color icon col-xs-2">
+            @Animation
+        </div>
+        <div class="holder col-xs-8">
+            <h3 class="title @(Large ? "large":"")">@Title</h3>
+            <p>
+                @Text
+            </p>
+        </div>
+    }
+    else
+    {
+        <span class="@Icon @(Large ? "":"custom-icon") main-color icon col-xs-1"></span>
+        <div class="holder col-xs-9">
+            <h3 class="title @(Large ? "large":"")">@Title</h3>
+            <p>
+                @Text
+            </p>
+        </div>
+    }
 </div>
 
 @code {
+    [Parameter]
+    public bool Animated { get; set; } = false;
+    [Parameter]
+    public MarkupString Animation { get; set; } = new MarkupString("");
     [Parameter]
     public string Title { get; set; } = "Lorem Ipsum";
     [Parameter]
@@ -17,5 +37,6 @@
     public string Text { get; set; } = "Lorem Ipsum Dolor";
     [Parameter]
     public string Icon { get; set; } = "fa fa-gears";
+
 
 }

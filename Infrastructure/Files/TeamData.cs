@@ -9,7 +9,7 @@ namespace LandingPage.Infrastructure.Files
 {
     public class TeamData
     {
-        public List<Team> Team { get; set; } = new List<Team> { 
+        public List<Team> Team { get; set; } = new List<Team> {
             new Team
             {
                 Name = "Hector Orellana Reyes",
@@ -21,7 +21,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/hector.webp",
                 LinkedIn = "https://www.linkedin.com/in/hector-orellana-reyes-220b7a113/",
                 GithubUrl = "https://github.com/horeyes",
-                Projects = new List<string>{ "Gentlebirth" },
+                Projects = new List<string>{ "Gentlebirth", "Advantage For Analysts"},
             },
             new Team
             {
@@ -34,7 +34,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/jose.webp",
                 LinkedIn = "https://www.linkedin.com/in/joecolon/",
                 GithubUrl = "https://github.com/jvelezc",
-                Projects = new List<string>{ "TechCU", "Gentlebirth", "Fertilemind" },
+                Projects = new List<string>{ "TechCU", "Gentlebirth", "Fertilemind", "Advantage For Analysts", "Westcor", "Stripe", "Maxana"},
             },
             new Team
             {
@@ -58,7 +58,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/arnaldo.webp",
                 LinkedIn = "https://www.linkedin.com/in/arnaldo-rodriguez-1445b811b/",
                 GithubUrl = "https://github.com/arodriguezgb",
-                Projects = new List<string>{ "Gentlebirth", "Fertilemind" },
+                Projects = new List<string>{ "Gentlebirth", "Fertilemind", "Advantage For Analysts" },
             },
             new Team
             {
@@ -70,7 +70,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/amaro.webp",
                 LinkedIn = "https://www.linkedin.com/in/cristian-amaro-burgos-64815816a/",
                 GithubUrl = "https://github.com/camaro24max",
-                Projects = new List<string>{ },
+                Projects = new List<string>{ "Happy Volts"},
             },
             new Team
             {
@@ -82,7 +82,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/marie.webp",
                 LinkedIn = "https://www.linkedin.com/in/mariefitch/",
                 GithubUrl = "",
-                Projects = new List<string>{  },
+                Projects = new List<string>{ "Kati Sportcap & Bag", "Farm to Market Bread Co.",  "Sportman Cap & Bag"},
             },
             new Team
             {
@@ -107,7 +107,8 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/juliana.webp",
                 LinkedIn = "https://www.linkedin.com/in/juliana-galeano-garrido/",
                 GithubUrl = "",
-                Projects = new List<string>{ },
+                Projects = new List<string>{ "Kati Sportcap & Bag", "Farm to Market Bread Co.",  "Sportman Cap & Bag", "Happy Volts"},
+
             },
             new Team
             {
@@ -120,7 +121,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/danny.webp",
                 LinkedIn = "https://www.linkedin.com/in/danny-stev-ruiz/",
                 GithubUrl = "https://github.com/danruiz01",
-                Projects = new List<string>{ },
+                Projects = new List<string>{ "Happy Volts", },
             },
             new Team
             {
@@ -158,7 +159,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/kate.webp",
                 LinkedIn = "https://www.linkedin.com/in/kateruthbradshaw/",
                 GithubUrl = "",
-                Projects = new List<string>{ },
+                Projects = new List<string>{ "Kati Sportcap & Bag", "Farm to Market Bread Co.", "Sportman Cap & Bag"},
             }
         };
     }
