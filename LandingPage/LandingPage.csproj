@@ -17,6 +17,11 @@
 		<ProjectReference Include="..\Domain\Domain.csproj" />
 		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
 	</ItemGroup>
+	
+		<Target Name="LandingPage" BeforeTargets="LandingPage">
+		<Message Text="Installing Sass" Importance="high" />
+		<Exec Command="npm install sass --save-dev" />
+	</Target>
 	<!-- Add SCSS files to dotnet watch -->
 	<ItemGroup>
 		<Watch Include="**\*.scss" />
