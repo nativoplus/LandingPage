@@ -25,6 +25,7 @@ namespace LandingPage.Infrastructure.Files
                 and refactored the implementation of multiple React components within a responsive web app, accessed by thousands 
                 of users, based on business requirements, user requests, and customer feedback. Additionally, they were looking 
                 to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
+                HeaderImageUrl =  "template/images/assets/gb/gentlebirth-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/gb/gentlebirth.webp",
                     "template/images/assets/gb/backoffice.webp",
@@ -96,6 +97,7 @@ namespace LandingPage.Infrastructure.Files
                 apps and provide a tool for its users to interact with the app. We
                 decided to build a UI based on the React framework, which was
                 already being used in the backend.</p>"),
+                HeaderImageUrl =  "template/images/assets/fm/fertile-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/fm/fertilemind.webp",
                     //"template/images/assets/gb/templates.jpg",
@@ -309,6 +311,7 @@ namespace LandingPage.Infrastructure.Files
         
 
 "),
+                HeaderImageUrl =  "template/images/assets/maxana/maxana-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/maxana/maxana.webp",
                     //"template/images/assets/gb/templates.jpg",
@@ -405,6 +408,7 @@ namespace LandingPage.Infrastructure.Files
                 </div>
               "){
                 },
+                HeaderImageUrl =  "template/images/assets/st/stripe-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/st/stripe.webp",
                     //"template/images/assets/gb/templates.jpg",
@@ -465,8 +469,11 @@ namespace LandingPage.Infrastructure.Files
                     between different member accounts, lend against external
                     entities, and more.
                 </p>
+                <iframe style='border: 1px solid rgba(0, 0, 0, 0.1);' width='100%' height='800px' src='https://www.figma.com/proto/Mxc6FeoJNVX2PxMA8DbgzZ/AFA?embed_host=share&kind=&node-id=315%3A8230&starting-point-node-id=62%3A4121' allowfullscreen></iframe>
+
               "){
                 },
+                HeaderImageUrl =  "template/images/assets/afa/afa-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/afa/afa.webp",
                 },
@@ -559,8 +566,12 @@ namespace LandingPage.Infrastructure.Files
                     interact with Westcor’s products. This app has helped secure Westcor as an industry leader 
                     in providing value-added solutions.
                 </p>
+
+                <iframe style='border: 1px solid rgba(0, 0, 0, 0.1);' width='100%' height='800px' src='https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmPvrUb7LgOU4ADmjVDJLGI%2Fwestcor%3Fnode-id%3D234%253A15836%26starting-point-node-id%3D152%253A10063' allowfullscreen></iframe>
+
               "){
                 },
+                HeaderImageUrl =  "template/images/assets/westcor/westcor-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/westcor/westcor.webp",
                     //"template/images/assets/gb/templates.jpg",
@@ -772,9 +783,10 @@ namespace LandingPage.Infrastructure.Files
                    </div>"
                     ){
                 },
+                HeaderImageUrl =  "template/images/assets/hv/happyvolts-header.webp",
                 ImgUrls = new List<string>{
-                    "template/images/assets/hv/hv2.webp",
                     "template/images/assets/hv/hv.webp",
+                    "template/images/assets/hv/hv2.webp"
                 },
                 Services = new List<string>
                 {
@@ -825,6 +837,7 @@ namespace LandingPage.Infrastructure.Files
                 marketing plan to engage more customers and suppliers to
                 work with.</p>
                 "),
+                HeaderImageUrl =  "template/images/assets/sc/sportsman-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/sc/sportcap.webp",
                     "template/images/assets/sc/sc2.webp",
@@ -882,6 +895,7 @@ namespace LandingPage.Infrastructure.Files
                 help increase sales volume as well as open up opportunities
                 for sourcing new suppliers.</p>
                 "),
+                HeaderImageUrl =  "template/images/assets/sc/kati-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/sc/ksc1.webp",
                     "template/images/assets/sc/sportcap.webp",
@@ -932,6 +946,7 @@ namespace LandingPage.Infrastructure.Files
                 us because they needed an array of services including collateral 
                 and sales promotion, marketing campaigns, display design, logo, 
                 and identity development.</p>"),
+                HeaderImageUrl =  "template/images/assets/ftmb/farm-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/ftmb/ftmb.webp",
                     "template/images/assets/ftmb/ftmb2.webp",

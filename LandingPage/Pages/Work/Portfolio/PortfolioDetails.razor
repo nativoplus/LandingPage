@@ -23,14 +23,14 @@
         <main id="main">
             <!-- start of page-header -->
             <div class="page-header text-center bg-img-full"
-                 style="background-image: url(template/images/bg/bggrey.webp);">
+                 style="background-image: url(@Project.HeaderImageUrl);">
                 <span class="bg-overlay"></span>
                 <div class="container pad-top-xs pad-bottom-lg">
                     <div class="row pad-top-md pad-bottom-xs">
                         <div class="col-xs-12">
                             <!-- start of breadcrumbs -->
                             <ul class="list-inline breadcrumbs">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a @onclick:preventDefault @onclick = "BackToHome" href="#">Home</a></li>
                                 <li>Portfolio Details</li>
                             </ul><!-- end of breadcrumbs -->
                         </div>
@@ -160,6 +160,13 @@
         NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
     }
 
+      public void BackToHome()
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
+
     private void LocationChanged(object sender, LocationChangedEventArgs e)
     {
         string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
@@ -174,4 +181,5 @@
         Project.Team = randomized.ToList();
     }
     void IDisposable.Dispose() { }
+
 }

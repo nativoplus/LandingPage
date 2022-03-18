@@ -1,0 +1,43 @@
+﻿
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+// COLORS
+$green: #2ecc71;
+$gray: #35302D;
+$gray-shine: #3C3735;
+$white-off: #DFDBD9;
+
+.nav-logo {
+    font: 300;
+    font-size: 1.5em !important;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    img {
+        height: 40px;
+    }
+
+    a {
+        display: block;
+        padding: 1em 0;
+        color: white;
+        text-decoration: none;
+        transition: .15s linear color;
+
+        &:hover {
+            color: #fff;
+
+            span {
+                color: $green;
+            }
+        }
+    }
+
+    span {
+        font-weight: 700;
+        transition: .15s linear color;
+    }
+}
