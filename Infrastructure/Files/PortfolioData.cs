@@ -465,6 +465,8 @@ namespace LandingPage.Infrastructure.Files
                     between different member accounts, lend against external
                     entities, and more.
                 </p>
+                <iframe style='border: 1px solid rgba(0, 0, 0, 0.1);' width='100%' height='800px' src='https://www.figma.com/proto/Mxc6FeoJNVX2PxMA8DbgzZ/AFA?embed_host=share&kind=&node-id=315%3A8230&starting-point-node-id=62%3A4121' allowfullscreen></iframe>
+
               "){
                 },
                 ImgUrls = new List<string>{
@@ -559,6 +561,9 @@ namespace LandingPage.Infrastructure.Files
                     interact with Westcor’s products. This app has helped secure Westcor as an industry leader 
                     in providing value-added solutions.
                 </p>
+
+                <iframe style='border: 1px solid rgba(0, 0, 0, 0.1);' width='100%' height='800px' src='https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmPvrUb7LgOU4ADmjVDJLGI%2Fwestcor%3Fnode-id%3D234%253A15836%26starting-point-node-id%3D152%253A10063' allowfullscreen></iframe>
+
               "){
                 },
                 ImgUrls = new List<string>{
@@ -773,8 +778,8 @@ namespace LandingPage.Infrastructure.Files
                     ){
                 },
                 ImgUrls = new List<string>{
-                    "template/images/assets/hv/hv2.webp",
                     "template/images/assets/hv/hv.webp",
+                    "template/images/assets/hv/hv2.webp"
                 },
                 Services = new List<string>
                 {

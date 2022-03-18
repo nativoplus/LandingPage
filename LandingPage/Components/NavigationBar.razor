@@ -11,8 +11,7 @@
 
                 <div class="col-xs-12">
                     <!-- Page logo -->
-                    <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
-
+                    <Logo />
                     <div class="pull-right">
                         <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="logo btn-green-nav text-uppercase hidden-mobile" style="@(HasNoSpace ? "":"color: black;")">Let's Talk!</a>
                         <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;" aria-label="Open or close the navigation menu"></a>
@@ -20,7 +19,8 @@
                         <Nativo_Menu_Template @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right CssClass="drawer" EnableOverlay=true>
                             <div class="header" role="banner">
                                 <div class="nav-logo">
-                                    <div class="logo "><a style="color: white !important;" href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
+                                    <Logo NavLogo="false" />
+
                                 </div>
                                 <div class="nav-wrap">
                                     <nav class="main-nav" role="navigation">
