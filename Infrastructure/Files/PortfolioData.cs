@@ -84,7 +84,7 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 1,
+                ProjectId = 2,
                 Name = "Fertilemind",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Fertilemind is an app that approaches infertility by intentional
@@ -137,7 +137,7 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 1,
+                ProjectId = 3,
                 Name = "Maxana",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Maxana is a company partner with a proven track record in the
@@ -153,18 +153,8 @@ namespace LandingPage.Infrastructure.Files
 				    <div class='mar-bottom-lg'>
 					    <h2 class='heading mar-bottom-xs'>What is Stripe?</h2>
 						    <p>
-                                Stripe is a technology company that builds economic infrastructure for 
-                                the internet. Their software helps businesses of all sizes to accept payments and 
-                                manage their businesses online. Their software platform is used by millions of 
-                                companies in over 120 countries.<br/><br/>
-
-                                Stripe selected us to build their first-ever Stripe University cohort to obtain 
-                                Stripe certification. We build a marketplace for Stripe where customers can easily 
-                                access highly vetted, certified Stripe engineers and other technical resources that 
-                                can help expand their payment capabilities. The platform uses friendly design to 
-                                connect enterprises with qualified, certified Stripe-certified engineers and other 
-                                technical resources that can readily and expertly implement Stripe integrations, 
-                                reducing time to market and revenue.
+                               Maxana is a premier staffing solution focused on technology sector. They are build tools to organize talent and provide a conduit between employers
+and contractors in the payment's space. 
                             </p>
 					</div>
                    
@@ -314,7 +304,6 @@ namespace LandingPage.Infrastructure.Files
                 HeaderImageUrl =  "template/images/assets/maxana/maxana-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/maxana/maxana.webp",
-                    //"template/images/assets/gb/templates.jpg",
                 },
                 Services = new List<string>
                 {
@@ -349,22 +338,17 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 1,
-                Name = "Stripe",
+                ProjectId = 5,
+                Name = "Marketplace App",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"Stripe is a technology company that builds economic infrastructure for 
-                the internet. Their software helps businesses of all sizes to accept payments and 
-                manage their businesses online. Their software platform is used by millions of 
-                companies in over 120 countries.",
+                Headline=@"The main goal of this project was to use configure a production ready instance of elastic search , wireframes, mocks ups and architecture
+                to connect people seeking meaninfull work with the right opportunities available for them",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@"
                 <p>
-                    Stripe selected us to build their first-ever Stripe University cohort to obtain 
-                    Stripe certification. We build a marketplace for Stripe where customers can easily 
-                    access highly vetted, certified Stripe engineers and other technical resources that 
-                    can help expand their payment capabilities. The platform uses friendly design to 
+                    The platform uses friendly design to 
                     connect enterprises with qualified, certified Stripe-certified engineers and other 
-                    technical resources that can readily and expertly implement Stripe integrations, 
+                    technical resources that can readily and expertly implement integrations, 
                     reducing time to market and revenue.
                 </p>
                 <div class='dots-image-2'>
@@ -446,7 +430,7 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 1,
+                ProjectId = 6,
                 Name = "Advantage For Analysts",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Advantage for Analysts Inc provides modeling and analysis software
@@ -705,7 +689,7 @@ namespace LandingPage.Infrastructure.Files
             //},
             new Portfolio
             {
-                ProjectId = 4,
+                ProjectId = 8,
                 Name = "Happy Volts",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"HappyVolts is a clean tech company that makes all-in-one
@@ -876,7 +860,7 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 6,
+                ProjectId = 9,
                 Name = "Kati Sportcap & Bag",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Kati Sportcap & Bag is an established distributor of promotional
@@ -933,7 +917,7 @@ namespace LandingPage.Infrastructure.Files
             },
             new Portfolio
             {
-                ProjectId = 8,
+                ProjectId = 10,
                 Name = "Farm to Market Bread Co.",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Farm to Market Bread Co. is a company that answers 
