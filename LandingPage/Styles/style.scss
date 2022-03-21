@@ -159,7 +159,7 @@ $media-expressions: ( 'screen': 'screen', 'print': 'print', 'handheld': 'handhel
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.1);
 }
 
 .bg-img-parallax {
@@ -328,6 +328,27 @@ button,
 	3. Global buttons style 
 -------------------------------------------------------------------*/
 
+
+.btn-green-custom-main {
+    color: $white;
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    background: #1c7d44 !important;
+    transition: all ease 0.3s;
+    border: 2px solid transparent;
+    font: 500 14px/24px $font-family-heading;
+
+    &:focus,
+    &:active {
+        color: $white;
+    }
+
+    &:hover {
+        color: white;
+        background: #26a65b !important;
+    }
+}
 .btn-green-custom {
     color: $white;
     padding: 10px 40px;

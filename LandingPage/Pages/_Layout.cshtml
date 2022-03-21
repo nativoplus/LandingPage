@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <base href="~/" />
     <!-- set the encoding of your site -->
     <meta charset="utf-8" />
@@ -30,7 +31,7 @@
     <link rel="preconnect" href="https://google.com" crossorigin />
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     
+
     <!-- Google fonts -->
     <link rel="preload" as="style" href=@googleFontsUrl />
     <link id="google-fonts" rel="stylesheet" media="print" href=@googleFontsUrl />
@@ -53,8 +54,8 @@
     <link href="LandingPage.styles.css" rel="stylesheet" />
 
     <!-- Page Title -->
-    <title>Building Custom Software Solution Web and Mobile applications - NativoPlus</title>
 
+    <meta name="ahrefs-site-verification" content="40dff77532c1c319d3a094683d2ff3b386695d515ebd36de41674e368f9af4bd">
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
@@ -77,6 +78,15 @@
             lottieScript.setAttribute('src', '@lottieUrl');
             document.head.appendChild(lottieScript);
         });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K48QSB7DXH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K48QSB7DXH');
     </script>
 </body>
 </html>
