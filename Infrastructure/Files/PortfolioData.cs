@@ -609,100 +609,6 @@ and contractors in the payment's space.
                 },
                 Categories = new List<string> { "Mobile Application"}
             },
-            //new Portfolio
-            //{
-            //    ProjectId = 3,
-            //    Name = "Techcu - TBC",
-            //    // Uses String Literal to make the string more readable on development. 
-            //    Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
-            //    Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
-            //    and outstanding service and member benefits.",
-            //    //Managing Body as a Markup string to be able to generate body more dynamically. 
-            //    Body = new MarkupString(@"<p>Techcu was interested in creating a member-centered website that provided members with the
-            //    information they needed and represented their values as well. We have provided Techcu with a number of services, one of these
-            //    is Restful Apis, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created
-            //    Fintech-focused APIs so that multiple partners can process loans, access member information, create transfers, and manage external
-            //    loans using Azure logic apps and azure functions.</p>
-            //    <div class='row' style='margin-bottom: 3rem'>
-            //        <div class='col-md-12'>
-            //            <p>
-            //                Additionally, we have delivered extensive support
-            //                for their legacy apps, improving code quality, creating development, staging and production environments as well. Our long-standing
-            //                mission has been to position Techcu in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
-            //                their offerings to the fintech world, granting them multiple partnerships across automobile and solar industries with many more to
-            //                come.
-            //            </p> 
-            //        </div>
-            //        <div class='col-md-12'>
-            //            <p>
-            //                Digital Account Opening is a product for a credit union which offers 
-            //                its customers to open an account with the union, without the customer 
-            //                ever interacting without an official, everything is done online.
-            //            </p> 
-            //            <p>
-            //                This application has the following features: 
-            //            </p> 
-            //            <ul>
-            //                <li>
-            //                    OFAC integrations.
-            //                </li>
-            //                <li>
-            //                    Soft credit inquiry at the moment of opening an account.
-            //                </li>
-            //                <li>
-            //                    Identity Detection.
-            //                </li> 
-            //                <li>
-            //                    Electronic in house and external transfers at the moment of funding an account.
-            //                </li>
-            //                <li>
-            //                    Move bank accounts from one bank to another.
-            //                </li>
-            //                <li>
-            //                    Plaid Integration.
-            //                </li>
-            //            </ul>
-            //        </div>
-            //       </div>"
-            //        ),
-            //    ImgUrls = new List<string>{
-            //        "template/images/assets/techcu/techcu2.webp",
-            //        "template/images/assets/techcu/techcu1.webp",
-            //        "template/images/assets/techcu/techcu3.webp",
-            //        "template/images/assets/techcu/techcu4.webp"
-            //    },
-            //    Services = new List<string>
-            //    {
-            //        "Web development",
-            //        "Web Design",
-            //        "Production Support",
-            //        "Mobile App Redesign",
-            //        "API Development",
-            //        "Database Design",
-            //        "Server Management",
-            //        "Deployment Automation"
-            //    },
-            //    Technologies = new List<string>
-            //    {
-            //        "Flutter / Dart",
-            //        "Firebase",
-            //        "SQL Server"
-
-            //    },
-            //    Practices = new List<string>
-            //    {
-            //        "User Research",
-            //        "UX Design",
-            //        "Agile Development",
-            //        "Restful API",
-            //        "Data Management",
-            //        "Technical Discovery",
-            //        "Mobile Design",
-            //        "Product Management",
-            //        "Cloud Hosting",
-            //        "Open Source Development"
-            //    },
-            //},
             new Portfolio
             {
                 ProjectId = 8,
@@ -974,7 +880,103 @@ and contractors in the payment's space.
                     "Product Management",
                 },
                 Categories = new List<string> { "Marketing"}
-            }
+            },
+            new Portfolio
+            {
+                ProjectId = 11,
+                Name = "Techcu",
+                // Uses String Literal to make the string more readable on development. 
+                Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
+                Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
+                and outstanding service and member benefits.",
+                //Managing Body as a Markup string to be able to generate body more dynamically. 
+                Body = new MarkupString(@"<p>Techcu was interested in creating a member-centered website that provided members with the
+                information they needed and represented their values as well. We have provided Techcu with a number of services, one of these
+                is Restful Apis, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created
+                Fintech-focused APIs so that multiple partners can process loans, access member information, create transfers, and manage external
+                loans using Azure logic apps and azure functions.</p>
+                <div class='row' style='margin-bottom: 3rem'>
+                    <div class='col-md-12'>
+                        <p>
+                            Additionally, we have delivered extensive support
+                            for their legacy apps, improving code quality, creating development, staging and production environments as well. Our long-standing
+                            mission has been to position Techcu in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
+                            their offerings to the fintech world, granting them multiple partnerships across automobile and solar industries with many more to
+                            come.
+                        </p> 
+                    </div>
+                    <div class='col-md-12'>
+                        <p>
+                            Digital Account Opening is a product for a credit union which offers 
+                            its customers to open an account with the union, without the customer 
+                            ever interacting without an official, everything is done online.
+                        </p> 
+                        <p>
+                            This application has the following features: 
+                        </p> 
+                        <ul>
+                            <li>
+                                OFAC integrations.
+                            </li>
+                            <li>
+                                Soft credit inquiry at the moment of opening an account.
+                            </li>
+                            <li>
+                                Identity Detection.
+                            </li> 
+                            <li>
+                                Electronic in house and external transfers at the moment of funding an account.
+                            </li>
+                            <li>
+                                Move bank accounts from one bank to another.
+                            </li>
+                            <li>
+                                Plaid Integration.
+                            </li>
+                        </ul>
+                    </div>
+                   </div>"
+                    ),
+                ImgUrls = new List<string>{
+                    "template/images/assets/techcu/techcu2.webp",
+                    "template/images/assets/techcu/techcu1.webp",
+                    "template/images/assets/techcu/techcu3.webp",
+                    "template/images/assets/techcu/techcu4.webp",
+                    "template/images/assets/techcu/1.webp",
+
+                },
+                Services = new List<string>
+                {
+                    "Web development",
+                    "Web Design",
+                    "Production Support",
+                    "Mobile App Redesign",
+                    "API Development",
+                    "Database Design",
+                    "Server Management",
+                    "Deployment Automation"
+                },
+                Technologies = new List<string>
+                {
+                    "Flutter / Dart",
+                    "Firebase",
+                    "SQL Server"
+
+                },
+                Practices = new List<string>
+                {
+                    "User Research",
+                    "UX Design",
+                    "Agile Development",
+                    "Restful API",
+                    "Data Management",
+                    "Technical Discovery",
+                    "Mobile Design",
+                    "Product Management",
+                    "Cloud Hosting",
+                    "Open Source Development"
+                },
+            },
         };
     }
 }

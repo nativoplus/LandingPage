@@ -39,6 +39,7 @@ bld/
 #wwwroot/
 /LandingPage/wwwroot/template/css/bundle.min.css
 /LandingPage/wwwroot/template/css/style.css
+/LandingPage/Pages/*.css
 /LandingPage/Components/*.css
 # Visual Studio 2017 auto generated files
 Generated\ Files/
