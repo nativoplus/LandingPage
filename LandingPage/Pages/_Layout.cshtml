@@ -38,7 +38,7 @@
     <noscript>
         <link rel="stylesheet" href=@googleFontsUrl />
     </noscript>
-    <script nonce="NativoPlus">
+    <script>
         document.getElementById("google-fonts").addEventListener('load', function() {
             this.onload = null;
             this.removeAttribute('media');
@@ -50,10 +50,7 @@
     <link rel="stylesheet" href="template/css/plugin-resets.css" />
     <link rel="stylesheet" href="template/css/fonts-icons.css" />
     <link rel="stylesheet" href="template/css/bundle.min.css" />
-
     <link href="LandingPage.styles.css" rel="stylesheet" />
-
-    <!-- Page Title -->
 
     <meta name="ahrefs-site-verification" content="40dff77532c1c319d3a094683d2ff3b386695d515ebd36de41674e368f9af4bd">
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
@@ -64,21 +61,24 @@
     <!-- Blazor -->
     <script src="_framework/blazor.server.js" autostart="false"></script>
 
-    <!-- Template -->
-    <script src="template/js/jquery.js"></script>
-    <script src="template/js/modal.js"> </script>
-    <script src="template/js/plugins.min.js"></script>
+    <!-- Scripts -->
+    <script defer src="template/js/jquery.js"></script>
+    <script defer src="template/js/modal.js"> </script>
+    <script defer src="template/js/plugins.min.js"></script>
     <script>
         Blazor.start().then(function() {
             var customScript = document.createElement('script');
+            customScript.setAttribute('defer', 'defer');
             customScript.setAttribute('src', 'template/js/scripts.min.js');
             document.head.appendChild(customScript);
 
             var lottieScript = document.createElement('script');
+            lottieScript.setAttribute('async', 'async');
             lottieScript.setAttribute('src', '@lottieUrl');
             document.head.appendChild(lottieScript);
         });
     </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K48QSB7DXH"></script>
     <script>
