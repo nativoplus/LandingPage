@@ -11,49 +11,41 @@
 @page "/portfolio/{ProjectName}"
 <!-- start of main page wrapper -->
 <PageTitle>NativoPlus - @Project.Name</PageTitle>
-<div id="wrapper">
+<div id="wrapper ">
     <!-- start of preloader -->
     <Preloader />
     <!-- end of preloader -->
     <div class="w1">
         <!-- start of page header -->
-        <NavigationBar />
+        <NavigationBar HasNoSpace="false"  />
         <!-- end of page header -->
         <!-- start of page main section -->
-        <main id="main">
+        <main id="main" class="bg-grey border-top">
             <!-- start of page-header -->
-            <section class="main-banner text-center">
+            @* <section class="main-banner text-center">
                 <!-- slide -->
                 <div class="slide bg-img-full" style="background-image: url(@Project.HeaderImageUrl);">
-                    <span class="bg-overlay"></span>
-                    <div class="caption">
-                        <div class="holder">
-                            <h1 class="heading">@Project.Name</h1>
-                            <p>@Project.Headline</p>
-                            <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom-main text-uppercase">Let's Talk!</a>
-                        </div>
-                    </div>
+                <span class="bg-overlay"></span>
+                <div class="caption">
+                <div class="holder">
+                <h1 class="heading">@Project.Name</h1>
+                <p>@Project.Headline</p>
+                <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom-main text-uppercase">Let's Talk!</a>
+                </div>
+                </div>
                 </div>
                 <a href="#" data-scroll-nav="1" class="btn-bottom pe-7s-angle-down" aria-label="Scroll to the next section of the page"></a>
-            </section>
-            <!-- end of main banner -->
-            @*<div class="page-header text-center bg-img-full"
-                 style="background-image: url(@Project.HeaderImageUrl);">
-                <span class="bg-overlay"></span>
-                <div class="container pad-top-xs pad-bottom-lg">
-                    <div class="row pad-top-md pad-bottom-xs">
-                        <div class="col-xs-12">
-                            <!-- start of breadcrumbs -->
-                            <ul class="list-inline breadcrumbs">
-                                <li><a @onclick:preventDefault @onclick="BackToHome" href="#">Home</a></li>
-                                <li>Portfolio Details</li>
-                            </ul><!-- end of breadcrumbs -->
-                        </div>
+                </section>*@
+            <!-- end of page-header -->
+            <div class="container pad-top-md">
+                <div class="row port-detail">
+                    <div class="col-xs-12 col-sm-12 mar-bottom-xs">
+                        <span class="heading">@Project.Name</span>
+                        <p>@Project.Headline</p>
+
                     </div>
                 </div>
-            </div>*@<!-- end of page-header -->
-            <div class="container pad-top-md">
-                <div class="row mar-bottom-sm pad-top-xs">
+                <div class="row mar-bottom-sm">
                     <div class="col-xs-12">
                         <!-- start of port-slider -->
                         <div class="port-slider">
@@ -69,8 +61,7 @@
                 <!-- start of port-detail -->
                 <div class="row port-detail mar-bottom-xs">
                     <div class="col-xs-12 col-sm-12 mar-bottom-xs">
-                        <span class="heading">@Project.Name</span>
-                        <p>@Project.Headline</p>
+
                         @Project.Body
 
                         @if (Project.Reviews.Count > 0)

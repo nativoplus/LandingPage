@@ -863,8 +863,8 @@ and contractors in the payment's space.
             },
             new Portfolio
             {
-                ProjectId = 3,
-                Name = "Techcu - TBC",
+                ProjectId = 11,
+                Name = "Techcu",
                 // Uses String Literal to make the string more readable on development. 
                 Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
                 Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
@@ -921,7 +921,9 @@ and contractors in the payment's space.
                     "template/images/assets/techcu/techcu2.webp",
                     "template/images/assets/techcu/techcu1.webp",
                     "template/images/assets/techcu/techcu3.webp",
-                    "template/images/assets/techcu/techcu4.webp"
+                    "template/images/assets/techcu/techcu4.webp",
+                    "template/images/assets/techcu/1.webp",
+
                 },
                 Services = new List<string>
                 {

@@ -46,7 +46,7 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/ramos.webp",
                 LinkedIn = "https://www.linkedin.com/in/angel-ramos-5a6a52a2/",
                 GithubUrl = "https://github.com/joey0xx",
-                Projects = new List<string>{ "TechCU"},
+                Projects = new List<string>{},
             },
             new Team
             {
