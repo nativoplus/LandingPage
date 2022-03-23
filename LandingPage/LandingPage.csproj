@@ -34,7 +34,7 @@
 	</ItemGroup>
 	<Target Name="CompileComponentSass" BeforeTargets="CompileGlobalSass">
 		<Message Text="Compiling Component SCSS files" Importance="high" />
-		<Exec Command="npm install sass --save-dev"/>
+		<Exec Command="npm install sass --save-dev" />
 		<Exec Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch('%(ComponentScssFiles.Identity)', `.*[/\\]_.*`))" Command="npm run sass -- --style=compressed --no-source-map --load-path= %(ComponentScssFiles.Identity) %(relativedir)%(filename).css" />
 	</Target>
 	

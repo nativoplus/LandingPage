@@ -864,14 +864,14 @@ and contractors in the payment's space.
             new Portfolio
             {
                 ProjectId = 11,
-                Name = "Techcu",
+                Name = "TechCU",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"Techcu is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
-                Instead of maximizing profits to pay company stockholders, Techcu invests resources to deliver superior rates, lower fees,
+                Headline=@"TechCU is a credit union that was founded in Silicon Valley, dedicated to the financial success of its members.
+                Instead of maximizing profits to pay company stockholders, TechCU invests resources to deliver superior rates, lower fees,
                 and outstanding service and member benefits.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>Techcu was interested in creating a member-centered website that provided members with the
-                information they needed and represented their values as well. We have provided Techcu with a number of services, one of these
+                Body = new MarkupString(@"<p>TechCU was interested in creating a member-centered website that provided members with the
+                information they needed and represented their values as well. We have provided TechCU with a number of services, one of these
                 is Restful Apis, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created
                 Fintech-focused APIs so that multiple partners can process loans, access member information, create transfers, and manage external
                 loans using Azure logic apps and azure functions.</p>
@@ -880,7 +880,7 @@ and contractors in the payment's space.
                         <p>
                             Additionally, we have delivered extensive support
                             for their legacy apps, improving code quality, creating development, staging and production environments as well. Our long-standing
-                            mission has been to position Techcu in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
+                            mission has been to position TechCU in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
                             their offerings to the fintech world, granting them multiple partnerships across automobile and solar industries with many more to
                             come.
                         </p> 
