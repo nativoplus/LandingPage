@@ -14,7 +14,7 @@
                     <Logo />
                     <div class="pull-right">
                         <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="logo btn-green-nav text-uppercase hidden-mobile" style="@(HasNoSpace ? "":"color: black;")">Let's Talk!</a>
-                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="pe-7s-menu opener pull-right" style="font-size: 24px/34px;" aria-label="Open or close the navigation menu"></a>
+                        <a href="#" @onclick:preventDefault @onclick="ToggleMenu" class="@MenuIconCssClass opener pull-right" style="font-size: 24px/34px;" aria-label="Open or close the navigation menu"></a>
                         <!-- start of page navigation -->
                         <Nativo_Menu_Template @bind-ToggleState=@MenuState Position=AllEnumerations.MenuPosition.Right CssClass="drawer" EnableOverlay=true>
                             <div class="header" role="banner">
@@ -49,6 +49,9 @@
     private bool MenuState = false;
     [Parameter]
     public bool HasNoSpace { get; set; } = true;
+
+    [Parameter]
+    public string MenuIconCssClass { get; set; } = "pe-7s-menu";
 
     protected override void OnInitialized()
     {
