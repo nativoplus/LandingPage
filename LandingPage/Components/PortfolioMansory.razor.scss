@@ -1,6 +1,11 @@
 ﻿$dark-green: #1c7d44;
+$light-green: #26a65b;
 
 .view-all {
     color: $dark-green;
     font-weight: 600;
+
+    &:hover {
+        color: $light-green;
+    }
 }

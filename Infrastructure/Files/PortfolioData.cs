@@ -1,16 +1,11 @@
 ﻿using LandingPage.Domain.Entities;
 using Microsoft.AspNetCore.Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LandingPage.Infrastructure.Files
 {
     public class PortfolioData
     {
-        public List<Portfolio> portfolio = new List<Portfolio>
+        public List<Portfolio> portfolio = new()
         {
             new Portfolio
             {
@@ -26,10 +21,15 @@ namespace LandingPage.Infrastructure.Files
                 of users, based on business requirements, user requests, and customer feedback. Additionally, they were looking 
                 to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
                 HeaderImageUrl =  "template/images/assets/gb/gentlebirth-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/gb/gentlebirth.webp",
                     "template/images/assets/gb/backoffice.webp",
                     //"template/images/assets/gb/templates.jpg",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/gb/gentlebirth-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -101,6 +101,10 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrls = new List<string>{
                     "template/images/assets/fm/fertilemind.webp",
                     //"template/images/assets/gb/templates.jpg",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/fm/fertilemind-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -305,6 +309,10 @@ and contractors in the payment's space.
                 ImgUrls = new List<string>{
                     "template/images/assets/maxana/maxana.webp",
                 },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/maxana/maxana-small.webp"
+                },
                 Services = new List<string>
                 {
                     "Production Support",
@@ -396,6 +404,10 @@ and contractors in the payment's space.
                 ImgUrls = new List<string>{
                     "template/images/assets/st/stripe.webp",
                     //"template/images/assets/gb/templates.jpg",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/st/stripe-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -560,6 +572,10 @@ and contractors in the payment's space.
                     "template/images/assets/westcor/westcor.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/westcor/westcor-small.webp"
+                },
                 Services = new List<string>
                 {
                     "Web development",
@@ -677,6 +693,10 @@ and contractors in the payment's space.
                 ImgUrls = new List<string>{
                     "template/images/assets/hv/hv.webp",
                     "template/images/assets/hv/hv2.webp"
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/hv/hv-small.webp"
                 },
                 Services = new List<string>
                 {
