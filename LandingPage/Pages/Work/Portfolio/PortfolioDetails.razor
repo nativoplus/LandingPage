@@ -17,10 +17,10 @@
     <!-- end of preloader -->
     <div class="w1">
         <!-- start of page header -->
-        <NavigationBar HasNoSpace="false"  />
+        <NavigationBar HasNoSpace="false" />
         <!-- end of page header -->
         <!-- start of page main section -->
-        <main id="main" class="bg-grey border-top">
+        <main id="main" class="border-top">
             <!-- start of page-header -->
             @* <section class="main-banner text-center">
                 <!-- slide -->
@@ -39,14 +39,40 @@
             <!-- end of page-header -->
             <div class="container pad-top-md">
                 <div class="row port-detail">
-                    <div class="col-xs-12 col-sm-12 mar-bottom-xs">
+                    <div class="col-xs-12 col-sm-12 ">
                         <span class="heading">@Project.Name</span>
                         <p>@Project.Headline</p>
 
                     </div>
                 </div>
-                <div class="row mar-bottom-sm">
-                    <div class="col-xs-12">
+                <div class="pad-bottom-lg pad-top-xs">
+                    <div class="row">
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4 icon-box">
+                            <IconBox Icon="pe-7s-attention"
+                                     Title="Challenge"
+                                     Text="We are friendly as our websites, we make it easy for visitors to find what they’re
+                                     looking for on any device." />
+                        </div><!-- end of icon-box -->
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4 icon-box">
+                            <IconBox Icon="pe-7s-target"
+                                     Title="Solution"
+                                     Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
+                                     but we try to be!" />
+                        </div><!-- end of icon-box -->
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                            <IconBox Icon="pe-7s-light"
+                                     Title="Outcome"
+                                     Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
+                        </div><!-- end of icon-box -->
+                    </div>
+                </div>
+
+
+                <div class="row mar-bottom-xs">
+                    <div class="col-xs-12 mar-bottom-xs">
                         <!-- start of port-slider -->
                         <div class="port-slider">
                             @foreach (var image in Project.ImgUrls)
@@ -61,7 +87,7 @@
                 <!-- start of port-detail -->
                 <div class="row port-detail mar-bottom-xs">
                     <div class="col-xs-12 col-sm-12 mar-bottom-xs">
-
+                        <span class="heading">Who is @Project.Name?</span>
                         @Project.Body
 
                         @if (Project.Reviews.Count > 0)
