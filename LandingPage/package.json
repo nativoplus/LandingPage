@@ -16,6 +16,6 @@
     "watch": "^1.0.2"
   },
   "devDependencies": {
-    "sass": "^1.49.9"
+    "sass": "^1.32.13"
   }
 }
