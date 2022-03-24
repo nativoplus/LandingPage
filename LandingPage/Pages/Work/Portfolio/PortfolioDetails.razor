@@ -22,21 +22,6 @@
         <!-- start of page main section -->
         <main id="main" class="border-top">
             <!-- start of page-header -->
-            @* <section class="main-banner text-center">
-                <!-- slide -->
-                <div class="slide bg-img-full" style="background-image: url(@Project.HeaderImageUrl);">
-                <span class="bg-overlay"></span>
-                <div class="caption">
-                <div class="holder">
-                <h1 class="heading">@Project.Name</h1>
-                <p>@Project.Headline</p>
-                <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom-main text-uppercase">Let's Talk!</a>
-                </div>
-                </div>
-                </div>
-                <a href="#" data-scroll-nav="1" class="btn-bottom pe-7s-angle-down" aria-label="Scroll to the next section of the page"></a>
-                </section>*@
-            <!-- end of page-header -->
             <div class="container pad-top-md">
                 <div class="row port-detail">
                     <div class="col-xs-12 col-sm-12 ">
@@ -45,30 +30,66 @@
 
                     </div>
                 </div>
-                <div class="pad-bottom-lg pad-top-xs">
-                    <div class="row">
+                <div class="pad-bottom-lg pad-top-sm">
+                    @* <div class="row">
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4 icon-box">
-                            <IconBox Icon="pe-7s-attention"
+                        <IconBox Icon="pe-7s-attention"
+                        Title="Challenge"
+                        Text="We are friendly as our websites, we make it easy for visitors to find what they’re
+                        looking for on any device." />
+                        </div><!-- end of icon-box -->
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4 icon-box">
+                        <IconBox Icon="pe-7s-target"
+                        Title="Solution"
+                        Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
+                        but we try to be!" />
+                        </div><!-- end of icon-box -->
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                        <IconBox Icon="pe-7s-light"
+                        Title="Outcome"
+                        Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
+                        </div><!-- end of icon-box -->
+                        </div>*@
+                    <div class="row mar-bottom-xs">
+                        <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                            <IconBox Animated="true"
+                                     Animation=@(new MarkupString(@"<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_ztp7ndvg.json'
+                                     background='trasparent' speed='1' style='width: 50px; height: 50px;'
+                                     loop autoplay></lottie-player>"))
+                                     Large="true"
                                      Title="Challenge"
                                      Text="We are friendly as our websites, we make it easy for visitors to find what they’re
                                      looking for on any device." />
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
-                        <div class="col-xs-12 col-sm-4 icon-box">
-                            <IconBox Icon="pe-7s-target"
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                            <IconBox Animated="true"
+                                     Animation=@(new MarkupString(@"<lottie-player src='https://assets3.lottiefiles.com/packages/lf20_plvgqatc.json'
+                                     background='transparent' speed='1' style='width: 50px; height: 45px;'
+                                     loop autoplay></lottie-player>"))
+                                     Large="true"
                                      Title="Solution"
                                      Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
                                      but we try to be!" />
                         </div><!-- end of icon-box -->
                         <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4  icon-box">
-                            <IconBox Icon="pe-7s-light"
+                            <IconBox Animated="true"
+                                     Animation=@(new MarkupString(@"<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_hwqxmtzu.json'
+                                     background='transparent' speed='1' style='width: 50px; height: 45px;'
+                                     loop autoplay></lottie-player>"))
+                                     Large="true"
                                      Title="Outcome"
                                      Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
                         </div><!-- end of icon-box -->
                     </div>
                 </div>
+                <!-- end of page-header -->
+
 
 
                 <div class="row mar-bottom-xs">

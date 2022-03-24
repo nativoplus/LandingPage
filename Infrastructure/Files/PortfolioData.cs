@@ -938,12 +938,8 @@ and contractors in the payment's space.
                    </div>"
                     ),
                 ImgUrls = new List<string>{
-                    "template/images/assets/techcu/techcu2.webp",
-                    "template/images/assets/techcu/techcu1.webp",
-                    "template/images/assets/techcu/techcu3.webp",
-                    "template/images/assets/techcu/techcu4.webp",
-                    "template/images/assets/techcu/1.webp",
-
+                    "template/images/assets/techcu/techcu.webp",
+                    "template/images/assets/techcu/techcu_mobile.webp",
                 },
                 Services = new List<string>
                 {

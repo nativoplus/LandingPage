@@ -2,7 +2,7 @@
 
     @if (Animated)
     {
-        <div class="@(Large ? "":"custom-icon") main-color icon col-xs-2">
+        <div class="@(Large ? "col-xs-1":"custom-icon col-xs-2") main-color icon">
             @Animation
         </div>
         <div class="holder col-xs-8">
@@ -27,6 +27,7 @@
 @code {
     [Parameter]
     public bool Animated { get; set; } = false;
+
     [Parameter]
     public MarkupString Animation { get; set; } = new MarkupString("");
     [Parameter]
