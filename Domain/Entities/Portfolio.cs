@@ -22,5 +22,8 @@ namespace LandingPage.Domain.Entities
         public List<string> Categories { get; set; } = new List<string>();
         public List<Team> Team { get; set; } = new List<Team>();
         public List<Reviews> Reviews { get; set; } = new List<Reviews>();
+        public string Challenge {  get; set; } = string.Empty;
+        public string Solution { get; set; } = string.Empty;
+        public string Outcome {  get; set; } = string.Empty;
     }
 }

@@ -30,64 +30,67 @@
 
                     </div>
                 </div>
-                <div class="pad-bottom-lg pad-top-sm">
-                    @* <div class="row">
-                        <!-- start of icon-box -->
-                        <div class="col-xs-12 col-sm-4 icon-box">
-                        <IconBox Icon="pe-7s-attention"
-                        Title="Challenge"
-                        Text="We are friendly as our websites, we make it easy for visitors to find what they’re
-                        looking for on any device." />
-                        </div><!-- end of icon-box -->
-                        <!-- start of icon-box -->
-                        <div class="col-xs-12 col-sm-4 icon-box">
-                        <IconBox Icon="pe-7s-target"
-                        Title="Solution"
-                        Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
-                        but we try to be!" />
-                        </div><!-- end of icon-box -->
-                        <!-- start of icon-box -->
+                @if (@Project.Challenge.Length > 0)
+                {
+                    <div class="pad-bottom-lg pad-top-sm">
+                        @* <div class="row">
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-sm-4 icon-box">
+                            <IconBox Icon="pe-7s-attention"
+                            Title="Challenge"
+                            Text="We are friendly as our websites, we make it easy for visitors to find what they’re
+                            looking for on any device." />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-sm-4 icon-box">
+                            <IconBox Icon="pe-7s-target"
+                            Title="Solution"
+                            Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
+                            but we try to be!" />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-sm-4  icon-box">
+                            <IconBox Icon="pe-7s-light"
+                            Title="Outcome"
+                            Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
+                            </div><!-- end of icon-box -->
+                            </div>*@
+
+                        <div class="row mar-bottom-xs">
+                            <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4  icon-box">
-                        <IconBox Icon="pe-7s-light"
-                        Title="Outcome"
-                        Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
-                        </div><!-- end of icon-box -->
-                        </div>*@
-                    <div class="row mar-bottom-xs">
-                        <!-- start of icon-box -->
-                        <div class="col-xs-12 col-sm-4  icon-box">
-                            <IconBox Animated="true"
+                                <IconBox Animated="true"
                                      Animation=@(new MarkupString(@"<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_ztp7ndvg.json'
                                      background='trasparent' speed='1' style='width: 50px; height: 50px;'
                                      loop autoplay></lottie-player>"))
                                      Large="true"
                                      Title="Challenge"
-                                     Text="We are friendly as our websites, we make it easy for visitors to find what they’re
-                                     looking for on any device." />
-                        </div><!-- end of icon-box -->
-                        <!-- start of icon-box -->
+                                     Text="@Project.Challenge" />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4  icon-box">
-                            <IconBox Animated="true"
+                                <IconBox Animated="true"
                                      Animation=@(new MarkupString(@"<lottie-player src='https://assets3.lottiefiles.com/packages/lf20_plvgqatc.json'
                                      background='transparent' speed='1' style='width: 50px; height: 45px;'
                                      loop autoplay></lottie-player>"))
                                      Large="true"
                                      Title="Solution"
-                                     Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
-                                     but we try to be!" />
-                        </div><!-- end of icon-box -->
-                        <!-- start of icon-box -->
+                                     Text="@Project.Solution" />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
                         <div class="col-xs-12 col-sm-4  icon-box">
-                            <IconBox Animated="true"
+                                <IconBox Animated="true"
                                      Animation=@(new MarkupString(@"<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_hwqxmtzu.json'
                                      background='transparent' speed='1' style='width: 50px; height: 45px;'
                                      loop autoplay></lottie-player>"))
                                      Large="true"
                                      Title="Outcome"
-                                     Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
-                        </div><!-- end of icon-box -->
+                                     Text="@Project.Outcome" />
+                            </div><!-- end of icon-box -->
                     </div>
-                </div>
+                    </div>
+                }
+
                 <!-- end of page-header -->
 
 
