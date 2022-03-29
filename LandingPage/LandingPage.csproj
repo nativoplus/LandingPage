@@ -10,6 +10,7 @@
 		<PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
 		<PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
 		<PackageReference Include="NativoPlus.BlazorRCL" Version="1.0.5" />
+		<PackageReference Include="SendGrid" Version="9.27.0" />
 	</ItemGroup>
 
 	<ItemGroup>
