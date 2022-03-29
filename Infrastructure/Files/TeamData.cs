@@ -14,10 +14,11 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Hector Orellana Reyes",
                 Role = "Software Engineer",
-                Description = @"Hector is a software developer with a wealth of practical experience. 
-                He’s fearless, up for a challenge and full of ideas. He can create the kind of software 
-                your organization needs to stay in front of your competitors. Hector loves to deliver effective, 
-                reliable services that meet the needs of any project, and he loves to see his ideas become real.",
+                Description = @"Hector is a software developer with a wealth of knowledge and experience. He is fearless and 
+                is up for any challenge. With his immense creativity and innovative nature, he can create the software your 
+                organization needs to stay in front of your competition. Hector loves to deliver practical, reliable services 
+                that go above the needs of any project. He loves to see clients become better versions of themselves through 
+                his expert endeavors. ",
                 ImgUrl = "template/images/team/hector.webp",
                 LinkedIn = "https://www.linkedin.com/in/hector-orellana-reyes-220b7a113/",
                 GithubUrl = "https://github.com/horeyes",
@@ -27,10 +28,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Jose Velez",
                 Role = "Founder",
-                Description = @"José founded Nativo Plus Studio and acquired BTMDT in 2021. Currently 
-                based in the San Francico Bay Area, he has over 10 years of experience with ovreseing 
-                the application development lifecycle from conception to implementation as a senior 
-                software engineer and software architect in the public and private sectors.",
+                Description = @"José founded Nativo Plus Studio and acquired BTMDT in 2021. He resides in the San Francisco Bay Area. 
+                He has over ten years of experience overseeing the application development lifecycle from conception to implementation 
+                as a senior software engineer and software architect in the public and private sectors. ",
                 ImgUrl = "template/images/team/jose.webp",
                 LinkedIn = "https://www.linkedin.com/in/joecolon/",
                 GithubUrl = "https://github.com/jvelezc",
@@ -40,9 +40,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Angel Ramos",
                 Role = "Software Engineer",
-                Description = @"Angel enjoys learning and staying on top of the latest trends in writing 
-                code. He specializes in NativeScript and APIs for mobile healthcare applications. He’s 
-                dedicated to ensuring quality and delivering value on every project.",
+                Description = @"Angel Ramos enjoys learning and staying on top of the latest trends for writing code. He 
+                specializes in NativeScript and APIs for mobile healthcare applications. Angel dedicates to ensuring quality 
+                and delivering value on every project.",
                 ImgUrl = "template/images/team/ramos.webp",
                 LinkedIn = "https://www.linkedin.com/in/angel-ramos-5a6a52a2/",
                 GithubUrl = "https://github.com/joey0xx",
@@ -52,9 +52,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Arnaldo Rodriguez",
                 Role = "Software Engineer",
-                Description = @"Focused and passionate about creating quality products, that involve a great 
-                design as well as great code. He likes to follow the best practices and latest design patterns. 
-                Arnaldo is a professional that promotes and empowers creativity and a healthy work environment.",
+                Description = @"Arnaldo is focused and passionate about creating quality products by ensuring they have a great
+                design and the code that executes well. He likes to follow the best practices and latest design patterns. He 
+                showcases professionality that cultivates a healthy work environment while empowering creativity. ",
                 ImgUrl = "template/images/team/arnaldo.webp",
                 LinkedIn = "https://www.linkedin.com/in/arnaldo-rodriguez-1445b811b/",
                 GithubUrl = "https://github.com/arodriguezgb",
@@ -64,9 +64,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Cristian Amaro",
                 Role = "Software Engineer",
-                Description = @"Cristian knows that website are about people, he is dedicated to full-stack web 
-                development. He focuse on designing modern web-based solutions and is experience on development 
-                life-cycle of team-based web projects.",
+                Description = @"Cristian knows that websites are about people and is ready to make sure those people shine as 
+                bright as the sun. He is dedicated to full-stack web development and focuses on designing modern web-based 
+                solutions for his clients. Cristian experienced on development life-cycle of team-based web projects.",
                 ImgUrl = "template/images/team/amaro.webp",
                 LinkedIn = "https://www.linkedin.com/in/cristian-amaro-burgos-64815816a/",
                 GithubUrl = "https://github.com/camaro24max",
@@ -76,9 +76,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Marie Fitch",
                 Role = "COO",
-                Description = @"Marie is a Creative specialist dedicated to finding original 
-                design solutions to everyday life. Specialist in sales and marketing, facilitating 
-                businesses to exceed sales objectives. ",
+                Description = @" Marie is a Creative Specialist dedicated to finding original design solutions to 
+                everyday life. Specializing in sales and marketing, she always facilitates businesses to exceed 
+                sales objectives. Making her clients the cream of the crop is her highest priority. ",
                 ImgUrl = "template/images/team/marie.webp",
                 LinkedIn = "https://www.linkedin.com/in/mariefitch/",
                 GithubUrl = "",
@@ -88,9 +88,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Angel Martinez",
                 Role = "Senior Software Engineer",
-                Description = @"Angel is always dedicated to ensuring quality and delivering value. 
-                Creative and passionate in promoting creativity and innovation. Proactive, 
-                self-motivated, and creative problem solver.",
+                Description = @"Angel dedicates himself to ensuring quality and delivering value. Creative and passionate 
+                about promoting creativity and innovation, he makes sure every project is just as impressive as he is! 
+                Angel is a proactive, self-motivated, and creative problem solver.",
                 ImgUrl = "template/images/team/martinez.webp",
                 LinkedIn = "https://www.linkedin.com/in/angel-isaac-martinez-437589a1/",
                 GithubUrl = "",
@@ -100,10 +100,8 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Juliana Galeano",
                 Role = "Art Director",
-                Description = @"Juliana has the ability to see the spark of potential everywhere. She is 
-                an expert in creating high-value content, experiences, and emotions through audiovisual 
-                content and storytelling. Juliana combines imagination with a desire for practical solutions 
-                using human-centered and design thinking tools.",
+                Description = @"Juliana can see the spark of potential everywhere. She is an expert in creating high-value 
+                content, experiences, and emotions through audiovisual content with superb storytelling. ",
                 ImgUrl = "template/images/team/juliana.webp",
                 LinkedIn = "https://www.linkedin.com/in/juliana-galeano-garrido/",
                 GithubUrl = "",
@@ -114,10 +112,10 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Danny Ruiz",
                 Role = "Software Engineer",
-                Description = @"Danny is a proactive and intuitive person, answering project needs before being
-                asked. He is focused on software and web application development, with a high level of creativity, 
-                a positive attitude, and a desire to learn and improve day by day. He is friendly and professional 
-                approach has resulted in many successful projects for clients of all sizes.",
+                Description = @"Danny is proactive and intuitive, answering project needs before being asked. He focuses on software 
+                and web application development. With his high level of creativity, a positive attitude, and desire to learn and improve, 
+                Danny is ready for any project or challenge. He has a friendly and professional approach, resulting in many successful 
+                projects for clients.",
                 ImgUrl = "template/images/team/danny.webp",
                 LinkedIn = "https://www.linkedin.com/in/danny-stev-ruiz/",
                 GithubUrl = "https://github.com/danruiz01",
@@ -127,9 +125,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Sara Cabrera",
                 Role = "Sales Specialist",
-                Description = @"Sara likes to help companies reach their best version, thanks to her skills 
-                and professional experience. She is passionate about Marketing and Business Analytics. As a 
-                Sales Specialist, she has a record of success in boosting brands through tailored strategies.",
+                Description = @"Sara likes to help companies reach their best version of themselves. Thanks to her skills and professional 
+                experience, she has done this will companies and projects of all sizes and backgrounds. She is passionate about Marketing 
+                and Business Analytics, and as a Sales Specialist, she has a record of success in boosting brands through tailored strategies.",
                 ImgUrl = "template/images/team/sara.webp",
                 LinkedIn = "https://www.linkedin.com/in/saracabrerao/",
                 GithubUrl = "",
@@ -139,11 +137,10 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Bradley Bailey-Murray",
                 Role = "Business Development",
-                Description = @"Taking concepts and turning them into reality through design and code is what 
-                gets him up in the morning. Having the opportunity to utilize his abilities to solve issues 
-                and constraints through planning and strategy drives him to continue to learn and grow as a 
-                designer and programmer on a daily basis. He loves to watch projects come to life through the 
-                product cycle.",
+                Description = @"Bradley takes concepts and turns them into reality through design, and code gets him up in the morning. 
+                Utilizing his abilities to solve issues through planning and strategy drives him to continue learning and growing as a 
+                designer and programmer. Bradley loves to watch projects come to life through the product cycle. He will make sure every 
+                step of your project is smooth and successful every step of the way. ",
                 ImgUrl = "template/images/team/bradley.webp",
                 LinkedIn = "https://www.linkedin.com/in/bradley-bailey-murray-3823a053/",
                 GithubUrl = "",
@@ -153,9 +150,9 @@ namespace LandingPage.Infrastructure.Files
             {
                 Name = "Kate Bradshaw",
                 Role = "Graphic Designer",
-                Description = @"Kate is a graphic designer with a background in creative writing. She takes a 
-                multifaceted approach to communication and problem solving, and is always looking to add new 
-                skills to her toolbelt.",
+                Description = @"Kate is a graphic designer with a background in creative writing. She takes a multifaceted approach to 
+                communication and problem solving while adding new skills to her toolbelt. She rises to the occasion in every instance
+                to make the client successful. ",
                 ImgUrl = "template/images/team/kate.webp",
                 LinkedIn = "https://www.linkedin.com/in/kateruthbradshaw/",
                 GithubUrl = "",

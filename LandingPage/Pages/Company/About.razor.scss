@@ -38,6 +38,7 @@ body {
 
 .segmented-control {
     position: relative;
+    z-index: 1;
     display: inline-block;
     border: 2px solid currentColor;
     font-style: normal;
