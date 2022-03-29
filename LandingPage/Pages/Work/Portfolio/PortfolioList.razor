@@ -62,22 +62,20 @@
                             <!-- start of item -->
                             <div class="item col-xs-12 col-sm-6 col-md-4 All mar-bottom-xs">
                                 <!-- start of product-box -->
-                            <div class="product-box">
-                                  
-                                    <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
-                                        <img loading="lazy" src="@project.ImgUrls[0]" alt="image" class="img-responive">
-                                    </a>
+                                <div class="product-box">
+                                    <div class="clickable" @onclick="@(() => NavigateTo(project.Name))">
+                                        <img loading="lazy" src="@project.SmallImgUrls[0]" alt="image" class="img-responive" width="720" height="480" />
+                                    </div>
                                     <div class="box">
-                                        <h3 class="heading large"><a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">@project.Name</a></h3>
+                                        <h3 class="heading large clickable"><span @onclick="@(() => NavigateTo(project.Name))">@project.Name</span></h3>
                                         <div class="frame">
                                             <span class="price">@(project.Categories.Count >0 ? project.Categories[0]: "Development")</span>
                                         </div>
                                     </div>
                                 </div><!-- end of product-box -->
-                        </div>
+                            </div>
                             <!-- end of item -->
                         }
-
                     </div><!-- end of isotop-holder -->
                 </div>
             </div>

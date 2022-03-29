@@ -146,9 +146,10 @@ namespace LandingPage.Infrastructure.Files
                     ),
                 SmallImgUrls = new List<string>
                 {
-                    "template/images/assets/techcu/techcu.webp"
+                    "template/images/assets/techcu/techcu-small.webp"
                 },
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/techcu/techcu.webp",
                     "template/images/assets/techcu/techcu_mobile.webp",
                 },
@@ -225,10 +226,12 @@ namespace LandingPage.Infrastructure.Files
                 {
                 },
                 HeaderImageUrl = "template/images/assets/afa/afa-header.webp",
-                SmallImgUrls = new List<string>{
-                    "template/images/assets/afa/afa.webp",
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/afa/afa-small.webp",
                 },
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/afa/afa.webp",
                 },
                 Services = new List<string>
@@ -284,7 +287,8 @@ namespace LandingPage.Infrastructure.Files
                 decided to build a UI based on the React framework, which was
                 already being used in the backend.</p>"),
                 HeaderImageUrl =  "template/images/assets/fm/fertile-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/fm/fertilemind.webp",
                     "template/images/assets/fm/fertile-header.webp",
 
@@ -413,7 +417,8 @@ namespace LandingPage.Infrastructure.Files
                 {
                 },
                 HeaderImageUrl = "template/images/assets/hv/happyvolts-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/hv/hv.webp",
                     "template/images/assets/hv/hv2.webp"
                 },
@@ -619,7 +624,8 @@ and contractors in the payment's space.
                 </div>
         "),
                 HeaderImageUrl =  "template/images/assets/maxana/maxana-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/maxana/maxana.webp",
                 },
                 SmallImgUrls = new List<string>
@@ -720,7 +726,8 @@ and contractors in the payment's space.
               "){
                 },
                 HeaderImageUrl =  "template/images/assets/st/stripe-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/st/stripe.webp",
                     "template/images/assets/st/stripe-header.webp",
 
@@ -797,7 +804,8 @@ and contractors in the payment's space.
               "){
                 },
                 HeaderImageUrl =  "template/images/assets/westcor/westcor-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/westcor/westcor.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
@@ -862,9 +870,14 @@ and contractors in the payment's space.
                 work with.</p>
                 "),
                 HeaderImageUrl =  "template/images/assets/sc/sportsman-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/sc/sportcap.webp",
                     "template/images/assets/sc/sc2.webp",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/sc/sportcap-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -924,9 +937,14 @@ and contractors in the payment's space.
                 for sourcing new suppliers.</p>
                 "),
                 HeaderImageUrl =  "template/images/assets/sc/kati-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/sc/ksc1.webp",
                     "template/images/assets/sc/sportcap.webp",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/sc/ksc1-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -979,9 +997,14 @@ and contractors in the payment's space.
                 and sales promotion, marketing campaigns, display design, logo, 
                 and identity development.</p>"),
                 HeaderImageUrl =  "template/images/assets/ftmb/farm-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/ftmb/ftmb.webp",
                     "template/images/assets/ftmb/ftmb2.webp",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/ftmb/ftmb-small.webp"
                 },
                 Services = new List<string>
                 {

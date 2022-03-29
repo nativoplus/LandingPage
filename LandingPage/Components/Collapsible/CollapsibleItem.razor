@@ -3,7 +3,7 @@
 @using static LandingPage.Enums.CollapsibleItemEnum
 <div class="@(HasBottomBorder? "border-bot" : "") ms10 custom-pad">
 
-    <a class="collapsible subheading" href="" @onclick:preventDefault @onclick="ToggleHander">
+    <div class="collapsible subheading" @onclick="ToggleHander">
         <div class="row">
             <div class="@(Flex ? "col-xs-10" : "col-xs-3")">
                 <span>@Header</span>
@@ -12,7 +12,7 @@
                 <span class="fa @(IsCollapsed? "fa-angle-up":"fa-angle-down") main-color icon @(Flex ? "pull-right": "")" style="font-size: 26px;"></span>
             </div>
         </div>
-    </a>
+    </div>
     <div class="row content">
         @if (CollapsibleItemOption == CollapsibleItemOptions.Team)
         {
