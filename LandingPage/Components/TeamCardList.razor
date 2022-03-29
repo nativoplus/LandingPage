@@ -20,7 +20,7 @@
                         <div class="team-box text-center">
 
                             <a href="#" @onclick:preventDefault @onclick=@(() => OnTeamMemberClickHandler(member)) aria-label="Learn more about this team member">
-                                <div class="img-box"><img src="@member.ImgUrl" alt="Team member's photo" class="img-responsive"></div>
+                                <div class="img-box"><img src="@member.ImgUrl" alt="Team member's photo" class="img-responsive" width="370" height="463" loading="lazy"></div>
                             </a>
                             <a href="#" @onclick:preventDefault @onclick=@(() => OnTeamMemberClickHandler(member)) class="custom-link" aria-label="Learn more about this team member">
                                 <h3 class="heading">@member.Name</h3>
