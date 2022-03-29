@@ -30,7 +30,7 @@
                         <div class="holder">
                             <h1 class="heading">About Us</h1>
                             <p>We work closely with businesses and change the world for<br /> the better with small teams, but a strong community.</p>
-                            <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom text-uppercase">Let's Talk!</a>
+                            <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom-main text-uppercase">Let's Talk!</a>
                         </div>
                     </div>
                 </div>
@@ -56,6 +56,7 @@
                                      Animation=@(new MarkupString(@"<lottie-player src='https://assets2.lottiefiles.com/packages/lf20_p7nybnpy.json'
                                      background='transparent' speed='1' style='width: 120px; height: 60px;;'
                                      loop autoplay></lottie-player>"))
+                                  
                                      Title="Easy For Users"
                                      Text="We are friendly as our websites, we make it easy for visitors to find what they’re
                                      looking for on any device." />
@@ -90,7 +91,7 @@
                                 <!-- start of main-heading -->
                                 <header class="main-heading mar-bottom-xs">
                                     <h2 class="heading">You don’t need any skills to create your website with NativoPlus!</h2>
-                                    <p>Your success is our success. Our teams work hard to deliver on the most demanding projects.</p>
+                                    <p>Tell us your vision and we will make it happen.</p>
                                 </header><!-- end of main-heading -->
                             </div>
                         </div>
@@ -192,11 +193,11 @@
                                             <ul class="list-inline social">
                                                 @if (selectedMember.LinkedIn.ToString() != "")
                                                 {
-                                                    <li><a href="@selectedMember.LinkedIn" aria-label="Team member's LinkedIn profile"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                                    <li><a href="@selectedMember.LinkedIn" aria-label="Team member's LinkedIn profile"><i class="fa-brands fa-linkedin-square" aria-hidden="true"></i></a></li>
                                                 }
                                                 @if (selectedMember.GithubUrl.ToString() != "")
                                                 {
-                                                    <li><a href="@selectedMember.GithubUrl" aria-label="Team member's GitHub account"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                                    <li><a href="@selectedMember.GithubUrl" aria-label="Team member's GitHub account"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
                                                 }
                                             </ul>
                                         </div>

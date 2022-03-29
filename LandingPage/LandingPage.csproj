@@ -17,6 +17,11 @@
 		<ProjectReference Include="..\Domain\Domain.csproj" />
 		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
 	</ItemGroup>
+	
+		<Target Name="LandingPage" BeforeTargets="LandingPage">
+		<Message Text="Installing Sass" Importance="high" />
+		<Exec Command="npm install sass@1.32.13 --save-dev" />
+	</Target>
 	<!-- Add SCSS files to dotnet watch -->
 	<ItemGroup>
 		<Watch Include="**\*.scss" />
@@ -27,9 +32,9 @@
 	<ItemGroup>
 		<ComponentScssFiles Include="**/*/*.scss" Exclude="node_modules/**;wwwroot/**;Styles/**" />
 	</ItemGroup>
-	
 	<Target Name="CompileComponentSass" BeforeTargets="CompileGlobalSass">
 		<Message Text="Compiling Component SCSS files" Importance="high" />
+		<Exec Command="npm install sass@1.32.13 --save-dev" />
 		<Exec Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch('%(ComponentScssFiles.Identity)', `.*[/\\]_.*`))" Command="npm run sass -- --style=compressed --no-source-map --load-path= %(ComponentScssFiles.Identity) %(relativedir)%(filename).css" />
 	</Target>
 	

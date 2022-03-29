@@ -11,35 +11,92 @@
 @page "/portfolio/{ProjectName}"
 <!-- start of main page wrapper -->
 <PageTitle>NativoPlus - @Project.Name</PageTitle>
-<div id="wrapper">
+<div id="wrapper ">
     <!-- start of preloader -->
     <Preloader />
     <!-- end of preloader -->
     <div class="w1">
         <!-- start of page header -->
-        <NavigationBar />
+        <NavigationBar HasNoSpace="false" />
         <!-- end of page header -->
         <!-- start of page main section -->
-        <main id="main">
+        <main id="main" class="border-top">
             <!-- start of page-header -->
-            <div class="page-header text-center bg-img-full"
-                 style="background-image: url(template/images/bg/bggrey.webp);">
-                <span class="bg-overlay"></span>
-                <div class="container pad-top-xs pad-bottom-lg">
-                    <div class="row pad-top-md pad-bottom-xs">
-                        <div class="col-xs-12">
-                            <!-- start of breadcrumbs -->
-                            <ul class="list-inline breadcrumbs">
-                                <li><a href="index.html">Home</a></li>
-                                <li>Portfolio Details</li>
-                            </ul><!-- end of breadcrumbs -->
-                        </div>
+            <div class="container pad-top-md">
+                <div class="row port-detail">
+                    <div class="col-xs-12 col-sm-12 ">
+                        <span class="heading">@Project.Name</span>
+                        <p>@Project.Headline</p>
+
                     </div>
                 </div>
-            </div><!-- end of page-header -->
-            <div class="container pad-top-md">
-                <div class="row mar-bottom-sm pad-top-xs">
-                    <div class="col-xs-12">
+                @if (@Project.Challenge.Length > 0)
+                {
+                    <div class="pad-bottom-lg pad-top-sm">
+                        @* <div class="row">
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-sm-4 icon-box">
+                            <IconBox Icon="pe-7s-attention"
+                            Title="Challenge"
+                            Text="We are friendly as our websites, we make it easy for visitors to find what they’re
+                            looking for on any device." />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-sm-4 icon-box">
+                            <IconBox Icon="pe-7s-target"
+                            Title="Solution"
+                            Text="We deliver complete and clean design through absolute use of every pixel. We are not perfect,
+                            but we try to be!" />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                            <div class="col-xs-12 col-sm-4  icon-box">
+                            <IconBox Icon="pe-7s-light"
+                            Title="Outcome"
+                            Text="We’re all about finding the right words to show you and your customers just how amazing you are." />
+                            </div><!-- end of icon-box -->
+                            </div>*@
+
+                        <div class="row mar-bottom-xs">
+                            <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                                <IconBox Animated="true"
+                                     Animation=@(new MarkupString(@"<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_ztp7ndvg.json'
+                                     background='trasparent' speed='1' style='width: 50px; height: 50px;'
+                                     loop autoplay></lottie-player>"))
+                                     Large="true"
+                                     Title="Challenge"
+                                     Text="@Project.Challenge" />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                                <IconBox Animated="true"
+                                     Animation=@(new MarkupString(@"<lottie-player src='https://assets3.lottiefiles.com/packages/lf20_plvgqatc.json'
+                                     background='transparent' speed='1' style='width: 50px; height: 45px;'
+                                     loop autoplay></lottie-player>"))
+                                     Large="true"
+                                     Title="Solution"
+                                     Text="@Project.Solution" />
+                            </div><!-- end of icon-box -->
+                            <!-- start of icon-box -->
+                        <div class="col-xs-12 col-sm-4  icon-box">
+                                <IconBox Animated="true"
+                                     Animation=@(new MarkupString(@"<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_hwqxmtzu.json'
+                                     background='transparent' speed='1' style='width: 50px; height: 45px;'
+                                     loop autoplay></lottie-player>"))
+                                     Large="true"
+                                     Title="Outcome"
+                                     Text="@Project.Outcome" />
+                            </div><!-- end of icon-box -->
+                    </div>
+                    </div>
+                }
+
+                <!-- end of page-header -->
+
+
+
+                <div class="row mar-bottom-xs">
+                    <div class="col-xs-12 mar-bottom-xs">
                         <!-- start of port-slider -->
                         <div class="port-slider">
                             @foreach (var image in Project.ImgUrls)
@@ -54,8 +111,7 @@
                 <!-- start of port-detail -->
                 <div class="row port-detail mar-bottom-xs">
                     <div class="col-xs-12 col-sm-12 mar-bottom-xs">
-                        <span class="heading">@Project.Name</span>
-                        <p>@Project.Headline</p>
+                        <span class="heading">Who is @Project.Name?</span>
                         @Project.Body
 
                         @if (Project.Reviews.Count > 0)
@@ -73,31 +129,31 @@
                     @*<div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1 mar-bottom-xs">
                         <!-- Starts Of Category Details-->
                         <div>
-                            <span class="subheading">Category</span>
-                            <span class="txt">
-                                @foreach (var category in Project.Categories)
-                                {
-                                    if (Project.Categories.IndexOf(category) != Project.Categories.Count - 1)
-                                    {
-                                        // Add Comma and a Space at the end of the string.
-                                        @(@category + ", ")
-                                    }
-                                    else
-                                    {
-                                        // Does Not Add Comma and Space at the end of the string for last item.
-                                        @category
-                                    }
-                                }
-                            </span>
+                        <span class="subheading">Category</span>
+                        <span class="txt">
+                        @foreach (var category in Project.Categories)
+                        {
+                        if (Project.Categories.IndexOf(category) != Project.Categories.Count - 1)
+                        {
+                        // Add Comma and a Space at the end of the string.
+                        @(@category + ", ")
+                        }
+                        else
+                        {
+                        // Does Not Add Comma and Space at the end of the string for last item.
+                        @category
+                        }
+                        }
+                        </span>
                         </div>
                         <!-- End Of Category Details-->
                         <!-- Starts Of Date Details-->
                         <div>
-                            <span class="subheading">Date</span>
-                            <span class="txt">TBA</span>
+                        <span class="subheading">Date</span>
+                        <span class="txt">TBA</span>
                         </div>
                         <!-- End Of Date Details-->
-                    </div>*@
+                        </div>*@
                     <div class="mar-bottom-lg">
                         <Collapsible>
                             @if (Project.Team.Count > 0)
@@ -160,6 +216,13 @@
         NavigationManager.NavigateTo("/work/portfolio/" + path, forceLoad: true);
     }
 
+    public void BackToHome()
+    {
+        // Forced Reload To Ensure a Fresh Instance of Javascript Files.
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
+
     private void LocationChanged(object sender, LocationChangedEventArgs e)
     {
         string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
@@ -174,4 +237,5 @@
         Project.Team = randomized.ToList();
     }
     void IDisposable.Dispose() { }
+
 }

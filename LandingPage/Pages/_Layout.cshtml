@@ -3,11 +3,12 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     var googleFontsUrl = "https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CWork+Sans:300,400,500,600&display=swap";
-    var lottieUrl ="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
+    var lottieUrl = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <base href="~/" />
     <!-- set the encoding of your site -->
     <meta charset="utf-8" />
@@ -25,33 +26,34 @@
     <meta name="keywords" content="agency, Startup, bootstrap, business, corporate, creative, minimal, modern, onepage, personal, portfolio,  html5, responsive, Company, Hiring, Develpment, Software, APP, Mobile, Responsive, Design, ">
     <meta name="author" content="NativoPlus">
 
-    <!-- Google fonts -->
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://mc.sendgrid.com" crossorigin />
+    <link rel="preconnect" href="https://google.com" crossorigin />
+    <link rel="preconnect" href="https://gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google fonts -->
     <link rel="preload" as="style" href=@googleFontsUrl />
     <link id="google-fonts" rel="stylesheet" media="print" href=@googleFontsUrl />
-
     <noscript>
         <link rel="stylesheet" href=@googleFontsUrl />
     </noscript>
-
-    <script nonce="NativoPlus">
+    <script>
         document.getElementById("google-fonts").addEventListener('load', function() {
             this.onload = null;
             this.removeAttribute('media');
         });
     </script>
-   
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="template/css/bootstrap.min.css" />
     <link rel="stylesheet" href="template/css/plugin-resets.css" />
     <link rel="stylesheet" href="template/css/fonts-icons.css" />
     <link rel="stylesheet" href="template/css/bundle.min.css" />
-
+    <link rel="stylesheet" href="template/fonts/font-awesome-pro/css/all.min.css" />
     <link href="LandingPage.styles.css" rel="stylesheet" />
-
-    <!-- Page Title -->
-    <title>Building Custom Software Solution Web and Mobile applications - NativoPlus</title>
-
+    <link rel="icon" href="template/images/assets/logo.png">
+    <meta name="ahrefs-site-verification" content="40dff77532c1c319d3a094683d2ff3b386695d515ebd36de41674e368f9af4bd">
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
@@ -60,17 +62,32 @@
     <!-- Blazor -->
     <script src="_framework/blazor.server.js" autostart="false"></script>
 
-    <!-- Template -->
-    <script src="@lottieUrl"></script>
-    <script src="template/js/jquery.js"></script>
-    <script src="template/js/modal.js"> </script>
-    <script src="template/js/plugins.min.js"></script>
+    <!-- Scripts -->
+    <script defer src="template/js/jquery.js"></script>
+    <script defer src="template/js/modal.js"> </script>
+    <script defer src="template/js/plugins.min.js"></script>
     <script>
         Blazor.start().then(function() {
             var customScript = document.createElement('script');
+            customScript.setAttribute('defer', 'defer');
             customScript.setAttribute('src', 'template/js/scripts.min.js');
             document.head.appendChild(customScript);
+
+            var lottieScript = document.createElement('script');
+            lottieScript.setAttribute('async', 'async');
+            lottieScript.setAttribute('src', '@lottieUrl');
+            document.head.appendChild(lottieScript);
         });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K48QSB7DXH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K48QSB7DXH');
     </script>
 </body>
 </html>

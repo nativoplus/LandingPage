@@ -10,7 +10,8 @@
     <header class="main-heading text-center row pad-bottom-lg">
         <div class="col-xs-12">
             <h2 class="heading">Our Cases</h2>
-            Explore some of our masterpieces. Lorem Ipsum dolores, lorem ipsum dolores
+           Check out some of the work we’ve done and the process of crafting 
+           <br />ideas into reality. Learn how we can do it for you.
         </div>
     </header><!-- end of main-heading -->
     <!-- start of isotop-holder -->
@@ -19,7 +20,7 @@
         <div class="item col-xs-12 col-sm-6 col-md-3 mar-bottom-xs filter2">
             <!-- start of portfolio-box -->
             <div class="portfolio-box">
-                <img src="@Portfolio[0].ImgUrls[0]" alt="image description" class="img-responsive">
+                <img src="@Portfolio[0].SmallImgUrls[0]" alt="image description" class="img-responsive" width="720" height="480" />
                 <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[0].Name))">
                     <div class="holder">
                         <div class="frame">
@@ -34,7 +35,7 @@
         <div class="item col-xs-12 col-sm-6 col-md-3 mar-bottom-xs filter1">
             <!-- start of portfolio-box -->
             <div class="portfolio-box">
-                <img src="@Portfolio[1].ImgUrls[0]" alt="image description" class="img-responsive">
+                <img src="@Portfolio[1].SmallImgUrls[0]" alt="image description" class="img-responsive" width="720" height="480" />
                 <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[1].Name))">
                     <div class="holder">
                         <div class="frame">
@@ -49,7 +50,7 @@
         <div class="item col-xs-12 col-md-6 mar-bottom-xs filter3">
             <!-- start of portfolio-box -->
             <div class="portfolio-box">
-                <img src="@Portfolio[2].ImgUrls[0]" alt="image description" class="img-responsive">
+                <img src="@Portfolio[2].SmallImgUrls[0]" alt="image description" class="img-responsive" width="720" height="480" />
                 <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[2].Name))">
                     <div class="holder">
                         <div class="frame">
@@ -65,7 +66,7 @@
             <!-- start of portfolio-box -->
             <div class="portfolio-box">
                 <div class="bg-overlay" style="opacity: .25;"></div>
-                <img src="@Portfolio[3].ImgUrls[0]" alt="image description" class="img-responsive">
+                <img src="@Portfolio[3].SmallImgUrls[0]" alt="image description" class="img-responsive" width="720" height="480" />
                 <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[3].Name))">
                     <div class="holder">
                         <div class="frame">
@@ -81,7 +82,7 @@
             <!-- start of portfolio-box -->
             <div class="portfolio-box">
 
-                <img src="@Portfolio[6].ImgUrls[1]" alt="image description" class="img-responsive">
+                <img src="@Portfolio[4].SmallImgUrls[0]" alt="image description" class="img-responsive" width="720" height="480" />
                 <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[6].Name))">
                     <div class="holder">
                         <div class="frame">
@@ -98,7 +99,7 @@
             <div class="portfolio-box">
                 <div class="bg-overlay" style="opacity: .25;"></div>
 
-                <img src="@Portfolio[5].ImgUrls[0]" alt="image description" class="img-responsive">
+                <img src="@Portfolio[6].SmallImgUrls[0]" alt="image description" class="img-responsive" width="720" height="480" />
                 <a class="over" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo(@Portfolio[5].Name))">
                     <div class="holder">
                         <div class="frame">
@@ -112,9 +113,7 @@
 
     </div><!-- end of isotop-holder -->
     <div class="col-xs-12">
-
-      <a class="pull-right" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo())">View All &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-
+      <a class="pull-right view-all" href="#" @onclick:preventDefault @onclick = "@(() => NavigateTo())">View All &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
     </div>
 </div>
 @code {

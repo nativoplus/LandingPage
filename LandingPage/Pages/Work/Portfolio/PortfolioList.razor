@@ -21,21 +21,37 @@
         <!-- end of page header -->
         <main id="main">
             <!-- start of page-header -->
-            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/projects.webp);">
+            @*            <div class="page-header text-center bg-img-full" style="background-image: url(template/images/bg/projects.webp);">
                 <span class="bg-overlay"></span>
                 <div class="container pad-top-xs pad-bottom-lg">
-                    <div class="row pad-top-md pad-bottom-xs">
-                        <div class="col-xs-12">
-                            <!-- start of breadcrumbs -->
-                            <ul class="list-inline breadcrumbs">
-                                <li><a @onclick:preventDefault @onclick="@(() => NavigateTo("/"))">Home</a></li>
-                                <li>Our Cases</li>
-                            </ul><!-- end of breadcrumbs -->
+                <div class="row pad-top-md pad-bottom-xs">
+                <div class="col-xs-12">
+                <!-- start of breadcrumbs -->
+                <ul class="list-inline breadcrumbs">
+                <li><a @onclick:preventDefault @onclick="@(() => NavigateTo("/"))">Home</a></li>
+                <li>Our Cases</li>
+                </ul><!-- end of breadcrumbs -->
+                </div>
+                </div>
+                </div>
+                </div>*@
+            <section class="main-banner text-center">
+                <!-- slide -->
+                <div class="slide bg-img-full" style="background-image: url(template/images/bg/projects.webp);">
+                    <span class="bg-overlay"></span>
+                    <div class="caption">
+                        <div class="holder">
+                            <h1 class="heading">Portfolio</h1>
+                            <p>We work closely with businesses and change the world for<br /> the better with small teams, but a strong community.</p>
+                            <a href="https://4sdr7v8wyra.typeform.com/to/W1XrxyGw" class="btn btn-green-custom-main text-uppercase">Let's Talk!</a>
                         </div>
                     </div>
                 </div>
-            </div><!-- end of page-header -->
-            <div class="container pad-top-md">
+                <a href="#" data-scroll-nav="1" class="btn-bottom pe-7s-angle-down" aria-label="Scroll to the next section of the page"></a>
+            </section>
+            <!-- end of main banner -->
+            <!-- end of page-header -->
+            <div class="container pad-top-md" data-scroll-index="1">
                 @*<CategoriesFilter @bind-ActiveFilter=ActiveFilter />*@
 
                 <div class="row mar-bottom-md">
@@ -47,6 +63,7 @@
                             <div class="item col-xs-12 col-sm-6 col-md-4 All mar-bottom-xs">
                                 <!-- start of product-box -->
                             <div class="product-box">
+                                  
                                     <a href="" @onclick:preventDefault @onclick="@(() => NavigateTo(project.Name))">
                                         <img loading="lazy" src="@project.ImgUrls[0]" alt="image" class="img-responive">
                                     </a>
@@ -76,7 +93,7 @@
     <BackToTop />
 </div><!-- end of main page wrapper -->
 @code {
-    public List<Portfolio> Portfolio = new List<Portfolio>{};
+    public List<Portfolio> Portfolio = new List<Portfolio> { };
     public string ActiveFilter { get; set; } = "All";
 
 
