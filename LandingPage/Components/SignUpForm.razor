@@ -1,0 +1,113 @@
+﻿@using System
+@using System.Globalization
+@using System.Text.RegularExpressions
+@using SendGrid
+
+@if (Submitted == true)
+{
+    <p data-role="confirmation-message" class="form-message">Thanks for signing up!</p>
+}
+else
+{
+    <div class="sendgrid-signup-form">
+        <div class="form" style="min-width: 370px; width: 370px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border-color: rgb(28, 125, 68); border-width: 0px; border-radius: 10px; padding: 20px 35px;">
+            <div class="fields-wrapper">
+                <section>
+                    <h1>Subscribe to our newsletter</h1>
+                    <p>Don’t be a stranger. Stay in touch! Sign up to get awesome updates from Nativoplus!</p>
+                </section>
+                <label class="input-label" for="email">Email</label>
+                <div class="input-wrap @(EmailIsValid ? "" : "has-error")"><input @bind="Email" class="email-input" type="text" id="email" name="email" placeholder="Please enter your email." /></div>
+                <p data-name="email" data-role="required" class="error @(EmailIsValid ? "hidden" : "")"><span>Please provide a valid email.</span></p>
+                <div class="submit-container">
+                    <button @onclick=@(() => Subscribe()) class="submit-button" style="background-color: rgb(28, 125, 68); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-width: 0px; border-radius: 24px; padding: 12px 24px;">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private string? ApiKey = "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";
+    private string? Email = string.Empty;
+    private bool EmailIsValid = true;
+    private bool Submitted = false;
+    private SendGridClient? _client;
+
+    protected override void OnInitialized()
+    {
+        _client = new SendGridClient(ApiKey);
+    }
+
+    private async Task Subscribe()
+    {
+        if (IsValidEmail(Email ?? string.Empty))
+        {
+            var data = @"{
+    ""contacts"": [
+    {
+    ""email"": " + $@"""{Email}""" + @"
+    }
+    ]
+    }";
+
+            if (_client is not null)
+            {
+                var response = await _client.RequestAsync(
+                    method: SendGridClient.Method.PUT,
+                    urlPath: "marketing/contacts",
+                    requestBody: data
+                );
+
+                Submitted = true;
+            }
+        }
+        else
+        {
+            EmailIsValid = false;
+        }
+    }
+
+    private bool IsValidEmail(string email)
+    {
+        if (string.IsNullOrWhiteSpace(email))
+            return false;
+
+        try
+        {
+            // Normalize the domain
+            email = Regex.Replace(email, @"(@)(.+)$", DomainMapper, RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+            // Examines the domain part of the email and normalizes it.
+            string DomainMapper(Match match)
+            {
+                // Use IdnMapping class to convert Unicode domain names.
+                var idn = new IdnMapping();
+
+                // Pull out and process domain name (throws ArgumentException on invalid)
+                string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                return match.Groups[1].Value + domainName;
+            }
+        }
+        catch (RegexMatchTimeoutException e)
+        {
+            return false;
+        }
+        catch (ArgumentException e)
+        {
+            return false;
+        }
+
+        try
+        {
+            return Regex.IsMatch(email,
+                @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+        }
+        catch (RegexMatchTimeoutException)
+        {
+            return false;
+        }
+    }
+}

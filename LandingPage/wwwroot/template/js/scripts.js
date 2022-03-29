@@ -497,7 +497,10 @@ $(document).ready(function () {
         $('.simple-hover-modal').show();
     });
 
-    $('.simple-hover-modal').click(function () {
-        $('.simple-hover-modal').hide();
+    $('.simple-hover-modal').click(function (e) {
+        var senderElement = e.target;
+        if ($(senderElement).is("div.simple-hover-modal")) {
+            $('.simple-hover-modal').hide();
+        }
     });
 });
