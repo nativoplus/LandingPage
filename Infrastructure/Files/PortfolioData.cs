@@ -277,6 +277,7 @@ namespace LandingPage.Infrastructure.Files
                 HeaderImageUrl =  "template/images/assets/fm/fertile-header.webp",
                 ImgUrls = new List<string>
                 {
+                    "template/images/assets/fm/fertilemind-cover.webp",
                     "template/images/assets/fm/fertilemind.webp",
                     "template/images/assets/fm/fertile-header.webp",
 
@@ -850,6 +851,7 @@ namespace LandingPage.Infrastructure.Files
                 HeaderImageUrl =  "template/images/assets/sc/sportsman-header.webp",
                 ImgUrls = new List<string>
                 {
+                    "template/images/assets/sc/sportman.webp",
                     "template/images/assets/sc/sportcap.webp",
                     "template/images/assets/sc/sc2.webp",
                 },
