@@ -4,8 +4,13 @@
     border-bottom: 1px solid $color3;
 }
 
-.collapsible {
+.collapsible.subheading span {
     cursor: pointer;
+    color: #1c7d44;
+
+    &:hover {
+        color: #26a65b;
+    }
 }
 
 .pm0 {

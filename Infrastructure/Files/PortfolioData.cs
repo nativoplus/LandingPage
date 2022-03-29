@@ -143,9 +143,10 @@ namespace LandingPage.Infrastructure.Files
                     ),
                 SmallImgUrls = new List<string>
                 {
-                    "template/images/assets/techcu/techcu.webp"
+                    "template/images/assets/techcu/techcu-small.webp"
                 },
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/techcu/techcu.webp",
                     "template/images/assets/techcu/techcu_mobile.webp",
                 },
@@ -215,10 +216,12 @@ namespace LandingPage.Infrastructure.Files
                 {
                 },
                 HeaderImageUrl = "template/images/assets/afa/afa-header.webp",
-                SmallImgUrls = new List<string>{
-                    "template/images/assets/afa/afa.webp",
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/afa/afa-small.webp",
                 },
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/afa/afa.webp",
                 },
                 Services = new List<string>
@@ -272,7 +275,8 @@ namespace LandingPage.Infrastructure.Files
                 showcase its apps and provide a tool for users to interact with the app more easily than before. We decided to build a UI based on the React 
                 framework. </p>"),
                 HeaderImageUrl =  "template/images/assets/fm/fertile-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/fm/fertilemind.webp",
                     "template/images/assets/fm/fertile-header.webp",
 
@@ -395,7 +399,8 @@ namespace LandingPage.Infrastructure.Files
                 {
                 },
                 HeaderImageUrl = "template/images/assets/hv/happyvolts-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/hv/hv.webp",
                     "template/images/assets/hv/hv2.webp"
                 },
@@ -598,7 +603,8 @@ namespace LandingPage.Infrastructure.Files
                 </div>
         "),
                 HeaderImageUrl =  "template/images/assets/maxana/maxana-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/maxana/maxana.webp",
                 },
                 SmallImgUrls = new List<string>
@@ -698,7 +704,8 @@ namespace LandingPage.Infrastructure.Files
                 {
                 },
                 HeaderImageUrl =  "template/images/assets/st/stripe-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/st/stripe.webp",
                     "template/images/assets/st/stripe-header.webp",
 
@@ -775,7 +782,8 @@ namespace LandingPage.Infrastructure.Files
                 {
                 },
                 HeaderImageUrl =  "template/images/assets/westcor/westcor-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/westcor/westcor.webp",
                     //"template/images/assets/gb/templates.jpg",
                 },
@@ -840,9 +848,14 @@ namespace LandingPage.Infrastructure.Files
                 work with.</p>
                 "),
                 HeaderImageUrl =  "template/images/assets/sc/sportsman-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/sc/sportcap.webp",
                     "template/images/assets/sc/sc2.webp",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/sc/sportcap-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -898,9 +911,14 @@ namespace LandingPage.Infrastructure.Files
                 for sourcing new suppliers.</p>
                 "),
                 HeaderImageUrl =  "template/images/assets/sc/kati-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/sc/ksc1.webp",
                     "template/images/assets/sc/sportcap.webp",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/sc/ksc1-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -948,9 +966,14 @@ namespace LandingPage.Infrastructure.Files
                 Body = new MarkupString(@"<p>Farm to Market Bread Company came to us because they needed various services, including collateral and sales promotion, 
                 marketing campaigns, display designs, a logo, and identity development.</p>"),
                 HeaderImageUrl =  "template/images/assets/ftmb/farm-header.webp",
-                ImgUrls = new List<string>{
+                ImgUrls = new List<string>
+                {
                     "template/images/assets/ftmb/ftmb.webp",
                     "template/images/assets/ftmb/ftmb2.webp",
+                },
+                SmallImgUrls = new List<string>
+                {
+                    "template/images/assets/ftmb/ftmb-small.webp"
                 },
                 Services = new List<string>
                 {

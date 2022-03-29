@@ -35,6 +35,12 @@ namespace LandingPage
                 app.UseHsts();
             }
 
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Append(Microsoft.Net.Http.Headers.HeaderNames.AcceptEncoding, "gzip, compress, br");
+                await next();
+            });
+
             app.UseHttpsRedirection();
             app.UseResponseCompression();
             app.UseStaticFiles();

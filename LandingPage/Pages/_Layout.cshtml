@@ -50,9 +50,11 @@
     <link rel="stylesheet" href="template/css/plugin-resets.css" />
     <link rel="stylesheet" href="template/css/fonts-icons.css" />
     <link rel="stylesheet" href="template/css/bundle.min.css" />
-    <link rel="stylesheet" href="template/fonts/font-awesome-pro/css/all.min.css" />
+    <link rel="stylesheet" href="template/fonts/font-awesome-pro/css/custom.css" />
+
     <link href="LandingPage.styles.css" rel="stylesheet" />
     <link rel="icon" href="template/images/assets/logo.png">
+
     <meta name="ahrefs-site-verification" content="40dff77532c1c319d3a094683d2ff3b386695d515ebd36de41674e368f9af4bd">
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
@@ -74,14 +76,14 @@
             document.head.appendChild(customScript);
 
             var lottieScript = document.createElement('script');
-            lottieScript.setAttribute('async', 'async');
+            lottieScript.setAttribute('defer', 'defer');
             lottieScript.setAttribute('src', '@lottieUrl');
             document.head.appendChild(lottieScript);
         });
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K48QSB7DXH"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-K48QSB7DXH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
