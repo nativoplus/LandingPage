@@ -16,10 +16,9 @@ namespace LandingPage.Infrastructure.Files
                 in their childbirth preparation. Mindfulness, breathing techniques, affirmations, and hypnosis are
                 combined with evidence-based research and technology to provide a holistic birthing experience.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>Gentlebirth was looking for improved the design, modified the structure, 
-                and refactored the implementation of multiple React components within a responsive web app, accessed by thousands 
-                of users, based on business requirements, user requests, and customer feedback. Additionally, they were looking 
-                to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
+                Body = new MarkupString(@"<p>Gentlebirth was looking for improved design, modified structure, and refactored implementation of multiple React components
+                within a responsive web app that thousands of users access daily. Changes needed to be made based on business requirements, user requests, and customer feedback. 
+                Additionally, they were looking to streamline the process of managing sessions, journeys, playlists, and promotions.</p>"),
                 HeaderImageUrl =  "template/images/assets/gb/gentlebirth-header.webp",
                 ImgUrls = new List<string>
                 {
@@ -97,26 +96,24 @@ namespace LandingPage.Infrastructure.Files
                 Instead of maximizing profits to pay company stockholders, TechCU invests resources to deliver superior rates, lower fees,
                 and outstanding service and member benefits.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>TechCU was interested in creating a member-centered website that provided members with the
-                information they needed and represented their values as well. We have provided TechCU with a number of services, one of these
-                is Restful Apis, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created
-                Fintech-focused APIs so that multiple partners can process loans, access member information, create transfers, and manage external
-                loans using Azure logic apps and azure functions.</p>
+                Body = new MarkupString(@"<p>TechCU was interested in creating a member-centered website that provided members with the 
+                information they needed and represented their values. We have provided TechCU with several services; one of these is Restful 
+                APIs, which can process thousands of loans daily in a consortium-like environment from multiple partners. We created FinTech 
+                focused APIs so that numerous partners can process loans, access member information, initiate transfers, and manage external loans using Azure logic apps and Azure functions.</p>
                 <div class='row' style='margin-bottom: 3rem'>
                     <div class='col-md-12'>
                         <p>
-                            Additionally, we have delivered extensive support
-                            for their legacy apps, improving code quality, creating development, staging and production environments as well. Our long-standing
-                            mission has been to position TechCU in the fintech industry, by providing enterprise services, APis, infrastructure that enhance
-                            their offerings to the fintech world, granting them multiple partnerships across automobile and solar industries with many more to
-                            come.
+                           Additionally, we have delivered extensive support for their legacy apps, improving code quality, creating development,
+                           staging, and production environments. Our long-standing mission has been to position TechCU in the FinTech industry by
+                           providing enterprise services, APIs, infrastructure that enhances their offerings to the FinTech world by granting them 
+                           multiple partnerships across automobile and solar industries with many more to come.
                         </p> 
                     </div>
                     <div class='col-md-12'>
                         <p>
-                            Digital Account Opening is a product for a credit union which offers 
-                            its customers to open an account with the union, without the customer 
-                            ever interacting without an official, everything is done online.
+                           Digital Account Opening is a product for a credit union that offers its customers a way to open an account with the union
+                           without the customer ever interacting with an actual human being or going into a bank branch. Absolutely everything is done 
+                           online at the user’s convenience, for example, electronic in-house and external transfers when funding an account.
                         </p> 
                         <p>
                             This application has the following features: 
@@ -207,17 +204,10 @@ namespace LandingPage.Infrastructure.Files
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@"
                 <p>
-                    We create for Advantage for Analysts Inc a member-centered
-                    web application that is not only conducive to their needs and
-                    requirements, but also allows clients to communicate, review,
-                    and interact as a teamwork. Our Restful APIs are responsible
-                    for processing thousands of loans daily in a consortium-like
-                    environment from multiple partners, allowing members to access
-                    their loan information from anywhere in the world. Fintechfocused
-                    APIs allow members to get loans from various partners
-                    on the same platform, process loans instantly, create transfers
-                    between different member accounts, lend against external
-                    entities, and more.
+                   We created for Advantage for Analysts Inc a member-centered web application that is conducive to their needs and requirements and allows clients 
+                   to communicate, review, and interact as a team. Our Restful APIs are responsible for processing thousands of loans daily in a consortium-like environment 
+                   from multiple partners, allowing members to access their loan information anywhere. FinTech focused APIs enable members to get loans from various partners 
+                   on the same platform, process loans instantly, create transfers between different member accounts, lend against external entities, etc.
                 </p>
                 <iframe style='border: 1px solid rgba(0, 0, 0, 0.1);' width='100%' height='800px' src='https://www.figma.com/proto/Mxc6FeoJNVX2PxMA8DbgzZ/AFA?embed_host=share&kind=&node-id=315%3A8230&starting-point-node-id=62%3A4121' allowfullscreen></iframe>
 
@@ -278,11 +268,9 @@ namespace LandingPage.Infrastructure.Files
                 guidance from the Award Winning FertileMind Program with an
                 interface to make your fertility journey effective and stress-free.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>Fertilemind needed an App focused on UX and a clean and easyto-
-                use platform. We develop a user interface to showcase its
-                apps and provide a tool for its users to interact with the app. We
-                decided to build a UI based on the React framework, which was
-                already being used in the backend.</p>"),
+                Body = new MarkupString(@"<p>Fertilemind needed an App focused on UX and a clean and easy-to-use platform. We developed a user interface to 
+                showcase its apps and provide a tool for users to interact with the app more easily than before. We decided to build a UI based on the React 
+                framework. </p>"),
                 HeaderImageUrl =  "template/images/assets/fm/fertile-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/fm/fertilemind.webp",
@@ -343,11 +331,9 @@ namespace LandingPage.Infrastructure.Files
                 work, we analyzed their current status and proposed a new visual
                 identity for them, seeking confidence, trust and intelligence.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>HappyVolts is a brand that has BTB and BTC customers. These
-                groups have different profiles, besides having different languages
-                and demographics. So, in order to improve the experience and
-                turn HappyVolts leads into clients, we use Design Thinking tools to
-                understand how our marketing and sales strategies should perform.</p>
+                Body = new MarkupString(@"<p>HappyVolts is a brand that has BTB and BTC customers. These groups have different profiles 
+                and have various languages and demographics to complicate matters. So, to improve the experience and turn HappyVolts leads 
+                into clients, we used Design Thinking tools to understand how our marketing and sales strategies should perform. </p>
                 <h5>
                     CHALLENGE:
                 </h5>
@@ -359,13 +345,11 @@ namespace LandingPage.Infrastructure.Files
                     ANALYSIS:
                 </h5>
                 <p>
-                    We primarily conduct desk research, we perform a top-down evaluation,
-                    and compare our findings with industry benchmarks. Next, we hold
-                    interviews with current customers dividing the results according to BTB
-                    and BTC. Once this phase was complete, we assemble a buyer persona
-                    template and a costumer journey map containing useful information
-                    about potential opportunities, touchpoints, sales tools and an analysis of
-                    outside and inside actors.
+                   We primarily conduct desk research, perform a top-down evaluation, and compare our findings with industry benchmarks. 
+                   Next, we hold interviews with current customers dividing the results according to BTB and BTC. Once this phase was 
+                   complete, we assembled a buyer persona template and a customer journey map containing helpful information about potential 
+                    opportunities, touchpoints, sales tools, and analysis of outside and inside actors.
+
                 </p>
                 <h5>
                     SOLUTION:
@@ -384,18 +368,16 @@ namespace LandingPage.Infrastructure.Files
                     SOCIAL MEDIA:
                 </h6>
                 <p>
-                    We create social media content for several platforms and manage their social 
-                    media accounts such as Instagram, Facebook, and LinkedIn. 
-                    We also create promotions and ads on those accounts.
+                   We create social media content for several platforms and manage their social media accounts such as Instagram, 
+                   Facebook, and LinkedIn. We also create promotions and advertisements on those accounts.
+
                 </p>
                 <h5>
                     MARKETING:
                 </h5>
                 <p>
-                    HappyVolts is interested in exhibiting at a variety of
-                    international fairs. We have created POP and other
-                    promotional material for them, including banners,
-                    booth design and other items.
+                   HappyVolts is interested in exhibiting at a variety of international fairs. We have created POP and other promotional
+                   material for them, including banners, booth designs, and other marketing and promotional items. 
                 </p>
                 <div class='row' style='margin-bottom: 3rem'>
                     <div class='col-md-12'>
@@ -460,11 +442,8 @@ namespace LandingPage.Infrastructure.Files
                 ProjectId = 6,
                 Name = "Maxana",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"Maxana is a company partner with a proven track record in the
-                creation of new Fin tech Digital Transformation solutions and
-                services to the market that create significant customer value
-                enabled by technological expertise and an ecosystem
-                of partners.",
+                Headline= @"Maxana is a company partner with a proven track record in creating new FinTech Digital Transformation solutions and services to the 
+                market that make significant customer value enabled by technological expertise and an ecosystem of partners.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@"
                 <div>
@@ -472,8 +451,8 @@ namespace LandingPage.Infrastructure.Files
                    
 				    <div class='mar-bottom-lg'>
 						    <p>
-                               Maxana is a premier staffing solution focused on technology sector. They are build tools to organize talent and provide a conduit between employers
-and contractors in the payment's space. 
+                            Maxana is a premier staffing solution focused on the technology sector. They built tools to organize talent and provide a conduit 
+                            between employers and contractors in the payment space.
                             </p>
 					</div>
                    
@@ -496,7 +475,7 @@ and contractors in the payment's space.
                                 <div class='holder'>
                                     <span class='title large'>Design</span>
                                     <p>
-                                       The capabilities were mapped to microservices using domaindriven
+                                       The capabilities were mapped to microservices using domain-driven
                                        design patterns like “ports and adapters,” which clarified the
                                        separation of concerns and enforced architecture. The infrastructure
                                        provisioning was 100% automated.
@@ -533,7 +512,7 @@ and contractors in the payment's space.
                         <div class='mar-bottom-sm'>
                             <span class='subheading mar-bottom-xs'>Problem Statement</span>
 						    <p>
-                              A financial services company wanted to expedite and expand customer onboardingcapabilities leveraging an emerging low code platform to:
+                              A financial services company wanted to expedite and expand customer onboarding capabilities leveraging an emerging low code platform to:
                             </p>
 
                             <ul>
@@ -565,8 +544,8 @@ and contractors in the payment's space.
                         <div class='mar-bottom-sm'>
                             <span class='subheading mar-bottom-xs'>Problem Statement</span>
 						    <p>
-                                A fintech needed to build a payments intelligence platform, including a unified system that consolidated risk, compliance, and investigative 
-                                tooling with metrics enabling a single lens for all payment transactions for the purposes of fraud and compliance-based investigations.​
+                               A FinTech needed to build a payments intelligence platform, including a unified system that consolidated risk, compliance, and investigative
+                               tooling with metrics enabling a single lens for all payment transactions for fraud and compliance-based investigations.​
                             </p>
                         </div>
                         <div class='mar-bottom-sm'>
@@ -581,7 +560,7 @@ and contractors in the payment's space.
                             <span class='subheading mar-bottom-xs'>Outcome</span>
                             <ul>
                                 <li>Reduction in issues related to sanctions and fraudulent payments</li>
-                                <li>Scalable and extensible tooling infrastructure that was flexible, configurable, customizable, and reusable​</li>
+                                <li>Scalable and extendable tooling infrastructure was flexible, configurable, customizable, and reusable​</li>
                                 <li>Increased operational efficiency​</li>
                                 <li>Improved accuracy​</li>
                             </ul>
@@ -592,7 +571,7 @@ and contractors in the payment's space.
                         <div class='mar-bottom-sm'>
                             <span class='subheading mar-bottom-xs'>Problem Statement</span>
 						    <p>
-                                A fintech needed to create extraordinary user experiences across all digital banking channels for a truly omni-channel experience.
+                               A FinTech needed to create extraordinary user experiences across all digital banking channels for a truly omnichannel experience.
                             </p>
                         </div>
                         <div class='mar-bottom-sm'>
@@ -671,15 +650,13 @@ and contractors in the payment's space.
                 ProjectId = 7,
                 Name = "Stripe",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"The main goal of this project was to use configure a production ready instance of elastic search , wireframes, mocks ups and architecture
-                to connect people seeking meaninfull work with the right opportunities available for them",
+                Headline= @"The main goal of this project was to configure a production-ready instance of elastic search, wireframes, mocks ups, and architecture 
+                to connect people seeking meaningful work with the right opportunities available for them.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@"
                 <p>
-                    The platform uses friendly design to 
-                    connect enterprises with qualified, certified Stripe-certified engineers and other 
-                    technical resources that can readily and expertly implement integrations, 
-                    reducing time to market and revenue.
+                   The platform uses a friendly design to connect enterprises with qualified and certified Stripe engineers and other technical resources that can 
+                   readily and expertly implement integrations while reducing time to market and generating revenue.
                 </p>
              
                 <div >
@@ -695,7 +672,7 @@ and contractors in the payment's space.
                         Design:
                     </h5>
                     <p>
-                       The capabilities were mapped to microservices using domaindriven
+                       The capabilities were mapped to microservices using domain-driven
                        design patterns like “ports and adapters,” which clarified the
                        separation of concerns and enforced architecture. The infrastructure
                        provisioning was 100% automated.
@@ -717,7 +694,8 @@ and contractors in the payment's space.
                     </p>
                     
                 </div>
-              "){
+              ")
+                {
                 },
                 HeaderImageUrl =  "template/images/assets/st/stripe-header.webp",
                 ImgUrls = new List<string>{
@@ -778,11 +756,10 @@ and contractors in the payment's space.
                 ProjectId = 8,
                 Name = "Westcor",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"Westcor, the largest privately held underwriter in the United States, is focused on 
-                creating and promoting a culture where innovation is abundant at every level while at the same 
-                time adhering to the strictest of compliance regulations and providing essential risk management 
-                training. These attributes have secured Westcor as an industry leader in providing value-added 
-                solutions to agents, lenders, and customers.",
+                Headline= @"Westcor, the largest privately held underwriter in the United States, is focused on creating and 
+                promoting a culture where innovation is abundant at every level while adhering to the strictest of compliance regulations 
+                and providing essential risk management training. These attributes have secured Westcor as an industry leader in providing 
+                value-added solutions to agents, lenders, and customers.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@"
                 <p>
@@ -794,7 +771,8 @@ and contractors in the payment's space.
 
                 <iframe style='border: 1px solid rgba(0, 0, 0, 0.1);' width='100%' height='800px' src='https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmPvrUb7LgOU4ADmjVDJLGI%2Fwestcor%3Fnode-id%3D234%253A15836%26starting-point-node-id%3D152%253A10063' allowfullscreen></iframe>
 
-              "){
+              ")
+                {
                 },
                 HeaderImageUrl =  "template/images/assets/westcor/westcor-header.webp",
                 ImgUrls = new List<string>{
@@ -907,12 +885,8 @@ and contractors in the payment's space.
                 ProjectId = 10,
                 Name = "Kati Sportcap & Bag",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"Kati Sportcap & Bag is an established distributor of promotional
-                products, caps, and bags, operated in Houston, Texas. For
-                more than 35 years, Kati Sportcap & Bag has serviced the
-                promotional products and decorated apparel industry. It now
-                carries 17 brands, 326 styles, and over 2,800 stock-keeping
-                units.",
+                Headline= @"Kati Sportcap & Bag is an established distributor of promotional products, caps, and bags in Houston, Texas. For more than 35 years, Kati Sportcap 
+                & Bag has serviced the promotional products and decorated apparel industry. It now carries 17 brands, 326 styles, and over 2,800 stock-keeping units.",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
                 Body = new MarkupString(@"<p>Kati Sportcap & Bag sought a website partner to create an
                 e-commerce site that would showcase its products and provide
@@ -968,16 +942,11 @@ and contractors in the payment's space.
                 ProjectId = 11,
                 Name = "Farm to Market Bread Co.",
                 // Uses String Literal to make the string more readable on development. 
-                Headline=@"Farm to Market Bread Co. is a company that answers 
-                the need for fresh bread baked from quality ingredients. Farm 
-                to Market Bread is the largest fresh bread bakery in the area 
-                of Kansas City, employing 65 people who bake, pack, and deliver 
-                fresh bread to 200 grocery stores and restaurants.",
+                Headline= @"Farm to Market Bread Co. is a company that answers the need for fresh bread baked from quality ingredients. Farm to Market Bread is 
+                the largest fresh bread bakery in Kansas City, employing 65 people who bake, pack, and deliver fresh bread to 200 grocery stores and restaurants. ",
                 //Managing Body as a Markup string to be able to generate body more dynamically. 
-                Body = new MarkupString(@"<p>Farm to Market Bread Company engaged 
-                us because they needed an array of services including collateral 
-                and sales promotion, marketing campaigns, display design, logo, 
-                and identity development.</p>"),
+                Body = new MarkupString(@"<p>Farm to Market Bread Company came to us because they needed various services, including collateral and sales promotion, 
+                marketing campaigns, display designs, a logo, and identity development.</p>"),
                 HeaderImageUrl =  "template/images/assets/ftmb/farm-header.webp",
                 ImgUrls = new List<string>{
                     "template/images/assets/ftmb/ftmb.webp",
