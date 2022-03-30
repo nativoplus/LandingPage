@@ -857,7 +857,7 @@ namespace LandingPage.Infrastructure.Files
                 },
                 SmallImgUrls = new List<string>
                 {
-                    "template/images/assets/sc/sportcap-small.webp"
+                    "template/images/assets/sc/sportman-small.webp"
                 },
                 Services = new List<string>
                 {
@@ -920,7 +920,7 @@ namespace LandingPage.Infrastructure.Files
                 },
                 SmallImgUrls = new List<string>
                 {
-                    "template/images/assets/sc/ksc1-small.webp"
+                    "template/images/assets/sc/kati-small.webp"
                 },
                 Services = new List<string>
                 {
