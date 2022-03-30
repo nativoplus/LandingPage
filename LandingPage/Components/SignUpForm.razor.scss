@@ -8,13 +8,20 @@
 }
 
 .form {
-    margin: 25px 5px 0;
+    margin: 25px auto 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     border-style: solid;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
     font-size: 16px;
+    width: 350px;
+    min-width: 350px;
+
+    @media (min-width: 768px) {
+        width: 370px;
+        margin: 25px 5px 0;
+    }
 
     section > h1, section > p {
         margin: 0 0 20px;
@@ -118,4 +125,8 @@
 
 .form-message {
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1c7d44;
+    margin: 20px 0;
 }
