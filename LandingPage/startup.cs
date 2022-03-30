@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.ResponseCompression;
+﻿using LandingPage.Data;
+using Microsoft.AspNetCore.ResponseCompression;
 
 namespace LandingPage
 {
@@ -6,7 +7,7 @@ namespace LandingPage
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration.BuildCustomConfiguration();
         }
 
         public IConfiguration Configuration { get; }
@@ -19,6 +20,11 @@ namespace LandingPage
             services.AddResponseCompression();
             services.AddRazorPages();
             services.AddServerSideBlazor(o => o.DetailedErrors = true);
+
+            services.AddOptions<SendGridConfig>().Configure(options =>
+            {
+                options.SignUpFormApiKey = Configuration["NativoSignUpFormApiKey"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,7 +1,10 @@
-﻿@using System
+﻿@using LandingPage.Data;
+@using Microsoft.Extensions.Options
+@using System
 @using System.Globalization
 @using System.Text.RegularExpressions
 @using SendGrid
+@inject IOptions<SendGridConfig> options
 
 @if (Submitted == true)
 {
@@ -10,7 +13,15 @@
 else
 {
     <div class="sendgrid-signup-form">
-        <div class="form" style="min-width: 370px; width: 370px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border-color: rgb(28, 125, 68); border-width: 0px; border-radius: 10px; padding: 20px 35px;">
+        
+        @if (ShowSpinner == true)
+        {
+            <div class="loader-container">
+                <div class="spinner spinner-round"></div>
+            </div>
+        }
+
+        <div class="form" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); border-color: rgb(28, 125, 68); border-width: 0px; border-radius: 10px; padding: 20px 35px;">
             <div class="fields-wrapper">
                 <section>
                     <h1>Subscribe to our newsletter</h1>
@@ -28,15 +39,18 @@ else
 }
 
 @code {
-    private string? ApiKey = "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";
     private string? Email = string.Empty;
     private bool EmailIsValid = true;
     private bool Submitted = false;
+    private bool ShowSpinner = false;
     private SendGridClient? _client;
 
     protected override void OnInitialized()
     {
-        _client = new SendGridClient(ApiKey);
+        string? sendGridApiKey = options.Value.SignUpFormApiKey;
+
+        if (string.IsNullOrEmpty(sendGridApiKey) == false)
+            _client = new SendGridClient(sendGridApiKey);
     }
 
     private async Task Subscribe()
@@ -53,6 +67,8 @@ else
 
             if (_client is not null)
             {
+                ShowSpinner = true;
+
                 var response = await _client.RequestAsync(
                     method: SendGridClient.Method.PUT,
                     urlPath: "marketing/contacts",
