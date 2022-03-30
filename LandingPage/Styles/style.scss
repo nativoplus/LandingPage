@@ -3792,12 +3792,12 @@ button,
 #back-top {
     bottom: 0;
     opacity: 0;
-    z-index: 1;
+    z-index: 0;
     right: 20px;
     width: 50px;
     color: #fff;
     height: 50px;
-    z-index: 9999;
+    z-index: 0;
     cursor: pointer;
     font-size: 25px;
     position: fixed;
@@ -3806,10 +3806,10 @@ button,
     border-radius: 3px;
     background: #252525;
     transition: all .6s ease;
-    transform: translateY(40px);
-    -ms-transform: translateY(40px);
+    transform: translateY(100px);
+    -ms-transform: translateY(100px);
     -webkit-transition: all .6s ease;
-    -webkit-transform: translateY(40px);
+    -webkit-transform: translateY(100px);
 }
 
 .scroll-to {
@@ -3819,13 +3819,13 @@ button,
 
 #back-top.show {
     opacity: 1;
-    transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -webkit-transform: translateY(-20px);
+    transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
 }
 
 #back-top:hover {
-    opacity: .9;
+    opacity: .9 ;
 }
 
 .js-tab-hidden {
