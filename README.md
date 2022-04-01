@@ -52,3 +52,11 @@ To Get SASS Dependencies Run the Following Command on the Terminal:
 ```CMD
 npm install sass --save-dev
 ```
+
+### Environment variables required to run the app:
+> Please contact jj@nativoplus.com to get the values for the environment variables.
+```
+AZURE_TENANT_ID
+AZURE_CLIENT_ID
+AZURE_CLIENT_SECRET
+```
