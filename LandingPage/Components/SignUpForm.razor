@@ -13,7 +13,7 @@
 else
 {
     <div class="sendgrid-signup-form">
-        
+
         @if (ShowSpinner == true)
         {
             <div class="loader-container">
@@ -58,12 +58,15 @@ else
         if (IsValidEmail(Email ?? string.Empty))
         {
             var data = @"{
-    ""contacts"": [
-    {
-    ""email"": " + $@"""{Email}""" + @"
-    }
-    ]
-    }";
+                ""list_ids"": [
+                    " + $@"""{options.Value.NewsletterContactsListId}""" + @"
+                ],
+                ""contacts"": [
+                    {
+                        ""email"": " + $@"""{Email}""" + @"
+                    }
+                ]
+            }";
 
             if (_client is not null)
             {

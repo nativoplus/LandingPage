@@ -24,6 +24,8 @@ namespace LandingPage
             services.AddOptions<SendGridConfig>().Configure(options =>
             {
                 options.SignUpFormApiKey = Configuration["NativoSignUpFormApiKey"];
+                options.NewsletterContactsListId = Configuration["SendGrid:NewsletterContactsListId"];
+                options.LeadsContactsListId = Configuration["SendGrid:LeadsContactsListId"];
             });
         }
 
