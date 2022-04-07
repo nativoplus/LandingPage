@@ -1,5 +1,7 @@
 ﻿using LandingPage.Data;
 using Microsoft.AspNetCore.ResponseCompression;
+using Newtonsoft.Json.Serialization;
+using SendGrid.Extensions.DependencyInjection;
 
 namespace LandingPage
 {
@@ -18,12 +20,26 @@ namespace LandingPage
         {
             services.Configure<GzipCompressionProviderOptions>(options => options.Level = System.IO.Compression.CompressionLevel.Fastest);
             services.AddResponseCompression();
+            services.AddMvc(options => options.EnableEndpointRouting = false)
+                .AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                })
+                .ConfigureApiBehaviorOptions(options =>
+                {
+                    options.SuppressModelStateInvalidFilter = true;
+                });
+
             services.AddRazorPages();
             services.AddServerSideBlazor(o => o.DetailedErrors = true);
 
-            services.AddOptions<SendGridConfig>().Configure(options =>
+            services.AddSendGrid(options =>
             {
-                options.SignUpFormApiKey = Configuration["NativoSignUpFormApiKey"];
+                options.ApiKey = Configuration["NativoSignUpFormApiKey"];
+            });
+
+            services.AddOptions<SendGridOptions>().Configure(options =>
+            {
                 options.NewsletterContactsListId = Configuration["SendGrid:NewsletterContactsListId"];
                 options.LeadsContactsListId = Configuration["SendGrid:LeadsContactsListId"];
             });
@@ -52,8 +68,9 @@ namespace LandingPage
             app.UseHttpsRedirection();
             app.UseResponseCompression();
             app.UseStaticFiles();
-
             app.UseRouting();
+
+            app.UseMvcWithDefaultRoute();
 
             app.UseEndpoints(endpoints =>
             {
