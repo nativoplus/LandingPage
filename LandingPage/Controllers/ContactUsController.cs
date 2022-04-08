@@ -21,11 +21,11 @@ namespace LandingPage.Controllers
         [HttpPost]
         public async Task Post([FromBody] TypeformContactUsPayload payload)
         {
-            if (payload?.EventData?.Response?.Answers is not null)
+            if (payload?.Response?.Answers is not null)
             {
-                if (payload.EventData.Response.Answers.Any())
+                if (payload.Response.Answers.Any())
                 {
-                    var answersList = payload.EventData.Response.Answers;
+                    var answersList = payload.Response.Answers;
 
                     foreach (var answer in answersList)
                     {
