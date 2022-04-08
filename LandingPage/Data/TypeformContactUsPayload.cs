@@ -4,12 +4,6 @@ namespace LandingPage.Data
 {
     public class TypeformContactUsPayload
     {
-        [JsonProperty(PropertyName = "raw_webhook_event")]
-        public RawWebhookEvent? EventData { get; set; }
-    }
-
-    public class RawWebhookEvent
-    {
         [JsonProperty(PropertyName = "form_response")]
         public FormResponse? Response { get; set; }
     }
