@@ -156,7 +156,19 @@ namespace LandingPage.Infrastructure.Files
                 ImgUrl = "template/images/team/kate-small.webp",
                 LinkedIn = "https://www.linkedin.com/in/kateruthbradshaw/",
                 GithubUrl = "",
-                Projects = new List<string>{ "Kati Sportcap & Bag", "Farm to Market Bread Co.", "Sportman Cap & Bag"},
+                Projects = new List<string>{ "Kati Sportcap & Bag", "Farm to Market Bread Co.", "Sportman Cap & Bag", "Gentlebirth"},
+            },
+            new Team
+            {
+                Name = "Linda Waterborg",
+                Role = "Creative Director",
+                Description = @"Linda values all aspects of the creative process, from brainstorming and copywriting to design and implementation. 
+                Her background in mass communication makes her a stickler for deadlines because even the best work can only be enjoyed if it meets 
+                the client’s needs and is completed on schedule. She is thankful for the opportunity to develop unique work for everyone she partners with",
+                ImgUrl = "template/images/team/linda-waterborg.webp",
+                LinkedIn = "https://www.linkedin.com/in/lindawaterborg/",
+                GithubUrl = "",
+                Projects = new List<string>{ "Kati Sportcap & Bag", "Gentlebirth", "Sportman Cap & Bag"},
             }
         };
     }
