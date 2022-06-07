@@ -41,3 +41,19 @@ $white-off: #DFDBD9;
         transition: .15s linear color;
     }
 }
+
+.nav-logo-image {
+    width: 170px;
+    margin-top: -18px;
+}
+
+.foot-logo-image{
+    margin: 0px 0px 6px !important;
+}
+@media (max-width: 767px) {
+
+    .foot-logo-image a > img{
+        width: 250px !important;
+    }
+    
+}
