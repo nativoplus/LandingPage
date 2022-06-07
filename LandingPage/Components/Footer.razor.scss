@@ -23,7 +23,13 @@ li > a:hover {
 }
 
 @media (max-width: 767px) {
+
+    #footer{
+        text-align: center
+    }
+
     ul.unstyled {
         padding-left: 0px;
     }
+
 }

@@ -4,16 +4,17 @@
 
 @if (NavLogo)
 {
-    <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
-
+    <div class="logo pull-left"><a href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))><img class="nav-logo-image" src="/template/images/bg/Horiz_color_cut.webp" alt="Logo NativoPlus"/></a></div>
 }
 else
 {
-    <div class="logo "><a style="color: white !important;" href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))>NativoPlus</a></div>
+    <div class="logo foot-logo-image"><a style="color: white !important;" href="/" @onclick:preventDefault @onclick=@( () => NavigateTo("/"))><img src="/template/images/bg/Horiz_whitetext_cut.webp" alt="Logo NativoPlus"/></a></div>
 }
 @code {
     [Parameter]
     public bool NavLogo { get; set; } = true;
+
+
 
     public void NavigateTo(string path)
     {
