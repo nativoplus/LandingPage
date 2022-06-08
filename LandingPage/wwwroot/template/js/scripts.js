@@ -203,17 +203,21 @@ $(document).ready(function () {
             var header = jQuery('#header');
             var headerOffset = header.offset().top || 200;
             var flag = true;
+            var image = jQuery('#image-logo');
 
             function scrollHandler() {
                 if (win.scrollTop() > headerOffset) {
                     if (flag) {
                         flag = false;
                         header.addClass(stickyClass);
+                        image.attr('src','/template/images/bg/Horiz_color_cut.webp');
+                  
                     }
                 } else {
                     if (!flag) {
                         flag = true;
                         header.removeClass(stickyClass);
+                        image.attr('src', '/template/images/bg/Horiz_whitetext_cut.webp');
                     }
                 }
             }
