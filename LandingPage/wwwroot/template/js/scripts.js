@@ -210,14 +210,14 @@ $(document).ready(function () {
                     if (flag) {
                         flag = false;
                         header.addClass(stickyClass);
-                        image.attr('src','/template/images/bg/Horiz_color_cut.webp');
+                        image.attr('src','/template/images/bg/NativoLogo-02_cut.webp');
                   
                     }
                 } else {
                     if (!flag) {
                         flag = true;
                         header.removeClass(stickyClass);
-                        image.attr('src', '/template/images/bg/Horiz_whitetext_cut.webp');
+                        image.attr('src', '/template/images/bg/NativoLogo-03_cut.webp');
                     }
                 }
             }
