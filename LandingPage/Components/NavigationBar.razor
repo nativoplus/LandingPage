@@ -2,7 +2,7 @@
 @inject NavigationManager NavigationManager
 
 <!-- start of page header -->
-<header id="header" class="@(HasNoSpace ? "nospace":"")">
+<header id="header" class="@(HasNoSpace ? "nospace":"") @(PortfolioDetails ? "portDetails":"")">
     <!-- header holder -->
 
     <div class="header-holder">
@@ -56,6 +56,8 @@
     private bool MenuState = false;
     [Parameter]
     public bool HasNoSpace { get; set; } = true;
+    [Parameter]
+    public bool PortfolioDetails { get; set; } = false;
 
     [Parameter]
     public string MenuIconCssClass { get; set; } = "fa-light fa-bars";
