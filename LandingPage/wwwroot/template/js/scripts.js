@@ -9,6 +9,11 @@ $(document).ready(function () {
 
     $('.count').counterUp();
 
+
+    if (jQuery('#header').hasClass('portDetails')) {
+        jQuery('#image-logo').attr('src', '/template/images/bg/NativoLogo-02_cut.webp');
+    }
+
     $("#contactForm").validator().on("submit", function (event) {
 
         "use strict";
@@ -217,7 +222,12 @@ $(document).ready(function () {
                     if (!flag) {
                         flag = true;
                         header.removeClass(stickyClass);
-                        image.attr('src', '/template/images/bg/NativoLogo-03_cut.webp');
+                        if (header.hasClass('portDetails')) {
+                            image.attr('src', '/template/images/bg/NativoLogo-02_cut.webp');
+                        } else {
+                            image.attr('src', '/template/images/bg/NativoLogo-03_cut.webp');
+                        }
+                        
                     }
                 }
             }

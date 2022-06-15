@@ -165,8 +165,20 @@ namespace LandingPage.Infrastructure.Files
                 Description = @"Linda values all aspects of the creative process, from brainstorming and copywriting to design and implementation. 
                 Her background in mass communication makes her a stickler for deadlines because even the best work can only be enjoyed if it meets 
                 the client’s needs and is completed on schedule. She is thankful for the opportunity to develop unique work for everyone she partners with",
-                ImgUrl = "template/images/team/linda-waterborg.webp",
+                ImgUrl = "template/images/team/linda-small.webp",
                 LinkedIn = "https://www.linkedin.com/in/lindawaterborg/",
+                GithubUrl = "",
+                Projects = new List<string>{ "Kati Sportcap & Bag", "Gentlebirth", "Sportman Cap & Bag"},
+            },
+            new Team
+            {
+                Name = "Kelsey Ruoff",
+                Role = "Account Manager",
+                Description = @"Kelsey is an account manager with a passion for writing and editing. She has an MBA in International Business, 
+                which contributes to her approach of creativity and efficiency in every project. 
+                It is her ultimate priority to deliver quality outcomes for every client.",
+                ImgUrl = "template/images/team/kelsey-small.webp",
+                LinkedIn = "https://www.linkedin.com/in/kelseyruoff/",
                 GithubUrl = "",
                 Projects = new List<string>{ "Kati Sportcap & Bag", "Gentlebirth", "Sportman Cap & Bag"},
             }

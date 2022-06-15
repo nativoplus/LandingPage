@@ -1050,7 +1050,7 @@ button,
     font: 300 20px/34px $font-family-heading;
 
     .bg-overlay {
-        opacity: 0.3;
+        opacity: 0.7; // 0.3
     }
 
     &.small {
@@ -1133,6 +1133,7 @@ button,
 
     p {
         margin: 0 0 55px;
+        font-weight: 400;
     }
 
     .btn-bottom {
@@ -1273,7 +1274,7 @@ button,
         font: 500 18px/38px $font-family-heading;
 
         &.large {
-            font-size: 22px;
+            font-size: 20px; // 22px
         }
     }
 
@@ -1297,7 +1298,7 @@ button,
         }
 
         .title {
-            font-size: 22px;
+            font-size: 20px; //22
         }
     }
 
@@ -1593,7 +1594,7 @@ button,
     .title {
         color: $white;
         display: block;
-        margin: 0 0 34px;
+        margin: 0 0 20px; //34px
         font: 500 14px/31px $font-family-heading;
     }
 
@@ -3598,7 +3599,7 @@ button,
     @include v-align();
 
     .bg-overlay {
-        opacity: 0.4;
+        opacity: 0.6;
     }
 
     .holder {
